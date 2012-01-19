@@ -1,0 +1,1301 @@
+MIT Pokerbots Local Match - bot3000 vs. testbot vs. testbot
+Hand #1
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Qh 6h]
+Dealt to testbot [4s 9c]
+Dealt to bot3000 [8s 2s]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #2
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [7d 4s]
+Dealt to testbot [9h 8d]
+Dealt to testbot [6s 2s]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #3
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Ah 9d]
+Dealt to bot3000 [Qd 3s]
+Dealt to testbot [7s Kc]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #4
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [3c Kc]
+Dealt to testbot [7s Qs]
+Dealt to bot3000 [Kh 9d]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #5
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [6s Qd]
+Dealt to testbot [3h Qc]
+Dealt to testbot [Ac 2s]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #6
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [8c 8s]
+Dealt to bot3000 [3d 6c]
+Dealt to testbot [Qs Ah]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #7
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [4d 5s]
+Dealt to testbot [2s 4s]
+Dealt to bot3000 [Ac 9c]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #8
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [3s Jh]
+Dealt to testbot [4d 9s]
+Dealt to testbot [2s 6s]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #9
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [8s Th]
+Dealt to bot3000 [As 6d]
+Dealt to testbot [2d Qs]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #10
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [4h 3h]
+Dealt to testbot [8s 2h]
+Dealt to bot3000 [Jd Qc]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #11
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [5d 4s]
+Dealt to testbot [3d 3s]
+Dealt to testbot [Ts 8c]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #12
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [9s 5h]
+Dealt to bot3000 [2c 2s]
+Dealt to testbot [4d 2h]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #13
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [7h Kd]
+Dealt to testbot [3c 9d]
+Dealt to bot3000 [5h 4d]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #14
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Js 8h]
+Dealt to testbot [8d 2d]
+Dealt to testbot [7d Jc]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #15
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [8s Kd]
+Dealt to bot3000 [6c 9h]
+Dealt to testbot [Ac 2h]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #16
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Ad 2s]
+Dealt to testbot [6s 6d]
+Dealt to bot3000 [4d 7h]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #17
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [6d 9d]
+Dealt to testbot [3c 5d]
+Dealt to testbot [7s 2c]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #18
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Ks 9s]
+Dealt to bot3000 [8s Js]
+Dealt to testbot [3h 7s]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #19
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [2s 6s]
+Dealt to testbot [5d Qd]
+Dealt to bot3000 [2d Kh]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #20
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [3s Tc]
+Dealt to testbot [4d Td]
+Dealt to testbot [5c 8h]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #21
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [2d 6d]
+Dealt to bot3000 [Ks Jh]
+Dealt to testbot [6c Kc]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #22
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Ts 8d]
+Dealt to testbot [7c 6c]
+Dealt to bot3000 [Qs 3h]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #23
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [9d 8s]
+Dealt to testbot [4c Qs]
+Dealt to testbot [Kh 9c]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #24
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Tc 9d]
+Dealt to bot3000 [4s 3s]
+Dealt to testbot [4d Jh]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #25
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [5d Ac]
+Dealt to testbot [6h Jh]
+Dealt to bot3000 [7s Qh]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #26
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [2c Tc]
+Dealt to testbot [Ah 6c]
+Dealt to testbot [8h Td]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #27
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [2c As]
+Dealt to bot3000 [7c 9d]
+Dealt to testbot [3d Ac]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #28
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [5c 4d]
+Dealt to testbot [2h 2c]
+Dealt to bot3000 [7d 6h]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #29
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [3d 4c]
+Dealt to testbot [5h 8s]
+Dealt to testbot [8h Ah]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #30
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Jd 8d]
+Dealt to bot3000 [4h 6c]
+Dealt to testbot [Td 4s]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #31
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [5d 7c]
+Dealt to testbot [4d Qh]
+Dealt to bot3000 [6c As]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #32
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Qh Kc]
+Dealt to testbot [Kh 6c]
+Dealt to testbot [8c Ts]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #33
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [4c Ah]
+Dealt to bot3000 [Kh 9s]
+Dealt to testbot [Ac 8h]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #34
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [3d Td]
+Dealt to testbot [7c 3c]
+Dealt to bot3000 [9s Qh]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #35
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Js 3c]
+Dealt to testbot [Kh 3d]
+Dealt to testbot [Ks Jd]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #36
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [7d Ac]
+Dealt to bot3000 [6h 4c]
+Dealt to testbot [5c 4d]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #37
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [7d 8s]
+Dealt to testbot [2h Kd]
+Dealt to bot3000 [5h 4s]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #38
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [4s As]
+Dealt to testbot [Qd Qc]
+Dealt to testbot [7s 6s]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #39
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [5s 9c]
+Dealt to bot3000 [7c Jd]
+Dealt to testbot [9h 6s]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #40
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [5c Jd]
+Dealt to testbot [8d 7c]
+Dealt to bot3000 [Jh 9d]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #41
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [6s Js]
+Dealt to testbot [Qc 4d]
+Dealt to testbot [9d 8c]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #42
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [3h 6d]
+Dealt to bot3000 [Ac Ks]
+Dealt to testbot [Jh 7h]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #43
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Qh 9h]
+Dealt to testbot [Jd 4s]
+Dealt to bot3000 [Qc 5h]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #44
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [4s 5c]
+Dealt to testbot [8h 9d]
+Dealt to testbot [5s Ts]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #45
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Jc Qc]
+Dealt to bot3000 [Kh 2d]
+Dealt to testbot [Qd Ac]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #46
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [9h 5h]
+Dealt to testbot [6c Jc]
+Dealt to bot3000 [8c 6h]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #47
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Ts 6d]
+Dealt to testbot [2h Ad]
+Dealt to testbot [7c Kc]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #48
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Js 7c]
+Dealt to bot3000 [2h 6h]
+Dealt to testbot [8d Qc]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #49
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Tc 9s]
+Dealt to testbot [5c 8d]
+Dealt to bot3000 [8h 5d]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #50
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [3d 5s]
+Dealt to testbot [5h 4s]
+Dealt to testbot [Th Ts]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #51
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Qd Jd]
+Dealt to bot3000 [Js Kd]
+Dealt to testbot [6h Ah]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #52
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [8c 4h]
+Dealt to testbot [6c Kd]
+Dealt to bot3000 [7c Jc]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #53
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Jd Ac]
+Dealt to testbot [8c 9s]
+Dealt to testbot [7c 5d]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #54
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Qd 3s]
+Dealt to bot3000 [9d 9h]
+Dealt to testbot [Ks 3h]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #55
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Qd 8d]
+Dealt to testbot [Kd Js]
+Dealt to bot3000 [3d Qh]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #56
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [4h 4c]
+Dealt to testbot [9c Ad]
+Dealt to testbot [5h Js]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #57
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Ts 3c]
+Dealt to bot3000 [Jd 3h]
+Dealt to testbot [2c 5h]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #58
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [9c Ks]
+Dealt to testbot [5d 4h]
+Dealt to bot3000 [4c 8d]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #59
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Qd 5d]
+Dealt to testbot [2d Qs]
+Dealt to testbot [5c Ah]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #60
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [9c 4d]
+Dealt to bot3000 [2h 6s]
+Dealt to testbot [6d 2s]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #61
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Ah Ks]
+Dealt to testbot [5s 3c]
+Dealt to bot3000 [Qd 4h]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #62
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Ad 3s]
+Dealt to testbot [5d 2s]
+Dealt to testbot [Th Kh]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #63
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [5s Ts]
+Dealt to bot3000 [9d 6d]
+Dealt to testbot [Kc Qs]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #64
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Qc 6s]
+Dealt to testbot [2d Qh]
+Dealt to bot3000 [9s 8d]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #65
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Jh 8s]
+Dealt to testbot [5d 4c]
+Dealt to testbot [Ts Ad]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #66
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [6d Jh]
+Dealt to bot3000 [3s 2d]
+Dealt to testbot [8h Td]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #67
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Ts 5c]
+Dealt to testbot [Jd Ks]
+Dealt to bot3000 [4d Ah]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #68
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Kc Td]
+Dealt to testbot [4d 8d]
+Dealt to testbot [3c 6c]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #69
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [7c 2c]
+Dealt to bot3000 [5c Ac]
+Dealt to testbot [8s 9d]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #70
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Qs Td]
+Dealt to testbot [3d 8s]
+Dealt to bot3000 [6c 6s]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #71
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [5h 2s]
+Dealt to testbot [4c Jc]
+Dealt to testbot [5d Qc]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #72
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [5d 7s]
+Dealt to bot3000 [6s Qd]
+Dealt to testbot [Ad Td]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #73
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [4c Js]
+Dealt to testbot [As 2s]
+Dealt to bot3000 [Kd 9c]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #74
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [3s Ks]
+Dealt to testbot [Qd 9d]
+Dealt to testbot [2s Ts]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #75
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Kc 4s]
+Dealt to bot3000 [7s 7h]
+Dealt to testbot [Ts 4d]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #76
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [3h Js]
+Dealt to testbot [Ad Jh]
+Dealt to bot3000 [4c 5h]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #77
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Kc 7d]
+Dealt to testbot [2c 9s]
+Dealt to testbot [6c 2h]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #78
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Tc 4s]
+Dealt to bot3000 [5h As]
+Dealt to testbot [4h 5c]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #79
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [2d 3c]
+Dealt to testbot [Qd 6d]
+Dealt to bot3000 [Ah Qc]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #80
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [5s 4d]
+Dealt to testbot [2s 8d]
+Dealt to testbot [7c 8s]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #81
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Ac Qd]
+Dealt to bot3000 [2s 9h]
+Dealt to testbot [Kh Ks]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #82
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [9h Ad]
+Dealt to testbot [8s Kd]
+Dealt to bot3000 [Js 3s]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #83
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Qh 5s]
+Dealt to testbot [3c Kc]
+Dealt to testbot [Jh Ah]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #84
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Kd 9d]
+Dealt to bot3000 [6d Td]
+Dealt to testbot [3h Kc]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #85
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Td Kc]
+Dealt to testbot [2s 6d]
+Dealt to bot3000 [6c 2h]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #86
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [Kc Qc]
+Dealt to testbot [2h 9c]
+Dealt to testbot [6s 5c]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #87
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [7c Ah]
+Dealt to bot3000 [7h 2s]
+Dealt to testbot [Js Jh]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #88
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Tc 4d]
+Dealt to testbot [Qh Ks]
+Dealt to bot3000 [8h 8s]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #89
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [4s 6h]
+Dealt to testbot [Ad 5c]
+Dealt to testbot [4c Ac]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #90
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Kh Tc]
+Dealt to bot3000 [6h Ts]
+Dealt to testbot [9c 4d]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #91
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [4d Kh]
+Dealt to testbot [Ks 7c]
+Dealt to bot3000 [3c 5s]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #92
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [9c 7s]
+Dealt to testbot [Qh As]
+Dealt to testbot [7h 5s]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #93
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [Ts Ac]
+Dealt to bot3000 [7h 9d]
+Dealt to testbot [Jd 4h]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #94
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [8d 4c]
+Dealt to testbot [9s 5s]
+Dealt to bot3000 [9h 3s]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #95
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [9c 5s]
+Dealt to testbot [Ah 2c]
+Dealt to testbot [4h Kd]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #96
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [4c 3d]
+Dealt to bot3000 [Th Jh]
+Dealt to testbot [6c 7h]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #97
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [4d 4h]
+Dealt to testbot [6s Jd]
+Dealt to bot3000 [Js 2c]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
+Hand #98
+Seat 1 (Button): testbot 1
+Seat 2 (SB): bot3000 0
+Seat 3 (BB): testbot -1
+bot3000 posts the blind of 1
+testbot posts the blind of 2
+Dealt to bot3000 [7h 8d]
+Dealt to testbot [Ks 7d]
+Dealt to testbot [7s Ac]
+testbot folds
+bot3000 folds
+testbot wins the pot (3)
+
+Hand #99
+Seat 1 (Button): testbot 0
+Seat 2 (SB): testbot 1
+Seat 3 (BB): bot3000 -1
+testbot posts the blind of 1
+bot3000 posts the blind of 2
+Dealt to testbot [3s 6h]
+Dealt to bot3000 [Js Qs]
+Dealt to testbot [7c Ah]
+testbot folds
+testbot folds
+bot3000 wins the pot (3)
+
+Hand #100
+Seat 1 (Button): bot3000 0
+Seat 2 (SB): testbot 0
+Seat 3 (BB): testbot 0
+testbot posts the blind of 1
+testbot posts the blind of 2
+Dealt to testbot [Tc 6c]
+Dealt to testbot [2h 2c]
+Dealt to bot3000 [Qc Ks]
+bot3000 folds
+testbot folds
+testbot wins the pot (3)
+
