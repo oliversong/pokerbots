@@ -12,7 +12,7 @@ class ChuckTestaStrat(Strategy):
     def getMove(self, b):
 
         ev = self.evalHand(b, b.state.boardCards)
-        
+
         pos = b.state.position
 
         move = "CHECK"
@@ -100,7 +100,3 @@ class ChuckTestaStrat(Strategy):
         if move not in [la[0] for la in b.state.legalActions]:
             move = "CHECK"
         return move
-       
-
-        return "FOLD"
-

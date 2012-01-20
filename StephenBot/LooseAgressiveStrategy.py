@@ -4,8 +4,6 @@ from Enums import *
 class LooseAgressiveStrategy(Strategy):
     def __init__(self):
         Strategy.__init__(self)
-        self.index1 = 0
-        self.index2 = 0
 
     def evaluateOdds(self, b):
         self.evaluatePocketCards(b)
@@ -13,7 +11,7 @@ class LooseAgressiveStrategy(Strategy):
 
     def getMove(self, b):
         raiseAmt = 10
-        
+
         move = "CHECK"
 
         if b.state.street()==PREFLOP:
@@ -22,7 +20,7 @@ class LooseAgressiveStrategy(Strategy):
                 if self.handRank > 655359:
                     move = "RAISE"
                 elif self.handRank < 393216:
-                    move = "FOLD" 
+                    move = "FOLD"
                 else: move = "CALL"
             elif b.state.position == 1: #small blind
                 if self.handRank < 393216:
@@ -38,7 +36,7 @@ class LooseAgressiveStrategy(Strategy):
             raiseAmt = (3+1) * b.state.bigB
         elif b.state.street()==FLOP:
             print "FLOP"
-            
+
             if self.handRank > 786431:
                 move = "RAISE"
             move = "BET"
@@ -60,6 +58,3 @@ class LooseAgressiveStrategy(Strategy):
                 return move
 
         return "FOLD"
-
-
-

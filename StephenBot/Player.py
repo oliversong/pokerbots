@@ -35,7 +35,7 @@ class Main:
             # the engine and act on it.
             print "Received", data
             self.game.parseInput(data)
-            bot.updateState(self.game)
+            self.bot.updateState(self.game)
 
             # When appropriate, reply to the engine with a legal action.
             # The engine will ignore all spurious packets you send.
@@ -45,12 +45,12 @@ class Main:
             # carriage return (\r), or else your bot will hang!
 
             if self.game.state == NEWHAND:
-                self.bot.setHoleCards(Card(game.holeCard1), Card(game.holeCard2))
-                bot.strategy = lagRule
+                self.bot.setHoleCards(Card(self.game.holeCard1), Card(self.game.holeCard2))
+                self.bot.strategy = lagRule
 
             if game.state == GETACTION:
-                bot.evaluateOdds()
-                move = bot.makeMove()
+                self.bot.evaluateOdds()
+                move = self.bot.makeMove()
                 print "SENDING A ", move, "ACTION TO ENGINE\n"
                 self.socket.send(move+'\n')
         # if we get here, the server disconnected us, so clean up the socket

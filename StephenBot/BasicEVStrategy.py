@@ -4,8 +4,6 @@ from Enums import *
 class BasicEVStrategy(Strategy):
     def __init__(self):
         Strategy.__init__(self)
-        self.index1 = 0
-        self.index2 = 0
 
     def evaluateOdds(self, b):
         self.evaluatePocketCards(b)
@@ -13,7 +11,7 @@ class BasicEVStrategy(Strategy):
 
     def getMove(self, b):
         raiseAmt = 10
-        
+
         move = "CHECK"
 
 
@@ -35,4 +33,3 @@ class BasicEVStrategy(Strategy):
 ##                return move
 
         return "FOLD"
-

@@ -1,5 +1,5 @@
 from pokereval import PokerEval
-from pocketlookup import *
+import pocketlookup
 
 ITERATIONS = 10000
 
@@ -7,42 +7,29 @@ class Strategy:
     def __init__(self):
         self.pokereval = PokerEval()
         self.handRank = None
-        self.index1 = 0
-        self.index2 = 0
 
     def evaluateOdds(self, b):
         raise NotImplementedError("evaluateOdds not implemented in subclass")
+
     def getMove(self, b):
         raise NotImplementedError("getMove not implemented in subclass")
-    
-    
+
     def evaluatePocketCards(self, b):
-        v1 = b.holeCard1.value - 2
-        v2 = b.holeCard2.value - 2
-
-        self.index1 = min(v1,v2)
-        self.index2 = max(v1,v2) - self.index1
-
-        suited = 1  #off suit hole cards
-        if b.holeCard2.suit == b.holeCard1.suit:
-            suited = 0  #suited
-
-        self.handRank = lookuphand[self.index1][self.index2][suited]
+        self.handRank = pocketlookup.evalPocket(b.holeCard1, b.holeCard2)
 
     def evalHand(self, b, board):
-#        print "BOARDCARDS", board
         hand = [b.holeCard1.stringValue, b.holeCard2.stringValue]
 
-        ev = self.pokereval.poker_eval(game="holdem", 
+        ev = self.pokereval.poker_eval(game="holdem",
                                        pockets = [hand,[255,255],[255,255]],
-                                       dead=[], 
+                                       dead=[],
                                        board=board,
                                        iterations = ITERATIONS)['eval'][0]['ev']
 #        print "HAND", hand, "BOARD", board, "EV", ev
 
         return ev
 
-    #Bet or raise the minimum amount, or times some multiplier def pushMin(self, b, m=1):
+    #Bet or raise the minimum amount, or times some multiplier
     def pushMin(self, b, m=1):
         if "BET" in [la[0] for la in b.state.legalActions]:
             return "BET"+":"+str(int(la[1])*m)
@@ -57,4 +44,3 @@ class Strategy:
         if b.state.lastBet <= m:
             return "CALL"
         return "FOLD"
-
