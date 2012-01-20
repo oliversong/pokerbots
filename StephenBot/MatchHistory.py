@@ -15,7 +15,7 @@ class MatchHistory:
 
     def updateHistory(self, game, hand):
 
-        pot = game.potSize
+        pot = 0
         prevBet = game.bigB
         allBets = [0,0,0]
         players = []
@@ -27,7 +27,6 @@ class MatchHistory:
             if action.type == SHOW:
                 showPlayers += [action.player]
                 self.showCards += [[action.showCard1, action.showCard2]]
-        print "SHOWPLAYERS:", showPlayers 
         showEV = [0]*len(showPlayers)
 
 
@@ -60,10 +59,7 @@ class MatchHistory:
                                                dead = [],
                                                board = b,
                                                iterations = ITERATIONS)                                               
-
                 showEV[i] = ev['eval'][0]['ev']
-                
-
 
             for action in street:
                 act = action.copy()
@@ -72,12 +68,11 @@ class MatchHistory:
 
                 act.player = action.player
                 act.amount = action.amount
-                
-                if act.player in showPlayers:
+               
+                if act.player in showPlayers and act.type != POST:
                     act.potAmount = act.amount/(pot+sum(bets))
                     act.betAmount = act.amount/float(prevBet)
                     act.handStrength = showEV[showPlayers.index(act.player)]
-                    
 
                 if act.player not in self.history.keys():
                     self.history[act.player] = [{},{},{},{}]
@@ -86,11 +81,12 @@ class MatchHistory:
                             self.history[act.player][s][a] = []
 
                 ##Append action into the match history table
-                print "HISTORY PRINTOUT", act.player, showPlayers
-                if act.player in showPlayers:
+                if act.player in showPlayers and act.type != POST:
                     self.history[act.player][hand.splitActions.index(street)][action.type].append(act)
+                
 
                 bets[players.index(act.player)] = max([bets[players.index(act.player)],act.amount])
+#                print "BETS AMOUNTS:",bets[players.index(act.player)]
 
                 if act.amount != 0:
                     prevBet = act.amount
@@ -116,5 +112,33 @@ class MatchHistory:
                         print "POT AMOUNT:",self.history[p][s][a][i].potAmount,",",
                         print "BET AMOUNT:", self.history[p][s][a][i].betAmount,
                         print "EV:", self.history[p][s][a][i].handStrength,"]"
+
+
+    def averageStrength(self, player, street, actionType, amountType, minAmt, maxAmt):
+        sum = 0
+        numMatches = 0
+#        print self.history.keys()
+        if actionType not in self.history[player][street].keys():
+            print "ACTION TYPE IN AVERAGE STRENGTH", actionType
+            return -1
+        actions = self.history[player][street][actionType]
+        for a in actions:
+            if amountType==POTAMOUNT:
+                if a.potAmount>=minAmt and a.potAmount<=maxAmt:
+                    sum += a.handStrength
+                    numMatches += 1
+            elif amountType==BETAMOUNT:
+                if a.betAmount>=minAmt and a.betAmount<=maxAmt:
+                    sum += a.handStrength
+                    numMatches += 1
+            else:
+                if a.amount>=minAmt and a.amount<=maxAmt:
+                    sum += a.handStrength
+                    numMatches += 1
+        if numMatches<3:
+            return -1
+        return float(sum)/numMatches
+
+
 
 

@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
         if game.state=="NEWHAND":
             bot.setHoleCards(Card(game.holeCard1), Card(game.holeCard2))
-            bot.strategy = lagRule
+            bot.strategy = chuckTesta
 
         if game.state == "GETACTION":
 ##            s.send("RAISE:15\n")

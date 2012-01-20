@@ -4,7 +4,7 @@ class Hand:
     def __init__(self):
         self.actions = None
         self.splitActions = None
-        self.trackedActions = [CHECK, BET, RAISE, CALL]
+        self.trackedActions = [CHECK, BET, RAISE, CALL, POST]
         self.clearHand()
         
     def clearHand(self):
@@ -24,10 +24,15 @@ class Hand:
     def splitActionsList(self):
         s = 0
         for a in self.actions:
-#            print "SPLIT ACTIONS LIST TYPE"
-#            print a.type
             if a.type == DEAL:
                 s += 1
             if a.type in self.trackedActions:
                 self.splitActions[s].append(a)
 
+    def recentOppMove(self):
+        if self.actions[-1].type in [DEAL, POST]:
+            return []
+        elif self.actions[-2].type in [DEAL, POST]:
+            return [self.actions[-1]]
+        else:
+            return[self.actions[-1], self.actions[-2]]
