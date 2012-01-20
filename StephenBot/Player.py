@@ -49,7 +49,7 @@ if __name__ == "__main__":
         # carriage return (\r), or else your bot will hang!
 
         if game.state=="NEWHAND":
-            bot.setHoleCards(game.holeCard1, game.holeCard2)
+            bot.setHoleCards(Card(game.holeCard1), Card(game.holeCard2))
             bot.strategy = lag
 
         if game.state == "GETACTION":

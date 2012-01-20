@@ -1,5 +1,6 @@
 class Card:
     def __init__(self, c):
+        self.stringValue = c
         self.value = self.cardValue(c[0])
         self.suit = self.suitValue(c[1])
 

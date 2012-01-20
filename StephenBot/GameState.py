@@ -38,7 +38,7 @@ class GameState:
         self.potSize = None
         self.numBoardCards = None
 
-        self.boardCards = None
+        self.boardCards = "__,__,__,__,__"#["__","__","__","__","__"]
         self.numLastActions = None
         self.lastActions = None
         self.numLegalActions = None
@@ -92,6 +92,7 @@ class GameState:
 
             self.timebank = float(packet[-1])
 
+            self.parseBoardCards()
             self.parseLastActions()
             self.parseLegalActions()
 
@@ -113,7 +114,7 @@ class GameState:
 
             print "bankroll", self.bankroll
             print "leftbank", self.leftBank
-            print "rightBank", self.rightBank
+            print "rightBank", self.rightBank, "\n"
 
             self.matchHistory.printHistory()
         
@@ -125,6 +126,8 @@ class GameState:
                 self.lastActions[i] = self.lastActions[i].split(":")
                 #add each action into structure, Hand
             
+                c1 = None
+                c2 = None
             
                 t = None
                 sla = self.lastActions[i][0]
@@ -144,17 +147,21 @@ class GameState:
                     t = POST
                 elif sla == "REFUND":
                     t = REFUND
-                elif sla == "SHOW":
+                elif sla == "SHOWS":
+                    c1 = self.lastActions[i][2]
+                    c2 = self.lastActions[i][3]
                     t = SHOW
                 elif sla == "TIE":
                     t = TIE
                 elif sla == "WIN":
                     t = WIN
-                a = Action(t, self.lastActions[i][1])
+
+
+                a = Action(t, self.lastActions[i][1], c1, c2)
                 if t in [RAISE,BET]:            #self.lastActions[i][0] in ["RAISE","BET"]:#[RAISE, BET]:
                     a.amount = float(self.lastActions[i][2])
                 self.hand.actions.append(a)
-        print "lastActions", self.lastActions
+#        print "lastActions", self.lastActions
     
     def parseLegalActions(self):
         if self.legalActions:
@@ -174,3 +181,7 @@ class GameState:
         else:
             return None
 
+    def parseBoardCards(self):
+        self.boardCards = self.boardCards.split(",")
+        for i in range(5-len(self.boardCards)):
+            self.boardCards += ["__"]

@@ -4,12 +4,12 @@ from Enums import *
 class LooseAgressiveStrategy(Strategy):
     def __init__(self):
         Strategy.__init__(self)
+        self.index1 = 0
+        self.index2 = 0
 
     def evaluateOdds(self, b):
-        self.handRank = self.pokereval.evaln([b.holeCard1, b.holeCard2])
-        
-
-        return b.pair*0.5 + b.faces*0.4 + b.suited*0.2 + b.consecutive*0.05
+        self.evaluatePocketCards(b)
+        self.evalHand(b, b.state.boardCards)
 
     def getMove(self, b):
         raiseAmt = 10
@@ -22,9 +22,8 @@ class LooseAgressiveStrategy(Strategy):
                 if self.handRank > 655359:
                     move = "RAISE"
                 elif self.handRank < 393216:
-                    move = "FOLD"
-                else:
-                    move = "CALL"
+                    move = "FOLD" 
+                else: move = "CALL"
             elif b.state.position == 1: #small blind
                 if self.handRank < 393216:
                     move = "FOLD"
@@ -61,4 +60,6 @@ class LooseAgressiveStrategy(Strategy):
                 return move
 
         return "FOLD"
+
+
 
