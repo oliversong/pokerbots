@@ -31,16 +31,16 @@ class Strategy:
 
     #Bet or raise the minimum amount, or times some multiplier
     def pushMin(self, b, m=1):
-        if "BET" in [la[0] for la in b.state.legalActions]:
+        if "BET" in [la[0] for la in b.game.legalActions]:
             return "BET"+":"+str(int(la[1])*m)
-        elif "RAISE" in [la[0] for la in b.state.legalActions]:
+        elif "RAISE" in [la[0] for la in b.game.legalActions]:
             return "RAISE"+":"+str(int(la[1])*m)
         return "CHECK" #CHECK LOGIC FOR THIS FUCNTION, SHOULD NEVER GET HERE
 
     ##If can check, then check.  Otherwise call up to m
     def maxRisk(self, b, m):
-        if "CHECK" in [la[0] for la in b.state.legalActions]:
+        if "CHECK" in [la[0] for la in b.game.legalActions]:
             return "CHECK"
-        if b.state.lastBet <= m:
+        if b.game.lastBet <= m:
             return "CALL"
         return "FOLD"

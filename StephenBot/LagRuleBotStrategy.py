@@ -7,13 +7,13 @@ class LagRuleBotStrategy(Strategy):
 
     def evaluateOdds(self, b):
         self.evaluatePocketCards(b)
-        self.evalHand(b, b.state.boardCards)
+        self.evalHand(b, b.game.boardCards)
 
     def getMove(self, b):
 
-        ev = self.evalHand(b, b.state.boardCards)
+        ev = self.evalHand(b, b.game.boardCards)
 
-        if b.state.street()==PREFLOP:
+        if b.game.street()==PREFLOP:
             print "PREFLOP"
             if ev>400:
                 return self.pushMin(b,3)
@@ -21,7 +21,7 @@ class LagRuleBotStrategy(Strategy):
                 return self.pushMin(b)
             else:
                 return self.maxRisk(b,2)
-        elif b.state.street()==FLOP:
+        elif b.game.street()==FLOP:
             print "FLOP"
             if ev>500:
                 return self.pushMin(b,3)
@@ -30,7 +30,7 @@ class LagRuleBotStrategy(Strategy):
             else:
                 return self.maxRisk(b,2)
 
-        elif b.state.street()==TURN:
+        elif b.game.street()==TURN:
             print "TURN"
             if ev>600:
                 return self.pushMin(b,3)
@@ -38,7 +38,7 @@ class LagRuleBotStrategy(Strategy):
                 return self.pushMin(b)
             else:
                 return self.maxRisk(b,2)
-        elif b.state.street()==RIVER:
+        elif b.game.street()==RIVER:
             print "RIVER"
             if ev>750:
                 return self.pushMin(b,3)
@@ -48,4 +48,3 @@ class LagRuleBotStrategy(Strategy):
                 return self.maxRisk(b,2)
 
         return "FOLD"
-
