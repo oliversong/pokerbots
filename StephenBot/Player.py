@@ -2,6 +2,7 @@ import socket
 import sys
 
 from Bot import *
+from Enums import *
 from GameState import *
 from LooseAgressiveStrategy import *
 from BasicEVStrategy import *
@@ -9,20 +10,58 @@ from LagRuleBotStrategy import *
 from ChuckTestaStrat import *
 
 
-"""
-Simple example pokerbot, written in python. This is an example of a bare bones,
-dumb pokerbot - it only sets up the socket necessary to connect with the engine
-and then always returns the same action. It is meant as an example of how a
-pokerbot should communicate with the engine.
-"""
+class Main:
+    def __init__(self, port):
+        self.socket = socket.create_connection(('localhost', port))
+        self.fs = socket.makefile()
+
+        self.bot = Bot()
+        self.game = GameState()
+        self.lag = LooseAgressiveStrategy()
+        self.bev = BasicEVStrategy()
+        self.lagRule = LagRuleBotStrategy()
+        self.chuckTesta = ChuckTestaStrat()
+
+    def run(self):
+        while 1:
+            # block until the engine sends us a packet
+            #data = s.recv(4096)
+            data = self.fs.readline()
+            # if we receive a null return, then the connection is dead
+            if not data:
+                print "Gameover, engine disconnected"
+                break
+            # Here is where you should implement code to parse the packets from
+            # the engine and act on it.
+            print "Received", data
+            self.game.parseInput(data)
+            bot.updateState(self.game)
+
+            # When appropriate, reply to the engine with a legal action.
+            # The engine will ignore all spurious packets you send.
+            # The engine will also check/fold for you if you return an
+            # illegal action.
+            # When sending responses, you need to have a newline character (\n) or
+            # carriage return (\r), or else your bot will hang!
+
+            if self.game.state == NEWHAND:
+                self.bot.setHoleCards(Card(game.holeCard1), Card(game.holeCard2))
+                bot.strategy = lagRule
+
+            if game.state == GETACTION:
+                bot.evaluateOdds()
+                move = bot.makeMove()
+                print "SENDING A ", move, "ACTION TO ENGINE\n"
+                self.socket.send(move+'\n')
+        # if we get here, the server disconnected us, so clean up the socket
+        self.socket.close()
+
 
 if __name__ == "__main__":
     # port number specified by the engine to connect to.
     port = int(sys.argv[1])
-    # initialize a socket
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # connect the socket to the engine
-    s.connect(('localhost', port))
+    s = socket.create_connection(('localhost', port))
     fs = s.makefile()
 
     bot = Bot()
@@ -31,7 +70,7 @@ if __name__ == "__main__":
     bev = BasicEVStrategy()
     lagRule = LagRuleBotStrategy()
     chuckTesta = ChuckTestaStrat()
-    
+
     while 1:
         # block until the engine sends us a packet
         #data = s.recv(4096)
@@ -42,7 +81,6 @@ if __name__ == "__main__":
             break
         # Here is where you should implement code to parse the packets from
         # the engine and act on it.
-#        print "THIS IS A NEW PACKET"
         print data
         game.parseInput(data)
         bot.updateState(game)

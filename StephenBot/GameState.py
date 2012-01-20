@@ -20,13 +20,11 @@ class GameState:
         self.smallB = None
         self.timebank = None
         self.matchHistory = MatchHistory()
-       
+
         self.hand = Hand()
-        self.trackedHands = [CHECK,BET,RAISE,CALL, POST]
+        #self.trackedHands = [CHECK,BET,RAISE,CALL, POST]
 
     def resetHand(self):
-#        self.hand.printHand()
-        
         self.handID = None
         self.position = None
         self.holeCard1 = None
@@ -47,7 +45,6 @@ class GameState:
         self.hand.clearHand()
 
         self.lastBet = 0
-
 
     def parseInput(self, input):
         numOptArgs = 0
@@ -113,14 +110,14 @@ class GameState:
             self.leftBank = int(packet[2])
             self.rightBank = int(packet[3])
             self.numLastActions = int(packet[4])
-            #parse actions  
+            #parse actions
             if self.numLastActions>0:
                 self.lastActions = packet[5]
             self.timebank = float(packet[-1])
 
             self.parseLastActions()
             self.hand.splitActionsList()
-            
+
             #update hand history now that final hand actions have been parsed
             self.matchHistory.updateHistory(self, self.hand)
 
@@ -129,7 +126,7 @@ class GameState:
             print "rightBank", self.rightBank, "\n"
 
 #            self.matchHistory.printHistory()
-        
+
 
     def parseLastActions(self):
         if self.lastActions:
@@ -137,10 +134,10 @@ class GameState:
             for i in range(self.numLastActions):
                 self.lastActions[i] = self.lastActions[i].split(":")
                 #add each action into structure, Hand
-            
+
                 c1 = None
                 c2 = None
-            
+
                 t = None
                 sla = self.lastActions[i][0]
                 if self.lastActions[i][0] == "RAISE":
@@ -180,13 +177,13 @@ class GameState:
                     a.amount = self.lastBet
                 self.hand.actions.append(a)
 #        print "lastActions", self.lastActions
-    
+
     def parseLegalActions(self):
         if self.legalActions:
             self.legalActions = self.legalActions.split(",")
             for i in range(self.numLegalActions):
                 self.legalActions[i] = self.legalActions[i].split(":")
- 
+
     def street(self):
         if self.numBoardCards == 0:
             return PREFLOP
