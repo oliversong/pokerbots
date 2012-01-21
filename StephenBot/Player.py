@@ -11,8 +11,13 @@ class Player:
         self.holeCard2 = None
         self.game = GameState()
         self.strategy = LagRuleBotStrategy()
-
-        self.socket = socket.create_connection(('localhost', port))
+        while True:
+            try:
+                self.socket = socket.create_connection(('oderby.mit.edu', port))
+            except socket.error, msg:
+                continue
+            else:
+                break
         self.fs = self.socket.makefile()
 
     def run(self):
