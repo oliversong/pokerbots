@@ -1,3 +1,4 @@
+from math import *
 from Action import *
 from Hand import *
 from GameState import *
@@ -83,17 +84,21 @@ class MatchHistory:
                 ##Append action into the match history table
                 if act.player in showPlayers and act.type != POST:
                     self.history[act.player][hand.splitActions.index(street)][action.type].append(act)
+                    #print "Action being historied", act.type, "Amt being Historied", act.amount, "Player being historied", act.player, "on street", 
+                    
                 
 
                 bets[players.index(act.player)] = max([bets[players.index(act.player)],act.amount])
 #                print "BETS AMOUNTS:",bets[players.index(act.player)]
 
-                if act.amount != 0:
+                if act.type in [BET, RAISE]:
                     prevBet = act.amount
             
             prevBet =  0.0000000000000001
 
             pot += sum(bets)
+
+            #self.printHistory()
 
     def printHistory(self):
         print "PRINTING HISTORY"
@@ -116,28 +121,42 @@ class MatchHistory:
 
     def averageStrength(self, player, street, actionType, amountType, minAmt, maxAmt):
         sum = 0
+        sum2 = 0
         numMatches = 0
-#        print self.history.keys()
+        std = 0
+        #print self.history.keys() ##Need to comment out
         if actionType not in self.history[player][street].keys():
             print "ACTION TYPE IN AVERAGE STRENGTH", actionType
-            return -1
+            return [-1,-1]
         actions = self.history[player][street][actionType]
         for a in actions:
             if amountType==POTAMOUNT:
                 if a.potAmount>=minAmt and a.potAmount<=maxAmt:
                     sum += a.handStrength
+                    sum2 += a.handStrength*a.handStrength
                     numMatches += 1
+                    mean = float(sum)/numMatches
+                    std = sqrt((float(sum2)/numMatches) - (mean*mean))
             elif amountType==BETAMOUNT:
                 if a.betAmount>=minAmt and a.betAmount<=maxAmt:
                     sum += a.handStrength
+                    sum2 += a.handStrength*a.handStrength
                     numMatches += 1
+                    mean = float(sum)/numMatches
+                    std = sqrt((float(sum2)/numMatches) - (mean*mean))
             else:
                 if a.amount>=minAmt and a.amount<=maxAmt:
                     sum += a.handStrength
                     numMatches += 1
+                    sum2 += a.handStrength*a.handStrength
+                    mean = float(sum)/numMatches
+                    std = sqrt((float(sum2)/numMatches) - (mean*mean))
+        
         if numMatches<3:
-            return -1
-        return float(sum)/numMatches
+            #print player, "Action", actionType, "Min Amt", minAmt,"Max Amt",maxAmt,"AmtType",amountType, "Street", street
+            #print [a.amount for a in actions]
+            return [-1,-1]
+        return [float(sum)/numMatches, std]
 
 
 

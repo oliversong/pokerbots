@@ -6,7 +6,7 @@ from GameState import *
 from LooseAgressiveStrategy import *
 from BasicEVStrategy import *
 from LagRuleBotStrategy import *
-from ChuckTestaStrat import *
+from ChuckTestaStrat2 import *
 
 
 """
@@ -27,10 +27,7 @@ if __name__ == "__main__":
 
     bot = Bot()
     game = GameState()
-    lag = LooseAgressiveStrategy()
-    bev = BasicEVStrategy()
-    lagRule = LagRuleBotStrategy()
-    chuckTesta = ChuckTestaStrat()
+    chuckTesta = ChuckTestaStrat2()
     
     while 1:
         # block until the engine sends us a packet
