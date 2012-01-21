@@ -13,7 +13,7 @@ class Player:
         self.strategy = LagRuleBotStrategy()
 
         self.socket = socket.create_connection(('localhost', port))
-        self.fs = socket.makefile()
+        self.fs = self.socket.makefile()
 
     def run(self):
         while 1:
