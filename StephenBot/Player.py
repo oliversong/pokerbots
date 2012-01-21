@@ -35,9 +35,6 @@ class Player:
             # When sending responses, you need to have a newline character (\n) or
             # carriage return (\r), or else your bot will hang!
 
-            if self.game.state == NEWHAND:
-                self.setHoleCards(Card(self.game.holeCard1), Card(self.game.holeCard2))
-
             if self.game.state == GETACTION:
                 self.strategy.evaluateOdds(self)
                 move = self.strategy.getMove(self)
@@ -45,13 +42,6 @@ class Player:
                 self.socket.send(move+'\n')
         # if we get here, the server disconnected us, so clean up the socket
         self.socket.close()
-
-    def isValidMove(self, move):
-        return false
-
-    def setHoleCards(self, c1, c2):
-        self.holeCard1 = c1
-        self.holeCard2 = c2
 
 if __name__ == "__main__":
     # port number specified by the engine to connect to.

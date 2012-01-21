@@ -77,8 +77,8 @@ class GameState:
 
             self.handID = int(packet[1])
             self.position = int(packet[2])
-            self.holeCard1 = packet[3]      #Card(packet[3])
-            self.holeCard2 = packet[4]      #Card(packet[4])
+            self.holeCard1 = Card(packet[3])
+            self.holeCard2 = Card(packet[4])
             self.bankroll = int(packet[5])
             self.leftBank = int(packet[6])
             self.rightBank = int(packet[7])

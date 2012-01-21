@@ -15,10 +15,10 @@ class Strategy:
         raise NotImplementedError("getMove not implemented in subclass")
 
     def evaluatePocketCards(self, b):
-        self.handRank = pocketlookup.evalPocket(b.holeCard1, b.holeCard2)
+        self.handRank = pocketlookup.evalPocket(b.game.holeCard1, b.game.holeCard2)
 
     def evalHand(self, b, board):
-        hand = [b.holeCard1.stringValue, b.holeCard2.stringValue]
+        hand = [b.game.holeCard1.stringValue, b.game.holeCard2.stringValue]
 
         ev = self.pokereval.poker_eval(game="holdem",
                                        pockets = [hand,[255,255],[255,255]],

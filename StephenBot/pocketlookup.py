@@ -7,7 +7,7 @@ def evalPocket(card1, card2):
     v2 = card2.value - 2
 
     # Are hole cards suited?
-    suited = holeCard2.suit == holeCard1.suit
+    suited = card2.suit == card1.suit
     index1 = min(v1,v2)
     index2 = max(v1,v2) - index1
 
