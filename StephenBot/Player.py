@@ -13,7 +13,7 @@ class Player:
         self.strategy = LagRuleBotStrategy()
         while True:
             try:
-                self.socket = socket.create_connection(('oderby.mit.edu', port))
+                self.socket = socket.create_connection(('localhost', port))
             except socket.error, msg:
                 continue
             else:
