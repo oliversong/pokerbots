@@ -5,28 +5,24 @@ class BasicEVStrategy(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
-    def evaluateOdds(self, b):
-        self.evaluatePocketCards(b)
-        self.evalHand(b, b.game.boardCards)
-
-    def getMove(self, b):
+    def getMove(self, game, archive):
         raiseAmt = 10
 
         move = "CHECK"
 
 
-        ev = self.evalHand(b, b.game.boardCards)
+        ev = self.evalHand(b, game.boardCards)
         if ev>300:
-            if "BET" in [la[0] for la in b.game.legalActions]:
+            if "BET" in [la[0] for la in game.legalActions]:
                 return la[0]+":"+la[1]
-            elif "RAISE" in [la[0] for la in b.game.legalActions]:
+            elif "RAISE" in [la[0] for la in game.legalActions]:
                 return la[0]+":"+la[1]
 
 
 
 
 
-##        if move in [la[0] for la in b.game.legalActions] or move in ["BET","RAISE"]
+##        if move in [la[0] for la in game.legalActions] or move in ["BET","RAISE"]
 ##            if move == "RAISE" or "BET":
 ##                return move+str(raiseAmt)
 ##            else:

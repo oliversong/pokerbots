@@ -1,6 +1,5 @@
 from Card import *
 from Enums import *
-from MatchHistory import *
 from Action import *
 from Hand import *
 
@@ -19,7 +18,6 @@ class GameState:
         self.bigB = None
         self.smallB = None
         self.timebank = None
-        self.matchHistory = MatchHistory()
 
         self.hand = Hand()
         #self.trackedHands = [CHECK,BET,RAISE,CALL, POST]
@@ -61,16 +59,6 @@ class GameState:
             self.bigB = int(packet[6])
             self.smallB = int(packet[7])
             self.timebank = float(packet[8])
-
-            self.matchHistory.history[self.leftOpp] = [{},{},{},{}]
-            for a in range(4):#[BET,CALL,CHECK,RAISE]:
-                for s in range(4):
-                    self.matchHistory.history[self.leftOpp][s][a] = []
-            self.matchHistory.history[self.rightOpp] = [{},{},{},{}]
-            for a in range(4):#[BET,CALL,CHECK,RAISE]:
-                for s in range(4):
-                    self.matchHistory.history[self.rightOpp][s][a] = []
-
 
         elif self.state == NEWHAND:
             self.resetHand()
@@ -118,15 +106,9 @@ class GameState:
             self.parseLastActions()
             self.hand.splitActionsList()
 
-            #update hand history now that final hand actions have been parsed
-            self.matchHistory.updateHistory(self, self.hand)
-
             print "bankroll", self.bankroll
             print "leftbank", self.leftBank
             print "rightBank", self.rightBank, "\n"
-
-#            self.matchHistory.printHistory()
-
 
     def parseLastActions(self):
         if self.lastActions:

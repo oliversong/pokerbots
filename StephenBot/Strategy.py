@@ -8,22 +8,24 @@ class Strategy:
         self.pokereval = PokerEval()
         self.handRank = None
 
-    def evaluateOdds(self, b):
-        raise NotImplementedError("evaluateOdds not implemented in subclass")
+    def evaluateOdds(self, game):
+        self.evaluatePocketCards(game)
+        self.evalHand(game)
+        #raise NotImplementedError("evaluateOdds not implemented in subclass")
 
-    def getMove(self, b):
+    def getMove(self, game, archive):
         raise NotImplementedError("getMove not implemented in subclass")
 
-    def evaluatePocketCards(self, b):
-        self.handRank = pocketlookup.evalPocket(b.game.holeCard1, b.game.holeCard2)
+    def evaluatePocketCards(self, game):
+        self.handRank = pocketlookup.evalPocket(game.holeCard1, game.holeCard2)
 
-    def evalHand(self, b, board):
-        hand = [b.game.holeCard1.stringValue, b.game.holeCard2.stringValue]
+    def evalHand(self, game):
+        hand = [game.holeCard1.stringValue, game.holeCard2.stringValue]
 
         ev = self.pokereval.poker_eval(game="holdem",
                                        pockets = [hand,[255,255],[255,255]],
                                        dead=[],
-                                       board=board,
+                                       board=game.boardCards,
                                        iterations = ITERATIONS)['eval'][0]['ev']
 #        print "HAND", hand, "BOARD", board, "EV", ev
 

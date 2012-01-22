@@ -4,12 +4,14 @@ import sys
 from Enums import *
 from GameState import *
 from LagRuleBotStrategy import *
+from MatchHistory import *
 
 class Player:
     def __init__(self, port):
         self.holeCard1 = None
         self.holeCard2 = None
         self.game = GameState()
+        self.archive = MatchHistory()
         self.strategy = LagRuleBotStrategy()
         while True:
             try:
@@ -40,11 +42,16 @@ class Player:
             # When sending responses, you need to have a newline character (\n) or
             # carriage return (\r), or else your bot will hang!
 
-            if self.game.state == GETACTION:
-                self.strategy.evaluateOdds(self)
-                move = self.strategy.getMove(self)
+            if self.game.state == NEWGAME:
+                self.archive.reset(self.game)
+            elif self.game.state == GETACTION:
+                self.strategy.evaluateOdds(self.game)
+                move = self.strategy.getMove(self.game, self.archive)
                 print "SENDING A ", move, "ACTION TO ENGINE\n"
                 self.socket.send(move+'\n')
+            elif self.game.state == HANDOVER:
+                #update hand history now that final hand actions have been parsed
+                self.archive.update(self.game)
         # if we get here, the server disconnected us, so clean up the socket
         self.socket.close()
 
