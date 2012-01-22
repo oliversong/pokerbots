@@ -13,7 +13,7 @@ class MatchHistory:
         self.pokereval = PokerEval()
         self.showCards = []
 
-    def reset(game):
+    def reset(self, game):
         self.history[game.leftOpp] = [{},{},{},{}]
         self.history[game.rightOpp] = [{},{},{},{}]
         for a in range(4):#[BET,CALL,CHECK,RAISE]:

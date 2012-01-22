@@ -11,7 +11,7 @@ class BasicEVStrategy(Strategy):
         move = "CHECK"
 
 
-        ev = self.evalHand(b, game.boardCards)
+        ev = self.evalHand(game)
         if ev>300:
             if "BET" in [la[0] for la in game.legalActions]:
                 return la[0]+":"+la[1]

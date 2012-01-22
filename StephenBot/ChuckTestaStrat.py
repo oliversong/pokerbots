@@ -16,17 +16,17 @@ class ChuckTestaStrat(Strategy):
 #        if game.street()==PREFLOP:
         if len(game.hand.recentOppMove())==0: #dealer
             if ev>400:
-                move = self.pushMin(b,3)
+                move = self.pushMin(game,3)
                 if move.split(":")[0] != "CHECK":
                     if move.split(":")[1] > 50:
                         move = "CALL"
             elif ev>250:
-                move = self.pushMin(b,1)
+                move = self.pushMin(game,1)
                 if move.split(":")[0] != "CHECK":
                     if move.split(":")[1] > 50:
                         move = "CALL"
             else:
-                return self.maxRisk(b,2)
+                return self.maxRisk(game,2)
             #move = "CALL"
         elif len(game.hand.recentOppMove())==1: #small blind
             rightOppEv = archive.averageStrength(game.rightOpp,
@@ -37,24 +37,24 @@ class ChuckTestaStrat(Strategy):
                                                               game.lastBet+10)
             if rightOppEv == -1:
                 if ev>400:
-                    move = self.pushMin(b,3)
+                    move = self.pushMin(game,3)
                     if move.split(":")[0] != "CHECK":
                         if move.split(":")[1] > 50:
                             move = "CALL"
                 elif ev>250:
-                    move = self.pushMin(b,1)
+                    move = self.pushMin(game,1)
                     if move.split(":")[0] != "CHECK":
                         if move.split(":")[1] > 50:
                             move = "CALL"
                 else:
-                    return self.maxRisk(b,2)
-#                return self.maxRisk(b,4)
+                    return self.maxRisk(game,2)
+#                return self.maxRisk(game,4)
             elif ev > rightOppEv:
-                move = self.pushMin(b,3)
+                move = self.pushMin(game,3)
                 if move.split(":")[0] != "CHECK":
                     if move.split(":")[1] > 50:
                         move = "CALL"
-#        move = "CALL"#self.pushMin(b, 1)#"CALL"
+#        move = "CALL"#self.pushMin(game, 1)#"CALL"
             else:
                 move = "CHECK"
         elif len(game.hand.recentOppMove())==2: #big blind
@@ -72,26 +72,26 @@ class ChuckTestaStrat(Strategy):
             print "RIGHT_EV:", rightOppEv, "LEFT_EV:", leftOppEv, "MY_EV:",ev
             if rightOppEv == -1 or leftOppEv==-1:
                 if ev>400:
-                    move = self.pushMin(b,3)
+                    move = self.pushMin(game,3)
                     if move.split(":")[0] != "CHECK":
                         if move.split(":")[1] > 50:
                             move = "CALL"
                 elif ev>250:
-                    move = self.pushMin(b,1)
+                    move = self.pushMin(game,1)
                     if move.split(":")[0] != "CHECK":
                         if move.split(":")[1] > 50:
                             move = "CALL"
                 else:
-                    return self.maxRisk(b,2)
-#               return self.maxRisk(b,4)
+                    return self.maxRisk(game,2)
+#               return self.maxRisk(game,4)
             elif ev <= rightOppEv or ev <= leftOppEv:
                 move = "CHECK"
             else:
-                move = self.pushMin(b,3)
+                move = self.pushMin(game,3)
                 if move.split(":")[0] != "CHECK":
                     if move.split(":")[1] > 50:
                         move = "CALL"
-#            move = "CALL"#self.pushMin(b, 5)#"CALL"
+#            move = "CALL"#self.pushMin(game, 5)#"CALL"
 
         if move not in [la[0] for la in game.legalActions]:
             move = "CHECK"
