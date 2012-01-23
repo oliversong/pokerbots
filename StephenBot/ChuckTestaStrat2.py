@@ -10,7 +10,7 @@ class ChuckTestaStrat2(Strategy):
         ev = self.evalHand(game)
         OppEvs = self.getOppEvs(game, archive)
 
-        pos = game.state.position
+        pos = game.position
         move = "CHECK"
 
 #        if game.street()==PREFLOP:

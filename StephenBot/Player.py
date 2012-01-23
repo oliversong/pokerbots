@@ -43,7 +43,7 @@ class Player:
             # illegal action.
             # When sending responses, you need to have a newline character (\n) or
             # carriage return (\r), or else your bot will hang!
-            if game.timebank<0:
+            if self.game.timebank<0:
                 print "OUT OF TIME. current time: ", self.game.timebank," at hand:", self.game.handID
 
             if self.game.state == NEWGAME:
