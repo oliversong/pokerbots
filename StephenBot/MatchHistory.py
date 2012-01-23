@@ -136,7 +136,7 @@ class MatchHistory:
         #print self.history.keys() ##Need to comment out
         if actionType not in self.history[player][street].keys():
             print "ACTION TYPE IN AVERAGE STRENGTH", actionType
-            return [-1,-1]
+            return [-1,200]
         actions = self.history[player][street][actionType]
         for a in actions:
             if amountType==POTAMOUNT:
@@ -182,6 +182,6 @@ class MatchHistory:
                 mean = float(sum)/numMatches
                 std = sqrt((float(sum2)/numMatches) - (mean*mean))
 
-            return [-1,-1]
+            return [-1,200]
 
         return [float(sum)/numMatches, std]
