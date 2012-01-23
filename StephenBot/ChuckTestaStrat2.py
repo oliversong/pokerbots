@@ -14,7 +14,7 @@ class ChuckTestaStrat2(Strategy):
 
         ev = self.evalHand(b, b.state.boardCards)
         OppEvs = self.getOppEvs(b)
-        
+
         pos = b.state.position
         move = "CHECK"
 
@@ -50,19 +50,19 @@ class ChuckTestaStrat2(Strategy):
             OppEvs[b.state.rightOpp] = [-1,-1]
 #            print ("No Previous Move on right")
         elif OM[b.state.rightOpp][-1][1].type == FOLD:
-            OppEvs[b.state.rightOpp] = [0,-1]            
+            OppEvs[b.state.rightOpp] = [0,-1]
         elif OM[b.state.rightOpp][-1][1].type == CHECK:
             OppEvs[b.state.rightOpp] = b.state.matchHistory.averageStrength(b.state.rightOpp,
                                                                   OM[b.state.rightOpp][-1][0],
                                                                   OM[b.state.rightOpp][-1][1].type,
                                                                   ABSAMOUNT,
                                                                   OM[b.state.rightOpp][-1][1].amount)
-        elif OM[b.state.rightOpp][-1][1].type in [BET, RAISE]:    
+        elif OM[b.state.rightOpp][-1][1].type in [BET, RAISE]:
             absamt = b.state.matchHistory.averageStrength(b.state.rightOpp,
                                                                   OM[b.state.rightOpp][-1][0],
                                                                   OM[b.state.rightOpp][-1][1].type,
                                                                   ABSAMOUNT,
-                                                                  OM[b.state.rightOpp][-1][1].amount)   
+                                                                  OM[b.state.rightOpp][-1][1].amount)
             betamt = b.state.matchHistory.averageStrength(b.state.rightOpp,
                                                                   OM[b.state.rightOpp][-1][0],
                                                                   OM[b.state.rightOpp][-1][1].type,
@@ -89,14 +89,14 @@ class ChuckTestaStrat2(Strategy):
             OppEvs[b.state.leftOpp] = [-1,-1]
 #            print "No previous move on left"
         elif OM[b.state.leftOpp][-1][1].type == FOLD:
-            OppEvs[b.state.leftOpp] = [0,-1]            
+            OppEvs[b.state.leftOpp] = [0,-1]
         elif OM[b.state.leftOpp][-1][1].type == CHECK:
             OppEvs[b.state.leftOpp] = b.state.matchHistory.averageStrength(b.state.leftOpp,
                                                                   OM[b.state.leftOpp][-1][0],
                                                                   OM[b.state.leftOpp][-1][1].type,
                                                                   ABSAMOUNT,
                                                                   OM[b.state.leftOpp][-1][1].amount)
-        elif OM[b.state.leftOpp][-1][1].type in [BET, RAISE]:    
+        elif OM[b.state.leftOpp][-1][1].type in [BET, RAISE]:
             absamt = b.state.matchHistory.averageStrength(b.state.leftOpp,
                                                                   OM[b.state.leftOpp][-1][0],
                                                                   OM[b.state.leftOpp][-1][1].type,
@@ -119,7 +119,7 @@ class ChuckTestaStrat2(Strategy):
                                                                   OM[b.state.leftOpp][-1][1].amount)
 #        else:
 #            print "getOppEvs is broken", OM[b.state.leftOpp][-1][1].type
-   
+
 
 
         return OppEvs
@@ -131,7 +131,7 @@ class ChuckTestaStrat2(Strategy):
         st = 0 #Are there 3 DEAL actions at the beginning of the game?
                 #I want st = 0 during the PREFLOP
         prevbet = 2
-        
+
         for acts in b.state.hand.actions:
             if acts.type == DEAL:
                 st+=1
@@ -146,40 +146,11 @@ class ChuckTestaStrat2(Strategy):
 #                else:
 #                    print "ERRROR IN OPPMOVES"
                 if acts.player == b.state.rightOpp:
-                    OM[b.state.rightOpp] += [(st,acts,betperc)] 
+                    OM[b.state.rightOpp] += [(st,acts,betperc)]
                 if acts.player == b.state.leftOpp:
-                    OM[b.state.leftOpp] += [(st,acts,betperc)] 
+                    OM[b.state.leftOpp] += [(st,acts,betperc)]
 
         return OM
-
-
-    def get_allIn(self,b):
-        st = -3
-        bets = [0,0,0,0]
-        prevBet = 0
-        allinbet = 200
-        for acts in b.state.hand.actions:
-            if acts.type == DEAL:
-                st+=1
-                prevBet = 0
-            elif acts.player != b.state.rightOpp and acts.player!= b.state.leftOpp and acts.type in [CALL, BET, RAISE, POST]: #Want to say acts.player == b.state.myName what is the field name for our name?
-                if acts.type == CALL:
-                    bets[st] = prevBet
-                elif acts.type == POST:
-                    bets[0] = acts.amount
-                else:
-                    bets[st] = acts.amount
-                    
-            if acts.type in [BET, RAISE, POST]:
-                preBet = acts.amount
-
-        if st>0:
-            for i in range(st-1):
-                allinbet -= bets[i]
-
-        return allinbet
-            
-            
 
     def blindEVplay(self, b, ev):
         move = "CHECK"
@@ -220,7 +191,7 @@ class ChuckTestaStrat2(Strategy):
         else:
             move = "CALL"
 
-	
+
 #        print "PUSH MIN MOVE:", move
         return move #CHECK LOGIC FOR THIS FUCNTION, SHOULD NEVER GET HERE
 
@@ -231,7 +202,3 @@ class ChuckTestaStrat2(Strategy):
         if b.state.lastBet <= m:
             return "CALL"
         return "FOLD"
-
-        
-
-        

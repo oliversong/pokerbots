@@ -14,7 +14,15 @@ class MatchHistory:
         self.pokereval = PokerEval()
         self.showCards = []
 
-    def updateHistory(self, game, hand):
+    def reset(self, game):
+        self.history[game.leftOpp] = [{},{},{},{}]
+        self.history[game.rightOpp] = [{},{},{},{}]
+        for a in range(4):#[BET,CALL,CHECK,RAISE]:
+            for s in range(4):
+                self.history[game.leftOpp][s][a] = []
+                self.history[game.rightOpp][s][a] = []
+
+    def update(self, game):
 
         pot = 0
         prevBet = game.bigB
@@ -23,8 +31,8 @@ class MatchHistory:
 
         showPlayers = []
         self.showCards = []
-        
-        for action in hand.actions:
+
+        for action in game.hand.actions:
             if action.type == SHOW:
                 showPlayers += [action.player]
                 self.showCards += [[action.showCard1, action.showCard2]]
@@ -34,12 +42,12 @@ class MatchHistory:
         if len(showPlayers) == 0:
             return
 
-        
 
-        for street in hand.splitActions:  #Preflop, flop, turn, river
+
+        for street in game.hand.splitActions:  #Preflop, flop, turn, river
             bets = [0,0,0]   #bets for current street for each player
- 
-            s = hand.splitActions.index(street)
+
+            s = game.hand.splitActions.index(street)
             b = [255,255,255,255,255]
             if s==1: #FLOP
                 b = game.boardCards
@@ -51,7 +59,7 @@ class MatchHistory:
             elif s==3: #RIVER
                 b = game.boardCards
 
-  
+
             for i in range(len(showPlayers)):
                 playerHand = self.showCards[i]
 
@@ -59,7 +67,7 @@ class MatchHistory:
                                                pockets =[playerHand,[255,255],[255,255]],
                                                dead = [],
                                                board = b,
-                                               iterations = ITERATIONS)                                               
+                                               iterations = ITERATIONS)
                 showEV[i] = ev['eval'][0]['ev']
 
             for action in street:
@@ -69,7 +77,7 @@ class MatchHistory:
 
                 act.player = action.player
                 act.amount = action.amount
-               
+
                 if act.player in showPlayers and act.type != POST:
                     act.potAmount = act.amount/(pot+sum(bets))
                     act.betAmount = act.amount/float(prevBet)
@@ -83,17 +91,15 @@ class MatchHistory:
 
                 ##Append action into the match history table
                 if act.player in showPlayers and act.type != POST:
-                    self.history[act.player][hand.splitActions.index(street)][action.type].append(act)
-                    #print "Action being historied", act.type, "Amt being Historied", act.amount, "Player being historied", act.player, "on street", 
-                    
-                
+                    self.history[act.player][game.hand.splitActions.index(street)][action.type].append(act)
+                    #print "Action being historied", act.type, "Amt being Historied", act.amount, "Player being historied", act.player, "on street",
 
                 bets[players.index(act.player)] = max([bets[players.index(act.player)],act.amount])
 #                print "BETS AMOUNTS:",bets[players.index(act.player)]
 
                 if act.type in [BET, RAISE]:
                     prevBet = act.amount
-            
+
             prevBet =  0.0000000000000001
 
             pot += sum(bets)
@@ -110,7 +116,7 @@ class MatchHistory:
                 for a in self.history[p][s].keys():
                     print "        ACTION", a
                     for i in range(len(self.history[p][s][a])):
-                        print "             [", 
+                        print "             [",
                         print "TYPE:", self.history[p][s][a][i].type,",",
                         print "PLAYER:", self.history[p][s][a][i].player,",",
                         print "AMOUNT:", self.history[p][s][a][i].amount,",",
@@ -179,7 +185,3 @@ class MatchHistory:
             return [-1,-1]
 
         return [float(sum)/numMatches, std]
-
-
-
-

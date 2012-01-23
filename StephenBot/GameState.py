@@ -1,6 +1,5 @@
 from Card import *
 from Enums import *
-from MatchHistory import *
 from Action import *
 from Hand import *
 
@@ -19,14 +18,11 @@ class GameState:
         self.bigB = None
         self.smallB = None
         self.timebank = None
-        self.matchHistory = MatchHistory()
-       
+
         self.hand = Hand()
-        self.trackedHands = [CHECK,BET,RAISE,CALL, POST]
+        #self.trackedHands = [CHECK,BET,RAISE,CALL, POST]
 
     def resetHand(self):
-#        self.hand.printHand()
-        
         self.handID = None
         self.position = None
         self.holeCard1 = None
@@ -48,7 +44,6 @@ class GameState:
 
         self.lastBet = 0
 
-
     def parseInput(self, input):
         numOptArgs = 0
         packet = input.split(" ")
@@ -65,23 +60,13 @@ class GameState:
             self.smallB = int(packet[7])
             self.timebank = float(packet[8])
 
-            self.matchHistory.history[self.leftOpp] = [{},{},{},{}]
-            for a in range(4):#[BET,CALL,CHECK,RAISE]:
-                for s in range(4):
-                    self.matchHistory.history[self.leftOpp][s][a] = []
-            self.matchHistory.history[self.rightOpp] = [{},{},{},{}]
-            for a in range(4):#[BET,CALL,CHECK,RAISE]:
-                for s in range(4):
-                    self.matchHistory.history[self.rightOpp][s][a] = []
-
-
         elif self.state == NEWHAND:
             self.resetHand()
 
             self.handID = int(packet[1])
             self.position = int(packet[2])
-            self.holeCard1 = packet[3]      #Card(packet[3])
-            self.holeCard2 = packet[4]      #Card(packet[4])
+            self.holeCard1 = Card(packet[3])
+            self.holeCard2 = Card(packet[4])
             self.bankroll = int(packet[5])
             self.leftBank = int(packet[6])
             self.rightBank = int(packet[7])
@@ -113,24 +98,20 @@ class GameState:
             self.leftBank = int(packet[2])
             self.rightBank = int(packet[3])
             self.numLastActions = int(packet[4])
-            #parse actions  
+            #parse actions
             if self.numLastActions>0:
                 self.lastActions = packet[5]
             self.timebank = float(packet[-1])
 
             self.parseLastActions()
             self.hand.splitActionsList()
-            
-            #update hand history now that final hand actions have been parsed
-            self.matchHistory.updateHistory(self, self.hand)
 
 ##            print "bankroll", self.bankroll
 ##            print "leftbank", self.leftBank
 ##            print "rightBank", self.rightBank, "\n"
-            
+
 #            if self.handID == self.numHands: #end of the game
 #                self.matchHistory.printHistory()
-        
 
     def parseLastActions(self):
         if self.lastActions:
@@ -138,28 +119,28 @@ class GameState:
             for i in range(self.numLastActions):
                 self.lastActions[i] = self.lastActions[i].split(":")
                 #add each action into structure, Hand
-            
+
                 c1 = None
                 c2 = None
-            
+
                 t = None
                 sla = self.lastActions[i][0]
-                if self.lastActions[i][0] == "RAISE":
+                if sla == "RAISE":
                     t = RAISE
                     self.lastBet = float(self.lastActions[i][2])
-                elif self.lastActions[i][0] == "CALL":
+                elif sla == "CALL":
                     t = CALL
-                elif self.lastActions[i][0] == "CHECK":
+                elif sla == "CHECK":
                     t = CHECK
-                elif self.lastActions[i][0] == "BET":
+                elif sla == "BET":
                     t = BET
                     self.lastBet = float(self.lastActions[i][2])
-                elif self.lastActions[i][0] == "FOLD":
+                elif sla == "FOLD":
                     t = FOLD
-                elif self.lastActions[i][0] == "DEAL":
+                elif sla == "DEAL":
                     t = DEAL
                     self.lastBet = 0
-                elif self.lastActions[i][0] == "POST":
+                elif sla == "POST":
                     t = POST
                     self.lastBet = float(self.lastActions[i][2])
                 elif sla == "REFUND":
@@ -173,21 +154,16 @@ class GameState:
                 elif sla == "WIN":
                     t = WIN
 
-
-                a = Action(t, self.lastActions[i][1], c1, c2)
-                if t in [RAISE,BET,POST]:            #self.lastActions[i][0] in ["RAISE","BET"]:#[RAISE, BET]:
-                    a.amount = float(self.lastActions[i][2])
-                elif t == CALL:
-                    a.amount = self.lastBet
+                a = Action(t, self.lastActions[i][1], c1, c2, amt= self.lastBet)
                 self.hand.actions.append(a)
 #        print "lastActions", self.lastActions
-    
+
     def parseLegalActions(self):
         if self.legalActions:
             self.legalActions = self.legalActions.split(",")
             for i in range(self.numLegalActions):
                 self.legalActions[i] = self.legalActions[i].split(":")
- 
+
     def street(self):
         if self.numBoardCards == 0:
             return PREFLOP

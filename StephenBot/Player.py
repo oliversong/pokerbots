@@ -1,72 +1,73 @@
 import socket
 import sys
 
-from Bot import *
+from Enums import *
 from GameState import *
-from LooseAgressiveStrategy import *
-from BasicEVStrategy import *
 from LagRuleBotStrategy import *
-from ChuckTestaStrat import *
+from MatchHistory import *
+from PlotBankrolls import *
 
+class Player:
+    def __init__(self, port):
+        self.holeCard1 = None
+        self.holeCard2 = None
+        self.game = GameState()
+        self.archive = MatchHistory()
+        self.strategy = LagRuleBotStrategy()
+        self.plot = PlotBankrolls()
+        while True:
+            try:
+                self.socket = socket.create_connection(('localhost', port))
+            except socket.error, msg:
+                continue
+            else:
+                break
+        self.fs = self.socket.makefile()
 
-"""
-Simple example pokerbot, written in python. This is an example of a bare bones,
-dumb pokerbot - it only sets up the socket necessary to connect with the engine
-and then always returns the same action. It is meant as an example of how a
-pokerbot should communicate with the engine.
-"""
+    def run(self):
+        while 1:
+            # block until the engine sends us a packet
+            data = self.fs.readline()
+            # if we receive a null return, then the connection is dead
+            if not data:
+                print "Gameover, engine disconnected"
+                break
+            # Here is where you should implement code to parse the packets from
+            # the engine and act on it.
+            print "Received", data
+            self.game.parseInput(data)
+
+            # When appropriate, reply to the engine with a legal action.
+            # The engine will ignore all spurious packets you send.
+            # The engine will also check/fold for you if you return an
+            # illegal action.
+            # When sending responses, you need to have a newline character (\n) or
+            # carriage return (\r), or else your bot will hang!
+            if game.timebank<0:
+                print "OUT OF TIME. current time: ", self.game.timebank," at hand:", self.game.handID
+
+            if self.game.state == NEWGAME:
+                self.archive.reset(self.game)
+            elif self.game.state == GETACTION:
+                self.strategy.evaluateOdds(self.game)
+                move = self.strategy.getMove(self.game, self.archive)
+                print "SENDING A ", move, "ACTION TO ENGINE\n"
+                self.socket.send(move+'\n')
+            elif self.game.state == HANDOVER:
+                #update hand history now that final hand actions have been parsed
+                self.archive.update(self.game)
+                self.plot.addMoreBanks(self.game.bankroll, self.game.leftBank, self.game.rightBank)
+                if self.game.handID == self.game.numHands:
+                    self.plot.leftOpp = self.game.leftOpp
+                    self.plot.rightOpp = self.game.rightOpp
+                    print "Final time: ", self.game.timebank
+                    print "GAMEOVER PLOTTING"
+                    self.plot.plotBanks()
+        # if we get here, the server disconnected us, so clean up the socket
+        self.socket.close()
 
 if __name__ == "__main__":
     # port number specified by the engine to connect to.
     port = int(sys.argv[1])
-    # initialize a socket
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    # connect the socket to the engine
-    s.connect(('localhost', port))
-    fs = s.makefile()
-
-    bot = Bot()
-    game = GameState()
-    lag = LooseAgressiveStrategy()
-    bev = BasicEVStrategy()
-    lagRule = LagRuleBotStrategy()
-    chuckTesta = ChuckTestaStrat()
-    
-    while 1:
-        # block until the engine sends us a packet
-        #data = s.recv(4096)
-        data = fs.readline()
-        # if we receive a null return, then the connection is dead
-        if not data:
-            print "Gameover, engine disconnected"
-            break
-        # Here is where you should implement code to parse the packets from
-        # the engine and act on it.
-#        print "THIS IS A NEW PACKET"
-##        print data
-        game.parseInput(data)
-        bot.updateState(game)
-
-        # When appropriate, reply to the engine with a legal action.
-        # The engine will ignore all spurious packets you send.
-        # The engine will also check/fold for you if you return an
-        # illegal action.
-        # When sending responses, you need to have a newline character (\n) or
-        # carriage return (\r), or else your bot will hang!
-
-        if game.timebank<0:
-            print "OUT OF TIME"
-
-        if game.state=="NEWHAND":
-            bot.setHoleCards(Card(game.holeCard1), Card(game.holeCard2))
-            bot.strategy = lagRule
-
-        if game.state == "GETACTION":
-##            s.send("RAISE:15\n")
-            bot.evaluateOdds()
-            move = bot.makeMove()
-##            print "SENDING A ", move, "ACTION TO ENGINE\n"
-            s.send(move+'\n')
-##            s.send("CHECK\n")
-    # if we get here, the server disconnected us, so clean up the socket
-    s.close()
+    p = Player(port)
+    p.run()
