@@ -14,7 +14,7 @@ class ChuckTestaStrat(Strategy):
         move = "CHECK"
 
 #        if game.street()==PREFLOP:
-        if len(game.hand.recentOppMove())==0: #dealer
+        if len(game.hand.recentOppMove())==0: #first to act
             if ev>400:
                 move = self.pushMin(game,3)
                 if move.split(":")[0] != "CHECK":
@@ -28,13 +28,13 @@ class ChuckTestaStrat(Strategy):
             else:
                 return self.maxRisk(game,2)
             #move = "CALL"
-        elif len(game.hand.recentOppMove())==1: #small blind
+        elif len(game.hand.recentOppMove())==1: #second to act
             rightOppEv = archive.averageStrength(game.rightOpp,
-                                                              0,
-                                                              game.hand.actions[-1].type,
-                                                              ABSAMOUNT,
-                                                              game.lastBet-10,
-                                                              game.lastBet+10)
+                                                 0,
+                                                 game.hand.actions[-1].type,
+                                                 ABSAMOUNT,
+                                                 game.lastBet-10,
+                                                 game.lastBet+10)
             if rightOppEv == -1:
                 if ev>400:
                     move = self.pushMin(game,3)
@@ -57,17 +57,18 @@ class ChuckTestaStrat(Strategy):
 #        move = "CALL"#self.pushMin(game, 1)#"CALL"
             else:
                 move = "CHECK"
-        elif len(game.hand.recentOppMove())==2: #big blind
+        else: #any other occurence
+            rightAct, leftAct = game.hand.recentOppMove()
             rightOppEv = archive.averageStrength(game.rightOpp, 0,
-                                                 game.hand.actions[-1].type,
+                                                 rightAct.type,
                                                  ABSAMOUNT,
-                                                 game.hand.recentOppMove()[0].amount-10,
-                                                 game.hand.recentOppMove()[0].amount+10)
+                                                 rightAct.amount-10,
+                                                 rightAct.amount+10)
             leftOppEv = archive.averageStrength(game.leftOpp, 0,
-                                                 game.hand.actions[-2].type,
-                                                 ABSAMOUNT,
-                                                 game.hand.recentOppMove()[1].amount-10,
-                                                 game.hand.recentOppMove()[1].amount+10)
+                                                leftAct.type,
+                                                ABSAMOUNT,
+                                                leftAct.amount-10,
+                                                leftAct.amount+10)
 
             print "RIGHT_EV:", rightOppEv, "LEFT_EV:", leftOppEv, "MY_EV:",ev
             if rightOppEv == -1 or leftOppEv==-1:

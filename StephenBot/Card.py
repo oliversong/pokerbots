@@ -18,7 +18,7 @@ class Card:
         elif v=='A' or v=='a':   #Ace
             return 14
         else:
-            return 0    #default send nothing
+            return -1    #default send nothing
 
     def suitValue(self, s):
         if s=='c' or s=='C':
@@ -31,4 +31,3 @@ class Card:
             return 3
         else:
             return -1
-

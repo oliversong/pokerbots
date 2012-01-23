@@ -122,22 +122,22 @@ class GameState:
 
                 t = None
                 sla = self.lastActions[i][0]
-                if self.lastActions[i][0] == "RAISE":
+                if sla == "RAISE":
                     t = RAISE
                     self.lastBet = float(self.lastActions[i][2])
-                elif self.lastActions[i][0] == "CALL":
+                elif sla == "CALL":
                     t = CALL
-                elif self.lastActions[i][0] == "CHECK":
+                elif sla == "CHECK":
                     t = CHECK
-                elif self.lastActions[i][0] == "BET":
+                elif sla == "BET":
                     t = BET
                     self.lastBet = float(self.lastActions[i][2])
-                elif self.lastActions[i][0] == "FOLD":
+                elif sla == "FOLD":
                     t = FOLD
-                elif self.lastActions[i][0] == "DEAL":
+                elif sla == "DEAL":
                     t = DEAL
                     self.lastBet = 0
-                elif self.lastActions[i][0] == "POST":
+                elif sla == "POST":
                     t = POST
                     self.lastBet = float(self.lastActions[i][2])
                 elif sla == "REFUND":
@@ -151,12 +151,7 @@ class GameState:
                 elif sla == "WIN":
                     t = WIN
 
-
-                a = Action(t, self.lastActions[i][1], c1, c2)
-                if t in [RAISE,BET,POST]:            #self.lastActions[i][0] in ["RAISE","BET"]:#[RAISE, BET]:
-                    a.amount = float(self.lastActions[i][2])
-                elif t == CALL:
-                    a.amount = self.lastBet
+                a = Action(t, self.lastActions[i][1], c1, c2, amt= self.lastBet)
                 self.hand.actions.append(a)
 #        print "lastActions", self.lastActions
 
