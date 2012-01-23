@@ -127,8 +127,9 @@ class GameState:
             print "bankroll", self.bankroll
             print "leftbank", self.leftBank
             print "rightBank", self.rightBank, "\n"
-
-#            self.matchHistory.printHistory()
+            
+#            if self.handID == self.numHands: #end of the game
+#                self.matchHistory.printHistory()
         
 
     def parseLastActions(self):

@@ -119,11 +119,14 @@ class MatchHistory:
                         print "EV:", self.history[p][s][a][i].handStrength,"]"
 
 
-    def averageStrength(self, player, street, actionType, amountType, minAmt, maxAmt):
+    def averageStrength(self, player, street, actionType, amountType, amount):
         sum = 0
         sum2 = 0
         numMatches = 0
         std = 0
+
+        amountDiffs = [] #list of action values [(action, actionAmount, abs(amount-actionAmount)
+
         #print self.history.keys() ##Need to comment out
         if actionType not in self.history[player][street].keys():
             print "ACTION TYPE IN AVERAGE STRENGTH", actionType
@@ -131,31 +134,51 @@ class MatchHistory:
         actions = self.history[player][street][actionType]
         for a in actions:
             if amountType==POTAMOUNT:
-                if a.potAmount>=minAmt and a.potAmount<=maxAmt:
+                if a.potAmount==amount:
                     sum += a.handStrength
                     sum2 += a.handStrength*a.handStrength
                     numMatches += 1
                     mean = float(sum)/numMatches
                     std = sqrt((float(sum2)/numMatches) - (mean*mean))
+                else:
+                    amountDiffs += [(a, a.potAmount, abs(a.potAmount - amount))]
             elif amountType==BETAMOUNT:
-                if a.betAmount>=minAmt and a.betAmount<=maxAmt:
+                if a.betAmount==amount:
                     sum += a.handStrength
                     sum2 += a.handStrength*a.handStrength
                     numMatches += 1
                     mean = float(sum)/numMatches
                     std = sqrt((float(sum2)/numMatches) - (mean*mean))
+                else:
+                    amountDiffs += [(a, a.betAmount, abs(a.betAmount - amount))]
             else:
-                if a.amount>=minAmt and a.amount<=maxAmt:
+                if a.amount==amount:
                     sum += a.handStrength
                     numMatches += 1
                     sum2 += a.handStrength*a.handStrength
                     mean = float(sum)/numMatches
                     std = sqrt((float(sum2)/numMatches) - (mean*mean))
-        
+                else:
+                    amountDiffs += [(a, a.amount, abs(a.amount - amount))]
+
         if numMatches<3:
-            #print player, "Action", actionType, "Min Amt", minAmt,"Max Amt",maxAmt,"AmtType",amountType, "Street", street
-            #print [a.amount for a in actions]
+           #sort the amountDiffs by the difference in amount from the desired amount
+            amountDiffs = sorted(amountDiffs, key=lambda x: x[2])
+#            print "AMOUNT DIFFS:", amountDiffs
+            minDiff = 0
+            for amt in amountDiffs:
+                if amt[2] != minDiff:
+                    minDiff = amt[2]
+                    if numMatches>=3:
+                        return [float(sum)/numMatches, std]
+                sum += amt[0].handStrength
+                numMatches += 1
+                sum2 += amt[0].handStrength*amt[0].handStrength
+                mean = float(sum)/numMatches
+                std = sqrt((float(sum2)/numMatches) - (mean*mean))
+
             return [-1,-1]
+
         return [float(sum)/numMatches, std]
 
 

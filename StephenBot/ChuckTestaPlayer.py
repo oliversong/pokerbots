@@ -7,6 +7,7 @@ from LooseAgressiveStrategy import *
 from BasicEVStrategy import *
 from LagRuleBotStrategy import *
 from ChuckTestaStrat2 import *
+from PlotBankrolls import *
 
 
 """
@@ -28,6 +29,8 @@ if __name__ == "__main__":
     bot = Bot()
     game = GameState()
     chuckTesta = ChuckTestaStrat2()
+
+    plot = PlotBankrolls()
     
     while 1:
         # block until the engine sends us a packet
@@ -62,5 +65,13 @@ if __name__ == "__main__":
             print "SENDING A ", move, "ACTION TO ENGINE\n"
             s.send(move+'\n')
 ##            s.send("CHECK\n")
+
+        if game.state == "HANDOVER":
+            plot.addMoreBanks(game.bankroll, game.leftBank, game.rightBank)
+            if game.handID == game.numHands:
+                plot.leftOpp = game.leftOpp
+                plot.rightOpp = game.rightOpp
+                print "GAMEOVER PLOTTING"
+                plot.plotBanks()
     # if we get here, the server disconnected us, so clean up the socket
     s.close()

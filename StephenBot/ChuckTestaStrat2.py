@@ -56,21 +56,18 @@ class ChuckTestaStrat2(Strategy):
                                                                   OM[b.state.rightOpp][-1][0],
                                                                   OM[b.state.rightOpp][-1][1].type,
                                                                   ABSAMOUNT,
-                                                                  OM[b.state.rightOpp][-1][1].amount-200,
-                                                                  OM[b.state.rightOpp][-1][1].amount+200)
+                                                                  OM[b.state.rightOpp][-1][1].amount)
         elif OM[b.state.rightOpp][-1][1].type in [BET, RAISE]:    
             absamt = b.state.matchHistory.averageStrength(b.state.rightOpp,
                                                                   OM[b.state.rightOpp][-1][0],
                                                                   OM[b.state.rightOpp][-1][1].type,
                                                                   ABSAMOUNT,
-                                                                  OM[b.state.rightOpp][-1][1].amount-10,
-                                                                  OM[b.state.rightOpp][-1][1].amount+10)   
+                                                                  OM[b.state.rightOpp][-1][1].amount)   
             betamt = b.state.matchHistory.averageStrength(b.state.rightOpp,
                                                                   OM[b.state.rightOpp][-1][0],
                                                                   OM[b.state.rightOpp][-1][1].type,
                                                                   BETAMOUNT,
-                                                                  OM[b.state.rightOpp][-1][2]-1,
-                                                                  OM[b.state.rightOpp][-1][2]+1)
+                                                                  OM[b.state.rightOpp][-1][2])
             if absamt[1]<betamt[1]:
                 OppEvs[b.state.rightOpp] = absamt
                 print"Abs Amount EV for Right"
@@ -83,8 +80,7 @@ class ChuckTestaStrat2(Strategy):
                                                                   OM[b.state.rightOpp][-1][0],
                                                                   OM[b.state.rightOpp][-1][1].type,
                                                                   ABSAMOUNT,
-                                                                  OM[b.state.rightOpp][-1][1].amount-10,
-                                                                  OM[b.state.rightOpp][-1][1].amount+10)
+                                                                  OM[b.state.rightOpp][-1][1].amount)
         else:
             print "getOppEvs is broken", OM[b.state.leftOpp][-1][1].type
 
@@ -99,21 +95,18 @@ class ChuckTestaStrat2(Strategy):
                                                                   OM[b.state.leftOpp][-1][0],
                                                                   OM[b.state.leftOpp][-1][1].type,
                                                                   ABSAMOUNT,
-                                                                  OM[b.state.leftOpp][-1][1].amount-200,
-                                                                  OM[b.state.leftOpp][-1][1].amount+200)
+                                                                  OM[b.state.leftOpp][-1][1].amount)
         elif OM[b.state.leftOpp][-1][1].type in [BET, RAISE]:    
             absamt = b.state.matchHistory.averageStrength(b.state.leftOpp,
                                                                   OM[b.state.leftOpp][-1][0],
                                                                   OM[b.state.leftOpp][-1][1].type,
                                                                   ABSAMOUNT,
-                                                                  OM[b.state.leftOpp][-1][1].amount-10,
-                                                                  OM[b.state.leftOpp][-1][1].amount+10)   
+                                                                  OM[b.state.leftOpp][-1][1].amount)
             betamt = b.state.matchHistory.averageStrength(b.state.leftOpp,
                                                                   OM[b.state.leftOpp][-1][0],
                                                                   OM[b.state.leftOpp][-1][1].type,
                                                                   BETAMOUNT,
-                                                                  OM[b.state.leftOpp][-1][2]-1,
-                                                                  OM[b.state.leftOpp][-1][2]+1)
+                                                                  OM[b.state.leftOpp][-1][2])
             if absamt[1]<betamt[1]:
                 OppEvs[b.state.leftOpp] = absamt
             else:
@@ -123,8 +116,7 @@ class ChuckTestaStrat2(Strategy):
                                                                   OM[b.state.leftOpp][-1][0],
                                                                   OM[b.state.leftOpp][-1][1].type,
                                                                   ABSAMOUNT,
-                                                                  OM[b.state.leftOpp][-1][1].amount-10,
-                                                                  OM[b.state.leftOpp][-1][1].amount+10)
+                                                                  OM[b.state.leftOpp][-1][1].amount)
         else:
             print "getOppEvs is broken", OM[b.state.leftOpp][-1][1].type
    
