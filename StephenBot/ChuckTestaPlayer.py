@@ -43,7 +43,7 @@ if __name__ == "__main__":
         # Here is where you should implement code to parse the packets from
         # the engine and act on it.
 #        print "THIS IS A NEW PACKET"
-        print data
+#        print data
         game.parseInput(data)
         bot.updateState(game)
 
@@ -53,6 +53,8 @@ if __name__ == "__main__":
         # illegal action.
         # When sending responses, you need to have a newline character (\n) or
         # carriage return (\r), or else your bot will hang!
+        if game.timebank<0:
+            print "OUT OF TIME. current time: ", game.timebank," at hand:", game.handID
 
         if game.state=="NEWHAND":
             bot.setHoleCards(Card(game.holeCard1), Card(game.holeCard2))
@@ -62,7 +64,7 @@ if __name__ == "__main__":
 ##            s.send("RAISE:15\n")
             bot.evaluateOdds()
             move = bot.makeMove()
-            print "SENDING A ", move, "ACTION TO ENGINE\n"
+#            print "SENDING A ", move, "ACTION TO ENGINE\n"
             s.send(move+'\n')
 ##            s.send("CHECK\n")
 
@@ -71,6 +73,7 @@ if __name__ == "__main__":
             if game.handID == game.numHands:
                 plot.leftOpp = game.leftOpp
                 plot.rightOpp = game.rightOpp
+                print "Final time: ", game.timebank
                 print "GAMEOVER PLOTTING"
                 plot.plotBanks()
     # if we get here, the server disconnected us, so clean up the socket

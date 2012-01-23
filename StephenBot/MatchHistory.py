@@ -164,7 +164,6 @@ class MatchHistory:
         if numMatches<3:
            #sort the amountDiffs by the difference in amount from the desired amount
             amountDiffs = sorted(amountDiffs, key=lambda x: x[2])
-#            print "AMOUNT DIFFS:", amountDiffs
             minDiff = 0
             for amt in amountDiffs:
                 if amt[2] != minDiff:

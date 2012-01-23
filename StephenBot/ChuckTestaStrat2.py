@@ -20,7 +20,7 @@ class ChuckTestaStrat2(Strategy):
 
 #        if b.state.street()==PREFLOP:
 
-        print "RIGHT EV:", OppEvs[b.state.rightOpp], "LEFT EV:", OppEvs[b.state.leftOpp], "EV:", ev
+##        print "RIGHT EV:", OppEvs[b.state.rightOpp], "LEFT EV:", OppEvs[b.state.leftOpp], "EV:", ev
 
         if OppEvs[b.state.rightOpp][0] == -1 and OppEvs[b.state.leftOpp][0] == -1:
             move = self.blindEVplay(b,ev)
@@ -48,7 +48,7 @@ class ChuckTestaStrat2(Strategy):
 
         if len(OM[b.state.rightOpp]) == 0:
             OppEvs[b.state.rightOpp] = [-1,-1]
-            print ("No Previous Move on right")
+#            print ("No Previous Move on right")
         elif OM[b.state.rightOpp][-1][1].type == FOLD:
             OppEvs[b.state.rightOpp] = [0,-1]            
         elif OM[b.state.rightOpp][-1][1].type == CHECK:
@@ -70,24 +70,24 @@ class ChuckTestaStrat2(Strategy):
                                                                   OM[b.state.rightOpp][-1][2])
             if absamt[1]<betamt[1]:
                 OppEvs[b.state.rightOpp] = absamt
-                print"Abs Amount EV for Right"
+#                print"Abs Amount EV for Right"
             else:
                 OppEvs[b.state.rightOpp] = betamt
-                print"Bet Amt EV for Right", betamt[0]
-                print  OM[b.state.rightOpp][-1][2]
+#                print"Bet Amt EV for Right", betamt[0]
+#                print  OM[b.state.rightOpp][-1][2]
         elif OM[b.state.rightOpp][-1][1].type == CALL:
             OppEvs[b.state.rightOpp] = b.state.matchHistory.averageStrength(b.state.rightOpp,
                                                                   OM[b.state.rightOpp][-1][0],
                                                                   OM[b.state.rightOpp][-1][1].type,
                                                                   ABSAMOUNT,
                                                                   OM[b.state.rightOpp][-1][1].amount)
-        else:
-            print "getOppEvs is broken", OM[b.state.leftOpp][-1][1].type
+#        else:
+#            print "getOppEvs is broken", OM[b.state.leftOpp][-1][1].type
 
 
         if len(OM[b.state.leftOpp]) ==0:
             OppEvs[b.state.leftOpp] = [-1,-1]
-            print "No previous move on left"
+#            print "No previous move on left"
         elif OM[b.state.leftOpp][-1][1].type == FOLD:
             OppEvs[b.state.leftOpp] = [0,-1]            
         elif OM[b.state.leftOpp][-1][1].type == CHECK:
@@ -117,8 +117,8 @@ class ChuckTestaStrat2(Strategy):
                                                                   OM[b.state.leftOpp][-1][1].type,
                                                                   ABSAMOUNT,
                                                                   OM[b.state.leftOpp][-1][1].amount)
-        else:
-            print "getOppEvs is broken", OM[b.state.leftOpp][-1][1].type
+#        else:
+#            print "getOppEvs is broken", OM[b.state.leftOpp][-1][1].type
    
 
 
@@ -143,8 +143,8 @@ class ChuckTestaStrat2(Strategy):
                         prevbet = acts.amount
                 elif acts.type == RAISE:
                     betperc = acts.amount/prevbet
-                else:
-                    print "ERRROR IN OPPMOVES"
+#                else:
+#                    print "ERRROR IN OPPMOVES"
                 if acts.player == b.state.rightOpp:
                     OM[b.state.rightOpp] += [(st,acts,betperc)] 
                 if acts.player == b.state.leftOpp:
@@ -221,7 +221,7 @@ class ChuckTestaStrat2(Strategy):
             move = "CALL"
 
 	
-        print "PUSH MIN MOVE:", move
+#        print "PUSH MIN MOVE:", move
         return move #CHECK LOGIC FOR THIS FUCNTION, SHOULD NEVER GET HERE
 
     ##If can check, then check. Otherwise call up to m

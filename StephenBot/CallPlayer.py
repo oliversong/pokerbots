@@ -36,7 +36,7 @@ if __name__ == "__main__":
             break
         # Here is where you should implement code to parse the packets from
         # the engine and act on it.
-        print data
+##        print data
         game.parseInput(data)
         bot.updateState(game)
 
@@ -46,6 +46,9 @@ if __name__ == "__main__":
         # illegal action.
         # When sending responses, you need to have a newline character (\n) or
         # carriage return (\r), or else your bot will hang!
+
+        if game.timebank<0:
+            print "RUN OUT OF TIME"
 
         if game.state == "GETACTION":
             s.send('CALL\n')

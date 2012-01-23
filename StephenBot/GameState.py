@@ -124,9 +124,9 @@ class GameState:
             #update hand history now that final hand actions have been parsed
             self.matchHistory.updateHistory(self, self.hand)
 
-            print "bankroll", self.bankroll
-            print "leftbank", self.leftBank
-            print "rightBank", self.rightBank, "\n"
+##            print "bankroll", self.bankroll
+##            print "leftbank", self.leftBank
+##            print "rightBank", self.rightBank, "\n"
             
 #            if self.handID == self.numHands: #end of the game
 #                self.matchHistory.printHistory()

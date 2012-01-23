@@ -97,7 +97,7 @@ class Strategy:
             move = "CALL"
 
 	
-        print "PUSH MIN MOVE:", move
+##        print "PUSH MIN MOVE:", move
         return move #CHECK LOGIC FOR THIS FUCNTION, SHOULD NEVER GET HERE
 
     ##If can check, then check. Otherwise call up to m
