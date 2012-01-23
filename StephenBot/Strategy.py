@@ -61,10 +61,11 @@ class Strategy:
     #Bet or raise the minimum amount, or times some multiplier
     def pushMin(self, game, m=1):
         move = "CALL"
-        if "BET" in [la[0] for la in game.legalActions]:
-            move = "BET"+":"+str(int(min(self.get_allIn(game),int(la[1])*m)))
-        elif "RAISE" in [la[0] for la in game.legalActions]:
-            move= "RAISE"+":"+str(int(min(self.get_allIn(game),int(la[1])*m)))
+        for la in game.legalActions:
+            if la[0] == "BET":
+                return "BET:"+str(min(self.get_allIn(game),int(la[1])*m))
+            if la[0] == "RAISE":
+                return "RAISE:"+str(min(self.get_allIn(game),int(la[1])*m))
 
 ##        print "PUSH MIN MOVE:", move
         return move
