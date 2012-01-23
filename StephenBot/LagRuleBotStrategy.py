@@ -10,7 +10,7 @@ class LagRuleBotStrategy(Strategy):
         ev = self.evalHand(game)
 
         if game.street()==PREFLOP:
-            print "PREFLOP"
+#            print "PREFLOP"
             if ev>400:
                 return self.pushMin(game,3)
             elif ev>250:
@@ -18,7 +18,7 @@ class LagRuleBotStrategy(Strategy):
             else:
                 return self.maxRisk(game,2)
         elif game.street()==FLOP:
-            print "FLOP"
+#            print "FLOP"
             if ev>500:
                 return self.pushMin(game,3)
             elif ev>350:
@@ -27,7 +27,7 @@ class LagRuleBotStrategy(Strategy):
                 return self.maxRisk(game,2)
 
         elif game.street()==TURN:
-            print "TURN"
+#            print "TURN"
             if ev>600:
                 return self.pushMin(game,3)
             elif ev>450:
@@ -35,7 +35,7 @@ class LagRuleBotStrategy(Strategy):
             else:
                 return self.maxRisk(game,2)
         elif game.street()==RIVER:
-            print "RIVER"
+#            print "RIVER"
             if ev>750:
                 return self.pushMin(game,3)
             elif ev>550:

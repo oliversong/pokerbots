@@ -34,7 +34,7 @@ class Player:
                 break
             # Here is where you should implement code to parse the packets from
             # the engine and act on it.
-            print "Received", data
+#            print "Received", data
             self.game.parseInput(data)
 
             # When appropriate, reply to the engine with a legal action.
@@ -51,7 +51,7 @@ class Player:
             elif self.game.state == GETACTION:
                 self.strategy.evaluateOdds(self.game)
                 move = self.strategy.getMove(self.game, self.archive)
-                print "SENDING A ", move, "ACTION TO ENGINE\n"
+#                print "SENDING A ", move, "ACTION TO ENGINE\n"
                 self.socket.send(move+'\n')
             elif self.game.state == HANDOVER:
                 #update hand history now that final hand actions have been parsed
