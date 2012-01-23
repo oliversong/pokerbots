@@ -32,16 +32,16 @@ class Strategy:
 
         return ev
 
-    def get_allIn(self,b):
+    def get_allIn(self,game):
         st = -3
         bets = [0,0,0,0]
         prevBet = 0
         allinbet = 200
-        for acts in b.state.hand.actions:
+        for acts in game.hand.actions:
             if acts.type == DEAL:
                 st+=1
                 prevBet = 0
-            elif acts.player != b.state.rightOpp and acts.player!= b.state.leftOpp and acts.type in [CALL, BET, RAISE, POST]: #Want to say acts.player == b.state.myName what is the field name for our name?
+            elif acts.player != game.rightOpp and acts.player!= game.leftOpp and acts.type in [CALL, BET, RAISE, POST]: #Want to say acts.player == game.myName what is the field name for our name?
                 if acts.type == CALL:
                     bets[st] = prevBet
                 elif acts.type == POST:
@@ -62,9 +62,9 @@ class Strategy:
     def pushMin(self, game, m=1):
         move = "CALL"
         if "BET" in [la[0] for la in game.legalActions]:
-            move = "BET"+":"+str(int(min(self.get_allIn(b),int(la[1])*m)))
+            move = "BET"+":"+str(int(min(self.get_allIn(game),int(la[1])*m)))
         elif "RAISE" in [la[0] for la in game.legalActions]:
-            move= "RAISE"+":"+str(int(min(self.get_allIn(b),int(la[1])*m)))
+            move= "RAISE"+":"+str(int(min(self.get_allIn(game),int(la[1])*m)))
 
 ##        print "PUSH MIN MOVE:", move
         return move
