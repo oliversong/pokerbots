@@ -191,4 +191,4 @@ class GameState:
 
     # Return amount needed to raise/bet all in
     def getAllIn(self):
-        return self.stack+self.pip
+        return int(self.stack+self.pip)

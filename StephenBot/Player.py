@@ -34,7 +34,7 @@ class Player:
                 break
             # Here is where you should implement code to parse the packets from
             # the engine and act on it.
-#            print "Received", data
+            print "Received", data
             self.game.parseInput(data)
 
             # When appropriate, reply to the engine with a legal action.
