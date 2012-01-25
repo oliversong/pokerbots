@@ -9,12 +9,12 @@ class CallRaiseStrategy(Strategy):
 
         ev = self.evalHand(game)
 
-        if game.street()==PREFLOP:
+        if game.street==PREFLOP:
             return "CALL"
 #            print "PREFLOP"
 #            if ev>250:
 #                return self.pushMin(game)
-        elif game.street()==FLOP:
+        elif game.street==FLOP:
             return "CALL"
 #            print "FLOP"
 #            if ev>500:
@@ -24,7 +24,7 @@ class CallRaiseStrategy(Strategy):
 #            else:
 #                return self.maxRisk(game,2)
 
-        elif game.street()==TURN:
+        elif game.street==TURN:
             return "CALL"
 #            print "TURN"
 #            if ev>600:
@@ -33,7 +33,7 @@ class CallRaiseStrategy(Strategy):
 #                return self.pushMin(game)
 #            else:
 #                return self.maxRisk(game,2)
-        elif game.street()==RIVER:
+        elif game.street==RIVER:
             return self.pushMin(game)
 #            print "RIVER"
 #            if ev>750:

@@ -10,7 +10,7 @@ class LooseAgressiveStrategy(Strategy):
 
         move = "CHECK"
 
-        if game.street()==PREFLOP:
+        if game.street==PREFLOP:
             print "PREFLOP"
             if game.position == 0: #DEALER
                 if self.handRank > 655359:
@@ -30,17 +30,17 @@ class LooseAgressiveStrategy(Strategy):
                     move = "CHECK"
 
             raiseAmt = (3+1) * game.bigB
-        elif game.street()==FLOP:
+        elif game.street==FLOP:
             print "FLOP"
 
             if self.handRank > 786431:
                 move = "RAISE"
             move = "BET"
             raiseAmt = int(0.75 * game.potSize)
-        elif game.street() == TURN:
+        elif game.street == TURN:
             print "TURN"
             raiseAmt = 0
-        elif game.street() == RIVER:
+        elif game.street == RIVER:
             print "RIVER"
             raiseAmt = 0
 
