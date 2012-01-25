@@ -1,10 +1,7 @@
 import socket
 import sys
 
-from Bot import *
 from GameState import *
-from LooseAgressiveStrategy import *
-
 
 """
 Simple example pokerbot, written in python. This is an example of a bare bones,
@@ -22,10 +19,8 @@ if __name__ == "__main__":
     s.connect(('localhost', port))
     fs = s.makefile()
 
-    bot = Bot()
     game = GameState()
-    lag = LooseAgressiveStrategy()
-    
+
     while 1:
         # block until the engine sends us a packet
         #data = s.recv(4096)
@@ -38,7 +33,6 @@ if __name__ == "__main__":
         # the engine and act on it.
 ##        print data
         game.parseInput(data)
-        bot.updateState(game)
 
         # When appropriate, reply to the engine with a legal action.
         # The engine will ignore all spurious packets you send.

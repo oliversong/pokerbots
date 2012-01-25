@@ -24,12 +24,14 @@ class GameState:
 
     def resetHand(self):
         self.handID = None
+        # position: 0=dealer, 1=sb, 2=bb
         self.position = None
         self.holeCard1 = None
         self.holeCard2 = None
         self.bankroll = None
         self.leftBank = None
         self.rightBank = None
+        self.stack = self.stackSize
 
         self.potSize = None
         self.numBoardCards = None
@@ -43,6 +45,8 @@ class GameState:
         self.hand.clearHand()
 
         self.lastBet = 0
+        self.pip = 0
+        self.street = PREFLOP
 
     def parseInput(self, input):
         numOptArgs = 0
@@ -119,27 +123,45 @@ class GameState:
 
                 c1 = None
                 c2 = None
-
                 t = None
+
                 sla = self.lastActions[i][0]
+                ourAction = self.lastActions[i][1] not in [self.leftOpp,
+                                                           self.rightOpp]
                 if sla == "RAISE":
+                    betAmt = float(self.lastActions[i][2])
+                    if ourAction:
+                        self.stack -= betAmt - self.pip
+                        self.pip = betAmt
                     t = RAISE
-                    self.lastBet = float(self.lastActions[i][2])
+                    self.lastBet = betAmt
                 elif sla == "CALL":
                     t = CALL
+                    if ourAction:
+                        self.stack -= self.lastBet - self.pip
+                        self.pip = self.lastBet
                 elif sla == "CHECK":
                     t = CHECK
                 elif sla == "BET":
                     t = BET
                     self.lastBet = float(self.lastActions[i][2])
+                    if ourAction:
+                        self.pip = self.lastBet
+                        self.stack -= self.lastBet
                 elif sla == "FOLD":
                     t = FOLD
                 elif sla == "DEAL":
                     t = DEAL
                     self.lastBet = 0
+                    self.pip = 0
+                    self.street += 1
                 elif sla == "POST":
+                    # if it's us
                     t = POST
                     self.lastBet = float(self.lastActions[i][2])
+                    if ourAction:
+                        self.pip = self.lastBet
+                        self.stack -= self.lastBet
                 elif sla == "REFUND":
                     t = REFUND
                 elif sla == "SHOWS":
@@ -161,20 +183,12 @@ class GameState:
             for i in range(self.numLegalActions):
                 self.legalActions[i] = self.legalActions[i].split(":")
 
-    def street(self):
-        if self.numBoardCards == 0:
-            return PREFLOP
-        elif self.numBoardCards == 3:
-            return FLOP
-        elif self.numBoardCards == 4:
-            return TURN
-        elif self.numBoardCards == 5:
-            return RIVER
-        else:
-            return None
-
     def parseBoardCards(self):
         if(type(self.boardCards) == type("STRING")):
             self.boardCards = self.boardCards.split(",")
         for i in range(5-len(self.boardCards)):
             self.boardCards += ["__"]
+
+    # Return amount needed to raise/bet all in
+    def getAllIn(self):
+        return self.stack+self.pip
