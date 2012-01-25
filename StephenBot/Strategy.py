@@ -33,6 +33,8 @@ class Strategy:
         return ev
 
     #Bet or raise the minimum amount, or times some multiplier
+    # If min raise amount is to raise to 4, multiplier of 3 says to raise to
+    # 3*4=12
     def pushMin(self, game, m=1):
         move = "CALL"
         for la in game.legalActions:

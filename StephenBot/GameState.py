@@ -173,7 +173,8 @@ class GameState:
                 elif sla == "WIN":
                     t = WIN
 
-                a = Action(t, self.lastActions[i][1], c1, c2, amt= self.lastBet)
+                a = Action(t, self.lastActions[i][1], c1, c2, 0, 0,
+                           self.lastBet)
                 self.hand.actions.append(a)
 #        print "lastActions", self.lastActions
 

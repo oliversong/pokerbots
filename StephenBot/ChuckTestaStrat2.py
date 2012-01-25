@@ -119,6 +119,7 @@ class ChuckTestaStrat2(Strategy):
 
         return OppEvs
 
+    #Return list of last moves made by each opponent
     def OppMoves(self, game):
         OM = {}
         OM[game.rightOpp]=[]
@@ -147,6 +148,7 @@ class ChuckTestaStrat2(Strategy):
 
         return OM
 
+    # Play when we don't know our opponents EV
     def blindEVplay(self, game, ev):
         move = "CHECK"
         if ev>400:
