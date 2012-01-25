@@ -1,0 +1,1863 @@
+6.S912 MIT Pokerbots - PoKerboT vs. Chezebot vs. OWWW
+Hand #1
+Seat 1 (Button): PoKerboT3003 3
+Seat 2 (SB): Chezebot3004 -1
+Seat 3 (BB): OWWW3005 -2
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [9c 3d]
+Dealt to OWWW3005 [Jd 4c]
+Dealt to PoKerboT3003 [Jc 9d]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #2
+Seat 1 (Button): OWWW3005 -2
+Seat 2 (SB): PoKerboT3003 5
+Seat 3 (BB): Chezebot3004 -3
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [2c 9d]
+Dealt to Chezebot3004 [Td 8h]
+Dealt to OWWW3005 [Th Kh]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #3
+Seat 1 (Button): Chezebot3004 68
+Seat 2 (SB): OWWW3005 -3
+Seat 3 (BB): PoKerboT3003 -65
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [5c 6h]
+Dealt to PoKerboT3003 [Jc 8d]
+Dealt to Chezebot3004 [7c 7h]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 calls
+*** FLOP *** [7s Ks Kd]
+PoKerboT3003 bets 10
+Chezebot3004 raises to 132
+PoKerboT3003 folds
+Uncalled bet of 122 returned to Chezebot3004
+Chezebot3004 wins the pot (141)
+
+Hand #4
+Seat 1 (Button): PoKerboT3003 -61
+Seat 2 (SB): Chezebot3004 66
+Seat 3 (BB): OWWW3005 -5
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [8d 6d]
+Dealt to OWWW3005 [4h 3d]
+Dealt to PoKerboT3003 [8c 6s]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [6c As Th]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 bets 20
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 20 returned to PoKerboT3003
+PoKerboT3003 wins the pot (6)
+
+Hand #5
+Seat 1 (Button): OWWW3005 -5
+Seat 2 (SB): PoKerboT3003 -41
+Seat 3 (BB): Chezebot3004 46
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [3h 4c]
+Dealt to Chezebot3004 [Kd 7d]
+Dealt to OWWW3005 [8s Qs]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [Ah Tc 3s]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (40)
+
+Hand #6
+Seat 1 (Button): Chezebot3004 46
+Seat 2 (SB): OWWW3005 -6
+Seat 3 (BB): PoKerboT3003 -40
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [Jh Ks]
+Dealt to PoKerboT3003 [2h 3s]
+Dealt to Chezebot3004 [4s Th]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #7
+Seat 1 (Button): PoKerboT3003 -37
+Seat 2 (SB): Chezebot3004 45
+Seat 3 (BB): OWWW3005 -8
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Kd Jh]
+Dealt to OWWW3005 [8c 4h]
+Dealt to PoKerboT3003 [Kc Jd]
+PoKerboT3003 raises to 40
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 38 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #8
+Seat 1 (Button): OWWW3005 -8
+Seat 2 (SB): PoKerboT3003 -237
+Seat 3 (BB): Chezebot3004 245
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Ad Kd]
+Dealt to Chezebot3004 [6c 6h]
+Dealt to OWWW3005 [8d 9d]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 raises to 60
+PoKerboT3003 raises to 200
+Chezebot3004 calls
+*** FLOP *** [3d 8c Tc]
+*** TURN *** [3d 8c Tc] [2s]
+*** RIVER *** [3d 8c Tc 2s] [7s]
+PoKerboT3003 shows Ad Kd (High Card)
+Chezebot3004 shows 6c 6h (Pair)
+Chezebot3004 wins the pot (400)
+
+Hand #9
+Seat 1 (Button): Chezebot3004 245
+Seat 2 (SB): OWWW3005 -9
+Seat 3 (BB): PoKerboT3003 -236
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [6c Qc]
+Dealt to PoKerboT3003 [5h 4c]
+Dealt to Chezebot3004 [3d Jc]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #10
+Seat 1 (Button): PoKerboT3003 -233
+Seat 2 (SB): Chezebot3004 244
+Seat 3 (BB): OWWW3005 -11
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Kd Jc]
+Dealt to OWWW3005 [7s Qs]
+Dealt to PoKerboT3003 [As 2d]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #11
+Seat 1 (Button): OWWW3005 -11
+Seat 2 (SB): PoKerboT3003 -231
+Seat 3 (BB): Chezebot3004 242
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [9c 2h]
+Dealt to Chezebot3004 [Tc 7s]
+Dealt to OWWW3005 [2c Qs]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #12
+Seat 1 (Button): Chezebot3004 293
+Seat 2 (SB): OWWW3005 -12
+Seat 3 (BB): PoKerboT3003 -281
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [7c 7s]
+Dealt to PoKerboT3003 [8d 4c]
+Dealt to Chezebot3004 [5d 5s]
+Chezebot3004 calls
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [2d 3d 4s]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [2d 3d 4s] [Ac]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** RIVER *** [2d 3d 4s Ac] [9d]
+PoKerboT3003 bets 10
+Chezebot3004 raises to 71
+PoKerboT3003 folds
+Uncalled bet of 61 returned to Chezebot3004
+Chezebot3004 wins the pot (101)
+
+Hand #13
+Seat 1 (Button): PoKerboT3003 -481
+Seat 2 (SB): Chezebot3004 495
+Seat 3 (BB): OWWW3005 -14
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Kc Ks]
+Dealt to OWWW3005 [5c As]
+Dealt to PoKerboT3003 [Jd 6d]
+PoKerboT3003 raises to 16
+Chezebot3004 raises to 50
+OWWW3005 folds
+PoKerboT3003 raises to 200
+Chezebot3004 calls
+*** FLOP *** [7c 6h Js]
+*** TURN *** [7c 6h Js] [Kh]
+*** RIVER *** [7c 6h Js Kh] [Qh]
+PoKerboT3003 shows Jd 6d (Two Pair)
+Chezebot3004 shows Kc Ks (Three of a Kind)
+Chezebot3004 wins the pot (402)
+
+Hand #14
+Seat 1 (Button): OWWW3005 -14
+Seat 2 (SB): PoKerboT3003 -281
+Seat 3 (BB): Chezebot3004 295
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [2h 7h]
+Dealt to Chezebot3004 [5c Th]
+Dealt to OWWW3005 [8s Ts]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 raises to 60
+PoKerboT3003 raises to 200
+Chezebot3004 calls
+*** FLOP *** [Jh 7s 7c]
+*** TURN *** [Jh 7s 7c] [3c]
+*** RIVER *** [Jh 7s 7c 3c] [4s]
+PoKerboT3003 shows 2h 7h (Three of a Kind)
+Chezebot3004 shows 5c Th (Pair)
+PoKerboT3003 wins the pot (400)
+
+Hand #15
+Seat 1 (Button): Chezebot3004 295
+Seat 2 (SB): OWWW3005 -15
+Seat 3 (BB): PoKerboT3003 -280
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [7d 2h]
+Dealt to PoKerboT3003 [8c 9h]
+Dealt to Chezebot3004 [3s 2c]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #16
+Seat 1 (Button): PoKerboT3003 -277
+Seat 2 (SB): Chezebot3004 294
+Seat 3 (BB): OWWW3005 -17
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [6s Ks]
+Dealt to OWWW3005 [9s 4c]
+Dealt to PoKerboT3003 [Kd 5s]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #17
+Seat 1 (Button): OWWW3005 -17
+Seat 2 (SB): PoKerboT3003 -237
+Seat 3 (BB): Chezebot3004 254
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [2h 5c]
+Dealt to Chezebot3004 [9c Kc]
+Dealt to OWWW3005 [6h Jc]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [4h 2c 9d]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [4h 2c 9d] [As]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** RIVER *** [4h 2c 9d As] [4c]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (80)
+
+Hand #18
+Seat 1 (Button): Chezebot3004 254
+Seat 2 (SB): OWWW3005 -18
+Seat 3 (BB): PoKerboT3003 -236
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [4h 7d]
+Dealt to PoKerboT3003 [2s Js]
+Dealt to Chezebot3004 [Td 5h]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #19
+Seat 1 (Button): PoKerboT3003 -233
+Seat 2 (SB): Chezebot3004 253
+Seat 3 (BB): OWWW3005 -20
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [5c Js]
+Dealt to OWWW3005 [8h 6h]
+Dealt to PoKerboT3003 [Qd Qc]
+PoKerboT3003 raises to 40
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 38 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #20
+Seat 1 (Button): OWWW3005 -20
+Seat 2 (SB): PoKerboT3003 -203
+Seat 3 (BB): Chezebot3004 223
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Qs Qc]
+Dealt to Chezebot3004 [Ad 2s]
+Dealt to OWWW3005 [7d Qh]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [Jd 8h 9d]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [Jd 8h 9d] [6c]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (60)
+
+Hand #21
+Seat 1 (Button): Chezebot3004 203
+Seat 2 (SB): OWWW3005 -21
+Seat 3 (BB): PoKerboT3003 -182
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [6h 5c]
+Dealt to PoKerboT3003 [Js 2h]
+Dealt to Chezebot3004 [7h As]
+Chezebot3004 calls
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [9c Kh Qc]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (41)
+
+Hand #22
+Seat 1 (Button): PoKerboT3003 -179
+Seat 2 (SB): Chezebot3004 202
+Seat 3 (BB): OWWW3005 -23
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [6c Js]
+Dealt to OWWW3005 [5d 5c]
+Dealt to PoKerboT3003 [9h 8s]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #23
+Seat 1 (Button): OWWW3005 -23
+Seat 2 (SB): PoKerboT3003 -229
+Seat 3 (BB): Chezebot3004 252
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [5d 6h]
+Dealt to Chezebot3004 [Kh Td]
+Dealt to OWWW3005 [9h Qd]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [2c Kc Qh]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [2c Kc Qh] [Ah]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** RIVER *** [2c Kc Qh Ah] [Qc]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+PoKerboT3003 shows 5d 6h (Pair)
+Chezebot3004 shows Kh Td (Two Pair)
+Chezebot3004 wins the pot (100)
+
+Hand #24
+Seat 1 (Button): Chezebot3004 252
+Seat 2 (SB): OWWW3005 -24
+Seat 3 (BB): PoKerboT3003 -228
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [6c 4d]
+Dealt to PoKerboT3003 [8d Kh]
+Dealt to Chezebot3004 [9c 3c]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #25
+Seat 1 (Button): PoKerboT3003 -225
+Seat 2 (SB): Chezebot3004 251
+Seat 3 (BB): OWWW3005 -26
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [7c 2h]
+Dealt to OWWW3005 [5h Th]
+Dealt to PoKerboT3003 [8s 6s]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #26
+Seat 1 (Button): OWWW3005 -26
+Seat 2 (SB): PoKerboT3003 -223
+Seat 3 (BB): Chezebot3004 249
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Qd 8d]
+Dealt to Chezebot3004 [5h 4h]
+Dealt to OWWW3005 [Tc Qs]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #27
+Seat 1 (Button): Chezebot3004 249
+Seat 2 (SB): OWWW3005 -27
+Seat 3 (BB): PoKerboT3003 -222
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [Qc Js]
+Dealt to PoKerboT3003 [2c 3d]
+Dealt to Chezebot3004 [4s 7c]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #28
+Seat 1 (Button): PoKerboT3003 -219
+Seat 2 (SB): Chezebot3004 248
+Seat 3 (BB): OWWW3005 -29
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Ks 2h]
+Dealt to OWWW3005 [6h 9d]
+Dealt to PoKerboT3003 [Kc 8h]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #29
+Seat 1 (Button): OWWW3005 -29
+Seat 2 (SB): PoKerboT3003 -217
+Seat 3 (BB): Chezebot3004 246
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [6c Ac]
+Dealt to Chezebot3004 [2h 6h]
+Dealt to OWWW3005 [9d Jc]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #30
+Seat 1 (Button): Chezebot3004 176
+Seat 2 (SB): OWWW3005 -30
+Seat 3 (BB): PoKerboT3003 -146
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [6h 4d]
+Dealt to PoKerboT3003 [Jd 9h]
+Dealt to Chezebot3004 [Ac 8c]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 calls
+*** FLOP *** [3s 2h Qd]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [3s 2h Qd] [Kd]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (141)
+
+Hand #31
+Seat 1 (Button): PoKerboT3003 -148
+Seat 2 (SB): Chezebot3004 174
+Seat 3 (BB): OWWW3005 -26
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [6c 4s]
+Dealt to OWWW3005 [Kd Qc]
+Dealt to PoKerboT3003 [Th 2h]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [3c Js Kc]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** TURN *** [3c Js Kc] [5h]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** RIVER *** [3c Js Kc 5h] [3h]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+PoKerboT3003 shows Th 2h (Pair)
+Chezebot3004 shows 6c 4s (Pair)
+OWWW3005 shows Kd Qc (Two Pair)
+OWWW3005 wins the pot (6)
+
+Hand #32
+Seat 1 (Button): OWWW3005 -26
+Seat 2 (SB): PoKerboT3003 -146
+Seat 3 (BB): Chezebot3004 172
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Ts Jc]
+Dealt to Chezebot3004 [3s 4s]
+Dealt to OWWW3005 [7h 9s]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #33
+Seat 1 (Button): Chezebot3004 170
+Seat 2 (SB): OWWW3005 -27
+Seat 3 (BB): PoKerboT3003 -143
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [5d 5h]
+Dealt to PoKerboT3003 [Qd Tc]
+Dealt to Chezebot3004 [Kh 4c]
+Chezebot3004 calls
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #34
+Seat 1 (Button): PoKerboT3003 -145
+Seat 2 (SB): Chezebot3004 168
+Seat 3 (BB): OWWW3005 -23
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Js 4h]
+Dealt to OWWW3005 [Kh Ks]
+Dealt to PoKerboT3003 [9d 2s]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [5d 8c 7d]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** TURN *** [5d 8c 7d] [3d]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** RIVER *** [5d 8c 7d 3d] [5s]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+PoKerboT3003 shows 9d 2s (Pair)
+Chezebot3004 shows Js 4h (Pair)
+OWWW3005 shows Kh Ks (Two Pair)
+OWWW3005 wins the pot (6)
+
+Hand #35
+Seat 1 (Button): OWWW3005 -23
+Seat 2 (SB): PoKerboT3003 -143
+Seat 3 (BB): Chezebot3004 166
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [5s As]
+Dealt to Chezebot3004 [3c Qh]
+Dealt to OWWW3005 [7s Kc]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #36
+Seat 1 (Button): Chezebot3004 96
+Seat 2 (SB): OWWW3005 -24
+Seat 3 (BB): PoKerboT3003 -72
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [2h Js]
+Dealt to PoKerboT3003 [6d Qs]
+Dealt to Chezebot3004 [5h Ks]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 calls
+*** FLOP *** [Ah 8s 9s]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [Ah 8s 9s] [Th]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (141)
+
+Hand #37
+Seat 1 (Button): PoKerboT3003 -102
+Seat 2 (SB): Chezebot3004 128
+Seat 3 (BB): OWWW3005 -26
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [8s Jd]
+Dealt to OWWW3005 [As 4d]
+Dealt to PoKerboT3003 [5c Js]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [8h 7d 5d]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 bets 8
+Chezebot3004 calls
+OWWW3005 folds
+*** TURN *** [8h 7d 5d] [3c]
+Chezebot3004 checks
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** RIVER *** [8h 7d 5d 3c] [8d]
+Chezebot3004 checks
+PoKerboT3003 bets 10
+Chezebot3004 calls
+PoKerboT3003 shows 5c Js (Two Pair)
+Chezebot3004 shows 8s Jd (Three of a Kind)
+Chezebot3004 wins the pot (62)
+
+Hand #38
+Seat 1 (Button): OWWW3005 -26
+Seat 2 (SB): PoKerboT3003 -100
+Seat 3 (BB): Chezebot3004 126
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [2c 8d]
+Dealt to Chezebot3004 [9d 6s]
+Dealt to OWWW3005 [Kh 7h]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #39
+Seat 1 (Button): Chezebot3004 126
+Seat 2 (SB): OWWW3005 -27
+Seat 3 (BB): PoKerboT3003 -99
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [7s 5d]
+Dealt to PoKerboT3003 [5s 4s]
+Dealt to Chezebot3004 [Kh 2s]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #40
+Seat 1 (Button): PoKerboT3003 -101
+Seat 2 (SB): Chezebot3004 124
+Seat 3 (BB): OWWW3005 -23
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Ts 4s]
+Dealt to OWWW3005 [6c 6d]
+Dealt to PoKerboT3003 [Jc 4h]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [5h Qd 2s]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** TURN *** [5h Qd 2s] [Ah]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** RIVER *** [5h Qd 2s Ah] [6s]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+PoKerboT3003 shows Jc 4h (High Card)
+Chezebot3004 shows Ts 4s (High Card)
+OWWW3005 shows 6c 6d (Three of a Kind)
+OWWW3005 wins the pot (6)
+
+Hand #41
+Seat 1 (Button): OWWW3005 -23
+Seat 2 (SB): PoKerboT3003 -99
+Seat 3 (BB): Chezebot3004 122
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [8c Td]
+Dealt to Chezebot3004 [2c 8s]
+Dealt to OWWW3005 [Ks 3d]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #42
+Seat 1 (Button): Chezebot3004 32
+Seat 2 (SB): OWWW3005 -24
+Seat 3 (BB): PoKerboT3003 -8
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [Jc 7s]
+Dealt to PoKerboT3003 [3d 7c]
+Dealt to Chezebot3004 [8d Ah]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 calls
+*** FLOP *** [6s 4s Ac]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [6s 4s Ac] [5d]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** RIVER *** [6s 4s Ac 5d] [Ks]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+Chezebot3004 shows 8d Ah (Pair)
+PoKerboT3003 shows 3d 7c (Straight)
+PoKerboT3003 wins the pot (181)
+
+Hand #43
+Seat 1 (Button): PoKerboT3003 -10
+Seat 2 (SB): Chezebot3004 30
+Seat 3 (BB): OWWW3005 -20
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [4c 7c]
+Dealt to OWWW3005 [3h 4h]
+Dealt to PoKerboT3003 [2c 9h]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [3s As Tc]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** TURN *** [3s As Tc] [Th]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** RIVER *** [3s As Tc Th] [5s]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+PoKerboT3003 shows 2c 9h (Pair)
+Chezebot3004 shows 4c 7c (Pair)
+OWWW3005 shows 3h 4h (Two Pair)
+OWWW3005 wins the pot (6)
+
+Hand #44
+Seat 1 (Button): OWWW3005 -20
+Seat 2 (SB): PoKerboT3003 -8
+Seat 3 (BB): Chezebot3004 28
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Ts 3c]
+Dealt to Chezebot3004 [2c 5s]
+Dealt to OWWW3005 [3d 6h]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #45
+Seat 1 (Button): Chezebot3004 28
+Seat 2 (SB): OWWW3005 -21
+Seat 3 (BB): PoKerboT3003 -7
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [Js Qd]
+Dealt to PoKerboT3003 [2c 8s]
+Dealt to Chezebot3004 [3h 9h]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #46
+Seat 1 (Button): PoKerboT3003 -4
+Seat 2 (SB): Chezebot3004 27
+Seat 3 (BB): OWWW3005 -23
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Js 7c]
+Dealt to OWWW3005 [3d As]
+Dealt to PoKerboT3003 [8h 7h]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #47
+Seat 1 (Button): OWWW3005 -23
+Seat 2 (SB): PoKerboT3003 26
+Seat 3 (BB): Chezebot3004 -3
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Td 7s]
+Dealt to Chezebot3004 [Kh 4s]
+Dealt to OWWW3005 [8s Kc]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [6s Tc Js]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [6s Tc Js] [9d]
+PoKerboT3003 checks
+Chezebot3004 checks
+*** RIVER *** [6s Tc Js 9d] [8h]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (60)
+
+Hand #48
+Seat 1 (Button): Chezebot3004 -73
+Seat 2 (SB): OWWW3005 -24
+Seat 3 (BB): PoKerboT3003 97
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [Kc Th]
+Dealt to PoKerboT3003 [8s 9c]
+Dealt to Chezebot3004 [Kd 2d]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 calls
+*** FLOP *** [8c 5d Td]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [8c 5d Td] [Js]
+PoKerboT3003 checks
+Chezebot3004 checks
+*** RIVER *** [8c 5d Td Js] [7s]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (141)
+
+Hand #49
+Seat 1 (Button): PoKerboT3003 100
+Seat 2 (SB): Chezebot3004 -74
+Seat 3 (BB): OWWW3005 -26
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [5h Js]
+Dealt to OWWW3005 [6s 4h]
+Dealt to PoKerboT3003 [9s As]
+PoKerboT3003 raises to 40
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 38 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #50
+Seat 1 (Button): OWWW3005 -26
+Seat 2 (SB): PoKerboT3003 102
+Seat 3 (BB): Chezebot3004 -76
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [7d 8s]
+Dealt to Chezebot3004 [2s 4s]
+Dealt to OWWW3005 [6h 5h]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #51
+Seat 1 (Button): Chezebot3004 -146
+Seat 2 (SB): OWWW3005 -27
+Seat 3 (BB): PoKerboT3003 173
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [6c 2s]
+Dealt to PoKerboT3003 [4s 6s]
+Dealt to Chezebot3004 [Kd 8s]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 calls
+*** FLOP *** [Jc 4c 3s]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [Jc 4c 3s] [Tc]
+PoKerboT3003 checks
+Chezebot3004 checks
+*** RIVER *** [Jc 4c 3s Tc] [Th]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (141)
+
+Hand #52
+Seat 1 (Button): PoKerboT3003 177
+Seat 2 (SB): Chezebot3004 -148
+Seat 3 (BB): OWWW3005 -29
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [9h 8h]
+Dealt to OWWW3005 [Ks 2h]
+Dealt to PoKerboT3003 [Tc 5s]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [6s 7s 3d]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** TURN *** [6s 7s 3d] [4h]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 bets 10
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (6)
+
+Hand #53
+Seat 1 (Button): OWWW3005 -29
+Seat 2 (SB): PoKerboT3003 179
+Seat 3 (BB): Chezebot3004 -150
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Kh Ks]
+Dealt to Chezebot3004 [5h 2d]
+Dealt to OWWW3005 [As 7c]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #54
+Seat 1 (Button): Chezebot3004 -150
+Seat 2 (SB): OWWW3005 -30
+Seat 3 (BB): PoKerboT3003 180
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [2s 4d]
+Dealt to PoKerboT3003 [As 5h]
+Dealt to Chezebot3004 [3c 4c]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #55
+Seat 1 (Button): PoKerboT3003 183
+Seat 2 (SB): Chezebot3004 -151
+Seat 3 (BB): OWWW3005 -32
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Kc Jd]
+Dealt to OWWW3005 [2c 6s]
+Dealt to PoKerboT3003 [As Jc]
+PoKerboT3003 raises to 40
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 38 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #56
+Seat 1 (Button): OWWW3005 -32
+Seat 2 (SB): PoKerboT3003 185
+Seat 3 (BB): Chezebot3004 -153
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [5h 7h]
+Dealt to Chezebot3004 [2d Qc]
+Dealt to OWWW3005 [5d Tc]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #57
+Seat 1 (Button): Chezebot3004 -155
+Seat 2 (SB): OWWW3005 -33
+Seat 3 (BB): PoKerboT3003 188
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [3d 7d]
+Dealt to PoKerboT3003 [9s Kc]
+Dealt to Chezebot3004 [Qd 8c]
+Chezebot3004 calls
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #58
+Seat 1 (Button): PoKerboT3003 191
+Seat 2 (SB): Chezebot3004 -156
+Seat 3 (BB): OWWW3005 -35
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Jh 8h]
+Dealt to OWWW3005 [5d Qs]
+Dealt to PoKerboT3003 [9c 8c]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #59
+Seat 1 (Button): OWWW3005 -35
+Seat 2 (SB): PoKerboT3003 211
+Seat 3 (BB): Chezebot3004 -176
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Ah 4s]
+Dealt to Chezebot3004 [Ac 3s]
+Dealt to OWWW3005 [Qd 4c]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [5d Jd 9h]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (40)
+
+Hand #60
+Seat 1 (Button): Chezebot3004 -183
+Seat 2 (SB): OWWW3005 -36
+Seat 3 (BB): PoKerboT3003 219
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [Jc 4h]
+Dealt to PoKerboT3003 [Kh Qs]
+Dealt to Chezebot3004 [9s 8d]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 folds
+Uncalled bet of 53 returned to PoKerboT3003
+PoKerboT3003 wins the pot (15)
+
+Hand #61
+Seat 1 (Button): PoKerboT3003 222
+Seat 2 (SB): Chezebot3004 -184
+Seat 3 (BB): OWWW3005 -38
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Jc Ts]
+Dealt to OWWW3005 [5s Qs]
+Dealt to PoKerboT3003 [7h As]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #62
+Seat 1 (Button): OWWW3005 -38
+Seat 2 (SB): PoKerboT3003 224
+Seat 3 (BB): Chezebot3004 -186
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Qs As]
+Dealt to Chezebot3004 [4d 6d]
+Dealt to OWWW3005 [8d Js]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #63
+Seat 1 (Button): Chezebot3004 -186
+Seat 2 (SB): OWWW3005 -39
+Seat 3 (BB): PoKerboT3003 225
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [5h 8c]
+Dealt to PoKerboT3003 [4h 6h]
+Dealt to Chezebot3004 [Qd 2h]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #64
+Seat 1 (Button): PoKerboT3003 228
+Seat 2 (SB): Chezebot3004 -187
+Seat 3 (BB): OWWW3005 -41
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Kd Jd]
+Dealt to OWWW3005 [Js 5h]
+Dealt to PoKerboT3003 [2d Qd]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #65
+Seat 1 (Button): OWWW3005 -41
+Seat 2 (SB): PoKerboT3003 230
+Seat 3 (BB): Chezebot3004 -189
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [2d 9c]
+Dealt to Chezebot3004 [7h 2c]
+Dealt to OWWW3005 [5c 2s]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #66
+Seat 1 (Button): Chezebot3004 -259
+Seat 2 (SB): OWWW3005 -42
+Seat 3 (BB): PoKerboT3003 301
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [Qs 7s]
+Dealt to PoKerboT3003 [9h 9c]
+Dealt to Chezebot3004 [Ac Kc]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 calls
+*** FLOP *** [7d 3s 6d]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [7d 3s 6d] [4h]
+PoKerboT3003 checks
+Chezebot3004 checks
+*** RIVER *** [7d 3s 6d 4h] [9d]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (141)
+
+Hand #67
+Seat 1 (Button): PoKerboT3003 310
+Seat 2 (SB): Chezebot3004 -266
+Seat 3 (BB): OWWW3005 -44
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [7h 6s]
+Dealt to OWWW3005 [2s 5d]
+Dealt to PoKerboT3003 [3s 8c]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [3c 2c 5h]
+Chezebot3004 bets 5
+OWWW3005 folds
+PoKerboT3003 raises to 50
+Chezebot3004 folds
+Uncalled bet of 45 returned to PoKerboT3003
+PoKerboT3003 wins the pot (16)
+
+Hand #68
+Seat 1 (Button): OWWW3005 -44
+Seat 2 (SB): PoKerboT3003 312
+Seat 3 (BB): Chezebot3004 -268
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Ad 9d]
+Dealt to Chezebot3004 [8h 7c]
+Dealt to OWWW3005 [7d 4s]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #69
+Seat 1 (Button): Chezebot3004 -348
+Seat 2 (SB): OWWW3005 -45
+Seat 3 (BB): PoKerboT3003 393
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [5s Ah]
+Dealt to PoKerboT3003 [8h Td]
+Dealt to Chezebot3004 [Js Ac]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 calls
+*** FLOP *** [7s 4s 6d]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [7s 4s 6d] [Tc]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** RIVER *** [7s 4s 6d Tc] [Ts]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (161)
+
+Hand #70
+Seat 1 (Button): PoKerboT3003 396
+Seat 2 (SB): Chezebot3004 -349
+Seat 3 (BB): OWWW3005 -47
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Qs 2s]
+Dealt to OWWW3005 [6h Ad]
+Dealt to PoKerboT3003 [7d Ks]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #71
+Seat 1 (Button): OWWW3005 -47
+Seat 2 (SB): PoKerboT3003 426
+Seat 3 (BB): Chezebot3004 -379
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Jh 9d]
+Dealt to Chezebot3004 [Kc 4c]
+Dealt to OWWW3005 [3s 7h]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [Kh 7s Ah]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [Kh 7s Ah] [2d]
+PoKerboT3003 checks
+Chezebot3004 checks
+*** RIVER *** [Kh 7s Ah 2d] [9c]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (60)
+
+Hand #72
+Seat 1 (Button): Chezebot3004 -308
+Seat 2 (SB): OWWW3005 -48
+Seat 3 (BB): PoKerboT3003 356
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [Th 4d]
+Dealt to PoKerboT3003 [5s Ks]
+Dealt to Chezebot3004 [As Ah]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 calls
+*** FLOP *** [9c Qs 4h]
+PoKerboT3003 bets 10
+Chezebot3004 raises to 132
+PoKerboT3003 folds
+Uncalled bet of 122 returned to Chezebot3004
+Chezebot3004 wins the pot (141)
+
+Hand #73
+Seat 1 (Button): PoKerboT3003 359
+Seat 2 (SB): Chezebot3004 -309
+Seat 3 (BB): OWWW3005 -50
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Ac 4h]
+Dealt to OWWW3005 [2c 6h]
+Dealt to PoKerboT3003 [Ad Qh]
+PoKerboT3003 raises to 40
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 38 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #74
+Seat 1 (Button): OWWW3005 -50
+Seat 2 (SB): PoKerboT3003 419
+Seat 3 (BB): Chezebot3004 -369
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [9s Tc]
+Dealt to Chezebot3004 [8d 2d]
+Dealt to OWWW3005 [8h Jd]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 raises to 60
+PoKerboT3003 raises to 200
+Chezebot3004 folds
+Uncalled bet of 140 returned to PoKerboT3003
+PoKerboT3003 wins the pot (120)
+
+Hand #75
+Seat 1 (Button): Chezebot3004 -369
+Seat 2 (SB): OWWW3005 -51
+Seat 3 (BB): PoKerboT3003 420
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [6c Qs]
+Dealt to PoKerboT3003 [Qd Qc]
+Dealt to Chezebot3004 [Kh 2d]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #76
+Seat 1 (Button): PoKerboT3003 423
+Seat 2 (SB): Chezebot3004 -370
+Seat 3 (BB): OWWW3005 -53
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Kd Th]
+Dealt to OWWW3005 [8h Qs]
+Dealt to PoKerboT3003 [4d Ad]
+PoKerboT3003 raises to 40
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 38 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #77
+Seat 1 (Button): OWWW3005 -53
+Seat 2 (SB): PoKerboT3003 425
+Seat 3 (BB): Chezebot3004 -372
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [4s 3s]
+Dealt to Chezebot3004 [9d 6h]
+Dealt to OWWW3005 [3c 6d]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #78
+Seat 1 (Button): Chezebot3004 -341
+Seat 2 (SB): OWWW3005 -54
+Seat 3 (BB): PoKerboT3003 395
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [9c Qc]
+Dealt to PoKerboT3003 [Td 7s]
+Dealt to Chezebot3004 [3s Ad]
+Chezebot3004 calls
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [4d 2h Th]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [4d 2h Th] [5c]
+PoKerboT3003 checks
+Chezebot3004 bets 45
+PoKerboT3003 folds
+Uncalled bet of 45 returned to Chezebot3004
+Chezebot3004 wins the pot (61)
+
+Hand #79
+Seat 1 (Button): PoKerboT3003 393
+Seat 2 (SB): Chezebot3004 -343
+Seat 3 (BB): OWWW3005 -50
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [2c Jc]
+Dealt to OWWW3005 [Qs Ts]
+Dealt to PoKerboT3003 [4d 8h]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [Ks Kd Qd]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** TURN *** [Ks Kd Qd] [5c]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** RIVER *** [Ks Kd Qd 5c] [5h]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+PoKerboT3003 shows 4d 8h (Two Pair)
+Chezebot3004 shows 2c Jc (Two Pair)
+OWWW3005 shows Qs Ts (Two Pair)
+OWWW3005 wins the pot (6)
+
+Hand #80
+Seat 1 (Button): OWWW3005 -50
+Seat 2 (SB): PoKerboT3003 363
+Seat 3 (BB): Chezebot3004 -313
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Ah 3c]
+Dealt to Chezebot3004 [Ac 7c]
+Dealt to OWWW3005 [Kc As]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [7h Th 7s]
+PoKerboT3003 bets 10
+Chezebot3004 raises to 62
+PoKerboT3003 folds
+Uncalled bet of 52 returned to Chezebot3004
+Chezebot3004 wins the pot (60)
+
+Hand #81
+Seat 1 (Button): Chezebot3004 -313
+Seat 2 (SB): OWWW3005 -51
+Seat 3 (BB): PoKerboT3003 364
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [Jc Qs]
+Dealt to PoKerboT3003 [Tc As]
+Dealt to Chezebot3004 [Ts 7c]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #82
+Seat 1 (Button): PoKerboT3003 371
+Seat 2 (SB): Chezebot3004 -318
+Seat 3 (BB): OWWW3005 -53
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Jd 9s]
+Dealt to OWWW3005 [5c Jh]
+Dealt to PoKerboT3003 [6d 4h]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [Ac 7s 2s]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** TURN *** [Ac 7s 2s] [Kd]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** RIVER *** [Ac 7s 2s Kd] [Js]
+Chezebot3004 bets 3
+OWWW3005 folds
+PoKerboT3003 raises to 30
+Chezebot3004 folds
+Uncalled bet of 27 returned to PoKerboT3003
+PoKerboT3003 wins the pot (12)
+
+Hand #83
+Seat 1 (Button): OWWW3005 -53
+Seat 2 (SB): PoKerboT3003 373
+Seat 3 (BB): Chezebot3004 -320
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Js 5d]
+Dealt to Chezebot3004 [9c Tc]
+Dealt to OWWW3005 [2d 2h]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #84
+Seat 1 (Button): Chezebot3004 -320
+Seat 2 (SB): OWWW3005 -54
+Seat 3 (BB): PoKerboT3003 374
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [6s 8d]
+Dealt to PoKerboT3003 [6d 9c]
+Dealt to Chezebot3004 [7d Jh]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #85
+Seat 1 (Button): PoKerboT3003 378
+Seat 2 (SB): Chezebot3004 -322
+Seat 3 (BB): OWWW3005 -56
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [3d Jc]
+Dealt to OWWW3005 [6c 4h]
+Dealt to PoKerboT3003 [9h 4c]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [5d 6h As]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** TURN *** [5d 6h As] [9d]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** RIVER *** [5d 6h As 9d] [2h]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 bets 10
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (6)
+
+Hand #86
+Seat 1 (Button): OWWW3005 -56
+Seat 2 (SB): PoKerboT3003 408
+Seat 3 (BB): Chezebot3004 -352
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [4c 5s]
+Dealt to Chezebot3004 [Ah Qh]
+Dealt to OWWW3005 [Ks Ts]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [9s Kh 3s]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [9s Kh 3s] [Td]
+PoKerboT3003 checks
+Chezebot3004 checks
+*** RIVER *** [9s Kh 3s Td] [4d]
+PoKerboT3003 bets 10
+Chezebot3004 folds
+Uncalled bet of 10 returned to PoKerboT3003
+PoKerboT3003 wins the pot (60)
+
+Hand #87
+Seat 1 (Button): Chezebot3004 -422
+Seat 2 (SB): OWWW3005 -57
+Seat 3 (BB): PoKerboT3003 479
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [Ts Kd]
+Dealt to PoKerboT3003 [3h Qd]
+Dealt to Chezebot3004 [9s Th]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 calls
+*** FLOP *** [5h 5c 8c]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [5h 5c 8c] [Ah]
+PoKerboT3003 checks
+Chezebot3004 checks
+*** RIVER *** [5h 5c 8c Ah] [Jh]
+PoKerboT3003 checks
+Chezebot3004 checks
+Chezebot3004 shows 9s Th (Pair)
+PoKerboT3003 shows 3h Qd (Pair)
+PoKerboT3003 wins the pot (141)
+
+Hand #88
+Seat 1 (Button): PoKerboT3003 482
+Seat 2 (SB): Chezebot3004 -423
+Seat 3 (BB): OWWW3005 -59
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [Qd Ts]
+Dealt to OWWW3005 [Qs Ks]
+Dealt to PoKerboT3003 [6c 7c]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #89
+Seat 1 (Button): OWWW3005 -59
+Seat 2 (SB): PoKerboT3003 522
+Seat 3 (BB): Chezebot3004 -463
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Th Qs]
+Dealt to Chezebot3004 [Qc 9h]
+Dealt to OWWW3005 [Kh 8s]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 calls
+*** FLOP *** [9c 2c Ts]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [9c 2c Ts] [Js]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** RIVER *** [9c 2c Ts Js] [6c]
+PoKerboT3003 checks
+Chezebot3004 checks
+PoKerboT3003 shows Th Qs (Pair)
+Chezebot3004 shows Qc 9h (Pair)
+PoKerboT3003 wins the pot (80)
+
+Hand #90
+Seat 1 (Button): Chezebot3004 -470
+Seat 2 (SB): OWWW3005 -60
+Seat 3 (BB): PoKerboT3003 530
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [8d Kh]
+Dealt to PoKerboT3003 [4d 3h]
+Dealt to Chezebot3004 [5d 9h]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 folds
+Uncalled bet of 53 returned to PoKerboT3003
+PoKerboT3003 wins the pot (15)
+
+Hand #91
+Seat 1 (Button): PoKerboT3003 533
+Seat 2 (SB): Chezebot3004 -471
+Seat 3 (BB): OWWW3005 -62
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [6h Js]
+Dealt to OWWW3005 [Qh 6s]
+Dealt to PoKerboT3003 [8d Tc]
+PoKerboT3003 raises to 16
+Chezebot3004 folds
+OWWW3005 folds
+Uncalled bet of 14 returned to PoKerboT3003
+PoKerboT3003 wins the pot (5)
+
+Hand #92
+Seat 1 (Button): OWWW3005 -62
+Seat 2 (SB): PoKerboT3003 535
+Seat 3 (BB): Chezebot3004 -473
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [4h 2c]
+Dealt to Chezebot3004 [3c Tc]
+Dealt to OWWW3005 [5h Ad]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #93
+Seat 1 (Button): Chezebot3004 -654
+Seat 2 (SB): OWWW3005 -63
+Seat 3 (BB): PoKerboT3003 717
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [Kh 3s]
+Dealt to PoKerboT3003 [6h 7h]
+Dealt to Chezebot3004 [Qs Qd]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 raises to 181
+PoKerboT3003 raises to 200
+Chezebot3004 folds
+Uncalled bet of 19 returned to PoKerboT3003
+PoKerboT3003 wins the pot (363)
+
+Hand #94
+Seat 1 (Button): PoKerboT3003 721
+Seat 2 (SB): Chezebot3004 -656
+Seat 3 (BB): OWWW3005 -65
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [3c 7h]
+Dealt to OWWW3005 [Qs 9c]
+Dealt to PoKerboT3003 [2d 4s]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [2s Ah Kd]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** TURN *** [2s Ah Kd] [6d]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** RIVER *** [2s Ah Kd 6d] [5d]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+PoKerboT3003 shows 2d 4s (Pair)
+Chezebot3004 shows 3c 7h (High Card)
+OWWW3005 shows Qs 9c (High Card)
+PoKerboT3003 wins the pot (6)
+
+Hand #95
+Seat 1 (Button): OWWW3005 -65
+Seat 2 (SB): PoKerboT3003 723
+Seat 3 (BB): Chezebot3004 -658
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [Tc 8d]
+Dealt to Chezebot3004 [4s Th]
+Dealt to OWWW3005 [Ac 8c]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #96
+Seat 1 (Button): Chezebot3004 -457
+Seat 2 (SB): OWWW3005 -66
+Seat 3 (BB): PoKerboT3003 523
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [4h 5s]
+Dealt to PoKerboT3003 [Ad Jh]
+Dealt to Chezebot3004 [As Qh]
+Chezebot3004 raises to 7
+OWWW3005 folds
+PoKerboT3003 raises to 60
+Chezebot3004 calls
+*** FLOP *** [Qd 2h 6d]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** TURN *** [Qd 2h 6d] [Ac]
+PoKerboT3003 bets 10
+Chezebot3004 calls
+*** RIVER *** [Qd 2h 6d Ac] [6h]
+PoKerboT3003 bets 10
+Chezebot3004 raises to 120
+PoKerboT3003 calls
+Chezebot3004 shows As Qh (Two Pair)
+PoKerboT3003 shows Ad Jh (Two Pair)
+Chezebot3004 wins the pot (401)
+
+Hand #97
+Seat 1 (Button): PoKerboT3003 521
+Seat 2 (SB): Chezebot3004 -453
+Seat 3 (BB): OWWW3005 -68
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [5d Js]
+Dealt to OWWW3005 [4d 6s]
+Dealt to PoKerboT3003 [Tc 3s]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [7h Qs 9c]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** TURN *** [7h Qs 9c] [2c]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** RIVER *** [7h Qs 9c 2c] [8d]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+PoKerboT3003 shows Tc 3s (High Card)
+Chezebot3004 shows 5d Js (High Card)
+OWWW3005 shows 4d 6s (High Card)
+Chezebot3004 wins the pot (6)
+
+Hand #98
+Seat 1 (Button): OWWW3005 -68
+Seat 2 (SB): PoKerboT3003 523
+Seat 3 (BB): Chezebot3004 -455
+PoKerboT3003 posts the blind of 1
+Chezebot3004 posts the blind of 2
+Dealt to PoKerboT3003 [5d 2d]
+Dealt to Chezebot3004 [5h 7s]
+Dealt to OWWW3005 [5s Jc]
+OWWW3005 folds
+PoKerboT3003 raises to 20
+Chezebot3004 folds
+Uncalled bet of 18 returned to PoKerboT3003
+PoKerboT3003 wins the pot (4)
+
+Hand #99
+Seat 1 (Button): Chezebot3004 -455
+Seat 2 (SB): OWWW3005 -69
+Seat 3 (BB): PoKerboT3003 524
+OWWW3005 posts the blind of 1
+PoKerboT3003 posts the blind of 2
+Dealt to OWWW3005 [5c Th]
+Dealt to PoKerboT3003 [4c Qc]
+Dealt to Chezebot3004 [5h 2c]
+Chezebot3004 folds
+OWWW3005 folds
+PoKerboT3003 wins the pot (3)
+
+Hand #100
+Seat 1 (Button): PoKerboT3003 532
+Seat 2 (SB): Chezebot3004 -461
+Seat 3 (BB): OWWW3005 -71
+Chezebot3004 posts the blind of 1
+OWWW3005 posts the blind of 2
+Dealt to Chezebot3004 [2s 4d]
+Dealt to OWWW3005 [6h 6d]
+Dealt to PoKerboT3003 [3d Qc]
+PoKerboT3003 calls
+Chezebot3004 calls
+OWWW3005 checks
+*** FLOP *** [8d 8s Ks]
+Chezebot3004 checks
+OWWW3005 checks
+PoKerboT3003 checks
+*** TURN *** [8d 8s Ks] [4c]
+Chezebot3004 bets 4
+OWWW3005 folds
+PoKerboT3003 raises to 40
+Chezebot3004 folds
+Uncalled bet of 36 returned to PoKerboT3003
+PoKerboT3003 wins the pot (14)
+

@@ -1,0 +1,1776 @@
+6.S912 MIT Pokerbots - HandBanana vs. AllinAlice vs. PoKerboT
+Hand #1
+Seat 1 (Button): HandBanana3000 0
+Seat 2 (SB): AllinAlice3001 -1
+Seat 3 (BB): PoKerboT3002 1
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [5d 6h]
+Dealt to PoKerboT3002 [7s 4h]
+Dealt to HandBanana3000 [9h 3c]
+HandBanana3000 folds
+AllinAlice3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #2
+Seat 1 (Button): PoKerboT3002 4
+Seat 2 (SB): HandBanana3000 -1
+Seat 3 (BB): AllinAlice3001 -3
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [9h 5c]
+Dealt to AllinAlice3001 [Kd 4d]
+Dealt to PoKerboT3002 [3d Qd]
+PoKerboT3002 raises to 16
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 14 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #3
+Seat 1 (Button): AllinAlice3001 -11
+Seat 2 (SB): PoKerboT3002 3
+Seat 3 (BB): HandBanana3000 8
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [2d Qs]
+Dealt to HandBanana3000 [9h 7s]
+Dealt to AllinAlice3001 [Ad 6s]
+AllinAlice3001 raises to 8
+PoKerboT3002 folds
+HandBanana3000 calls
+*** FLOP *** [8d 5c 5h]
+HandBanana3000 bets 9
+AllinAlice3001 folds
+Uncalled bet of 9 returned to HandBanana3000
+HandBanana3000 wins the pot (17)
+
+Hand #4
+Seat 1 (Button): HandBanana3000 6
+Seat 2 (SB): AllinAlice3001 -13
+Seat 3 (BB): PoKerboT3002 7
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [6d Qc]
+Dealt to PoKerboT3002 [Jh Th]
+Dealt to HandBanana3000 [9c Ah]
+HandBanana3000 calls
+AllinAlice3001 calls
+PoKerboT3002 raises to 40
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 38 returned to PoKerboT3002
+PoKerboT3002 wins the pot (6)
+
+Hand #5
+Seat 1 (Button): PoKerboT3002 10
+Seat 2 (SB): HandBanana3000 5
+Seat 3 (BB): AllinAlice3001 -15
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [Td 8s]
+Dealt to AllinAlice3001 [8d 7h]
+Dealt to PoKerboT3002 [Ks 3h]
+PoKerboT3002 raises to 16
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 14 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #6
+Seat 1 (Button): AllinAlice3001 -17
+Seat 2 (SB): PoKerboT3002 14
+Seat 3 (BB): HandBanana3000 3
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Th Kd]
+Dealt to HandBanana3000 [Js Ad]
+Dealt to AllinAlice3001 [7c 6d]
+AllinAlice3001 calls
+PoKerboT3002 raises to 40
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 38 returned to PoKerboT3002
+PoKerboT3002 wins the pot (6)
+
+Hand #7
+Seat 1 (Button): HandBanana3000 39
+Seat 2 (SB): AllinAlice3001 -51
+Seat 3 (BB): PoKerboT3002 12
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Tc 7h]
+Dealt to PoKerboT3002 [3c Jd]
+Dealt to HandBanana3000 [Kc Ac]
+HandBanana3000 calls
+AllinAlice3001 calls
+PoKerboT3002 checks
+*** FLOP *** [2h 5s Th]
+AllinAlice3001 bets 16
+PoKerboT3002 folds
+HandBanana3000 calls
+*** TURN *** [2h 5s Th] [7c]
+AllinAlice3001 bets 16
+HandBanana3000 raises to 45
+AllinAlice3001 folds
+Uncalled bet of 29 returned to HandBanana3000
+HandBanana3000 wins the pot (70)
+
+Hand #8
+Seat 1 (Button): PoKerboT3002 10
+Seat 2 (SB): HandBanana3000 52
+Seat 3 (BB): AllinAlice3001 -62
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [2d Kc]
+Dealt to AllinAlice3001 [Qs 7s]
+Dealt to PoKerboT3002 [9s 5h]
+PoKerboT3002 calls
+HandBanana3000 raises to 11
+AllinAlice3001 calls
+PoKerboT3002 folds
+*** FLOP *** [5s 5d Ad]
+HandBanana3000 bets 186
+AllinAlice3001 folds
+Uncalled bet of 186 returned to HandBanana3000
+HandBanana3000 wins the pot (24)
+
+Hand #9
+Seat 1 (Button): AllinAlice3001 -62
+Seat 2 (SB): PoKerboT3002 54
+Seat 3 (BB): HandBanana3000 8
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Th Qc]
+Dealt to HandBanana3000 [Kc Ac]
+Dealt to AllinAlice3001 [8d 3s]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 raises to 44
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 156 returned to PoKerboT3002
+PoKerboT3002 wins the pot (88)
+
+Hand #10
+Seat 1 (Button): HandBanana3000 8
+Seat 2 (SB): AllinAlice3001 -132
+Seat 3 (BB): PoKerboT3002 124
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [8h Ah]
+Dealt to PoKerboT3002 [7s 6h]
+Dealt to HandBanana3000 [7d Ts]
+HandBanana3000 folds
+AllinAlice3001 raises to 8
+PoKerboT3002 raises to 70
+AllinAlice3001 calls
+*** FLOP *** [Td 5h 2d]
+AllinAlice3001 checks
+PoKerboT3002 bets 10
+AllinAlice3001 folds
+Uncalled bet of 10 returned to PoKerboT3002
+PoKerboT3002 wins the pot (140)
+
+Hand #11
+Seat 1 (Button): PoKerboT3002 127
+Seat 2 (SB): HandBanana3000 7
+Seat 3 (BB): AllinAlice3001 -134
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [Qs 9c]
+Dealt to AllinAlice3001 [Th 2h]
+Dealt to PoKerboT3002 [9d Ad]
+PoKerboT3002 raises to 40
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 38 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #12
+Seat 1 (Button): AllinAlice3001 -134
+Seat 2 (SB): PoKerboT3002 97
+Seat 3 (BB): HandBanana3000 37
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Jd 8d]
+Dealt to HandBanana3000 [Kc Qh]
+Dealt to AllinAlice3001 [3h Ts]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 calls
+*** FLOP *** [Jc 2h 5c]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 46
+PoKerboT3002 folds
+Uncalled bet of 36 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #13
+Seat 1 (Button): HandBanana3000 47
+Seat 2 (SB): AllinAlice3001 -142
+Seat 3 (BB): PoKerboT3002 95
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Ah 8s]
+Dealt to PoKerboT3002 [4c 8h]
+Dealt to HandBanana3000 [Jh Ks]
+HandBanana3000 calls
+AllinAlice3001 raises to 8
+PoKerboT3002 folds
+HandBanana3000 raises to 16
+AllinAlice3001 folds
+Uncalled bet of 8 returned to HandBanana3000
+HandBanana3000 wins the pot (18)
+
+Hand #14
+Seat 1 (Button): PoKerboT3002 107
+Seat 2 (SB): HandBanana3000 37
+Seat 3 (BB): AllinAlice3001 -144
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [8d Ac]
+Dealt to AllinAlice3001 [Ts 7c]
+Dealt to PoKerboT3002 [4h 2d]
+PoKerboT3002 calls
+HandBanana3000 raises to 10
+AllinAlice3001 folds
+PoKerboT3002 raises to 90
+HandBanana3000 folds
+Uncalled bet of 80 returned to PoKerboT3002
+PoKerboT3002 wins the pot (22)
+
+Hand #15
+Seat 1 (Button): AllinAlice3001 -144
+Seat 2 (SB): PoKerboT3002 109
+Seat 3 (BB): HandBanana3000 35
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Qs Ks]
+Dealt to HandBanana3000 [2d 3h]
+Dealt to AllinAlice3001 [6d 3d]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 folds
+Uncalled bet of 18 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #16
+Seat 1 (Button): HandBanana3000 63
+Seat 2 (SB): AllinAlice3001 -146
+Seat 3 (BB): PoKerboT3002 83
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Th 7c]
+Dealt to PoKerboT3002 [2c As]
+Dealt to HandBanana3000 [Jd Qc]
+HandBanana3000 calls
+AllinAlice3001 calls
+PoKerboT3002 raises to 16
+HandBanana3000 calls
+AllinAlice3001 folds
+*** FLOP *** [7d 6d 8h]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 24
+PoKerboT3002 folds
+Uncalled bet of 14 returned to HandBanana3000
+HandBanana3000 wins the pot (54)
+
+Hand #17
+Seat 1 (Button): PoKerboT3002 100
+Seat 2 (SB): HandBanana3000 62
+Seat 3 (BB): AllinAlice3001 -162
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [7h Ad]
+Dealt to AllinAlice3001 [Kh Jd]
+Dealt to PoKerboT3002 [4c Ah]
+PoKerboT3002 raises to 16
+HandBanana3000 folds
+AllinAlice3001 calls
+*** FLOP *** [5s 5c 6h]
+AllinAlice3001 checks
+PoKerboT3002 bets 10
+AllinAlice3001 folds
+Uncalled bet of 10 returned to PoKerboT3002
+PoKerboT3002 wins the pot (33)
+
+Hand #18
+Seat 1 (Button): AllinAlice3001 -162
+Seat 2 (SB): PoKerboT3002 70
+Seat 3 (BB): HandBanana3000 92
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Ts Ac]
+Dealt to HandBanana3000 [9h Jc]
+Dealt to AllinAlice3001 [3h 2s]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 calls
+*** FLOP *** [Qd Kd Jd]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 52
+PoKerboT3002 folds
+Uncalled bet of 42 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #19
+Seat 1 (Button): HandBanana3000 92
+Seat 2 (SB): AllinAlice3001 -163
+Seat 3 (BB): PoKerboT3002 71
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [9c 4s]
+Dealt to PoKerboT3002 [Js 9s]
+Dealt to HandBanana3000 [5c 2d]
+HandBanana3000 folds
+AllinAlice3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #20
+Seat 1 (Button): PoKerboT3002 69
+Seat 2 (SB): HandBanana3000 90
+Seat 3 (BB): AllinAlice3001 -159
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [8s Ts]
+Dealt to AllinAlice3001 [3c 4d]
+Dealt to PoKerboT3002 [Td 5h]
+PoKerboT3002 calls
+HandBanana3000 calls
+AllinAlice3001 checks
+*** FLOP *** [3s 3d 9h]
+HandBanana3000 checks
+AllinAlice3001 bets 40
+PoKerboT3002 folds
+HandBanana3000 folds
+Uncalled bet of 40 returned to AllinAlice3001
+AllinAlice3001 wins the pot (6)
+
+Hand #21
+Seat 1 (Button): AllinAlice3001 -159
+Seat 2 (SB): PoKerboT3002 39
+Seat 3 (BB): HandBanana3000 120
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [4s Js]
+Dealt to HandBanana3000 [3h Ah]
+Dealt to AllinAlice3001 [7d 2d]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 calls
+*** FLOP *** [Qh 5c 8h]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 86
+PoKerboT3002 folds
+Uncalled bet of 76 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #22
+Seat 1 (Button): HandBanana3000 -8
+Seat 2 (SB): AllinAlice3001 -160
+Seat 3 (BB): PoKerboT3002 168
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [3h 9d]
+Dealt to PoKerboT3002 [Ad Jh]
+Dealt to HandBanana3000 [Kh 9s]
+HandBanana3000 raises to 6
+AllinAlice3001 folds
+PoKerboT3002 raises to 50
+HandBanana3000 raises to 128
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 72 returned to PoKerboT3002
+PoKerboT3002 wins the pot (257)
+
+Hand #23
+Seat 1 (Button): PoKerboT3002 166
+Seat 2 (SB): HandBanana3000 2
+Seat 3 (BB): AllinAlice3001 -168
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [9s Jd]
+Dealt to AllinAlice3001 [Th Qs]
+Dealt to PoKerboT3002 [2c 9h]
+PoKerboT3002 calls
+HandBanana3000 calls
+AllinAlice3001 raises to 8
+PoKerboT3002 folds
+HandBanana3000 raises to 15
+AllinAlice3001 folds
+Uncalled bet of 7 returned to HandBanana3000
+HandBanana3000 wins the pot (18)
+
+Hand #24
+Seat 1 (Button): AllinAlice3001 -80
+Seat 2 (SB): PoKerboT3002 80
+Seat 3 (BB): HandBanana3000 0
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [7s 8s]
+Dealt to HandBanana3000 [Tc 7h]
+Dealt to AllinAlice3001 [Jc Ks]
+AllinAlice3001 raises to 8
+PoKerboT3002 raises to 56
+HandBanana3000 folds
+AllinAlice3001 calls
+*** FLOP *** [Jh 2c Ts]
+PoKerboT3002 bets 10
+AllinAlice3001 calls
+*** TURN *** [Jh 2c Ts] [2d]
+PoKerboT3002 bets 10
+AllinAlice3001 calls
+*** RIVER *** [Jh 2c Ts 2d] [6h]
+PoKerboT3002 bets 10
+AllinAlice3001 calls
+AllinAlice3001 shows Jc Ks (Two Pair)
+PoKerboT3002 shows 7s 8s (Pair)
+AllinAlice3001 wins the pot (174)
+
+Hand #25
+Seat 1 (Button): HandBanana3000 0
+Seat 2 (SB): AllinAlice3001 -10
+Seat 3 (BB): PoKerboT3002 10
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Ac Ad]
+Dealt to PoKerboT3002 [9d 2d]
+Dealt to HandBanana3000 [3d 4c]
+HandBanana3000 folds
+AllinAlice3001 raises to 8
+PoKerboT3002 raises to 70
+AllinAlice3001 calls
+*** FLOP *** [Kh 2h As]
+AllinAlice3001 bets 40
+PoKerboT3002 folds
+Uncalled bet of 40 returned to AllinAlice3001
+AllinAlice3001 wins the pot (140)
+
+Hand #26
+Seat 1 (Button): PoKerboT3002 8
+Seat 2 (SB): HandBanana3000 4
+Seat 3 (BB): AllinAlice3001 -12
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [Ts 5c]
+Dealt to AllinAlice3001 [5h 8s]
+Dealt to PoKerboT3002 [6d 2h]
+PoKerboT3002 calls
+HandBanana3000 calls
+AllinAlice3001 checks
+*** FLOP *** [3c 9c 3d]
+HandBanana3000 checks
+AllinAlice3001 checks
+PoKerboT3002 checks
+*** TURN *** [3c 9c 3d] [Kh]
+HandBanana3000 checks
+AllinAlice3001 checks
+PoKerboT3002 checks
+*** RIVER *** [3c 9c 3d Kh] [Ad]
+HandBanana3000 checks
+AllinAlice3001 checks
+PoKerboT3002 checks
+PoKerboT3002 shows 6d 2h (Pair)
+HandBanana3000 shows Ts 5c (Pair)
+AllinAlice3001 shows 5h 8s (Pair)
+HandBanana3000 wins the pot (6)
+
+Hand #27
+Seat 1 (Button): AllinAlice3001 -12
+Seat 2 (SB): PoKerboT3002 -22
+Seat 3 (BB): HandBanana3000 34
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [9h As]
+Dealt to HandBanana3000 [Kc Th]
+Dealt to AllinAlice3001 [5c 4h]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 calls
+*** FLOP *** [Qh 5h Ts]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 162
+PoKerboT3002 folds
+Uncalled bet of 152 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #28
+Seat 1 (Button): HandBanana3000 34
+Seat 2 (SB): AllinAlice3001 -14
+Seat 3 (BB): PoKerboT3002 -20
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [3c Kd]
+Dealt to PoKerboT3002 [4c 6d]
+Dealt to HandBanana3000 [5c 7c]
+HandBanana3000 folds
+AllinAlice3001 calls
+PoKerboT3002 raises to 20
+AllinAlice3001 folds
+Uncalled bet of 18 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #29
+Seat 1 (Button): PoKerboT3002 13
+Seat 2 (SB): HandBanana3000 33
+Seat 3 (BB): AllinAlice3001 -46
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [5h 3d]
+Dealt to AllinAlice3001 [As Jh]
+Dealt to PoKerboT3002 [5s Ah]
+PoKerboT3002 raises to 16
+HandBanana3000 folds
+AllinAlice3001 calls
+*** FLOP *** [Jd 3c 6c]
+AllinAlice3001 bets 16
+PoKerboT3002 raises to 160
+AllinAlice3001 folds
+Uncalled bet of 144 returned to PoKerboT3002
+PoKerboT3002 wins the pot (65)
+
+Hand #30
+Seat 1 (Button): AllinAlice3001 -54
+Seat 2 (SB): PoKerboT3002 23
+Seat 3 (BB): HandBanana3000 31
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Td 7h]
+Dealt to HandBanana3000 [6s Jh]
+Dealt to AllinAlice3001 [As 3s]
+AllinAlice3001 raises to 8
+PoKerboT3002 raises to 56
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 48 returned to PoKerboT3002
+PoKerboT3002 wins the pot (18)
+
+Hand #31
+Seat 1 (Button): HandBanana3000 17
+Seat 2 (SB): AllinAlice3001 -55
+Seat 3 (BB): PoKerboT3002 38
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [4d 7s]
+Dealt to PoKerboT3002 [9h Jh]
+Dealt to HandBanana3000 [4c 8d]
+HandBanana3000 raises to 14
+AllinAlice3001 folds
+PoKerboT3002 raises to 130
+HandBanana3000 folds
+Uncalled bet of 116 returned to PoKerboT3002
+PoKerboT3002 wins the pot (29)
+
+Hand #32
+Seat 1 (Button): PoKerboT3002 62
+Seat 2 (SB): HandBanana3000 -5
+Seat 3 (BB): AllinAlice3001 -57
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [3c 3d]
+Dealt to AllinAlice3001 [8c 2d]
+Dealt to PoKerboT3002 [4s 7d]
+PoKerboT3002 calls
+HandBanana3000 calls
+AllinAlice3001 checks
+*** FLOP *** [Ac Ts Kh]
+HandBanana3000 checks
+AllinAlice3001 checks
+PoKerboT3002 checks
+*** TURN *** [Ac Ts Kh] [Th]
+HandBanana3000 checks
+AllinAlice3001 checks
+PoKerboT3002 checks
+*** RIVER *** [Ac Ts Kh Th] [4c]
+HandBanana3000 bets 2
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 calls
+PoKerboT3002 shows 4s 7d (Two Pair)
+HandBanana3000 shows 3c 3d (Two Pair)
+PoKerboT3002 wins the pot (46)
+
+Hand #33
+Seat 1 (Button): AllinAlice3001 -65
+Seat 2 (SB): PoKerboT3002 61
+Seat 3 (BB): HandBanana3000 4
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [2s Ts]
+Dealt to HandBanana3000 [7d 9c]
+Dealt to AllinAlice3001 [Ac Qd]
+AllinAlice3001 raises to 8
+PoKerboT3002 folds
+HandBanana3000 calls
+*** FLOP *** [6s Ah 9s]
+HandBanana3000 bets 42
+AllinAlice3001 folds
+Uncalled bet of 42 returned to HandBanana3000
+HandBanana3000 wins the pot (17)
+
+Hand #34
+Seat 1 (Button): HandBanana3000 2
+Seat 2 (SB): AllinAlice3001 -7
+Seat 3 (BB): PoKerboT3002 5
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Jh Js]
+Dealt to PoKerboT3002 [6c 9c]
+Dealt to HandBanana3000 [Th Ks]
+HandBanana3000 calls
+AllinAlice3001 raises to 8
+PoKerboT3002 raises to 56
+HandBanana3000 folds
+AllinAlice3001 calls
+*** FLOP *** [3h Jc 9h]
+AllinAlice3001 bets 40
+PoKerboT3002 folds
+Uncalled bet of 40 returned to AllinAlice3001
+AllinAlice3001 wins the pot (114)
+
+Hand #35
+Seat 1 (Button): PoKerboT3002 -17
+Seat 2 (SB): HandBanana3000 26
+Seat 3 (BB): AllinAlice3001 -9
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [2c Qh]
+Dealt to AllinAlice3001 [Tc 5h]
+Dealt to PoKerboT3002 [3c Jh]
+PoKerboT3002 calls
+HandBanana3000 calls
+AllinAlice3001 checks
+*** FLOP *** [8s Ah 8h]
+HandBanana3000 checks
+AllinAlice3001 checks
+PoKerboT3002 checks
+*** TURN *** [8s Ah 8h] [2d]
+HandBanana3000 bets 2
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 calls
+*** RIVER *** [8s Ah 8h 2d] [3h]
+HandBanana3000 bets 44
+PoKerboT3002 folds
+Uncalled bet of 44 returned to HandBanana3000
+HandBanana3000 wins the pot (46)
+
+Hand #36
+Seat 1 (Button): AllinAlice3001 -17
+Seat 2 (SB): PoKerboT3002 -167
+Seat 3 (BB): HandBanana3000 184
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [6d 6h]
+Dealt to HandBanana3000 [8d 8c]
+Dealt to AllinAlice3001 [Qd Th]
+AllinAlice3001 raises to 8
+PoKerboT3002 raises to 140
+HandBanana3000 calls
+AllinAlice3001 folds
+*** FLOP *** [6s 8h Jd]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 30
+PoKerboT3002 folds
+Uncalled bet of 20 returned to HandBanana3000
+HandBanana3000 wins the pot (308)
+
+Hand #37
+Seat 1 (Button): HandBanana3000 82
+Seat 2 (SB): AllinAlice3001 -18
+Seat 3 (BB): PoKerboT3002 -64
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [6s 2h]
+Dealt to PoKerboT3002 [Qd 6c]
+Dealt to HandBanana3000 [2c 4c]
+HandBanana3000 raises to 4
+AllinAlice3001 folds
+PoKerboT3002 raises to 30
+HandBanana3000 raises to 102
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 98 returned to PoKerboT3002
+PoKerboT3002 wins the pot (205)
+
+Hand #38
+Seat 1 (Button): PoKerboT3002 -61
+Seat 2 (SB): HandBanana3000 81
+Seat 3 (BB): AllinAlice3001 -20
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [7h Kh]
+Dealt to AllinAlice3001 [7s 4s]
+Dealt to PoKerboT3002 [5d Qd]
+PoKerboT3002 raises to 16
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 14 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #39
+Seat 1 (Button): AllinAlice3001 -22
+Seat 2 (SB): PoKerboT3002 -57
+Seat 3 (BB): HandBanana3000 79
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Th 4s]
+Dealt to HandBanana3000 [6s 4c]
+Dealt to AllinAlice3001 [6d Qc]
+AllinAlice3001 calls
+PoKerboT3002 calls
+HandBanana3000 checks
+*** FLOP *** [Jh 7h Ts]
+PoKerboT3002 bets 20
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 20 returned to PoKerboT3002
+PoKerboT3002 wins the pot (6)
+
+Hand #40
+Seat 1 (Button): HandBanana3000 79
+Seat 2 (SB): AllinAlice3001 -24
+Seat 3 (BB): PoKerboT3002 -55
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [7c Ts]
+Dealt to PoKerboT3002 [5d 8s]
+Dealt to HandBanana3000 [4d 8c]
+HandBanana3000 folds
+AllinAlice3001 calls
+PoKerboT3002 raises to 20
+AllinAlice3001 folds
+Uncalled bet of 18 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #41
+Seat 1 (Button): PoKerboT3002 -52
+Seat 2 (SB): HandBanana3000 78
+Seat 3 (BB): AllinAlice3001 -26
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [7h 3d]
+Dealt to AllinAlice3001 [3s Jd]
+Dealt to PoKerboT3002 [7c Ac]
+PoKerboT3002 raises to 40
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 38 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #42
+Seat 1 (Button): AllinAlice3001 -28
+Seat 2 (SB): PoKerboT3002 -112
+Seat 3 (BB): HandBanana3000 140
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [7c 6s]
+Dealt to HandBanana3000 [Ks Tc]
+Dealt to AllinAlice3001 [Kh 2d]
+AllinAlice3001 calls
+PoKerboT3002 calls
+HandBanana3000 raises to 6
+AllinAlice3001 folds
+PoKerboT3002 raises to 50
+HandBanana3000 calls
+*** FLOP *** [8s Jh As]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 114
+PoKerboT3002 folds
+Uncalled bet of 104 returned to HandBanana3000
+HandBanana3000 wins the pot (122)
+
+Hand #43
+Seat 1 (Button): HandBanana3000 153
+Seat 2 (SB): AllinAlice3001 -39
+Seat 3 (BB): PoKerboT3002 -114
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [7h Jh]
+Dealt to PoKerboT3002 [7d 2d]
+Dealt to HandBanana3000 [2s 9c]
+HandBanana3000 raises to 11
+AllinAlice3001 calls
+PoKerboT3002 folds
+*** FLOP *** [Kc 9h 5s]
+AllinAlice3001 checks
+HandBanana3000 bets 164
+AllinAlice3001 folds
+Uncalled bet of 164 returned to HandBanana3000
+HandBanana3000 wins the pot (24)
+
+Hand #44
+Seat 1 (Button): PoKerboT3002 -130
+Seat 2 (SB): HandBanana3000 171
+Seat 3 (BB): AllinAlice3001 -41
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [Qd Ks]
+Dealt to AllinAlice3001 [2s 8c]
+Dealt to PoKerboT3002 [Ts Qh]
+PoKerboT3002 raises to 16
+HandBanana3000 calls
+AllinAlice3001 folds
+*** FLOP *** [3s 4d 6h]
+HandBanana3000 bets 20
+PoKerboT3002 folds
+Uncalled bet of 20 returned to HandBanana3000
+HandBanana3000 wins the pot (34)
+
+Hand #45
+Seat 1 (Button): AllinAlice3001 -41
+Seat 2 (SB): PoKerboT3002 -160
+Seat 3 (BB): HandBanana3000 201
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [2s Jh]
+Dealt to HandBanana3000 [3c 3d]
+Dealt to AllinAlice3001 [4s 5h]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 calls
+*** FLOP *** [4d 6s 4c]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 49
+PoKerboT3002 folds
+Uncalled bet of 39 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #46
+Seat 1 (Button): HandBanana3000 201
+Seat 2 (SB): AllinAlice3001 -49
+Seat 3 (BB): PoKerboT3002 -152
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Kc 8c]
+Dealt to PoKerboT3002 [3s 2c]
+Dealt to HandBanana3000 [3c 4s]
+HandBanana3000 folds
+AllinAlice3001 raises to 8
+PoKerboT3002 raises to 70
+AllinAlice3001 folds
+Uncalled bet of 62 returned to PoKerboT3002
+PoKerboT3002 wins the pot (16)
+
+Hand #47
+Seat 1 (Button): PoKerboT3002 -154
+Seat 2 (SB): HandBanana3000 199
+Seat 3 (BB): AllinAlice3001 -45
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [2d 3h]
+Dealt to AllinAlice3001 [6d Ad]
+Dealt to PoKerboT3002 [4s Jc]
+PoKerboT3002 calls
+HandBanana3000 calls
+AllinAlice3001 raises to 8
+PoKerboT3002 folds
+HandBanana3000 folds
+Uncalled bet of 6 returned to AllinAlice3001
+AllinAlice3001 wins the pot (6)
+
+Hand #48
+Seat 1 (Button): AllinAlice3001 -45
+Seat 2 (SB): PoKerboT3002 -152
+Seat 3 (BB): HandBanana3000 197
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Qc 4s]
+Dealt to HandBanana3000 [6c 3s]
+Dealt to AllinAlice3001 [4h 7s]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 folds
+Uncalled bet of 18 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #49
+Seat 1 (Button): HandBanana3000 158
+Seat 2 (SB): AllinAlice3001 -46
+Seat 3 (BB): PoKerboT3002 -112
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Jc 2h]
+Dealt to PoKerboT3002 [Kh 9d]
+Dealt to HandBanana3000 [5c 5h]
+HandBanana3000 calls
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 raises to 39
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 161 returned to PoKerboT3002
+PoKerboT3002 wins the pot (79)
+
+Hand #50
+Seat 1 (Button): PoKerboT3002 -108
+Seat 2 (SB): HandBanana3000 156
+Seat 3 (BB): AllinAlice3001 -48
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [3h 8c]
+Dealt to AllinAlice3001 [9s 7s]
+Dealt to PoKerboT3002 [Td 2d]
+PoKerboT3002 calls
+HandBanana3000 calls
+AllinAlice3001 checks
+*** FLOP *** [5h Ad Jh]
+HandBanana3000 checks
+AllinAlice3001 checks
+PoKerboT3002 checks
+*** TURN *** [5h Ad Jh] [Ts]
+HandBanana3000 checks
+AllinAlice3001 checks
+PoKerboT3002 bets 20
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 20 returned to PoKerboT3002
+PoKerboT3002 wins the pot (6)
+
+Hand #51
+Seat 1 (Button): AllinAlice3001 -50
+Seat 2 (SB): PoKerboT3002 -17
+Seat 3 (BB): HandBanana3000 67
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Ah Td]
+Dealt to HandBanana3000 [4s 8d]
+Dealt to AllinAlice3001 [7d 9h]
+AllinAlice3001 calls
+PoKerboT3002 raises to 40
+HandBanana3000 raises to 89
+AllinAlice3001 folds
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 111 returned to PoKerboT3002
+PoKerboT3002 wins the pot (180)
+
+Hand #52
+Seat 1 (Button): HandBanana3000 67
+Seat 2 (SB): AllinAlice3001 -51
+Seat 3 (BB): PoKerboT3002 -16
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Tc 5d]
+Dealt to PoKerboT3002 [8d 4s]
+Dealt to HandBanana3000 [4c Qh]
+HandBanana3000 folds
+AllinAlice3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #53
+Seat 1 (Button): PoKerboT3002 -12
+Seat 2 (SB): HandBanana3000 65
+Seat 3 (BB): AllinAlice3001 -53
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [3s 6d]
+Dealt to AllinAlice3001 [5d 6h]
+Dealt to PoKerboT3002 [3c 9h]
+PoKerboT3002 calls
+HandBanana3000 calls
+AllinAlice3001 checks
+*** FLOP *** [2c 8h Qc]
+HandBanana3000 checks
+AllinAlice3001 checks
+PoKerboT3002 checks
+*** TURN *** [2c 8h Qc] [Ad]
+HandBanana3000 checks
+AllinAlice3001 checks
+PoKerboT3002 checks
+*** RIVER *** [2c 8h Qc Ad] [4h]
+HandBanana3000 checks
+AllinAlice3001 checks
+PoKerboT3002 checks
+PoKerboT3002 shows 3c 9h (High Card)
+HandBanana3000 shows 3s 6d (High Card)
+AllinAlice3001 shows 5d 6h (High Card)
+PoKerboT3002 wins the pot (6)
+
+Hand #54
+Seat 1 (Button): AllinAlice3001 -55
+Seat 2 (SB): PoKerboT3002 -8
+Seat 3 (BB): HandBanana3000 63
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Kh 4s]
+Dealt to HandBanana3000 [6s Jd]
+Dealt to AllinAlice3001 [8d Th]
+AllinAlice3001 calls
+PoKerboT3002 raises to 16
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 14 returned to PoKerboT3002
+PoKerboT3002 wins the pot (6)
+
+Hand #55
+Seat 1 (Button): HandBanana3000 63
+Seat 2 (SB): AllinAlice3001 -56
+Seat 3 (BB): PoKerboT3002 -7
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [2d 8c]
+Dealt to PoKerboT3002 [7s 6s]
+Dealt to HandBanana3000 [9s Tc]
+HandBanana3000 folds
+AllinAlice3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #56
+Seat 1 (Button): PoKerboT3002 -4
+Seat 2 (SB): HandBanana3000 62
+Seat 3 (BB): AllinAlice3001 -58
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [7h Qd]
+Dealt to AllinAlice3001 [Ts Jd]
+Dealt to PoKerboT3002 [Kc 9c]
+PoKerboT3002 raises to 40
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 38 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #57
+Seat 1 (Button): AllinAlice3001 -58
+Seat 2 (SB): PoKerboT3002 -2
+Seat 3 (BB): HandBanana3000 60
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Jc 9c]
+Dealt to HandBanana3000 [9h 2h]
+Dealt to AllinAlice3001 [5c 3h]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 folds
+Uncalled bet of 18 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #58
+Seat 1 (Button): HandBanana3000 70
+Seat 2 (SB): AllinAlice3001 -66
+Seat 3 (BB): PoKerboT3002 -4
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Jh 9h]
+Dealt to PoKerboT3002 [3c 8c]
+Dealt to HandBanana3000 [Kd Ah]
+HandBanana3000 raises to 5
+AllinAlice3001 raises to 8
+PoKerboT3002 folds
+HandBanana3000 raises to 41
+AllinAlice3001 folds
+Uncalled bet of 33 returned to HandBanana3000
+HandBanana3000 wins the pot (18)
+
+Hand #59
+Seat 1 (Button): PoKerboT3002 -1
+Seat 2 (SB): HandBanana3000 69
+Seat 3 (BB): AllinAlice3001 -68
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [Jc Qh]
+Dealt to AllinAlice3001 [Td Js]
+Dealt to PoKerboT3002 [Jd 5d]
+PoKerboT3002 raises to 16
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 14 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #60
+Seat 1 (Button): AllinAlice3001 -76
+Seat 2 (SB): PoKerboT3002 -2
+Seat 3 (BB): HandBanana3000 78
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [2d Qh]
+Dealt to HandBanana3000 [7d Tc]
+Dealt to AllinAlice3001 [Qs Td]
+AllinAlice3001 raises to 8
+PoKerboT3002 folds
+HandBanana3000 calls
+*** FLOP *** [As 3c 6c]
+HandBanana3000 bets 9
+AllinAlice3001 folds
+Uncalled bet of 9 returned to HandBanana3000
+HandBanana3000 wins the pot (17)
+
+Hand #61
+Seat 1 (Button): HandBanana3000 78
+Seat 2 (SB): AllinAlice3001 -77
+Seat 3 (BB): PoKerboT3002 -1
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Th 4c]
+Dealt to PoKerboT3002 [8s 3c]
+Dealt to HandBanana3000 [Kh 6d]
+HandBanana3000 folds
+AllinAlice3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #62
+Seat 1 (Button): PoKerboT3002 2
+Seat 2 (SB): HandBanana3000 77
+Seat 3 (BB): AllinAlice3001 -79
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [Qd 7h]
+Dealt to AllinAlice3001 [8c Td]
+Dealt to PoKerboT3002 [Ac 5c]
+PoKerboT3002 raises to 40
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 38 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #63
+Seat 1 (Button): AllinAlice3001 -79
+Seat 2 (SB): PoKerboT3002 76
+Seat 3 (BB): HandBanana3000 3
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [4s Kc]
+Dealt to HandBanana3000 [Qd Qs]
+Dealt to AllinAlice3001 [5h Td]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 raises to 74
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 126 returned to PoKerboT3002
+PoKerboT3002 wins the pot (148)
+
+Hand #64
+Seat 1 (Button): HandBanana3000 3
+Seat 2 (SB): AllinAlice3001 -81
+Seat 3 (BB): PoKerboT3002 78
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [4d 4s]
+Dealt to PoKerboT3002 [3h 6d]
+Dealt to HandBanana3000 [5h 2c]
+HandBanana3000 folds
+AllinAlice3001 calls
+PoKerboT3002 raises to 20
+AllinAlice3001 folds
+Uncalled bet of 18 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #65
+Seat 1 (Button): PoKerboT3002 208
+Seat 2 (SB): HandBanana3000 -125
+Seat 3 (BB): AllinAlice3001 -83
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [9s 6c]
+Dealt to AllinAlice3001 [4s Js]
+Dealt to PoKerboT3002 [Ad Tc]
+PoKerboT3002 raises to 40
+HandBanana3000 raises to 128
+AllinAlice3001 folds
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 72 returned to PoKerboT3002
+PoKerboT3002 wins the pot (258)
+
+Hand #66
+Seat 1 (Button): AllinAlice3001 -83
+Seat 2 (SB): PoKerboT3002 178
+Seat 3 (BB): HandBanana3000 -95
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Qs Kh]
+Dealt to HandBanana3000 [Tc 7h]
+Dealt to AllinAlice3001 [8d 4c]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 calls
+*** FLOP *** [9s 8h 5d]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 46
+PoKerboT3002 folds
+Uncalled bet of 36 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #67
+Seat 1 (Button): HandBanana3000 -85
+Seat 2 (SB): AllinAlice3001 -91
+Seat 3 (BB): PoKerboT3002 176
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [6d Ac]
+Dealt to PoKerboT3002 [3c 9h]
+Dealt to HandBanana3000 [5c 5h]
+HandBanana3000 calls
+AllinAlice3001 raises to 8
+PoKerboT3002 folds
+HandBanana3000 raises to 20
+AllinAlice3001 folds
+Uncalled bet of 12 returned to HandBanana3000
+HandBanana3000 wins the pot (18)
+
+Hand #68
+Seat 1 (Button): PoKerboT3002 179
+Seat 2 (SB): HandBanana3000 -86
+Seat 3 (BB): AllinAlice3001 -93
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [6s 9c]
+Dealt to AllinAlice3001 [Kc 4d]
+Dealt to PoKerboT3002 [8c Th]
+PoKerboT3002 raises to 16
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 14 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #69
+Seat 1 (Button): AllinAlice3001 -93
+Seat 2 (SB): PoKerboT3002 149
+Seat 3 (BB): HandBanana3000 -56
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [4h 9h]
+Dealt to HandBanana3000 [Ah 6h]
+Dealt to AllinAlice3001 [8h 4c]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 calls
+*** FLOP *** [Ks 7c Tc]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 41
+PoKerboT3002 folds
+Uncalled bet of 31 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #70
+Seat 1 (Button): HandBanana3000 -56
+Seat 2 (SB): AllinAlice3001 -94
+Seat 3 (BB): PoKerboT3002 150
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [2c 3c]
+Dealt to PoKerboT3002 [9d 6h]
+Dealt to HandBanana3000 [5d Ac]
+HandBanana3000 folds
+AllinAlice3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #71
+Seat 1 (Button): PoKerboT3002 148
+Seat 2 (SB): HandBanana3000 -52
+Seat 3 (BB): AllinAlice3001 -96
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [Qd 3d]
+Dealt to AllinAlice3001 [4h 8h]
+Dealt to PoKerboT3002 [4s 8c]
+PoKerboT3002 calls
+HandBanana3000 calls
+AllinAlice3001 checks
+*** FLOP *** [Kd 9d 5d]
+HandBanana3000 bets 84
+AllinAlice3001 folds
+PoKerboT3002 folds
+Uncalled bet of 84 returned to HandBanana3000
+HandBanana3000 wins the pot (6)
+
+Hand #72
+Seat 1 (Button): AllinAlice3001 -98
+Seat 2 (SB): PoKerboT3002 296
+Seat 3 (BB): HandBanana3000 -198
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [5h 2h]
+Dealt to HandBanana3000 [7s 7h]
+Dealt to AllinAlice3001 [4d Td]
+AllinAlice3001 calls
+PoKerboT3002 calls
+HandBanana3000 raises to 7
+AllinAlice3001 folds
+PoKerboT3002 raises to 60
+HandBanana3000 raises to 146
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 54 returned to PoKerboT3002
+PoKerboT3002 wins the pot (294)
+
+Hand #73
+Seat 1 (Button): HandBanana3000 -198
+Seat 2 (SB): AllinAlice3001 -106
+Seat 3 (BB): PoKerboT3002 304
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [5s As]
+Dealt to PoKerboT3002 [7c Kc]
+Dealt to HandBanana3000 [6d Ah]
+HandBanana3000 folds
+AllinAlice3001 raises to 8
+PoKerboT3002 raises to 70
+AllinAlice3001 folds
+Uncalled bet of 62 returned to PoKerboT3002
+PoKerboT3002 wins the pot (16)
+
+Hand #74
+Seat 1 (Button): PoKerboT3002 366
+Seat 2 (SB): HandBanana3000 -258
+Seat 3 (BB): AllinAlice3001 -108
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [Qd Qh]
+Dealt to AllinAlice3001 [6s 3d]
+Dealt to PoKerboT3002 [Tc 8c]
+PoKerboT3002 raises to 16
+HandBanana3000 raises to 60
+AllinAlice3001 folds
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 140 returned to PoKerboT3002
+PoKerboT3002 wins the pot (122)
+
+Hand #75
+Seat 1 (Button): AllinAlice3001 -164
+Seat 2 (SB): PoKerboT3002 424
+Seat 3 (BB): HandBanana3000 -260
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Kd 4c]
+Dealt to HandBanana3000 [7s 3d]
+Dealt to AllinAlice3001 [Ac Qd]
+AllinAlice3001 raises to 8
+PoKerboT3002 raises to 56
+HandBanana3000 folds
+AllinAlice3001 calls
+*** FLOP *** [3c 7c 4d]
+PoKerboT3002 bets 10
+AllinAlice3001 folds
+Uncalled bet of 10 returned to PoKerboT3002
+PoKerboT3002 wins the pot (114)
+
+Hand #76
+Seat 1 (Button): HandBanana3000 -260
+Seat 2 (SB): AllinAlice3001 -172
+Seat 3 (BB): PoKerboT3002 432
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [7h Jh]
+Dealt to PoKerboT3002 [Th Qd]
+Dealt to HandBanana3000 [3c 7d]
+HandBanana3000 folds
+AllinAlice3001 raises to 8
+PoKerboT3002 raises to 70
+AllinAlice3001 folds
+Uncalled bet of 62 returned to PoKerboT3002
+PoKerboT3002 wins the pot (16)
+
+Hand #77
+Seat 1 (Button): PoKerboT3002 435
+Seat 2 (SB): HandBanana3000 -261
+Seat 3 (BB): AllinAlice3001 -174
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [Tc Jh]
+Dealt to AllinAlice3001 [7d 3s]
+Dealt to PoKerboT3002 [Jd Td]
+PoKerboT3002 raises to 40
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 38 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #78
+Seat 1 (Button): AllinAlice3001 -174
+Seat 2 (SB): PoKerboT3002 405
+Seat 3 (BB): HandBanana3000 -231
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Ac 4d]
+Dealt to HandBanana3000 [As 2s]
+Dealt to AllinAlice3001 [Jc 2d]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 calls
+*** FLOP *** [Kh Th Js]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 45
+PoKerboT3002 folds
+Uncalled bet of 35 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #79
+Seat 1 (Button): HandBanana3000 -416
+Seat 2 (SB): AllinAlice3001 -175
+Seat 3 (BB): PoKerboT3002 591
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [5h 7s]
+Dealt to PoKerboT3002 [Th 5d]
+Dealt to HandBanana3000 [9h Qs]
+HandBanana3000 raises to 5
+AllinAlice3001 folds
+PoKerboT3002 raises to 40
+HandBanana3000 raises to 185
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 15 returned to PoKerboT3002
+PoKerboT3002 wins the pot (371)
+
+Hand #80
+Seat 1 (Button): PoKerboT3002 589
+Seat 2 (SB): HandBanana3000 -406
+Seat 3 (BB): AllinAlice3001 -183
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [Jh Th]
+Dealt to AllinAlice3001 [2c Ac]
+Dealt to PoKerboT3002 [5h Jc]
+PoKerboT3002 calls
+HandBanana3000 raises to 4
+AllinAlice3001 raises to 8
+PoKerboT3002 folds
+HandBanana3000 raises to 20
+AllinAlice3001 folds
+Uncalled bet of 12 returned to HandBanana3000
+HandBanana3000 wins the pot (18)
+
+Hand #81
+Seat 1 (Button): AllinAlice3001 -169
+Seat 2 (SB): PoKerboT3002 588
+Seat 3 (BB): HandBanana3000 -419
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [6c 9d]
+Dealt to HandBanana3000 [Th 6d]
+Dealt to AllinAlice3001 [Js Ad]
+AllinAlice3001 raises to 8
+PoKerboT3002 folds
+HandBanana3000 calls
+*** FLOP *** [Ks As 2s]
+HandBanana3000 bets 5
+AllinAlice3001 raises to 16
+HandBanana3000 folds
+Uncalled bet of 11 returned to AllinAlice3001
+AllinAlice3001 wins the pot (27)
+
+Hand #82
+Seat 1 (Button): HandBanana3000 -419
+Seat 2 (SB): AllinAlice3001 -170
+Seat 3 (BB): PoKerboT3002 589
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [2h 9s]
+Dealt to PoKerboT3002 [6c 8d]
+Dealt to HandBanana3000 [9d 7d]
+HandBanana3000 folds
+AllinAlice3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #83
+Seat 1 (Button): PoKerboT3002 559
+Seat 2 (SB): HandBanana3000 -387
+Seat 3 (BB): AllinAlice3001 -172
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [5c Ad]
+Dealt to AllinAlice3001 [5d 9c]
+Dealt to PoKerboT3002 [3h 6s]
+PoKerboT3002 calls
+HandBanana3000 raises to 4
+AllinAlice3001 folds
+PoKerboT3002 raises to 30
+HandBanana3000 calls
+*** FLOP *** [7c Js 9h]
+HandBanana3000 bets 41
+PoKerboT3002 folds
+Uncalled bet of 41 returned to HandBanana3000
+HandBanana3000 wins the pot (62)
+
+Hand #84
+Seat 1 (Button): AllinAlice3001 -172
+Seat 2 (SB): PoKerboT3002 529
+Seat 3 (BB): HandBanana3000 -357
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Ad 3c]
+Dealt to HandBanana3000 [5s 5c]
+Dealt to AllinAlice3001 [Jh 2s]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 calls
+*** FLOP *** [Ks 8c Td]
+PoKerboT3002 bets 10
+HandBanana3000 raises to 51
+PoKerboT3002 folds
+Uncalled bet of 41 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #85
+Seat 1 (Button): HandBanana3000 -364
+Seat 2 (SB): AllinAlice3001 -173
+Seat 3 (BB): PoKerboT3002 537
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Qd 8s]
+Dealt to PoKerboT3002 [Kd 4s]
+Dealt to HandBanana3000 [9c 5d]
+HandBanana3000 raises to 7
+AllinAlice3001 folds
+PoKerboT3002 raises to 60
+HandBanana3000 folds
+Uncalled bet of 53 returned to PoKerboT3002
+PoKerboT3002 wins the pot (15)
+
+Hand #86
+Seat 1 (Button): PoKerboT3002 540
+Seat 2 (SB): HandBanana3000 -365
+Seat 3 (BB): AllinAlice3001 -175
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [3s 9s]
+Dealt to AllinAlice3001 [2d 4h]
+Dealt to PoKerboT3002 [7s Qc]
+PoKerboT3002 raises to 16
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 14 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #87
+Seat 1 (Button): AllinAlice3001 -172
+Seat 2 (SB): PoKerboT3002 539
+Seat 3 (BB): HandBanana3000 -367
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [6c 2h]
+Dealt to HandBanana3000 [3c 4h]
+Dealt to AllinAlice3001 [Jh Ks]
+AllinAlice3001 raises to 8
+PoKerboT3002 folds
+HandBanana3000 folds
+Uncalled bet of 6 returned to AllinAlice3001
+AllinAlice3001 wins the pot (5)
+
+Hand #88
+Seat 1 (Button): HandBanana3000 -367
+Seat 2 (SB): AllinAlice3001 -242
+Seat 3 (BB): PoKerboT3002 609
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [9s Ks]
+Dealt to PoKerboT3002 [Tc 5c]
+Dealt to HandBanana3000 [Ah 2c]
+HandBanana3000 folds
+AllinAlice3001 raises to 8
+PoKerboT3002 raises to 70
+AllinAlice3001 calls
+*** FLOP *** [3h Ad Td]
+AllinAlice3001 checks
+PoKerboT3002 bets 10
+AllinAlice3001 folds
+Uncalled bet of 10 returned to PoKerboT3002
+PoKerboT3002 wins the pot (140)
+
+Hand #89
+Seat 1 (Button): PoKerboT3002 607
+Seat 2 (SB): HandBanana3000 -361
+Seat 3 (BB): AllinAlice3001 -246
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [5c Ac]
+Dealt to AllinAlice3001 [8d Jc]
+Dealt to PoKerboT3002 [2d 6h]
+PoKerboT3002 calls
+HandBanana3000 raises to 4
+AllinAlice3001 calls
+PoKerboT3002 folds
+*** FLOP *** [3c Th Ks]
+HandBanana3000 bets 10
+AllinAlice3001 folds
+Uncalled bet of 10 returned to HandBanana3000
+HandBanana3000 wins the pot (10)
+
+Hand #90
+Seat 1 (Button): AllinAlice3001 -248
+Seat 2 (SB): PoKerboT3002 611
+Seat 3 (BB): HandBanana3000 -363
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Qc Ah]
+Dealt to HandBanana3000 [As 7s]
+Dealt to AllinAlice3001 [4h 9h]
+AllinAlice3001 calls
+PoKerboT3002 raises to 40
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 38 returned to PoKerboT3002
+PoKerboT3002 wins the pot (6)
+
+Hand #91
+Seat 1 (Button): HandBanana3000 -338
+Seat 2 (SB): AllinAlice3001 -271
+Seat 3 (BB): PoKerboT3002 609
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [Ks Qc]
+Dealt to PoKerboT3002 [3d 8s]
+Dealt to HandBanana3000 [Ah As]
+HandBanana3000 raises to 7
+AllinAlice3001 calls
+PoKerboT3002 folds
+*** FLOP *** [4c Qs 9h]
+AllinAlice3001 bets 16
+HandBanana3000 raises to 191
+AllinAlice3001 folds
+Uncalled bet of 175 returned to HandBanana3000
+HandBanana3000 wins the pot (48)
+
+Hand #92
+Seat 1 (Button): PoKerboT3002 612
+Seat 2 (SB): HandBanana3000 -339
+Seat 3 (BB): AllinAlice3001 -273
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [6h 3c]
+Dealt to AllinAlice3001 [4s Kh]
+Dealt to PoKerboT3002 [Ac 7c]
+PoKerboT3002 raises to 40
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 38 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #93
+Seat 1 (Button): AllinAlice3001 -273
+Seat 2 (SB): PoKerboT3002 686
+Seat 3 (BB): HandBanana3000 -413
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [4h Td]
+Dealt to HandBanana3000 [9s Th]
+Dealt to AllinAlice3001 [8c 2h]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 raises to 74
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 126 returned to PoKerboT3002
+PoKerboT3002 wins the pot (148)
+
+Hand #94
+Seat 1 (Button): HandBanana3000 -413
+Seat 2 (SB): AllinAlice3001 -274
+Seat 3 (BB): PoKerboT3002 687
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [6h 9c]
+Dealt to PoKerboT3002 [Kd 8s]
+Dealt to HandBanana3000 [Jd 3c]
+HandBanana3000 folds
+AllinAlice3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #95
+Seat 1 (Button): PoKerboT3002 707
+Seat 2 (SB): HandBanana3000 -415
+Seat 3 (BB): AllinAlice3001 -292
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [7d 5d]
+Dealt to AllinAlice3001 [2s Jd]
+Dealt to PoKerboT3002 [8c 6d]
+PoKerboT3002 calls
+HandBanana3000 calls
+AllinAlice3001 checks
+*** FLOP *** [9c 9h Js]
+HandBanana3000 checks
+AllinAlice3001 bets 16
+PoKerboT3002 raises to 160
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 144 returned to PoKerboT3002
+PoKerboT3002 wins the pot (38)
+
+Hand #96
+Seat 1 (Button): AllinAlice3001 -294
+Seat 2 (SB): PoKerboT3002 711
+Seat 3 (BB): HandBanana3000 -417
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [Ac Ad]
+Dealt to HandBanana3000 [Jd 4s]
+Dealt to AllinAlice3001 [Kh 2c]
+AllinAlice3001 calls
+PoKerboT3002 raises to 40
+HandBanana3000 folds
+AllinAlice3001 folds
+Uncalled bet of 38 returned to PoKerboT3002
+PoKerboT3002 wins the pot (6)
+
+Hand #97
+Seat 1 (Button): HandBanana3000 -417
+Seat 2 (SB): AllinAlice3001 -296
+Seat 3 (BB): PoKerboT3002 713
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [As 3h]
+Dealt to PoKerboT3002 [Jc 6h]
+Dealt to HandBanana3000 [8d Qd]
+HandBanana3000 folds
+AllinAlice3001 calls
+PoKerboT3002 raises to 20
+AllinAlice3001 folds
+Uncalled bet of 18 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #98
+Seat 1 (Button): PoKerboT3002 711
+Seat 2 (SB): HandBanana3000 -419
+Seat 3 (BB): AllinAlice3001 -292
+HandBanana3000 posts the blind of 1
+AllinAlice3001 posts the blind of 2
+Dealt to HandBanana3000 [9s 2s]
+Dealt to AllinAlice3001 [Ts 3h]
+Dealt to PoKerboT3002 [5s Td]
+PoKerboT3002 calls
+HandBanana3000 calls
+AllinAlice3001 checks
+*** FLOP *** [6c 6h 6d]
+HandBanana3000 checks
+AllinAlice3001 bets 40
+PoKerboT3002 folds
+HandBanana3000 folds
+Uncalled bet of 40 returned to AllinAlice3001
+AllinAlice3001 wins the pot (6)
+
+Hand #99
+Seat 1 (Button): AllinAlice3001 -292
+Seat 2 (SB): PoKerboT3002 850
+Seat 3 (BB): HandBanana3000 -558
+PoKerboT3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to PoKerboT3002 [9s Qd]
+Dealt to HandBanana3000 [Td 7h]
+Dealt to AllinAlice3001 [2h Qs]
+AllinAlice3001 folds
+PoKerboT3002 raises to 20
+HandBanana3000 raises to 139
+PoKerboT3002 raises to 200
+HandBanana3000 folds
+Uncalled bet of 61 returned to PoKerboT3002
+PoKerboT3002 wins the pot (278)
+
+Hand #100
+Seat 1 (Button): HandBanana3000 -558
+Seat 2 (SB): AllinAlice3001 -293
+Seat 3 (BB): PoKerboT3002 851
+AllinAlice3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to AllinAlice3001 [3h 7d]
+Dealt to PoKerboT3002 [9s 2h]
+Dealt to HandBanana3000 [6s 4h]
+HandBanana3000 folds
+AllinAlice3001 folds
+PoKerboT3002 wins the pot (3)
+
