@@ -6,7 +6,7 @@ class Hand:
         self.splitActions = None
         self.trackedActions = [CHECK, BET, RAISE, CALL, POST]
         self.clearHand()
-        
+
     def clearHand(self):
         self.actions = []
         self.splitActions = [[],[],[],[]]
@@ -20,9 +20,10 @@ class Hand:
                     print "[", a.type, ",", a.player, ",", a.amount, "]"
                 else:
                     print "[", a.type, ",", a.player, "]"
-    
+
     def splitActionsList(self):
         s = 0
+        self.splitActions = [[],[],[],[]]
         for a in self.actions:
             if a.type == DEAL:
                 s += 1

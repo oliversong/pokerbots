@@ -34,7 +34,7 @@ class Player:
                 break
             # Here is where you should implement code to parse the packets from
             # the engine and act on it.
-            print "Received", data
+            print "Received", data[:-1]
             self.game.parseInput(data)
 
             # When appropriate, reply to the engine with a legal action.
@@ -56,7 +56,9 @@ class Player:
             elif self.game.state == HANDOVER:
                 #update hand history now that final hand actions have been parsed
                 self.archive.update(self.game)
-                self.plot.addMoreBanks(self.game.bankroll, self.game.leftBank, self.game.rightBank)
+                self.plot.addMoreBanks(self.game.bankroll, self.game.leftBank,
+                                       self.game.rightBank)
+                print ""
                 if self.game.handID == self.game.numHands:
                     self.plot.leftOpp = self.game.leftOpp
                     self.plot.rightOpp = self.game.rightOpp
