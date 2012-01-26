@@ -1,6 +1,7 @@
 from pokereval import PokerEval
 from Enums import *
-import pocketlookup
+import TwoPocketLookup
+import ThreePocketLookup
 
 ITERATIONS = 10000
 
@@ -10,15 +11,18 @@ class Strategy:
         self.handRank = None
 
     def evaluateOdds(self, game):
-        self.evaluatePocketCards(game)
+        self.evaluatePocketCards3(game)
         self.evalHand(game)
         #raise NotImplementedError("evaluateOdds not implemented in subclass")
 
     def getMove(self, game, archive):
         raise NotImplementedError("getMove not implemented in subclass")
 
-    def evaluatePocketCards(self, game):
-        self.handRank = pocketlookup.evalPocket(game.holeCard1, game.holeCard2)
+    def evaluatePocketCards2(self, game):
+        return TwoPocketLookup.evalPocket(game.holeCard1, game.holeCard2)
+
+    def evaluatePocketCards3(self, game):
+        return ThreePocketLookup.evalPocket(game.holeCard1, game.holeCard2)
 
     def evalHand(self, game):
         hand = [game.holeCard1.stringValue, game.holeCard2.stringValue]

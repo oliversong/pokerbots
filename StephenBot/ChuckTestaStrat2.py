@@ -13,7 +13,23 @@ class ChuckTestaStrat2(Strategy):
         pos = game.position
         move = "CHECK"
 
-#        if game.street()==PREFLOP:
+        if game.street==PREFLOP:
+            #if num players 2 (someone folded already)
+            #if there are only 2 people in the game (someone folded)
+            for la in game.lastActions:
+                if la[0] == "FOLD":
+                    ev = self.evaluatePocketCards2(game)
+            ev = self.evaluatePocketCards3(game)
+
+            if ev <275:
+                return "CHECK"
+
+            if game.lastBet > 150:
+                return "CHECK"
+
+
+
+
 
 ##        print "RIGHT EV:", OppEvs[game.rightOpp], "LEFT EV:", OppEvs[game.leftOpp], "EV:", ev
 
@@ -119,7 +135,6 @@ class ChuckTestaStrat2(Strategy):
 
         return OppEvs
 
-    #Return list of last moves made by each opponent
     def OppMoves(self, game):
         OM = {}
         OM[game.rightOpp]=[]
@@ -148,7 +163,6 @@ class ChuckTestaStrat2(Strategy):
 
         return OM
 
-    # Play when we don't know our opponents EV
     def blindEVplay(self, game, ev):
         move = "CHECK"
         if ev>400:
