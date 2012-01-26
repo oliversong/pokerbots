@@ -7,28 +7,36 @@ class ChuckTestaStrat2(Strategy):
         Strategy.__init__(self)
 
     def getMove(self, game, archive):
-        ev = self.evalHand(game)
-        OppEvs = self.getOppEvs(game, archive)
-
-        move = "CHECK"
-
+        # Calculate our ev
         if game.street==PREFLOP:
             if game.activePlayers == 2:
                 ev = self.evaluatePocketCards2(game)
-            else: 
+            else:
                 ev = self.evaluatePocketCards3(game)
 
-            if ev <275:
-                return "CHECK"
+            #if ev <275:
+            #    return "CHECK"
 
-            if game.lastBet > 100:
-                return "CHECK"
+        else:
+            ev = self.evalHand(game)
+
+        OppEvs = self.getOppEvs(game, archive)
+
+        move = "CHECK"
 
         print "RIGHT EV:", OppEvs[game.rightOpp], "LEFT EV:", OppEvs[game.leftOpp], "EV:", ev, "activePlayers:", game.activePlayers
 
         if OppEvs[game.rightOpp][0] == -1 and OppEvs[game.leftOpp][0] == -1:
             print "know nothing"
             move = self.blindEVplay(game,ev)
+        elif game.activePlayers == 2:
+            print "Only playing one other person and know his EV"
+            if ev > OppEvs[game.rightOpp][0]-OppEvs[game.rightOpp][1]/2 and ev > OppEvs[game.leftOpp][0]-OppEvs[game.leftOpp][1]/2:
+                print "know we're better"
+                move = self.bestEVplay(game)
+            else:
+                print "know we're worse"
+                move = "CHECK"
         elif OppEvs[game.rightOpp][0] == -1 or OppEvs[game.leftOpp][0] == -1:
             print "know only one"
             move = self.blindEVplay(game,ev)
