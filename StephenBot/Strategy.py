@@ -22,9 +22,17 @@ class Strategy:
 
     def evalHand(self, game):
         hand = [game.holeCard1.stringValue, game.holeCard2.stringValue]
+        if game.activePlayers == 3:
+            pockets = [hand,[255,255],[255,255]]
+        elif game.activePlayers == 2:
+            pockets = [hand,[255,255]]
+        else:
+            # shouldn't get here, but just in case
+            print "Only 1 active player! EV is 1"
+            return 1000
 
         ev = self.pokereval.poker_eval(game="holdem",
-                                       pockets = [hand,[255,255],[255,255]],
+                                       pockets = pockets,
                                        dead=[],
                                        board=game.boardCards,
                                        iterations = ITERATIONS)['eval'][0]['ev']

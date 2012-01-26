@@ -48,6 +48,7 @@ class GameState:
         self.pips = [0]*3
         self.lastBet = 0
         self.street = PREFLOP
+        self.activePlayers = 3
 
     def parseInput(self, input):
         numOptArgs = 0
@@ -172,7 +173,8 @@ class GameState:
                     c1 = self.lastActions[i][2]
                     c2 = self.lastActions[i][3]
                     amt = 0
-                #elif sla == "FOLD":
+                elif sla == "FOLD":
+                    self.activePlayers -= 1
                 #elif sla == "REFUND":
                 #elif sla == "TIE":
                 #elif sla == "WIN":
