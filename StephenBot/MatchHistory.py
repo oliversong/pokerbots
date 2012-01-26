@@ -69,26 +69,18 @@ class MatchHistory:
                 if action.player not in players:
                     players += [action.player]
 
-                #act.player = action.player
-                #act.amount = action.amount
-                #print "processing action: " + str(act)
-
-                if act.player in showPlayers and act.type != POST:
-                    print act.amount, pot, sum(bets)
-                    act.potAmount = act.amount/float(pot+sum(bets))
-                    act.betAmount = act.amount/float(prevBet)
-                    act.handStrength = showEV[showPlayers.index(act.player)]
-
                 if act.player not in self.history.keys():
                     self.history[act.player] = [{},{},{},{}]
                     for a in range(4):#[BET,CALL,CHECK,RAISE]:
                         for k in range(4):
                             self.history[act.player][k][a] = []
 
-                ##Append action into the match history table
+                #print "processing action: " + str(act)
+
                 if act.player in showPlayers and act.type != POST:
+                    act.handStrength = showEV[showPlayers.index(act.player)]
                     self.history[act.player][s][action.type].append(act)
-                    #print "Appending action: " + str(act)
+                    print "Appending action: " + str(act)
 
                 i = players.index(act.player)
                 bets[i] = max([bets[i],act.amount])

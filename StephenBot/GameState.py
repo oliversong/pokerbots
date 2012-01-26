@@ -31,9 +31,9 @@ class GameState:
         self.bankroll = None
         self.leftBank = None
         self.rightBank = None
-        self.stack = self.stackSize
 
         self.potSize = None
+        self.pot = 0
         self.numBoardCards = None
 
         self.boardCards = "__,__,__,__,__"#["__","__","__","__","__"]
@@ -44,8 +44,9 @@ class GameState:
 
         self.hand.clearHand()
 
+        self.stacks = [self.stackSize]*3
+        self.pips = [0]*3
         self.lastBet = 0
-        self.pip = 0
         self.street = PREFLOP
 
     def parseInput(self, input):
@@ -123,59 +124,64 @@ class GameState:
 
                 c1 = None
                 c2 = None
-                t = None
 
                 sla = self.lastActions[i][0]
-                ourAction = self.lastActions[i][1] not in [self.leftOpp,
-                                                           self.rightOpp]
+                actor = self.lastActions[i][1]
+                if actor == self.leftOpp:
+                    player = LEFTOPP
+                elif actor == self.rightOpp:
+                    player = RIGHTOPP
+                else:
+                    player = ME
+                potamt = 0
+                betamt = 0
+                amt = self.lastBet
+                t = ACTION_TYPES.index(sla)
+                if len(self.lastActions[i]) == 3:
+                    amt = float(self.lastActions[i][2])
                 if sla == "RAISE":
-                    betAmt = float(self.lastActions[i][2])
-                    if ourAction:
-                        self.stack -= betAmt - self.pip
-                        self.pip = betAmt
-                    t = RAISE
-                    self.lastBet = betAmt
+                    betamt = amt/float(self.lastBet)
+                    potamt = amt/float(self.pot + sum(self.pips))
+                    self.lastBet = amt
+                    self.stacks[player] -= amt - self.pips[player]
+                    self.pips[player] = amt
                 elif sla == "CALL":
-                    t = CALL
-                    if ourAction:
-                        self.stack -= self.lastBet - self.pip
-                        self.pip = self.lastBet
+                    betamt = 1.0
+                    potamt = amt/float(self.pot + sum(self.pips))
+                    self.stacks[player] -= self.lastBet - self.pips[player]
+                    self.pips[player] = self.lastBet
                 elif sla == "CHECK":
-                    t = CHECK
+                    if self.street != PREFLOP:
+                        amt = 0
                 elif sla == "BET":
-                    t = BET
+                    betamt = amt/float(self.lastBet)
+                    potamt = amt/float(self.pot + sum(self.pips))
                     self.lastBet = float(self.lastActions[i][2])
-                    if ourAction:
-                        self.pip = self.lastBet
-                        self.stack -= self.lastBet
-                elif sla == "FOLD":
-                    t = FOLD
+                    self.stacks[player] -= self.lastBet
+                    self.pips[player] = self.lastBet
+                #elif sla == "FOLD":
                 elif sla == "DEAL":
-                    t = DEAL
-                    self.lastBet = 0
-                    self.pip = 0
+                    amt = 0
+                    self.pot += sum(self.pips)
+                    self.pips = [0]*3
                     self.street += 1
                 elif sla == "POST":
-                    # if it's us
-                    t = POST
                     self.lastBet = float(self.lastActions[i][2])
-                    if ourAction:
-                        self.pip = self.lastBet
-                        self.stack -= self.lastBet
-                elif sla == "REFUND":
-                    t = REFUND
+                    self.stacks[player] -= self.lastBet
+                    self.pips[player] = self.lastBet
+                #elif sla == "REFUND":
                 elif sla == "SHOWS":
                     c1 = self.lastActions[i][2]
                     c2 = self.lastActions[i][3]
-                    t = SHOW
-                elif sla == "TIE":
-                    t = TIE
-                elif sla == "WIN":
-                    t = WIN
+                    amt = 0
+                #elif sla == "TIE":
+                #elif sla == "WIN":
 
-                a = Action(t, self.lastActions[i][1], c1, c2, 0, 0,
-                           self.lastBet)
+                a = Action(t, self.lastActions[i][1], c1, c2, potamt, betamt,
+                           amt)
                 self.hand.actions.append(a)
+                #print "processed action: " + str(a)
+                #print "resulting in: stacks",self.stacks, "and pips", self.pips
 #        print "lastActions", self.lastActions
 
     def parseLegalActions(self):
@@ -192,4 +198,4 @@ class GameState:
 
     # Return amount needed to raise/bet all in
     def getAllIn(self):
-        return int(self.stack+self.pip)
+        return int(self.stacks[ME]+self.pips[ME])
