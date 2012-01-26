@@ -12,7 +12,6 @@ class MatchHistory:
     def __init__(self):
         self.history = {}
         self.pokereval = PokerEval()
-        self.showCards = []
 
     def reset(self, game):
         self.history[game.leftOpp] = [{},{},{},{}]
@@ -23,40 +22,29 @@ class MatchHistory:
                 self.history[game.rightOpp][s][a] = []
 
     def update(self, game):
-        pot = 0
-        prevBet = game.bigB
-        allBets = [0,0,0]
-        players = []
-
         showPlayers = []
-        self.showCards = []
+        showCards = []
 
         for action in game.hand.actions:
-            if action.type == SHOW:
+            if action.type == SHOW and action.player in self.history.keys():
                 showPlayers += [action.player]
-                self.showCards += [[action.showCard1, action.showCard2]]
-        showEV = [0]*len(showPlayers)
+                showCards += [[action.showCard1, action.showCard2]]
 
         if len(showPlayers) == 0:
             return
+        showEV = [0]*len(showPlayers)
 
         for s,street in enumerate(game.hand.splitActions):  #Preflop, flop, turn, river
-            bets = [0,0,0]   #bets for current street for each player
-            b = [255,255,255,255,255]
-            if s==1: #FLOP
+            b = [255]*5
+            if s==FLOP: #FLOP
+                b[:3] = game.boardCards[:3]
+            elif s==TURN: #TURN
+                b[:4] = game.boardCards[:4]
+            elif s==RIVER: #RIVER
                 b = game.boardCards
-                b[3] = 255
-                b[4] = 255
-            elif s==2: #TURN
-                b = game.boardCards
-                b[4] = 255
-            elif s==3: #RIVER
-                b = game.boardCards
-
 
             for i in range(len(showPlayers)):
-                playerHand = self.showCards[i]
-
+                playerHand = showCards[i]
                 ev = self.pokereval.poker_eval(game="holdem",
                                                pockets =[playerHand,[255,255],[255,255]],
                                                dead = [],
@@ -65,33 +53,11 @@ class MatchHistory:
                 showEV[i] = ev['eval'][0]['ev']
 
             for action in street:
-                act = action.copy()
-                if action.player not in players:
-                    players += [action.player]
-
-                if act.player not in self.history.keys():
-                    self.history[act.player] = [{},{},{},{}]
-                    for a in range(4):#[BET,CALL,CHECK,RAISE]:
-                        for k in range(4):
-                            self.history[act.player][k][a] = []
-
-                #print "processing action: " + str(act)
-
-                if act.player in showPlayers and act.type != POST:
-                    act.handStrength = showEV[showPlayers.index(act.player)]
+                if action.player in showPlayers and action.type != POST:
+                    act = action.copy()
+                    act.handStrength = showEV[showPlayers.index(action.player)]
                     self.history[act.player][s][action.type].append(act)
-                    print "Appending action: " + str(act)
-
-                i = players.index(act.player)
-                bets[i] = max([bets[i],act.amount])
-                #print "bets list is", bets
-
-                if act.type in [BET, RAISE]:
-                    prevBet = act.amount
-
-            prevBet =  0.0000000000000001
-
-            pot += sum(bets)
+                    #print "Appending action: " + str(act)
 
             #self.printHistory()
 
@@ -113,7 +79,7 @@ class MatchHistory:
                         print "BET AMOUNT:", self.history[p][s][a][i].betAmount,
                         print "EV:", self.history[p][s][a][i].handStrength,"]"
 
-    def averageStrength(self, player, street, actionType, amountType, amount):
+    def averageStrength(self, player, street, action, amountType):
         sum = 0
         sum2 = 0
         numMatches = 0
@@ -122,38 +88,38 @@ class MatchHistory:
         amountDiffs = [] #list of action values [(action, actionAmount, abs(amount-actionAmount)
 
         #print self.history.keys() ##Need to comment out
-        if actionType not in self.history[player][street].keys():
-            print "ACTION TYPE IN AVERAGE STRENGTH", actionType
+        if action.type not in self.history[player][street].keys():
+            print "ACTION TYPE IN AVERAGE STRENGTH", action.type
             return [-1,200]
-        actions = self.history[player][street][actionType]
+        actions = self.history[player][street][action.type]
         for a in actions:
             if amountType==POTAMOUNT:
-                if a.potAmount==amount:
+                if a.potAmount==action.potAmount:
                     sum += a.handStrength
                     sum2 += a.handStrength*a.handStrength
                     numMatches += 1
                     mean = float(sum)/numMatches
                     std = sqrt((float(sum2)/numMatches) - (mean*mean))
                 else:
-                    amountDiffs += [(a, a.potAmount, abs(a.potAmount - amount))]
+                    amountDiffs += [(a, a.potAmount, abs(a.potAmount - action.potAmount))]
             elif amountType==BETAMOUNT:
-                if a.betAmount==amount:
+                if a.betAmount==action.betAmount:
                     sum += a.handStrength
                     sum2 += a.handStrength*a.handStrength
                     numMatches += 1
                     mean = float(sum)/numMatches
                     std = sqrt((float(sum2)/numMatches) - (mean*mean))
                 else:
-                    amountDiffs += [(a, a.betAmount, abs(a.betAmount - amount))]
+                    amountDiffs += [(a, a.betAmount, abs(a.betAmount - action.betAmount))]
             else:
-                if a.amount==amount:
+                if a.amount==action.amount:
                     sum += a.handStrength
                     numMatches += 1
                     sum2 += a.handStrength*a.handStrength
                     mean = float(sum)/numMatches
                     std = sqrt((float(sum2)/numMatches) - (mean*mean))
                 else:
-                    amountDiffs += [(a, a.amount, abs(a.amount - amount))]
+                    amountDiffs += [(a, a.amount, abs(a.amount - action.amount))]
 
         if numMatches<3:
            #sort the amountDiffs by the difference in amount from the desired amount

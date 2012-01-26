@@ -136,9 +136,9 @@ class GameState:
                 potamt = 0
                 betamt = 0
                 amt = self.lastBet
-                t = ACTION_TYPES.index(sla)
                 if len(self.lastActions[i]) == 3:
                     amt = float(self.lastActions[i][2])
+
                 if sla == "RAISE":
                     betamt = amt/float(self.lastBet)
                     potamt = amt/float(self.pot + sum(self.pips))
@@ -159,7 +159,6 @@ class GameState:
                     self.lastBet = float(self.lastActions[i][2])
                     self.stacks[player] -= self.lastBet
                     self.pips[player] = self.lastBet
-                #elif sla == "FOLD":
                 elif sla == "DEAL":
                     amt = 0
                     self.pot += sum(self.pips)
@@ -169,16 +168,17 @@ class GameState:
                     self.lastBet = float(self.lastActions[i][2])
                     self.stacks[player] -= self.lastBet
                     self.pips[player] = self.lastBet
-                #elif sla == "REFUND":
                 elif sla == "SHOWS":
                     c1 = self.lastActions[i][2]
                     c2 = self.lastActions[i][3]
                     amt = 0
+                #elif sla == "FOLD":
+                #elif sla == "REFUND":
                 #elif sla == "TIE":
                 #elif sla == "WIN":
 
-                a = Action(t, self.lastActions[i][1], c1, c2, potamt, betamt,
-                           amt)
+                a = Action(ACTION_TYPES.index(sla), self.lastActions[i][1], c1,
+                           c2, potamt, betamt, amt)
                 self.hand.actions.append(a)
                 #print "processed action: " + str(a)
                 #print "resulting in: stacks",self.stacks, "and pips", self.pips

@@ -40,83 +40,32 @@ class ChuckTestaStrat2(Strategy):
         OppEvs[game.rightOpp] = [-1,-1]
         OppEvs[game.leftOpp] = [-1,-1]
 
+        for p in [game.leftOpp, game.rightOpp]:
+            if len(OM[p]) == 0:
+                OppEvs[p] = [-1,-1]
+                continue
 
-        if len(OM[game.rightOpp]) == 0:
-            OppEvs[game.rightOpp] = [-1,-1]
-#            print ("No Previous Move on right")
-        elif OM[game.rightOpp][-1][1].type == FOLD:
-            OppEvs[game.rightOpp] = [0,-1]
-        elif OM[game.rightOpp][-1][1].type == CHECK:
-            OppEvs[game.rightOpp] = archive.averageStrength(game.rightOpp,
-                                                            OM[game.rightOpp][-1][0],
-                                                            OM[game.rightOpp][-1][1].type,
-                                                            ABSAMOUNT,
-                                                            OM[game.rightOpp][-1][1].amount)
-        elif OM[game.rightOpp][-1][1].type in [BET, RAISE]:
-            absamt = archive.averageStrength(game.rightOpp,
-                                             OM[game.rightOpp][-1][0],
-                                             OM[game.rightOpp][-1][1].type,
-                                             ABSAMOUNT,
-                                             OM[game.rightOpp][-1][1].amount)
-            betamt = archive.averageStrength(game.rightOpp,
-                                             OM[game.rightOpp][-1][0],
-                                             OM[game.rightOpp][-1][1].type,
-                                             BETAMOUNT,
-                                             OM[game.rightOpp][-1][2])
-            if absamt[1]<betamt[1]:
-                OppEvs[game.rightOpp] = absamt
-#                print"Abs Amount EV for Right"
-            else:
-                OppEvs[game.rightOpp] = betamt
-#                print"Bet Amt EV for Right", betamt[0]
-#                print  OM[game.rightOpp][-1][2]
-        elif OM[game.rightOpp][-1][1].type == CALL:
-            OppEvs[game.rightOpp] = archive.averageStrength(game.rightOpp,
-                                                            OM[game.rightOpp][-1][0],
-                                                            OM[game.rightOpp][-1][1].type,
-                                                            ABSAMOUNT,
-                                                            OM[game.rightOpp][-1][1].amount)
-#        else:
-#            print "getOppEvs is broken", OM[game.leftOpp][-1][1].type
+            lastAction = OM[p][-1][1]
+            if lastAction.type == FOLD:
+                OppEvs[p] = [0,-1]
+                continue
 
+            absamt = archive.averageStrength(p, game.street,
+                                             lastAction, ABSAMOUNT)
 
-        if len(OM[game.leftOpp]) ==0:
-            OppEvs[game.leftOpp] = [-1,-1]
-#            print "No previous move on left"
-        elif OM[game.leftOpp][-1][1].type == FOLD:
-            OppEvs[game.leftOpp] = [0,-1]
-        elif OM[game.leftOpp][-1][1].type == CHECK:
-            OppEvs[game.leftOpp] = archive.averageStrength(game.leftOpp,
-                                                           OM[game.leftOpp][-1][0],
-                                                           OM[game.leftOpp][-1][1].type,
-                                                           ABSAMOUNT,
-                                                           OM[game.leftOpp][-1][1].amount)
-        elif OM[game.leftOpp][-1][1].type in [BET, RAISE]:
-            absamt = archive.averageStrength(game.leftOpp,
-                                             OM[game.leftOpp][-1][0],
-                                             OM[game.leftOpp][-1][1].type,
-                                             ABSAMOUNT,
-                                             OM[game.leftOpp][-1][1].amount)
-            betamt = archive.averageStrength(game.leftOpp,
-                                             OM[game.leftOpp][-1][0],
-                                             OM[game.leftOpp][-1][1].type,
-                                             BETAMOUNT,
-                                             OM[game.leftOpp][-1][2])
-            if absamt[1]<betamt[1]:
-                OppEvs[game.leftOpp] = absamt
-            else:
-                OppEvs[game.leftOpp] = betamt
-        elif OM[game.leftOpp][-1][1].type == CALL:
-            OppEvs[game.leftOpp] = archive.averageStrength(game.leftOpp,
-                                                           OM[game.leftOpp][-1][0],
-                                                           OM[game.leftOpp][-1][1].type,
-                                                           ABSAMOUNT,
-                                                           OM[game.leftOpp][-1][1].amount)
-#        else:
-#            print "getOppEvs is broken", OM[game.leftOpp][-1][1].type
+            if lastAction.type == CHECK:
+                OppEvs[p] = absamt
+                continue
 
+            potamt = archive.averageStrength(p, game.street,
+                                             lastAction, POTAMOUNT)
 
-
+            if lastAction.type in [BET, CALL]:
+                OppEvs[p] = min(absamt,potamt,key=lambda x:x[1])
+            elif lastAction.type == RAISE:
+                betamt = archive.averageStrength(p, game.street,
+                                                 lastAction, BETAMOUNT)
+                OppEvs[p] = min(absamt,betamt,potamt,key=lambda x:x[1])
         return OppEvs
 
     #Return list of last moves made by each opponent
@@ -126,26 +75,12 @@ class ChuckTestaStrat2(Strategy):
         OM[game.leftOpp] =[]
         st = 0 #Are there 3 DEAL actions at the beginning of the game?
                 #I want st = 0 during the PREFLOP
-        prevbet = 2
-
-        for acts in game.hand.actions:
-            if acts.type == DEAL:
-                st+=1
-                prevbet = 0
-            elif acts.type != POST:
-                if acts.type in [CALL, CHECK, FOLD, BET]:
-                    betperc = 0
-                    if acts.type == BET:
-                        prevbet = acts.amount
-                elif acts.type == RAISE:
-                    betperc = acts.amount/prevbet
-#                else:
-#                    print "ERRROR IN OPPMOVES"
-                if acts.player == game.rightOpp:
-                    OM[game.rightOpp] += [(st,acts,betperc)]
-                if acts.player == game.leftOpp:
-                    OM[game.leftOpp] += [(st,acts,betperc)]
-
+        game.hand.splitActionsList()
+        for s,street in enumerate(game.hand.splitActions):
+            for acts in street:
+                if acts.type != POST:
+                    if acts.player in OM.keys():
+                        OM[acts.player] += [(s,acts)]
         return OM
 
     # Play when we don't know our opponents EV
