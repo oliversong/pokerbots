@@ -1,99 +1,208 @@
 from Strategy import *
 from Enums import *
+from Move import *
+import random
 
-class ChuckTestaStrat(Strategy):
+class ChuckTestaStrat2(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
     def getMove(self, game, archive):
-
-        ev = self.evalHand(game)
-
-        pos = game.position
-
-        move = "CHECK"
-
-#        if game.street()==PREFLOP:
-        if len(game.hand.recentOppMove())==0: #first to act
-            if ev>400:
-                move = self.pushMin(game,3)
-                if move.split(":")[0] != "CHECK":
-                    if move.split(":")[1] > 50:
-                        move = "CALL"
-            elif ev>250:
-                move = self.pushMin(game,1)
-                if move.split(":")[0] != "CHECK":
-                    if move.split(":")[1] > 50:
-                        move = "CALL"
+        # Calculate our ev
+        if game.street==PREFLOP:
+            if game.activePlayers == 2:
+                ev = self.evaluatePocketCards2(game)
             else:
-                return self.maxRisk(game,2)
-            #move = "CALL"
-        elif len(game.hand.recentOppMove())==1: #second to act
-            rightOppEv = archive.averageStrength(game.rightOpp,
-                                                 0,
-                                                 game.hand.actions[-1].type,
-                                                 ABSAMOUNT,
-                                                 game.lastBet-10,
-                                                 game.lastBet+10)
-            if rightOppEv == -1:
-                if ev>400:
-                    move = self.pushMin(game,3)
-                    if move.split(":")[0] != "CHECK":
-                        if move.split(":")[1] > 50:
-                            move = "CALL"
-                elif ev>250:
-                    move = self.pushMin(game,1)
-                    if move.split(":")[0] != "CHECK":
-                        if move.split(":")[1] > 50:
-                            move = "CALL"
-                else:
-                    return self.maxRisk(game,2)
-#                return self.maxRisk(game,4)
-            elif ev > rightOppEv:
-                move = self.pushMin(game,3)
-                if move.split(":")[0] != "CHECK":
-                    if move.split(":")[1] > 50:
-                        move = "CALL"
-#        move = "CALL"#self.pushMin(game, 1)#"CALL"
-            else:
-                move = "CHECK"
-        else: #any other occurence
-            rightAct, leftAct = game.hand.recentOppMove()
-            rightOppEv = archive.averageStrength(game.rightOpp, 0,
-                                                 rightAct.type,
-                                                 ABSAMOUNT,
-                                                 rightAct.amount-10,
-                                                 rightAct.amount+10)
-            leftOppEv = archive.averageStrength(game.leftOpp, 0,
-                                                leftAct.type,
-                                                ABSAMOUNT,
-                                                leftAct.amount-10,
-                                                leftAct.amount+10)
+                ev = self.evaluatePocketCards3(game)
 
-            print "RIGHT_EV:", rightOppEv, "LEFT_EV:", leftOppEv, "MY_EV:",ev
-            if rightOppEv == -1 or leftOppEv==-1:
-                if ev>400:
-                    move = self.pushMin(game,3)
-                    if move.split(":")[0] != "CHECK":
-                        if move.split(":")[1] > 50:
-                            move = "CALL"
-                elif ev>250:
-                    move = self.pushMin(game,1)
-                    if move.split(":")[0] != "CHECK":
-                        if move.split(":")[1] > 50:
-                            move = "CALL"
-                else:
-                    return self.maxRisk(game,2)
-#               return self.maxRisk(game,4)
-            elif ev <= rightOppEv or ev <= leftOppEv:
-                move = "CHECK"
-            else:
-                move = self.pushMin(game,3)
-                if move.split(":")[0] != "CHECK":
-                    if move.split(":")[1] > 50:
-                        move = "CALL"
-#            move = "CALL"#self.pushMin(game, 5)#"CALL"
+            #if ev <275:
+            #    return "CHECK"
 
-        if move not in [la[0] for la in game.legalActions]:
-            move = "CHECK"
+        else:
+            ev = self.evalHand(game)
+
+        OppEvs = self.getOppEvs(game, archive)
+
+        move = Move(CHECK)
+
+        print "RIGHT EV:", OppEvs[game.rightOpp], "LEFT EV:", OppEvs[game.leftOpp], "EV:", ev, "activePlayers:", game.activePlayers
+
+        comment = ""
+        if OppEvs[game.rightOpp][0] == -1 and OppEvs[game.leftOpp][0] == -1:
+            comment = "know nothing"
+            move = self.blindEVplay(game,ev)
+        elif game.activePlayers == 2:
+            comment = "Only playing one player"
+            if ev > OppEvs[game.rightOpp][0]-OppEvs[game.rightOpp][1]/2 and ev > OppEvs[game.leftOpp][0]-OppEvs[game.leftOpp][1]/2:
+                comment += " and we know we're better"
+                move = self.bestEVplay(game)
+            else:
+                comment += " and we know we're worse"
+                move = Move(CHECK)
+        elif OppEvs[game.rightOpp][0] == -1 or OppEvs[game.leftOpp][0] == -1:
+            comment = "know only one EV"
+            move = self.blindEVplay(game,ev)
+            if OppEvs[game.rightOpp][0]-OppEvs[game.rightOpp][1]/2>ev or OppEvs[game.leftOpp][0]-OppEvs[game.leftOpp][1]/2>ev:
+                comment += " and we're worse"
+                move = Move(CHECK)
+        elif ev > OppEvs[game.rightOpp][0]-OppEvs[game.rightOpp][1]/2 and ev > OppEvs[game.leftOpp][0]-OppEvs[game.leftOpp][1]/2:
+            comment = "know both and we're better than both"
+            move = self.bestEVplay(game)
+        else:
+            comment = "know both and we're worse than at least one"
+            move = Move(CHECK)
+        #print comment
+        if ACTION_TYPES[move.type] not in [la[0] for la in game.legalActions]:
+            print "returned illegal action"
+            move = Move(CHECK)
+
+        move.rightEV = OppEvs[game.rightOpp]
+        move.leftEV = OppEvs[game.leftOpp]
+        move.myEV = ev
+        move.comment = comment
+
+        return move
+
+
+    def getOppEvs(self, game, archive):
+        OM = self.OppMoves(game)
+        OppEvs = {}
+        OppEvs[game.rightOpp] = [-1,1000]
+        OppEvs[game.leftOpp] = [-1,1000]
+
+        for p in [game.leftOpp, game.rightOpp]:
+            if len(OM[p]) == 0:
+                OppEvs[p] = [-1,1000]
+                continue
+
+            lastAction = OM[p][-1][1]
+            if lastAction.type == FOLD:
+                OppEvs[p] = [0,1000]
+                continue
+
+            absamt = archive.averageStrength(p, game.street,
+                                             lastAction, ABSAMOUNT)
+
+            if lastAction.type == CHECK:
+                OppEvs[p] = absamt
+                continue
+
+            potamt = archive.averageStrength(p, game.street,
+                                             lastAction, POTAMOUNT)
+
+            if lastAction.type in [BET, CALL]:
+                OppEvs[p] = min(absamt,potamt,key=lambda x:x[1])
+            elif lastAction.type == RAISE:
+                betamt = archive.averageStrength(p, game.street,
+                                                 lastAction, BETAMOUNT)
+                OppEvs[p] = min(absamt,betamt,potamt,key=lambda x:x[1])
+        return OppEvs
+
+    def OppMoves(self, game):
+        OM = {}
+        OM[game.rightOpp]=[]
+        OM[game.leftOpp] =[]
+        game.hand.splitActionsList()
+        for s,street in enumerate(game.hand.splitActions):
+            for acts in street:
+                if acts.type != POST:
+                    if acts.player in OM.keys():
+                        OM[acts.player] += [(s,acts)]
+        return OM
+
+    def blindEVplay(self, game, ev):
+        street = game.street
+        if street == PREFLOP:
+            npm = 0
+            if game.activePlayers == 2:
+                npm = 160
+            move = Move(CHECK)
+            if ev>600+npm:
+                move = self.pushMin(game,random.randint(4,10))
+                if move.type in [BET, RAISE]:
+                    if move.amount > 200:
+                        move = Move(CALL)
+            elif ev>400+npm:
+                move = self.pushMin(game,random.randint(1,4))
+                if move.type in [BET, RAISE]:
+                    if move.amount > 30:
+                        move = Move(CALL)
+            elif ev>300+npm:
+                move = self.maxRisk(game,10)
+            else:
+                move =  self.maxRisk(game,2)
+        elif street == FLOP:
+            move = Move(CHECK)
+            if ev>700:
+                move = self.pushMin(game,random.randint(4,10))
+                if move.type in [BET, RAISE]:
+                    if move.amount > 200:
+                        move = Move(CALL)
+            elif ev>500:
+                move = self.pushMin(game,random.randint(1,4))
+                if move.type in [BET, RAISE]:
+                    if move.amount > 50:
+                        move = Move(CALL)
+            else:
+                move =  self.maxRisk(game,2)
+        elif street == TURN:
+            move = Move(CHECK)
+            if ev>800:
+                move = self.pushMin(game,10)
+                if move.type in [BET, RAISE]:
+                    if move.amount > 200:
+                        move = Move(CALL)
+            elif ev>600:
+                move = self.pushMin(game,random.randint(1,4))
+                if move.type in [BET, RAISE]:
+                    if move.amount > 50:
+                        move = Move(CALL)
+            elif ev>500:
+                move = self.maxRisk(game,10)
+            else:
+                move =  self.maxRisk(game,2)
+        elif street == RIVER:
+            move = Move(CHECK)
+            if ev>800:
+                move = self.pushMin(game,random.randint(4,10))
+                if move.type in [BET, RAISE]:
+                    if move.amount > 200:
+                        move = Move(CALL)
+            elif ev>650:
+                move = self.pushMin(game,random.randint(1,4))
+                if move.type in [BET, RAISE]:
+                    if move.amount > 50:
+                        move = Move(CALL)
+            elif ev>500:
+                move = self.maxRisk(game,10)
+            else:
+                move =  self.maxRisk(game,2)
+        else:
+            print "Error! You reached a state not 0-3! in blindEVplay"
+
+        return move
+
+
+    def bestEVplay(self, game):
+        street = game.street
+        if street == PREFLOP:
+            move = self.pushMin(game,random.randint(2,6))
+            if move.type in [BET, RAISE]:
+                if move.amount > 30:
+                    move = Move(CALL)
+        elif street == FLOP:
+            move = self.pushMin(game,random.randint(3,7))
+            if move.type in [BET, RAISE]:
+                if move.amount > 40:
+                    move = Move(CALL)
+        elif street == TURN:
+            move = self.pushMin(game,random.randint(4,8))
+            if move.type in [BET, RAISE]:
+                if move.amount > 50:
+                    move = Move(CALL)
+        elif street == RIVER:
+            move = self.pushMin(game,10)
+        else:
+            print "Error! You reached a state not 0-3! in bestEVplay"
+
         return move
