@@ -10,7 +10,7 @@ class FoldBotStrategy(Strategy):
 
         ev = self.evalHand(game)
 
-        if game.street==PREFLOP and if ev > 350:
+        if game.street==PREFLOP and ev > 350:
             if "RAISE" in [la[0] for la in game.legalActions]:
                 return Move(RAISE, game.stackSize)
             if "BET" in [la[0] for la in game.legalActions]:

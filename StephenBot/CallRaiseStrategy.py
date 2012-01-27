@@ -11,4 +11,4 @@ class CallRaiseStrategy(Strategy):
         if game.street==RIVER:
             return self.pushMin(game)
 
-        return move(CALL)
+        return Move(CALL)

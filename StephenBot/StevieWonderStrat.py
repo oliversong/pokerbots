@@ -3,7 +3,7 @@ from Enums import *
 from Move import *
 import random
 
-class ChuckTestaStrat(Strategy):
+class StevieWonderStrat(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
@@ -21,46 +21,7 @@ class ChuckTestaStrat(Strategy):
         else:
             ev = self.evalHand(game)
 
-        OppEvs = self.getOppEvs(game, archive)
-
-        move = Move(CHECK)
-
-        print "RIGHT EV:", OppEvs[game.rightOpp], "LEFT EV:", OppEvs[game.leftOpp], "EV:", ev, "activePlayers:", game.activePlayers
-
-        comment = ""
-        if OppEvs[game.rightOpp][0] == -1 and OppEvs[game.leftOpp][0] == -1:
-            comment = "know nothing"
-            move = self.blindEVplay(game,ev)
-        elif game.activePlayers == 2:
-            comment = "Only playing one player"
-            if ev > OppEvs[game.rightOpp][0]+OppEvs[game.rightOpp][1]/2 and ev > OppEvs[game.leftOpp][0]+OppEvs[game.leftOpp][1]/2:
-                comment += " and we know we're better"
-                move = self.bestEVplay(game)
-            else:
-                comment += " and we know we're worse"
-                move = Move(CHECK)
-        elif OppEvs[game.rightOpp][0] == -1 or OppEvs[game.leftOpp][0] == -1:
-            comment = "know only one EV"
-            move = self.blindEVplay(game,ev)
-            if OppEvs[game.rightOpp][0]>ev or OppEvs[game.leftOpp][0]>ev:
-                comment += " and we're worse"
-                move = Move(CHECK)
-        elif ev > OppEvs[game.rightOpp][0]+OppEvs[game.rightOpp][1]/2 and ev > OppEvs[game.leftOpp][0]+OppEvs[game.leftOpp][1]/2:
-            comment = "know both and we're better than both"
-            move = self.bestEVplay(game)
-        else:
-            comment = "know both and we're worse than at least one"
-            move = Move(CHECK)
-        #print comment
-        if ACTION_TYPES[move.type] not in [la[0] for la in game.legalActions]:
-            print "returned illegal action"
-            move = Move(CHECK)
-
-        move.rightEV = OppEvs[game.rightOpp]
-        move.leftEV = OppEvs[game.leftOpp]
-        move.myEV = ev
-        move.comment = comment
-
+        move = self.blindEVplay(game,ev)
         return move
 
 

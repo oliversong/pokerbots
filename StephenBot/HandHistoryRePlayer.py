@@ -24,7 +24,7 @@ class HandHistoryRePlayer:
 
     def run(self):
         f_in = open(self.fileName, 'r')
-        f_out = open(self.fileName[:-3]+"-ann.txt", 'w')
+        f_out = open(self.fileName[:-3]+"ann.txt", 'w')
         self.history.packets.reverse()
         data = self.history.packets.pop()
         self.run_player(data[0] + "\n")

@@ -3,6 +3,8 @@ class ParseMatchHistory():
         self.packets = []
         self.numHands = numHand
         self.myPlayer = "PoKerboT"
+        self.leftOpp = ""
+        self.rightOpp = "0"
 
     def parseHistory(self, h):
         f = open(h, 'r')
@@ -10,15 +12,15 @@ class ParseMatchHistory():
         line = l.split(" ")
         if line[0] == "6.S912":
             if line[4] == self.myPlayer:
-                rightOpp = line[8][:-1] #chop newline
-                leftOpp = line[6]
+                self.rightOpp = line[8][:-1] #chop newline
+                self.leftOpp = line[6]
             elif line[6] == self.myPlayer:
-                rightOpp = line[4]
-                leftOpp = line[8][:-1] #chop newline
+                self.rightOpp = line[4]
+                self.leftOpp = line[8][:-1] #chop newline
             else: #"PoKerboT" == line[8]
-                rightOpp = line[6]
-                leftOpp = line[4]
-            packet = "NEWGAME 1 "+leftOpp+" " + rightOpp + " " + str(self.numHands) + " 200 2 1 10000.0000"
+                self.rightOpp = line[6]
+                self.leftOpp = line[4]
+            packet = "NEWGAME 1 "+self.leftOpp+" " + self.rightOpp + " " + str(self.numHands) + " 200 2 1 10000.0000"
             self.packets += [[packet, [], []]]
 
         handID = 0
@@ -36,8 +38,8 @@ class ParseMatchHistory():
         l = f.readline()
         while l:
             if l=="\n":
-                packet = "HANDOVER "+bankrolls[self.myPlayer] + " "+bankrolls[leftOpp] + " " + bankrolls[rightOpp] + " "+str(numLastActions) + lastActions[:-1] + " " + str(numBoardCards) + boardCards+ " 1000.000"
-                self.packets += [[packet, pockets[leftOpp], pockets[rightOpp]]]
+                packet = "HANDOVER "+bankrolls[self.myPlayer] + " "+bankrolls[self.leftOpp] + " " + bankrolls[self.rightOpp] + " "+str(numLastActions) + lastActions[:-1] + " " + str(numBoardCards) + boardCards+ " 1000.000"
+                self.packets += [[packet, pockets[self.leftOpp], pockets[self.rightOpp]]]
                 l = f.readline()
                 continue
 
@@ -75,13 +77,13 @@ class ParseMatchHistory():
                     boardCards += ","+line[7][1]+line[7][2]
                 l = f.readline()
                 continue
-            elif line[0][:-4] in [leftOpp, rightOpp, self.myPlayer]:
+            elif line[0][:-4] in [self.leftOpp, self.rightOpp, self.myPlayer]:
                 if line[1] == "posts":
                     lastActions += "POST:"+line[0][:-4]+":"+line[-1]+","
                     numLastActions += 1
                 elif makingHandPacket:
-                    packet = "NEWHAND "+str(handID)+" "+position+" "+pockets[self.myPlayer][0] + " " + pockets[self.myPlayer][1] + " " + bankrolls[self.myPlayer] + " " + bankrolls[leftOpp] + " " +bankrolls[rightOpp] + " 1000.000"
-                    self.packets += [[packet, pockets[leftOpp], pockets[rightOpp]]]
+                    packet = "NEWHAND "+str(handID)+" "+position+" "+pockets[self.myPlayer][0] + " " + pockets[self.myPlayer][1] + " " + bankrolls[self.myPlayer] + " " + bankrolls[self.leftOpp] + " " +bankrolls[self.rightOpp] + " 1000.000"
+                    self.packets += [[packet, pockets[self.leftOpp], pockets[self.rightOpp]]]
                     makingHandPacket = False
 #                    l = f.readline()
                     continue
@@ -103,7 +105,7 @@ class ParseMatchHistory():
                         l = f.readline()
                         continue
                     packet = "GETACTION "+str(potSize) + " " +str(numBoardCards)+ boardCards + " " + str(numLastActions)+ lastActions[:-1] +" 1 FOLD 10000.0000"
-                    self.packets += [[packet, pockets[leftOpp], pockets[rightOpp]]]
+                    self.packets += [[packet, pockets[self.leftOpp], pockets[self.rightOpp]]]
                     numLastActions = 0
                     if line[1] == "folds":
                         lastActions = " FOLD:" + self.myPlayer + ","
