@@ -61,8 +61,8 @@ class Player:
                                        self.game.rightBank)
                 print ""
                 if self.game.handID == self.game.numHands:
-                    self.plot.leftOpp = self.game.leftOpp
-                    self.plot.rightOpp = self.game.rightOpp
+                    self.plot.leftOpp = self.game.leftOpp.name
+                    self.plot.rightOpp = self.game.rightOpp.name
                     print "Final time: ", self.game.timebank
                     print "GAMEOVER PLOTTING"
                     self.plot.plotBanks()

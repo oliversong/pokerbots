@@ -25,27 +25,27 @@ class ChuckTestaStrat(Strategy):
 
         move = Move(CHECK)
 
-        print "RIGHT EV:", OppEvs[game.rightOpp], "LEFT EV:", OppEvs[game.leftOpp], "EV:", ev, "activePlayers:", game.activePlayers
+        print "RIGHT EV:", OppEvs[game.rightOpp.name], "LEFT EV:", OppEvs[game.leftOpp.name], "EV:", ev, "activePlayers:", game.activePlayers
 
         comment = ""
-        if OppEvs[game.rightOpp][0] == -1 and OppEvs[game.leftOpp][0] == -1:
+        if OppEvs[game.rightOpp.name][0] == -1 and OppEvs[game.leftOpp.name][0] == -1:
             comment = "know nothing"
             move = self.blindEVplay(game,ev)
         elif game.activePlayers == 2:
             comment = "Only playing one player"
-            if ev > OppEvs[game.rightOpp][0]+OppEvs[game.rightOpp][1]/2 and ev > OppEvs[game.leftOpp][0]+OppEvs[game.leftOpp][1]/2:
+            if ev > OppEvs[game.rightOpp.name][0]+OppEvs[game.rightOpp.name][1]/2 and ev > OppEvs[game.leftOpp.name][0]+OppEvs[game.leftOpp.name][1]/2:
                 comment += " and we know we're better"
                 move = self.bestEVplay(game)
             else:
                 comment += " and we know we're worse"
                 move = Move(CHECK)
-        elif OppEvs[game.rightOpp][0] == -1 or OppEvs[game.leftOpp][0] == -1:
+        elif OppEvs[game.rightOpp.name][0] == -1 or OppEvs[game.leftOpp.name][0] == -1:
             comment = "know only one EV"
             move = self.blindEVplay(game,ev)
-            if OppEvs[game.rightOpp][0]>ev or OppEvs[game.leftOpp][0]>ev:
+            if OppEvs[game.rightOpp.name][0]>ev or OppEvs[game.leftOpp.name][0]>ev:
                 comment += " and we're worse"
                 move = Move(CHECK)
-        elif ev > OppEvs[game.rightOpp][0]+OppEvs[game.rightOpp][1]/2 and ev > OppEvs[game.leftOpp][0]+OppEvs[game.leftOpp][1]/2:
+        elif ev > OppEvs[game.rightOpp.name][0]+OppEvs[game.rightOpp.name][1]/2 and ev > OppEvs[game.leftOpp.name][0]+OppEvs[game.leftOpp.name][1]/2:
             comment = "know both and we're better than both"
             move = self.bestEVplay(game)
         else:
@@ -56,8 +56,8 @@ class ChuckTestaStrat(Strategy):
             print "returned illegal action"
             move = Move(CHECK)
 
-        move.rightEV = OppEvs[game.rightOpp]
-        move.leftEV = OppEvs[game.leftOpp]
+        move.rightEV = OppEvs[game.rightOpp.name]
+        move.leftEV = OppEvs[game.leftOpp.name]
         move.myEV = ev
         move.comment = comment
 
@@ -67,10 +67,10 @@ class ChuckTestaStrat(Strategy):
     def getOppEvs(self, game, archive):
         OM = self.OppMoves(game)
         OppEvs = {}
-        OppEvs[game.rightOpp] = [-1,1000]
-        OppEvs[game.leftOpp] = [-1,1000]
+        OppEvs[game.rightOpp.name] = [-1,1000]
+        OppEvs[game.leftOpp.name] = [-1,1000]
 
-        for p in [game.leftOpp, game.rightOpp]:
+        for p in [game.leftOpp.name, game.rightOpp.name]:
             if len(OM[p]) == 0:
                 OppEvs[p] = [-1,1000]
                 continue
@@ -100,8 +100,8 @@ class ChuckTestaStrat(Strategy):
 
     def OppMoves(self, game):
         OM = {}
-        OM[game.rightOpp]=[]
-        OM[game.leftOpp] =[]
+        OM[game.rightOpp.name]=[]
+        OM[game.leftOpp.name] =[]
         game.hand.splitActionsList()
         for s,street in enumerate(game.hand.splitActions):
             for acts in street:

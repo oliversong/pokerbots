@@ -12,12 +12,12 @@ class MatchHistory:
         self.pokereval = PokerEval()
 
     def reset(self, game):
-        self.history[game.leftOpp] = [{},{},{},{}]
-        self.history[game.rightOpp] = [{},{},{},{}]
+        self.history[game.leftOpp.name] = [{},{},{},{}]
+        self.history[game.rightOpp.name] = [{},{},{},{}]
         for a in range(4):#[BET,CALL,CHECK,RAISE]:
             for s in range(4):
-                self.history[game.leftOpp][s][a] = []
-                self.history[game.rightOpp][s][a] = []
+                self.history[game.leftOpp.name][s][a] = []
+                self.history[game.rightOpp.name][s][a] = []
 
     def update(self, game):
         showStats = {}

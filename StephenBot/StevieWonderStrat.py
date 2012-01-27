@@ -28,10 +28,10 @@ class StevieWonderStrat(Strategy):
     def getOppEvs(self, game, archive):
         OM = self.OppMoves(game)
         OppEvs = {}
-        OppEvs[game.rightOpp] = [-1,1000]
-        OppEvs[game.leftOpp] = [-1,1000]
+        OppEvs[game.rightOpp.name] = [-1,1000]
+        OppEvs[game.leftOpp.name] = [-1,1000]
 
-        for p in [game.leftOpp, game.rightOpp]:
+        for p in [game.leftOpp.name, game.rightOpp.name]:
             if len(OM[p]) == 0:
                 OppEvs[p] = [-1,1000]
                 continue
