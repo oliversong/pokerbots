@@ -1,4 +1,3 @@
-
 class ParseMatchHistory():
     def __init__(self, numHand):
         self.packets = []
@@ -19,8 +18,8 @@ class ParseMatchHistory():
             else: #"PoKerboT" == line[8]
                 rightOpp = line[6]
                 leftOpp = line[4]
-            packet = "NEWGAME 1 "+leftOpp+" " + rightOpp + " " + str(self.numHands) + " 2 1 10000.0000"
-            self.packets += [packet]
+            packet = "NEWGAME 1 "+leftOpp+" " + rightOpp + " " + str(self.numHands) + " 200 2 1 10000.0000"
+            self.packets += [[packet, [], []]]
 
         handID = 0
         makingHandPacket = False
@@ -38,7 +37,7 @@ class ParseMatchHistory():
         while l:
             if l=="\n":
                 packet = "HANDOVER "+bankrolls[self.myPlayer] + " "+bankrolls[leftOpp] + " " + bankrolls[rightOpp] + " "+str(numLastActions) + lastActions[:-1] + " " + str(numBoardCards) + boardCards+ " 1000.000"
-                self.packets += [packet]
+                self.packets += [[packet, pockets[leftOpp], pockets[rightOpp]]]
                 l = f.readline()
                 continue
 
@@ -82,7 +81,7 @@ class ParseMatchHistory():
                     numLastActions += 1
                 elif makingHandPacket:
                     packet = "NEWHAND "+str(handID)+" "+position+" "+pockets[self.myPlayer][0] + " " + pockets[self.myPlayer][1] + " " + bankrolls[self.myPlayer] + " " + bankrolls[leftOpp] + " " +bankrolls[rightOpp] + " 1000.000"
-                    self.packets += [packet]
+                    self.packets += [[packet, pockets[leftOpp], pockets[rightOpp]]]
                     makingHandPacket = False
 #                    l = f.readline()
                     continue
@@ -104,7 +103,7 @@ class ParseMatchHistory():
                         l = f.readline()
                         continue
                     packet = "GETACTION "+str(potSize) + " " +str(numBoardCards)+ boardCards + " " + str(numLastActions)+ lastActions[:-1] +" 1 FOLD 10000.0000"
-                    self.packets += [packet]
+                    self.packets += [[packet, pockets[leftOpp], pockets[rightOpp]]]
                     numLastActions = 0
                     if line[1] == "folds":
                         lastActions = " FOLD:" + self.myPlayer + ","
@@ -151,10 +150,6 @@ class ParseMatchHistory():
                 continue
 
             l = f.readline()
-        for p in self.packets:
-            print p
-
-
-
-
-
+        #for p in self.packets:
+        #    print p
+        f.close()

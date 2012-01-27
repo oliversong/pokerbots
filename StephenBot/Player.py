@@ -6,6 +6,7 @@ from GameState import *
 from LagRuleBotStrategy import *
 from MatchHistory import *
 from PlotBankrolls import *
+from Move import *
 
 class Player:
     def __init__(self, port):
