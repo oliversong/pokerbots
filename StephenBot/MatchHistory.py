@@ -129,7 +129,11 @@ class MatchHistory:
                     mean = float(sum)/numMatches
                     std = sqrt((float(sum2)/numMatches) - (mean*mean))
                 else:
-                    amountDiffs += [(a, a.amount, abs(a.amount - action.amount))]
+                    upperBound = action.amount + 2 + 0.10*action.amount
+                    lowerBound = action.amount - 2 - 0.10*action.amount
+                    #only use actions within a certain range to calculate average/std values
+                    if a.amount <= upperBound and a.amount >= lowerBound:
+                        amountDiffs += [(a, a.amount, abs(a.amount - action.amount))]
 
         if numMatches<3:
            #sort the amountDiffs by the difference in amount from the desired amount
