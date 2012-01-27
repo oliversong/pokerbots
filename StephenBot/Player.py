@@ -12,9 +12,12 @@ class Player:
     def __init__(self, port):
         self.holeCard1 = None
         self.holeCard2 = None
+        self.startBank = None
         self.game = GameState()
         self.archive = MatchHistory()
-        self.strategy = LagRuleBotStrategy()
+        self.strategy = Strategy()
+        self.losingStrat = LagRuleBotStrategy()
+        self.winningStrat = LagRuleBotStrategy()
         self.plot = PlotBankrolls()
         while True:
             try:
@@ -49,6 +52,17 @@ class Player:
 
             if self.game.state == NEWGAME:
                 self.archive.reset(self.game)
+                self.startBank = None
+            elif self.game.state == NEWHAND:
+                if self.startBank is None:
+                    self.startBank = self.game.bankroll
+                    self.strategy = self.winningStrat
+                elif self.game.bankroll < self.startBank - 2000:
+                    print "We're losing, using losing strategy!"
+                    self.strategy = self.losingStrat
+                elif self.game.bankroll > self.startBank:
+                    print "We're winning, using winning strategy!"
+                    self.strategy = self.winningStrat
             elif self.game.state == GETACTION:
                 #self.strategy.evaluateOdds(self.game)
                 move = self.strategy.getMove(self.game, self.archive)
