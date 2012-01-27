@@ -4,7 +4,7 @@ import sys
 
 from Enums import *
 from GameState import *
-from ChuckTestaStrat2 import *
+from ChuckTestaStrat import *
 from MatchHistory import *
 from PlotBankrolls import *
 from Move import *
@@ -16,7 +16,7 @@ class HandHistoryRePlayer:
         self.holeCard2 = None
         self.game = GameState()
         self.archive = MatchHistory()
-        self.strategy = ChuckTestaStrat2()
+        self.strategy = ChuckTestaStrat()
         self.history = ParseMatchHistory(1000)
         self.fileName = fileName
         self.history.parseHistory(fileName)

@@ -3,7 +3,7 @@ from Enums import *
 from Move import *
 import random
 
-class ChuckTestaStrat2(Strategy):
+class ChuckTestaStrat(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
