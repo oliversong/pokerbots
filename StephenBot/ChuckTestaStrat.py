@@ -21,10 +21,10 @@ class ChuckTestaStrat(Strategy):
 
         print "RIGHT EV:", OppEvs[game.rightOpp.name], "LEFT EV:", OppEvs[game.leftOpp.name], "EV:", ev, "activePlayers:", game.activePlayers
 
-        p1ev = OppEvs[game.rightOpp][0]
-        p1stdev = OppEvs[game.rightOpp][1]
-        p2ev = OppEvs[game.leftOpp][0]
-        p2stdev = OppEvs[game.leftOpp][1]
+        p1ev = OppEvs[game.rightOpp.name][0]
+        p1stdev = OppEvs[game.rightOpp.name][1]
+        p2ev = OppEvs[game.leftOpp.name][0]
+        p2stdev = OppEvs[game.leftOpp.name][1]
         comment = ""
         
         if p1ev == -1 and p2ev == -1:
