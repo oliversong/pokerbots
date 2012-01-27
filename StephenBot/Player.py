@@ -51,7 +51,7 @@ class Player:
             elif self.game.state == GETACTION:
                 #self.strategy.evaluateOdds(self.game)
                 move = self.strategy.getMove(self.game, self.archive)
-#                print "SENDING A ", move, "ACTION TO ENGINE\n"
+                print "our move:",move
                 self.socket.send(move.toString())
             elif self.game.state == HANDOVER:
                 #update hand history now that final hand actions have been parsed

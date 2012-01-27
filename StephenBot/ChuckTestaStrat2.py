@@ -27,33 +27,39 @@ class ChuckTestaStrat2(Strategy):
 
         print "RIGHT EV:", OppEvs[game.rightOpp], "LEFT EV:", OppEvs[game.leftOpp], "EV:", ev, "activePlayers:", game.activePlayers
 
+        comment = ""
         if OppEvs[game.rightOpp][0] == -1 and OppEvs[game.leftOpp][0] == -1:
-            print "know nothing"
+            comment = "know nothing"
             move = self.blindEVplay(game,ev)
         elif game.activePlayers == 2:
-            print "Only playing one other person and know his EV"
+            comment = "Only playing one player"
             if ev > OppEvs[game.rightOpp][0]-OppEvs[game.rightOpp][1]/2 and ev > OppEvs[game.leftOpp][0]-OppEvs[game.leftOpp][1]/2:
-                print "know we're better"
+                comment += " and we know we're better"
                 move = self.bestEVplay(game)
             else:
-                print "know we're worse"
+                comment += " and we know we're worse"
                 move = Move(CHECK)
         elif OppEvs[game.rightOpp][0] == -1 or OppEvs[game.leftOpp][0] == -1:
-            print "know only one"
+            comment = "know only one EV"
             move = self.blindEVplay(game,ev)
             if OppEvs[game.rightOpp][0]-OppEvs[game.rightOpp][1]/2>ev or OppEvs[game.leftOpp][0]-OppEvs[game.leftOpp][1]/2>ev:
-                print "and we're worse than the one we know"
+                comment += " and we're worse"
                 move = Move(CHECK)
         elif ev > OppEvs[game.rightOpp][0]-OppEvs[game.rightOpp][1]/2 and ev > OppEvs[game.leftOpp][0]-OppEvs[game.leftOpp][1]/2:
-            print "know both and we're better"
+            comment = "know both and we're better than both"
             move = self.bestEVplay(game)
         else:
-            print "know both and we're worse than at least one"
+            comment = "know both and we're worse than at least one"
             move = Move(CHECK)
-
+        #print comment
         if ACTION_TYPES[move.type] not in [la[0] for la in game.legalActions]:
             print "returned illegal action"
             move = Move(CHECK)
+
+        move.rightEV = OppEvs[game.rightOpp]
+        move.leftEV = OppEvs[game.leftOpp]
+        move.myEV = ev
+        move.comment = comment
 
         return move
 
