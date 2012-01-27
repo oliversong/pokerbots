@@ -27,20 +27,26 @@ class Strategy:
 
     def evalHand(self, game):
         hand = [game.holeCard1.stringValue, game.holeCard2.stringValue]
-        if game.activePlayers == 3:
-            pockets = [hand,[255,255],[255,255]]
-        elif game.activePlayers == 2:
-            pockets = [hand,[255,255]]
+        if game.street==PREFLOP:
+            if game.activePlayers == 2:
+                ev = self.evaluatePocketCards2(game)
+            else:
+                ev = self.evaluatePocketCards3(game)
         else:
-            # shouldn't get here, but just in case
-            print "Only 1 active player! EV is 1"
-            return 1000
+            if game.activePlayers == 3:
+                pockets = [hand,[255,255],[255,255]]
+            elif game.activePlayers == 2:
+                pockets = [hand,[255,255]]
+            else:
+                # shouldn't get here, but just in case
+                print "Only 1 active player! EV is 1"
+                return 1000
 
-        ev = self.pokereval.poker_eval(game="holdem",
-                                       pockets = pockets,
-                                       dead=[],
-                                       board=game.boardCards,
-                                       iterations = ITERATIONS)['eval'][0]['ev']
+            ev = self.pokereval.poker_eval(game="holdem",
+                                           pockets = pockets,
+                                           dead=[],
+                                           board=game.boardCards,
+                                           iterations = ITERATIONS)['eval'][0]['ev']
 #        print "HAND", hand, "BOARD", board, "EV", ev
 
         return ev
