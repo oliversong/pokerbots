@@ -1,5 +1,6 @@
 from pokereval import PokerEval
 from Enums import *
+from Move import *
 import TwoPocketLookup
 import ThreePocketLookup
 
@@ -48,12 +49,12 @@ class Strategy:
     # If min raise amount is to raise to 4, multiplier of 3 says to raise to
     # 3*4=12
     def pushMin(self, game, m=1):
-        move = "CALL"
+        move = Move(CALL)
         for la in game.legalActions:
             if la[0] == "BET":
-                return "BET:"+str(min(game.getAllIn(),int(la[1])*m))
+                return Move(BET, min(game.getAllIn(),int(la[1])*m))
             if la[0] == "RAISE":
-                return "RAISE:"+str(min(game.getAllIn(),int(la[1])*m))
+                return Move(RAISE, min(game.getAllIn(),int(la[1])*m))
 
 ##        print "PUSH MIN MOVE:", move
         return move
@@ -61,7 +62,7 @@ class Strategy:
     ##If can check, then check.  Otherwise call up to m
     def maxRisk(self, game, m):
         if "CHECK" in [la[0] for la in game.legalActions]:
-            return "CHECK"
+            return Move(CHECK)
         if game.lastBet <= m:
-            return "CALL"
-        return "FOLD"
+            return Move(CALL)
+        return Move(FOLD)

@@ -20,26 +20,23 @@ class MatchHistory:
                 self.history[game.rightOpp][s][a] = []
 
     def update(self, game):
-        showPlayers = []
-        showCards = []
+        showStats = {}
 
         for action in game.hand.actions:
             if action.type == SHOW and action.player in self.history.keys():
-                showPlayers += [action.player]
-                showCards += [[action.showCard1, action.showCard2]]
+                showStats[action.player] = [[action.showCard1, action.showCard2],0]
 
-        if len(showPlayers) == 0:
+        if len(showStats.keys()) == 0:
             return
-        showEV = [0]*len(showPlayers)
 
-        for i in range(len(showPlayers)):
-            playerHand = showCards[i]
+        for player in showStats.keys():
+            playerHand = showStats[player][0]
             ev = self.pokereval.poker_eval(game="holdem",
                                            pockets=[playerHand,[255,255],[255,255]],
                                            dead=[],
                                            board=[255]*5,
                                            iterations=ITERATIONS)
-            showEV[i] = ev['eval'][0]['ev']
+            showStats[player][1] = ev['eval'][0]['ev']
         street = 0
         activePlayers = 3
         b = [255]*5
@@ -52,8 +49,8 @@ class MatchHistory:
                     b[:4] = game.boardCards[:4]
                 elif street==RIVER: #RIVER
                     b = game.boardCards
-                for i in range(len(showPlayers)):
-                    playerHand = showCards[i]
+                for player in showStats.keys():
+                    playerHand = showStats[player][0]
                     pockets = [playerHand,[255,255],[255,255]]
                     if activePlayers == 2:
                         pockets = pockets[:2]
@@ -62,23 +59,23 @@ class MatchHistory:
                                                    dead=[],
                                                    board=b,
                                                    iterations=ITERATIONS)
-                    showEV[i] = ev['eval'][0]['ev']
+                    showStats[player][1] = ev['eval'][0]['ev']
             elif action.type == FOLD:
-                # only will see at most one fold if we got to showdown
-                for i in range(len(showPlayers)):
-                    playerHand = showCards[i]
+                activePlayers -= 1
+                print "saw fold", action
+                for player in showStats.keys():
+                    playerHand = showStats[player][0]
                     ev = self.pokereval.poker_eval(game="holdem",
                                                    pockets=[playerHand,[255,255]],
                                                    dead=[],
                                                    board=b,
                                                    iterations=ITERATIONS)
-                    showEV[i] = ev['eval'][0]['ev']
-            elif action.player in showPlayers and action.type != POST and action.type in game.hand.trackedActions:
+                    showStats[player][1] = ev['eval'][0]['ev']
+
+            elif action.player in showStats.keys() and action.type != POST and action.type in game.hand.trackedActions:
                 act = action.copy()
-                act.handStrength = showEV[showPlayers.index(action.player)]
+                act.handStrength = showStats[action.player][1]
                 self.history[act.player][street][action.type].append(act)
-                #if act.handStrength == 0:
-                #    print "added act", act
 
     def printHistory(self):
         print "PRINTING HISTORY"
@@ -88,10 +85,10 @@ class MatchHistory:
             for s in range(4):
                 print "    STREET", s
                 for a in self.history[p][s].keys():
-                    print "        ACTION", a
+                    print "        ACTION", ACTION_TYPES[a]
                     for i in range(len(self.history[p][s][a])):
                         print "             [",
-                        print "TYPE:", self.history[p][s][a][i].type,",",
+                        print "TYPE:", ACTION_TYPES[self.history[p][s][a][i].type],",",
                         print "PLAYER:", self.history[p][s][a][i].player,",",
                         print "AMOUNT:", self.history[p][s][a][i].amount,",",
                         print "POT AMOUNT:",self.history[p][s][a][i].potAmount,",",

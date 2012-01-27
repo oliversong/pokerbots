@@ -1,8 +1,9 @@
 from Strategy import *
 from Enums import *
+from Move import *
 import random
 
-class ChuckTestaStrat2(Strategy):
+class StevieWonderStrat(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
@@ -20,40 +21,7 @@ class ChuckTestaStrat2(Strategy):
         else:
             ev = self.evalHand(game)
 
-        OppEvs = self.getOppEvs(game, archive)
-
-        move = "CHECK"
-
-        print "RIGHT EV:", OppEvs[game.rightOpp], "LEFT EV:", OppEvs[game.leftOpp], "EV:", ev, "activePlayers:", game.activePlayers
-
-        if OppEvs[game.rightOpp][0] == -1 and OppEvs[game.leftOpp][0] == -1:
-            print "know nothing"
-            move = self.blindEVplay(game,ev)
-        elif game.activePlayers == 2:
-            print "Only playing one other person and know his EV"
-            if ev > OppEvs[game.rightOpp][0]-OppEvs[game.rightOpp][1]/2 and ev > OppEvs[game.leftOpp][0]-OppEvs[game.leftOpp][1]/2:
-                print "know we're better"
-                move = self.bestEVplay(game)
-            else:
-                print "know we're worse"
-                move = "CHECK"
-        elif OppEvs[game.rightOpp][0] == -1 or OppEvs[game.leftOpp][0] == -1:
-            print "know only one"
-            move = self.blindEVplay(game,ev)
-            if OppEvs[game.rightOpp][0]-OppEvs[game.rightOpp][1]/2>ev or OppEvs[game.leftOpp][0]-OppEvs[game.leftOpp][1]/2>ev:
-                print "and we're worse than the one we know"
-                move = "CHECK"
-        elif ev > OppEvs[game.rightOpp][0]-OppEvs[game.rightOpp][1]/2 and ev > OppEvs[game.leftOpp][0]-OppEvs[game.leftOpp][1]/2:
-            print "know both and we're better"
-            move = self.bestEVplay(game)
-        else:
-            print "know both and we're worse than at least one"
-            move = "CHECK"
-
-        if move.split(":")[0] not in [la[0] for la in game.legalActions]:
-            print "returned illegal action"
-            move = "CHECK"
-
+        move = self.blindEVplay(game,ev)
         return move
 
 
@@ -109,63 +77,63 @@ class ChuckTestaStrat2(Strategy):
             npm = 0
             if game.activePlayers == 2:
                 npm = 160
-            move = "CHECK"
+            move = Move(CHECK)
             if ev>600+npm:
                 move = self.pushMin(game,random.randint(4,10))
-                if move.split(":")[0] in ["BET", "RAISE"]:
-                    if int(move.split(":")[1]) > 200:
-                        move = "CALL"
+                if move.type in [BET, RAISE]:
+                    if move.amount > 200:
+                        move = Move(CALL)
             elif ev>400+npm:
                 move = self.pushMin(game,random.randint(1,4))
-                if move.split(":")[0] in ["BET", "RAISE"]:
-                    if int(move.split(":")[1]) > 30:
-                        move = "CALL"
+                if move.type in [BET, RAISE]:
+                    if move.amount > 30:
+                        move = Move(CALL)
             elif ev>300+npm:
                 move = self.maxRisk(game,10)
             else:
                 move =  self.maxRisk(game,2)
         elif street == FLOP:
-            move = "CHECK"
+            move = Move(CHECK)
             if ev>700:
                 move = self.pushMin(game,random.randint(4,10))
-                if move.split(":")[0] in ["BET", "RAISE"]:
-                    if int(move.split(":")[1]) > 200:
-                        move = "CALL"
+                if move.type in [BET, RAISE]:
+                    if move.amount > 200:
+                        move = Move(CALL)
             elif ev>500:
                 move = self.pushMin(game,random.randint(1,4))
-                if move.split(":")[0] in ["BET", "RAISE"]:
-                    if int(move.split(":")[1]) > 50:
-                        move = "CALL"
+                if move.type in [BET, RAISE]:
+                    if move.amount > 50:
+                        move = Move(CALL)
             else:
                 move =  self.maxRisk(game,2)
         elif street == TURN:
-            move = "CHECK"
+            move = Move(CHECK)
             if ev>800:
                 move = self.pushMin(game,10)
-                if move.split(":")[0] in ["BET", "RAISE"]:
-                    if int(move.split(":")[1]) > 200:
-                        move = "CALL"
+                if move.type in [BET, RAISE]:
+                    if move.amount > 200:
+                        move = Move(CALL)
             elif ev>600:
                 move = self.pushMin(game,random.randint(1,4))
-                if move.split(":")[0] in ["BET", "RAISE"]:
-                    if int(move.split(":")[1]) > 50:
-                        move = "CALL"
+                if move.type in [BET, RAISE]:
+                    if move.amount > 50:
+                        move = Move(CALL)
             elif ev>500:
                 move = self.maxRisk(game,10)
             else:
                 move =  self.maxRisk(game,2)
         elif street == RIVER:
-            move = "CHECK"
+            move = Move(CHECK)
             if ev>800:
                 move = self.pushMin(game,random.randint(4,10))
-                if move.split(":")[0] in ["BET", "RAISE"]:
-                    if int(move.split(":")[1]) > 200:
-                        move = "CALL"
+                if move.type in [BET, RAISE]:
+                    if move.amount > 200:
+                        move = Move(CALL)
             elif ev>650:
                 move = self.pushMin(game,random.randint(1,4))
-                if move.split(":")[0] in ["BET", "RAISE"]:
-                    if int(move.split(":")[1]) > 50:
-                        move = "CALL"
+                if move.type in [BET, RAISE]:
+                    if move.amount > 50:
+                        move = Move(CALL)
             elif ev>500:
                 move = self.maxRisk(game,10)
             else:
@@ -180,19 +148,19 @@ class ChuckTestaStrat2(Strategy):
         street = game.street
         if street == PREFLOP:
             move = self.pushMin(game,random.randint(2,6))
-            if move.split(":")[0] in ["BET", "RAISE"]:
-                if int(move.split(":")[1]) > 30:
-                    move = "CALL"
+            if move.type in [BET, RAISE]:
+                if move.amount > 30:
+                    move = Move(CALL)
         elif street == FLOP:
             move = self.pushMin(game,random.randint(3,7))
-            if move.split(":")[0] in ["BET", "RAISE"]:
-                if int(move.split(":")[1]) > 40:
-                    move = "CALL"
+            if move.type in [BET, RAISE]:
+                if move.amount > 40:
+                    move = Move(CALL)
         elif street == TURN:
             move = self.pushMin(game,random.randint(4,8))
-            if move.split(":")[0] in ["BET", "RAISE"]:
-                if int(move.split(":")[1]) > 50:
-                    move = "CALL"
+            if move.type in [BET, RAISE]:
+                if move.amount > 50:
+                    move = Move(CALL)
         elif street == RIVER:
             move = self.pushMin(game,10)
         else:

@@ -106,9 +106,15 @@ class GameState:
             self.numLastActions = int(packet[4])
             #parse actions
             if self.numLastActions>0:
+                numOptArgs += 1
                 self.lastActions = packet[5]
+            self.numBoardCards = int(packet[5+numOptArgs])
+            if self.numBoardCards>0:
+                numOptArgs += 1
+                self.boardCards = packet[5+numOptArgs]    #Card(packet[3+i])
             self.timebank = float(packet[-1])
 
+            self.parseBoardCards()
             self.parseLastActions()
             self.hand.splitActionsList()
 
