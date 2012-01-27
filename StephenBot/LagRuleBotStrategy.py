@@ -1,5 +1,6 @@
 from Strategy import *
 from Enums import *
+from Move import *
 
 class LagRuleBotStrategy(Strategy):
     def __init__(self):
@@ -43,4 +44,4 @@ class LagRuleBotStrategy(Strategy):
             else:
                 return self.maxRisk(game,2)
 
-        return "FOLD"
+        return Move(FOLD)
