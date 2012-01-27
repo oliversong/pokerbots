@@ -49,10 +49,10 @@ class Player:
             if self.game.state == NEWGAME:
                 self.archive.reset(self.game)
             elif self.game.state == GETACTION:
-                self.strategy.evaluateOdds(self.game)
+                #self.strategy.evaluateOdds(self.game)
                 move = self.strategy.getMove(self.game, self.archive)
 #                print "SENDING A ", move, "ACTION TO ENGINE\n"
-                self.socket.send(move+'\n')
+                self.socket.send(move.toString())
             elif self.game.state == HANDOVER:
                 #update hand history now that final hand actions have been parsed
                 self.archive.update(self.game)
