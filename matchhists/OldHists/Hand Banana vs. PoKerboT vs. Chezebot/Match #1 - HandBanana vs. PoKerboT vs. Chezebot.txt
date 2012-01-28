@@ -1,0 +1,1838 @@
+6.S912 MIT Pokerbots - HandBanana vs. PoKerboT vs. Chezebot
+Hand #1
+Seat 1 (Button): HandBanana3000 0
+Seat 2 (SB): PoKerboT3001 30
+Seat 3 (BB): Chezebot3002 -30
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [Jc 3h]
+Dealt to Chezebot3002 [4s 4d]
+Dealt to HandBanana3000 [Qh 7h]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 calls
+*** FLOP *** [9c 5c Qd]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** TURN *** [9c 5c Qd] [Ac]
+PoKerboT3001 bets 10
+Chezebot3002 folds
+Uncalled bet of 10 returned to PoKerboT3001
+PoKerboT3001 wins the pot (60)
+
+Hand #2
+Seat 1 (Button): Chezebot3002 -32
+Seat 2 (SB): HandBanana3000 -2
+Seat 3 (BB): PoKerboT3001 34
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [4c 9h]
+Dealt to PoKerboT3001 [Qs Ah]
+Dealt to Chezebot3002 [Tc Kd]
+Chezebot3002 calls
+HandBanana3000 calls
+PoKerboT3001 raises to 40
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 38 returned to PoKerboT3001
+PoKerboT3001 wins the pot (6)
+
+Hand #3
+Seat 1 (Button): PoKerboT3001 32
+Seat 2 (SB): Chezebot3002 -38
+Seat 3 (BB): HandBanana3000 6
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [2h 2d]
+Dealt to HandBanana3000 [Kh Qd]
+Dealt to PoKerboT3001 [2s 6c]
+PoKerboT3001 calls
+Chezebot3002 calls
+HandBanana3000 raises to 6
+PoKerboT3001 folds
+Chezebot3002 calls
+*** FLOP *** [9h Ad Qc]
+Chezebot3002 checks
+HandBanana3000 bets 57
+Chezebot3002 folds
+Uncalled bet of 57 returned to HandBanana3000
+HandBanana3000 wins the pot (14)
+
+Hand #4
+Seat 1 (Button): HandBanana3000 6
+Seat 2 (SB): PoKerboT3001 34
+Seat 3 (BB): Chezebot3002 -40
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [2c 3c]
+Dealt to Chezebot3002 [4s Tc]
+Dealt to HandBanana3000 [7s Jc]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #5
+Seat 1 (Button): Chezebot3002 -40
+Seat 2 (SB): HandBanana3000 -99
+Seat 3 (BB): PoKerboT3001 139
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [Qh As]
+Dealt to PoKerboT3001 [4s 5s]
+Dealt to Chezebot3002 [Jc 4h]
+Chezebot3002 folds
+HandBanana3000 raises to 6
+PoKerboT3001 raises to 50
+HandBanana3000 raises to 105
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 95 returned to PoKerboT3001
+PoKerboT3001 wins the pot (210)
+
+Hand #6
+Seat 1 (Button): PoKerboT3001 173
+Seat 2 (SB): Chezebot3002 -41
+Seat 3 (BB): HandBanana3000 -132
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Qs 9h]
+Dealt to HandBanana3000 [As Td]
+Dealt to PoKerboT3001 [Jd Th]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 raises to 33
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 167 returned to PoKerboT3001
+PoKerboT3001 wins the pot (67)
+
+Hand #7
+Seat 1 (Button): HandBanana3000 -132
+Seat 2 (SB): PoKerboT3001 123
+Seat 3 (BB): Chezebot3002 9
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [2d Jd]
+Dealt to Chezebot3002 [7d Ks]
+Dealt to HandBanana3000 [6d Qs]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 calls
+*** FLOP *** [Kh 2h 3d]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** TURN *** [Kh 2h 3d] [6c]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** RIVER *** [Kh 2h 3d 6c] [3s]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+PoKerboT3001 shows 2d Jd (Two Pair)
+Chezebot3002 shows 7d Ks (Two Pair)
+Chezebot3002 wins the pot (100)
+
+Hand #8
+Seat 1 (Button): Chezebot3002 9
+Seat 2 (SB): HandBanana3000 -236
+Seat 3 (BB): PoKerboT3001 227
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [Tc Ah]
+Dealt to PoKerboT3001 [Jd 9h]
+Dealt to Chezebot3002 [7s 3d]
+Chezebot3002 folds
+HandBanana3000 raises to 6
+PoKerboT3001 raises to 50
+HandBanana3000 raises to 104
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 96 returned to PoKerboT3001
+PoKerboT3001 wins the pot (208)
+
+Hand #9
+Seat 1 (Button): PoKerboT3001 315
+Seat 2 (SB): Chezebot3002 8
+Seat 3 (BB): HandBanana3000 -323
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Jh 9s]
+Dealt to HandBanana3000 [3c 5d]
+Dealt to PoKerboT3001 [Kc Ts]
+PoKerboT3001 raises to 40
+Chezebot3002 folds
+HandBanana3000 raises to 87
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 113 returned to PoKerboT3001
+PoKerboT3001 wins the pot (175)
+
+Hand #10
+Seat 1 (Button): HandBanana3000 -323
+Seat 2 (SB): PoKerboT3001 317
+Seat 3 (BB): Chezebot3002 6
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [Qh 5d]
+Dealt to Chezebot3002 [Ts 6c]
+Dealt to HandBanana3000 [As 3c]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #11
+Seat 1 (Button): Chezebot3002 4
+Seat 2 (SB): HandBanana3000 -325
+Seat 3 (BB): PoKerboT3001 321
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [7s 4s]
+Dealt to PoKerboT3001 [6c Ks]
+Dealt to Chezebot3002 [7d 9d]
+Chezebot3002 calls
+HandBanana3000 calls
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 14 returned to PoKerboT3001
+PoKerboT3001 wins the pot (6)
+
+Hand #12
+Seat 1 (Button): PoKerboT3001 324
+Seat 2 (SB): Chezebot3002 3
+Seat 3 (BB): HandBanana3000 -327
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [5h 5s]
+Dealt to HandBanana3000 [3h 9h]
+Dealt to PoKerboT3001 [7d Ad]
+PoKerboT3001 raises to 40
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 38 returned to PoKerboT3001
+PoKerboT3001 wins the pot (5)
+
+Hand #13
+Seat 1 (Button): HandBanana3000 -327
+Seat 2 (SB): PoKerboT3001 524
+Seat 3 (BB): Chezebot3002 -197
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [2s Js]
+Dealt to Chezebot3002 [As 8s]
+Dealt to HandBanana3000 [Qd 4d]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 raises to 60
+PoKerboT3001 raises to 200
+Chezebot3002 calls
+*** FLOP *** [Tc 8d Jc]
+*** TURN *** [Tc 8d Jc] [6h]
+*** RIVER *** [Tc 8d Jc 6h] [3c]
+PoKerboT3001 shows 2s Js (Pair)
+Chezebot3002 shows As 8s (Pair)
+PoKerboT3001 wins the pot (400)
+
+Hand #14
+Seat 1 (Button): Chezebot3002 -197
+Seat 2 (SB): HandBanana3000 -329
+Seat 3 (BB): PoKerboT3001 526
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [6d 3c]
+Dealt to PoKerboT3001 [4h 6s]
+Dealt to Chezebot3002 [4c 5c]
+Chezebot3002 folds
+HandBanana3000 calls
+PoKerboT3001 raises to 20
+HandBanana3000 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #15
+Seat 1 (Button): PoKerboT3001 524
+Seat 2 (SB): Chezebot3002 -203
+Seat 3 (BB): HandBanana3000 -321
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Js 3d]
+Dealt to HandBanana3000 [As 5s]
+Dealt to PoKerboT3001 [8s 4d]
+PoKerboT3001 calls
+Chezebot3002 calls
+HandBanana3000 raises to 6
+PoKerboT3001 folds
+Chezebot3002 calls
+*** FLOP *** [7d 9c Qh]
+Chezebot3002 checks
+HandBanana3000 bets 10
+Chezebot3002 folds
+Uncalled bet of 10 returned to HandBanana3000
+HandBanana3000 wins the pot (14)
+
+Hand #16
+Seat 1 (Button): HandBanana3000 -492
+Seat 2 (SB): PoKerboT3001 697
+Seat 3 (BB): Chezebot3002 -205
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [9s 7s]
+Dealt to Chezebot3002 [7h Td]
+Dealt to HandBanana3000 [2h 7c]
+HandBanana3000 raises to 7
+PoKerboT3001 raises to 48
+Chezebot3002 folds
+HandBanana3000 raises to 171
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 29 returned to PoKerboT3001
+PoKerboT3001 wins the pot (344)
+
+Hand #17
+Seat 1 (Button): Chezebot3002 -205
+Seat 2 (SB): HandBanana3000 -494
+Seat 3 (BB): PoKerboT3001 699
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [2h 8s]
+Dealt to PoKerboT3001 [7c 3s]
+Dealt to Chezebot3002 [5c Jc]
+Chezebot3002 folds
+HandBanana3000 calls
+PoKerboT3001 raises to 20
+HandBanana3000 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #18
+Seat 1 (Button): PoKerboT3001 733
+Seat 2 (SB): Chezebot3002 -206
+Seat 3 (BB): HandBanana3000 -527
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Kh 6h]
+Dealt to HandBanana3000 [5s Jh]
+Dealt to PoKerboT3001 [Ts 7d]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 calls
+*** FLOP *** [9s 2h Ac]
+HandBanana3000 bets 17
+PoKerboT3001 raises to 170
+HandBanana3000 folds
+Uncalled bet of 153 returned to PoKerboT3001
+PoKerboT3001 wins the pot (67)
+
+Hand #19
+Seat 1 (Button): HandBanana3000 -527
+Seat 2 (SB): PoKerboT3001 735
+Seat 3 (BB): Chezebot3002 -208
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [7s Ts]
+Dealt to Chezebot3002 [Qd 2h]
+Dealt to HandBanana3000 [7h Kh]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #20
+Seat 1 (Button): Chezebot3002 -117
+Seat 2 (SB): HandBanana3000 -528
+Seat 3 (BB): PoKerboT3001 645
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [2s 7d]
+Dealt to PoKerboT3001 [3s Kh]
+Dealt to Chezebot3002 [Ac 9d]
+Chezebot3002 raises to 7
+HandBanana3000 folds
+PoKerboT3001 raises to 60
+Chezebot3002 calls
+*** FLOP *** [4c 3c 6c]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** TURN *** [4c 3c 6c] [Js]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** RIVER *** [4c 3c 6c Js] [Ah]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+Chezebot3002 shows Ac 9d (Pair)
+PoKerboT3001 shows 3s Kh (Pair)
+Chezebot3002 wins the pot (181)
+
+Hand #21
+Seat 1 (Button): PoKerboT3001 655
+Seat 2 (SB): Chezebot3002 -125
+Seat 3 (BB): HandBanana3000 -530
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Kh 6d]
+Dealt to HandBanana3000 [As 4h]
+Dealt to PoKerboT3001 [8d 5h]
+PoKerboT3001 calls
+Chezebot3002 raises to 8
+HandBanana3000 folds
+PoKerboT3001 raises to 70
+Chezebot3002 folds
+Uncalled bet of 62 returned to PoKerboT3001
+PoKerboT3001 wins the pot (18)
+
+Hand #22
+Seat 1 (Button): HandBanana3000 -530
+Seat 2 (SB): PoKerboT3001 455
+Seat 3 (BB): Chezebot3002 75
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [7s 3c]
+Dealt to Chezebot3002 [Kc 3d]
+Dealt to HandBanana3000 [4c 2d]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 raises to 60
+PoKerboT3001 raises to 200
+Chezebot3002 calls
+*** FLOP *** [8h 2s 4s]
+*** TURN *** [8h 2s 4s] [Qc]
+*** RIVER *** [8h 2s 4s Qc] [Kd]
+PoKerboT3001 shows 7s 3c (High Card)
+Chezebot3002 shows Kc 3d (Pair)
+Chezebot3002 wins the pot (400)
+
+Hand #23
+Seat 1 (Button): Chezebot3002 64
+Seat 2 (SB): HandBanana3000 -517
+Seat 3 (BB): PoKerboT3001 453
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [Qh 2s]
+Dealt to PoKerboT3001 [6c 4h]
+Dealt to Chezebot3002 [9d 7d]
+Chezebot3002 calls
+HandBanana3000 raises to 11
+PoKerboT3001 folds
+Chezebot3002 calls
+*** FLOP *** [2d 4s Td]
+HandBanana3000 bets 129
+Chezebot3002 folds
+Uncalled bet of 129 returned to HandBanana3000
+HandBanana3000 wins the pot (24)
+
+Hand #24
+Seat 1 (Button): PoKerboT3001 487
+Seat 2 (SB): Chezebot3002 63
+Seat 3 (BB): HandBanana3000 -550
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [7c Qc]
+Dealt to HandBanana3000 [Kh Qh]
+Dealt to PoKerboT3001 [6c 8c]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 raises to 33
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 167 returned to PoKerboT3001
+PoKerboT3001 wins the pot (67)
+
+Hand #25
+Seat 1 (Button): HandBanana3000 -550
+Seat 2 (SB): PoKerboT3001 489
+Seat 3 (BB): Chezebot3002 61
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [Jc 5d]
+Dealt to Chezebot3002 [4h Qh]
+Dealt to HandBanana3000 [Ah 5s]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #26
+Seat 1 (Button): Chezebot3002 59
+Seat 2 (SB): HandBanana3000 -558
+Seat 3 (BB): PoKerboT3001 499
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [Kc 6s]
+Dealt to PoKerboT3001 [Js 6h]
+Dealt to Chezebot3002 [9c Qs]
+Chezebot3002 calls
+HandBanana3000 calls
+PoKerboT3001 checks
+*** FLOP *** [6c 3c 2h]
+HandBanana3000 bets 6
+PoKerboT3001 raises to 120
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 114 returned to PoKerboT3001
+PoKerboT3001 wins the pot (18)
+
+Hand #27
+Seat 1 (Button): PoKerboT3001 459
+Seat 2 (SB): Chezebot3002 58
+Seat 3 (BB): HandBanana3000 -517
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [6s 7h]
+Dealt to HandBanana3000 [8s Qc]
+Dealt to PoKerboT3001 [Kh Jc]
+PoKerboT3001 raises to 40
+Chezebot3002 folds
+HandBanana3000 calls
+*** FLOP *** [Ks 2h 4c]
+HandBanana3000 bets 55
+PoKerboT3001 folds
+Uncalled bet of 55 returned to HandBanana3000
+HandBanana3000 wins the pot (81)
+
+Hand #28
+Seat 1 (Button): HandBanana3000 -525
+Seat 2 (SB): PoKerboT3001 469
+Seat 3 (BB): Chezebot3002 56
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [Qh Ah]
+Dealt to Chezebot3002 [4s Jh]
+Dealt to HandBanana3000 [Ac 5h]
+HandBanana3000 raises to 8
+PoKerboT3001 raises to 140
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 132 returned to PoKerboT3001
+PoKerboT3001 wins the pot (18)
+
+Hand #29
+Seat 1 (Button): Chezebot3002 -24
+Seat 2 (SB): HandBanana3000 -526
+Seat 3 (BB): PoKerboT3001 550
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [6h Jc]
+Dealt to PoKerboT3001 [Kc 3d]
+Dealt to Chezebot3002 [9d 9c]
+Chezebot3002 raises to 7
+HandBanana3000 folds
+PoKerboT3001 raises to 60
+Chezebot3002 calls
+*** FLOP *** [5c 4h 4d]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** TURN *** [5c 4h 4d] [3s]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** RIVER *** [5c 4h 4d 3s] [2s]
+PoKerboT3001 bets 10
+Chezebot3002 folds
+Uncalled bet of 10 returned to PoKerboT3001
+PoKerboT3001 wins the pot (161)
+
+Hand #30
+Seat 1 (Button): PoKerboT3001 584
+Seat 2 (SB): Chezebot3002 -25
+Seat 3 (BB): HandBanana3000 -559
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [8h Td]
+Dealt to HandBanana3000 [Ad Ks]
+Dealt to PoKerboT3001 [As 4h]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 raises to 33
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 167 returned to PoKerboT3001
+PoKerboT3001 wins the pot (67)
+
+Hand #31
+Seat 1 (Button): HandBanana3000 -559
+Seat 2 (SB): PoKerboT3001 586
+Seat 3 (BB): Chezebot3002 -27
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [9s Qc]
+Dealt to Chezebot3002 [2s 4d]
+Dealt to HandBanana3000 [7h 5c]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #32
+Seat 1 (Button): Chezebot3002 -27
+Seat 2 (SB): HandBanana3000 -561
+Seat 3 (BB): PoKerboT3001 588
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [4h 7s]
+Dealt to PoKerboT3001 [7d 7c]
+Dealt to Chezebot3002 [2c 3s]
+Chezebot3002 folds
+HandBanana3000 calls
+PoKerboT3001 raises to 20
+HandBanana3000 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #33
+Seat 1 (Button): PoKerboT3001 572
+Seat 2 (SB): Chezebot3002 -28
+Seat 3 (BB): HandBanana3000 -544
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [9s 2s]
+Dealt to HandBanana3000 [6d As]
+Dealt to PoKerboT3001 [Qh 9d]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 calls
+*** FLOP *** [3c 9c 2h]
+HandBanana3000 bets 26
+PoKerboT3001 folds
+Uncalled bet of 26 returned to HandBanana3000
+HandBanana3000 wins the pot (33)
+
+Hand #34
+Seat 1 (Button): HandBanana3000 -674
+Seat 2 (SB): PoKerboT3001 704
+Seat 3 (BB): Chezebot3002 -30
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [Kd 9s]
+Dealt to Chezebot3002 [5d 6s]
+Dealt to HandBanana3000 [Jc 5h]
+HandBanana3000 raises to 5
+PoKerboT3001 raises to 32
+Chezebot3002 folds
+HandBanana3000 raises to 130
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 70 returned to PoKerboT3001
+PoKerboT3001 wins the pot (262)
+
+Hand #35
+Seat 1 (Button): Chezebot3002 -30
+Seat 2 (SB): HandBanana3000 -654
+Seat 3 (BB): PoKerboT3001 684
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [5s Jc]
+Dealt to PoKerboT3001 [8s Tc]
+Dealt to Chezebot3002 [Ts 6d]
+Chezebot3002 folds
+HandBanana3000 calls
+PoKerboT3001 raises to 20
+HandBanana3000 calls
+*** FLOP *** [5c 9c Ad]
+HandBanana3000 bets 59
+PoKerboT3001 folds
+Uncalled bet of 59 returned to HandBanana3000
+HandBanana3000 wins the pot (40)
+
+Hand #36
+Seat 1 (Button): PoKerboT3001 668
+Seat 2 (SB): Chezebot3002 -31
+Seat 3 (BB): HandBanana3000 -637
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Qh 2d]
+Dealt to HandBanana3000 [Ac 6c]
+Dealt to PoKerboT3001 [7c Qs]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 calls
+*** FLOP *** [6d Jc 8d]
+HandBanana3000 bets 55
+PoKerboT3001 folds
+Uncalled bet of 55 returned to HandBanana3000
+HandBanana3000 wins the pot (33)
+
+Hand #37
+Seat 1 (Button): HandBanana3000 -637
+Seat 2 (SB): PoKerboT3001 728
+Seat 3 (BB): Chezebot3002 -91
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [6h 7d]
+Dealt to Chezebot3002 [As Ah]
+Dealt to HandBanana3000 [Td 6c]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 raises to 60
+PoKerboT3001 raises to 200
+Chezebot3002 folds
+Uncalled bet of 140 returned to PoKerboT3001
+PoKerboT3001 wins the pot (120)
+
+Hand #38
+Seat 1 (Button): Chezebot3002 -91
+Seat 2 (SB): HandBanana3000 -607
+Seat 3 (BB): PoKerboT3001 698
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [Ks 8h]
+Dealt to PoKerboT3001 [7c Qc]
+Dealt to Chezebot3002 [Js 4s]
+Chezebot3002 folds
+HandBanana3000 raises to 4
+PoKerboT3001 raises to 30
+HandBanana3000 calls
+*** FLOP *** [3c 4d 5h]
+HandBanana3000 bets 28
+PoKerboT3001 folds
+Uncalled bet of 28 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #39
+Seat 1 (Button): PoKerboT3001 733
+Seat 2 (SB): Chezebot3002 -92
+Seat 3 (BB): HandBanana3000 -641
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [8c 9s]
+Dealt to HandBanana3000 [5d Qc]
+Dealt to PoKerboT3001 [2s 2d]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 calls
+*** FLOP *** [8d 9h 8s]
+HandBanana3000 bets 18
+PoKerboT3001 raises to 180
+HandBanana3000 folds
+Uncalled bet of 162 returned to PoKerboT3001
+PoKerboT3001 wins the pot (69)
+
+Hand #40
+Seat 1 (Button): HandBanana3000 -641
+Seat 2 (SB): PoKerboT3001 735
+Seat 3 (BB): Chezebot3002 -94
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [7d Qc]
+Dealt to Chezebot3002 [3d 9s]
+Dealt to HandBanana3000 [9h Tc]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #41
+Seat 1 (Button): Chezebot3002 -94
+Seat 2 (SB): HandBanana3000 -643
+Seat 3 (BB): PoKerboT3001 737
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [3d 5s]
+Dealt to PoKerboT3001 [Ah 9h]
+Dealt to Chezebot3002 [7d 8d]
+Chezebot3002 folds
+HandBanana3000 calls
+PoKerboT3001 raises to 20
+HandBanana3000 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #42
+Seat 1 (Button): PoKerboT3001 780
+Seat 2 (SB): Chezebot3002 -95
+Seat 3 (BB): HandBanana3000 -685
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Tc 5d]
+Dealt to HandBanana3000 [6h 7c]
+Dealt to PoKerboT3001 [8c Qd]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 raises to 42
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 158 returned to PoKerboT3001
+PoKerboT3001 wins the pot (85)
+
+Hand #43
+Seat 1 (Button): HandBanana3000 -657
+Seat 2 (SB): PoKerboT3001 754
+Seat 3 (BB): Chezebot3002 -97
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [8h Jc]
+Dealt to Chezebot3002 [8c 3h]
+Dealt to HandBanana3000 [Qh Td]
+HandBanana3000 calls
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 calls
+*** FLOP *** [2s 6d 3c]
+PoKerboT3001 bets 10
+HandBanana3000 raises to 24
+PoKerboT3001 folds
+Uncalled bet of 14 returned to HandBanana3000
+HandBanana3000 wins the pot (54)
+
+Hand #44
+Seat 1 (Button): Chezebot3002 -97
+Seat 2 (SB): HandBanana3000 -627
+Seat 3 (BB): PoKerboT3001 724
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [Ac 2h]
+Dealt to PoKerboT3001 [9h 4c]
+Dealt to Chezebot3002 [5s 3c]
+Chezebot3002 folds
+HandBanana3000 raises to 4
+PoKerboT3001 raises to 30
+HandBanana3000 calls
+*** FLOP *** [8s Qs As]
+HandBanana3000 bets 114
+PoKerboT3001 folds
+Uncalled bet of 114 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #45
+Seat 1 (Button): PoKerboT3001 764
+Seat 2 (SB): Chezebot3002 -98
+Seat 3 (BB): HandBanana3000 -666
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [7c Ad]
+Dealt to HandBanana3000 [Ah Kc]
+Dealt to PoKerboT3001 [7h Jc]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 raises to 39
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 161 returned to PoKerboT3001
+PoKerboT3001 wins the pot (79)
+
+Hand #46
+Seat 1 (Button): HandBanana3000 -666
+Seat 2 (SB): PoKerboT3001 766
+Seat 3 (BB): Chezebot3002 -100
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [Th Ks]
+Dealt to Chezebot3002 [5d 8d]
+Dealt to HandBanana3000 [7h 9c]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #47
+Seat 1 (Button): Chezebot3002 -100
+Seat 2 (SB): HandBanana3000 -646
+Seat 3 (BB): PoKerboT3001 746
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [Jd 7h]
+Dealt to PoKerboT3001 [8d 3h]
+Dealt to Chezebot3002 [6d 2d]
+Chezebot3002 folds
+HandBanana3000 calls
+PoKerboT3001 raises to 20
+HandBanana3000 calls
+*** FLOP *** [5c Qc Qs]
+HandBanana3000 bets 26
+PoKerboT3001 folds
+Uncalled bet of 26 returned to HandBanana3000
+HandBanana3000 wins the pot (40)
+
+Hand #48
+Seat 1 (Button): PoKerboT3001 744
+Seat 2 (SB): Chezebot3002 -51
+Seat 3 (BB): HandBanana3000 -693
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Kc Ts]
+Dealt to HandBanana3000 [2d Qc]
+Dealt to PoKerboT3001 [9d 3s]
+PoKerboT3001 calls
+Chezebot3002 calls
+HandBanana3000 raises to 4
+PoKerboT3001 folds
+Chezebot3002 calls
+*** FLOP *** [5d 5c Th]
+Chezebot3002 bets 8
+HandBanana3000 calls
+*** TURN *** [5d 5c Th] [7d]
+Chezebot3002 checks
+HandBanana3000 bets 9
+Chezebot3002 calls
+*** RIVER *** [5d 5c Th 7d] [Tc]
+Chezebot3002 bets 26
+HandBanana3000 calls
+Chezebot3002 shows Kc Ts (Full House)
+HandBanana3000 shows 2d Qc (Two Pair)
+Chezebot3002 wins the pot (96)
+
+Hand #49
+Seat 1 (Button): HandBanana3000 -693
+Seat 2 (SB): PoKerboT3001 774
+Seat 3 (BB): Chezebot3002 -81
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [6d 2c]
+Dealt to Chezebot3002 [9h 9d]
+Dealt to HandBanana3000 [Jh 2s]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 calls
+*** FLOP *** [Td Qh 6s]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** TURN *** [Td Qh 6s] [Ac]
+PoKerboT3001 bets 10
+Chezebot3002 folds
+Uncalled bet of 10 returned to PoKerboT3001
+PoKerboT3001 wins the pot (60)
+
+Hand #50
+Seat 1 (Button): Chezebot3002 -93
+Seat 2 (SB): HandBanana3000 -679
+Seat 3 (BB): PoKerboT3001 772
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [Qh As]
+Dealt to PoKerboT3001 [4h 7c]
+Dealt to Chezebot3002 [Qc 9h]
+Chezebot3002 calls
+HandBanana3000 raises to 12
+PoKerboT3001 folds
+Chezebot3002 calls
+*** FLOP *** [Tc Jd 2d]
+HandBanana3000 bets 128
+Chezebot3002 folds
+Uncalled bet of 128 returned to HandBanana3000
+HandBanana3000 wins the pot (26)
+
+Hand #51
+Seat 1 (Button): PoKerboT3001 775
+Seat 2 (SB): Chezebot3002 -94
+Seat 3 (BB): HandBanana3000 -681
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [6h Ah]
+Dealt to HandBanana3000 [8c 6d]
+Dealt to PoKerboT3001 [5c 5d]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 14 returned to PoKerboT3001
+PoKerboT3001 wins the pot (5)
+
+Hand #52
+Seat 1 (Button): HandBanana3000 -721
+Seat 2 (SB): PoKerboT3001 817
+Seat 3 (BB): Chezebot3002 -96
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [7s 4d]
+Dealt to Chezebot3002 [9h 6h]
+Dealt to HandBanana3000 [Ah 5h]
+HandBanana3000 calls
+PoKerboT3001 calls
+Chezebot3002 checks
+*** FLOP *** [Qh Kd 4c]
+PoKerboT3001 bets 8
+Chezebot3002 folds
+HandBanana3000 calls
+*** TURN *** [Qh Kd 4c] [9s]
+PoKerboT3001 bets 10
+HandBanana3000 calls
+*** RIVER *** [Qh Kd 4c 9s] [2h]
+PoKerboT3001 bets 10
+HandBanana3000 raises to 20
+PoKerboT3001 raises to 150
+HandBanana3000 folds
+Uncalled bet of 130 returned to PoKerboT3001
+PoKerboT3001 wins the pot (82)
+
+Hand #53
+Seat 1 (Button): Chezebot3002 -96
+Seat 2 (SB): HandBanana3000 -691
+Seat 3 (BB): PoKerboT3001 787
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [7d Qs]
+Dealt to PoKerboT3001 [Qh As]
+Dealt to Chezebot3002 [3h 4d]
+Chezebot3002 folds
+HandBanana3000 raises to 4
+PoKerboT3001 raises to 30
+HandBanana3000 calls
+*** FLOP *** [9c 6s 6h]
+HandBanana3000 bets 40
+PoKerboT3001 folds
+Uncalled bet of 40 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #54
+Seat 1 (Button): PoKerboT3001 790
+Seat 2 (SB): Chezebot3002 -97
+Seat 3 (BB): HandBanana3000 -693
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Ks 7s]
+Dealt to HandBanana3000 [5s 3d]
+Dealt to PoKerboT3001 [5d As]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 14 returned to PoKerboT3001
+PoKerboT3001 wins the pot (5)
+
+Hand #55
+Seat 1 (Button): HandBanana3000 -693
+Seat 2 (SB): PoKerboT3001 792
+Seat 3 (BB): Chezebot3002 -99
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [9d As]
+Dealt to Chezebot3002 [4h Qc]
+Dealt to HandBanana3000 [9h 8s]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #56
+Seat 1 (Button): Chezebot3002 -99
+Seat 2 (SB): HandBanana3000 -663
+Seat 3 (BB): PoKerboT3001 762
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [4s Qs]
+Dealt to PoKerboT3001 [Ts As]
+Dealt to Chezebot3002 [2h Th]
+Chezebot3002 folds
+HandBanana3000 raises to 4
+PoKerboT3001 raises to 30
+HandBanana3000 calls
+*** FLOP *** [2c 5h 4d]
+HandBanana3000 bets 74
+PoKerboT3001 folds
+Uncalled bet of 74 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #57
+Seat 1 (Button): PoKerboT3001 765
+Seat 2 (SB): Chezebot3002 -100
+Seat 3 (BB): HandBanana3000 -665
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Ad 2h]
+Dealt to HandBanana3000 [2d 4h]
+Dealt to PoKerboT3001 [7d 8c]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 14 returned to PoKerboT3001
+PoKerboT3001 wins the pot (5)
+
+Hand #58
+Seat 1 (Button): HandBanana3000 -651
+Seat 2 (SB): PoKerboT3001 764
+Seat 3 (BB): Chezebot3002 -113
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [3d Qs]
+Dealt to Chezebot3002 [5c Ad]
+Dealt to HandBanana3000 [Ah Kc]
+HandBanana3000 raises to 4
+PoKerboT3001 folds
+Chezebot3002 raises to 13
+HandBanana3000 raises to 44
+Chezebot3002 folds
+Uncalled bet of 31 returned to HandBanana3000
+HandBanana3000 wins the pot (27)
+
+Hand #59
+Seat 1 (Button): Chezebot3002 -120
+Seat 2 (SB): HandBanana3000 -652
+Seat 3 (BB): PoKerboT3001 772
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [4s 4c]
+Dealt to PoKerboT3001 [Qs 6d]
+Dealt to Chezebot3002 [Qd 3d]
+Chezebot3002 raises to 7
+HandBanana3000 folds
+PoKerboT3001 raises to 60
+Chezebot3002 folds
+Uncalled bet of 53 returned to PoKerboT3001
+PoKerboT3001 wins the pot (15)
+
+Hand #60
+Seat 1 (Button): PoKerboT3001 848
+Seat 2 (SB): Chezebot3002 -121
+Seat 3 (BB): HandBanana3000 -727
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Kc 2h]
+Dealt to HandBanana3000 [Qh Qs]
+Dealt to PoKerboT3001 [7s Td]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 raises to 75
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 125 returned to PoKerboT3001
+PoKerboT3001 wins the pot (151)
+
+Hand #61
+Seat 1 (Button): HandBanana3000 -727
+Seat 2 (SB): PoKerboT3001 850
+Seat 3 (BB): Chezebot3002 -123
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [6h 8h]
+Dealt to Chezebot3002 [5d Jc]
+Dealt to HandBanana3000 [8d 3s]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #62
+Seat 1 (Button): Chezebot3002 -42
+Seat 2 (SB): HandBanana3000 -728
+Seat 3 (BB): PoKerboT3001 770
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [6c Ks]
+Dealt to PoKerboT3001 [Qd 5c]
+Dealt to Chezebot3002 [Ts Tc]
+Chezebot3002 raises to 7
+HandBanana3000 folds
+PoKerboT3001 raises to 60
+Chezebot3002 calls
+*** FLOP *** [3h 7s 3s]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** TURN *** [3h 7s 3s] [2c]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** RIVER *** [3h 7s 3s 2c] [7d]
+PoKerboT3001 checks
+Chezebot3002 checks
+Chezebot3002 shows Ts Tc (Two Pair)
+PoKerboT3001 shows Qd 5c (Two Pair)
+Chezebot3002 wins the pot (161)
+
+Hand #63
+Seat 1 (Button): PoKerboT3001 754
+Seat 2 (SB): Chezebot3002 -43
+Seat 3 (BB): HandBanana3000 -711
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Kc 8c]
+Dealt to HandBanana3000 [2s Kd]
+Dealt to PoKerboT3001 [Tc Jd]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 calls
+*** FLOP *** [3c 8h Qs]
+HandBanana3000 bets 21
+PoKerboT3001 folds
+Uncalled bet of 21 returned to HandBanana3000
+HandBanana3000 wins the pot (33)
+
+Hand #64
+Seat 1 (Button): HandBanana3000 -711
+Seat 2 (SB): PoKerboT3001 756
+Seat 3 (BB): Chezebot3002 -45
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [5d 6d]
+Dealt to Chezebot3002 [2c 7h]
+Dealt to HandBanana3000 [2s 5s]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #65
+Seat 1 (Button): Chezebot3002 -45
+Seat 2 (SB): HandBanana3000 -713
+Seat 3 (BB): PoKerboT3001 758
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [5s 3d]
+Dealt to PoKerboT3001 [Td 2h]
+Dealt to Chezebot3002 [2d Qh]
+Chezebot3002 folds
+HandBanana3000 calls
+PoKerboT3001 raises to 20
+HandBanana3000 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #66
+Seat 1 (Button): PoKerboT3001 718
+Seat 2 (SB): Chezebot3002 -46
+Seat 3 (BB): HandBanana3000 -672
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [5c Tc]
+Dealt to HandBanana3000 [Ad 2c]
+Dealt to PoKerboT3001 [Ah Ts]
+PoKerboT3001 raises to 40
+Chezebot3002 folds
+HandBanana3000 calls
+*** FLOP *** [8c 8s 6d]
+HandBanana3000 bets 126
+PoKerboT3001 folds
+Uncalled bet of 126 returned to HandBanana3000
+HandBanana3000 wins the pot (81)
+
+Hand #67
+Seat 1 (Button): HandBanana3000 -672
+Seat 2 (SB): PoKerboT3001 738
+Seat 3 (BB): Chezebot3002 -66
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [3s 3c]
+Dealt to Chezebot3002 [Kd 3d]
+Dealt to HandBanana3000 [2h 8h]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 calls
+*** FLOP *** [7h Qd 9s]
+PoKerboT3001 bets 10
+Chezebot3002 folds
+Uncalled bet of 10 returned to PoKerboT3001
+PoKerboT3001 wins the pot (40)
+
+Hand #68
+Seat 1 (Button): Chezebot3002 -66
+Seat 2 (SB): HandBanana3000 -642
+Seat 3 (BB): PoKerboT3001 708
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [5c Kd]
+Dealt to PoKerboT3001 [Kc Td]
+Dealt to Chezebot3002 [Qc 3h]
+Chezebot3002 folds
+HandBanana3000 raises to 4
+PoKerboT3001 raises to 30
+HandBanana3000 calls
+*** FLOP *** [Th 6h 9d]
+HandBanana3000 bets 27
+PoKerboT3001 folds
+Uncalled bet of 27 returned to HandBanana3000
+HandBanana3000 wins the pot (60)
+
+Hand #69
+Seat 1 (Button): PoKerboT3001 711
+Seat 2 (SB): Chezebot3002 -67
+Seat 3 (BB): HandBanana3000 -644
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [5h 6c]
+Dealt to HandBanana3000 [8s 2s]
+Dealt to PoKerboT3001 [Ac Qd]
+PoKerboT3001 raises to 40
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 38 returned to PoKerboT3001
+PoKerboT3001 wins the pot (5)
+
+Hand #70
+Seat 1 (Button): HandBanana3000 -644
+Seat 2 (SB): PoKerboT3001 713
+Seat 3 (BB): Chezebot3002 -69
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [3h 5d]
+Dealt to Chezebot3002 [6d 4h]
+Dealt to HandBanana3000 [8s Qc]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #71
+Seat 1 (Button): Chezebot3002 -69
+Seat 2 (SB): HandBanana3000 -604
+Seat 3 (BB): PoKerboT3001 673
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [Ks 9d]
+Dealt to PoKerboT3001 [9c Qh]
+Dealt to Chezebot3002 [8h 2d]
+Chezebot3002 folds
+HandBanana3000 raises to 5
+PoKerboT3001 raises to 40
+HandBanana3000 calls
+*** FLOP *** [Ah 5d Qd]
+HandBanana3000 bets 80
+PoKerboT3001 folds
+Uncalled bet of 80 returned to HandBanana3000
+HandBanana3000 wins the pot (80)
+
+Hand #72
+Seat 1 (Button): PoKerboT3001 676
+Seat 2 (SB): Chezebot3002 -70
+Seat 3 (BB): HandBanana3000 -606
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [6h 8s]
+Dealt to HandBanana3000 [7s 6d]
+Dealt to PoKerboT3001 [Ac 8d]
+PoKerboT3001 raises to 40
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 38 returned to PoKerboT3001
+PoKerboT3001 wins the pot (5)
+
+Hand #73
+Seat 1 (Button): HandBanana3000 -606
+Seat 2 (SB): PoKerboT3001 636
+Seat 3 (BB): Chezebot3002 -30
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [2c Kc]
+Dealt to Chezebot3002 [9c Qd]
+Dealt to HandBanana3000 [Jh 9h]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 calls
+*** FLOP *** [Js Qh 7h]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** TURN *** [Js Qh 7h] [8h]
+PoKerboT3001 checks
+Chezebot3002 checks
+*** RIVER *** [Js Qh 7h 8h] [Ts]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+PoKerboT3001 shows 2c Kc (High Card)
+Chezebot3002 shows 9c Qd (Straight)
+Chezebot3002 wins the pot (80)
+
+Hand #74
+Seat 1 (Button): Chezebot3002 41
+Seat 2 (SB): HandBanana3000 -607
+Seat 3 (BB): PoKerboT3001 566
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [5d 9h]
+Dealt to PoKerboT3001 [6s 3c]
+Dealt to Chezebot3002 [9s Td]
+Chezebot3002 raises to 7
+HandBanana3000 folds
+PoKerboT3001 raises to 60
+Chezebot3002 calls
+*** FLOP *** [Ah Qd 4d]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** TURN *** [Ah Qd 4d] [5h]
+PoKerboT3001 checks
+Chezebot3002 checks
+*** RIVER *** [Ah Qd 4d 5h] [5c]
+PoKerboT3001 checks
+Chezebot3002 checks
+Chezebot3002 shows 9s Td (Pair)
+PoKerboT3001 shows 6s 3c (Pair)
+Chezebot3002 wins the pot (141)
+
+Hand #75
+Seat 1 (Button): PoKerboT3001 649
+Seat 2 (SB): Chezebot3002 40
+Seat 3 (BB): HandBanana3000 -689
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [5s 6s]
+Dealt to HandBanana3000 [Kd Ks]
+Dealt to PoKerboT3001 [Qh 8c]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 raises to 82
+PoKerboT3001 raises to 200
+HandBanana3000 folds
+Uncalled bet of 118 returned to PoKerboT3001
+PoKerboT3001 wins the pot (165)
+
+Hand #76
+Seat 1 (Button): HandBanana3000 -689
+Seat 2 (SB): PoKerboT3001 651
+Seat 3 (BB): Chezebot3002 38
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [3h 6h]
+Dealt to Chezebot3002 [5d 7h]
+Dealt to HandBanana3000 [Js 5c]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #77
+Seat 1 (Button): Chezebot3002 38
+Seat 2 (SB): HandBanana3000 -649
+Seat 3 (BB): PoKerboT3001 611
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [6h As]
+Dealt to PoKerboT3001 [Ac 7h]
+Dealt to Chezebot3002 [8c 2h]
+Chezebot3002 folds
+HandBanana3000 raises to 5
+PoKerboT3001 raises to 40
+HandBanana3000 calls
+*** FLOP *** [7c 2c Jc]
+HandBanana3000 bets 41
+PoKerboT3001 folds
+Uncalled bet of 41 returned to HandBanana3000
+HandBanana3000 wins the pot (80)
+
+Hand #78
+Seat 1 (Button): PoKerboT3001 623
+Seat 2 (SB): Chezebot3002 28
+Seat 3 (BB): HandBanana3000 -651
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Jc 4s]
+Dealt to HandBanana3000 [9s 2h]
+Dealt to PoKerboT3001 [3s 7s]
+PoKerboT3001 calls
+Chezebot3002 calls
+HandBanana3000 checks
+*** FLOP *** [Td 4h 3d]
+Chezebot3002 checks
+HandBanana3000 checks
+PoKerboT3001 bets 8
+Chezebot3002 calls
+HandBanana3000 folds
+*** TURN *** [Td 4h 3d] [7h]
+Chezebot3002 checks
+PoKerboT3001 bets 10
+Chezebot3002 folds
+Uncalled bet of 10 returned to PoKerboT3001
+PoKerboT3001 wins the pot (22)
+
+Hand #79
+Seat 1 (Button): HandBanana3000 -651
+Seat 2 (SB): PoKerboT3001 625
+Seat 3 (BB): Chezebot3002 26
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [9h 8c]
+Dealt to Chezebot3002 [9d 2c]
+Dealt to HandBanana3000 [4s 7d]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #80
+Seat 1 (Button): Chezebot3002 27
+Seat 2 (SB): HandBanana3000 -652
+Seat 3 (BB): PoKerboT3001 625
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [5s 6s]
+Dealt to PoKerboT3001 [Ah 7d]
+Dealt to Chezebot3002 [2s Ac]
+Chezebot3002 raises to 7
+HandBanana3000 folds
+PoKerboT3001 raises to 60
+Chezebot3002 calls
+*** FLOP *** [5h Qs Ks]
+PoKerboT3001 checks
+Chezebot3002 checks
+*** TURN *** [5h Qs Ks] [5c]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** RIVER *** [5h Qs Ks 5c] [3d]
+PoKerboT3001 checks
+Chezebot3002 checks
+Chezebot3002 shows 2s Ac (Pair)
+PoKerboT3001 shows Ah 7d (Pair)
+Chezebot3002 ties for the pot (71)
+PoKerboT3001 ties for the pot (70)
+
+Hand #81
+Seat 1 (Button): PoKerboT3001 623
+Seat 2 (SB): Chezebot3002 25
+Seat 3 (BB): HandBanana3000 -648
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [6c Qc]
+Dealt to HandBanana3000 [7s 4h]
+Dealt to PoKerboT3001 [2d Ts]
+PoKerboT3001 calls
+Chezebot3002 calls
+HandBanana3000 raises to 19
+PoKerboT3001 folds
+Chezebot3002 folds
+Uncalled bet of 17 returned to HandBanana3000
+HandBanana3000 wins the pot (6)
+
+Hand #82
+Seat 1 (Button): HandBanana3000 -596
+Seat 2 (SB): PoKerboT3001 573
+Seat 3 (BB): Chezebot3002 23
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [Kc Qd]
+Dealt to Chezebot3002 [8c 4d]
+Dealt to HandBanana3000 [Jh Ks]
+HandBanana3000 calls
+PoKerboT3001 raises to 40
+Chezebot3002 folds
+HandBanana3000 calls
+*** FLOP *** [2s 2h Ad]
+PoKerboT3001 bets 10
+HandBanana3000 raises to 101
+PoKerboT3001 folds
+Uncalled bet of 91 returned to HandBanana3000
+HandBanana3000 wins the pot (102)
+
+Hand #83
+Seat 1 (Button): Chezebot3002 23
+Seat 2 (SB): HandBanana3000 -598
+Seat 3 (BB): PoKerboT3001 575
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [7c 6h]
+Dealt to PoKerboT3001 [4s 8h]
+Dealt to Chezebot3002 [7h 3h]
+Chezebot3002 folds
+HandBanana3000 calls
+PoKerboT3001 raises to 20
+HandBanana3000 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #84
+Seat 1 (Button): PoKerboT3001 578
+Seat 2 (SB): Chezebot3002 22
+Seat 3 (BB): HandBanana3000 -600
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Ah 5s]
+Dealt to HandBanana3000 [2h 3d]
+Dealt to PoKerboT3001 [7s 9h]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 14 returned to PoKerboT3001
+PoKerboT3001 wins the pot (5)
+
+Hand #85
+Seat 1 (Button): HandBanana3000 -600
+Seat 2 (SB): PoKerboT3001 580
+Seat 3 (BB): Chezebot3002 20
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [4h Th]
+Dealt to Chezebot3002 [6c 7s]
+Dealt to HandBanana3000 [2c 9d]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #86
+Seat 1 (Button): Chezebot3002 18
+Seat 2 (SB): HandBanana3000 -484
+Seat 3 (BB): PoKerboT3001 466
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [5d 2c]
+Dealt to PoKerboT3001 [2d 4s]
+Dealt to Chezebot3002 [9d Jh]
+Chezebot3002 calls
+HandBanana3000 calls
+PoKerboT3001 checks
+*** FLOP *** [4d 6s 5c]
+HandBanana3000 bets 2
+PoKerboT3001 calls
+Chezebot3002 folds
+*** TURN *** [4d 6s 5c] [Ks]
+HandBanana3000 bets 11
+PoKerboT3001 raises to 110
+HandBanana3000 calls
+*** RIVER *** [4d 6s 5c Ks] [Tc]
+HandBanana3000 bets 37
+PoKerboT3001 folds
+Uncalled bet of 37 returned to HandBanana3000
+HandBanana3000 wins the pot (230)
+
+Hand #87
+Seat 1 (Button): PoKerboT3001 424
+Seat 2 (SB): Chezebot3002 16
+Seat 3 (BB): HandBanana3000 -440
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Td Kd]
+Dealt to HandBanana3000 [3s 4d]
+Dealt to PoKerboT3001 [Th 5d]
+PoKerboT3001 calls
+Chezebot3002 calls
+HandBanana3000 checks
+*** FLOP *** [8h Js Qs]
+Chezebot3002 checks
+HandBanana3000 checks
+PoKerboT3001 checks
+*** TURN *** [8h Js Qs] [5s]
+Chezebot3002 checks
+HandBanana3000 checks
+PoKerboT3001 checks
+*** RIVER *** [8h Js Qs 5s] [7s]
+Chezebot3002 checks
+HandBanana3000 bets 4
+Chezebot3002 folds
+PoKerboT3001 raises to 40
+HandBanana3000 raises to 107
+PoKerboT3001 folds
+Uncalled bet of 67 returned to HandBanana3000
+HandBanana3000 wins the pot (86)
+
+Hand #88
+Seat 1 (Button): HandBanana3000 -437
+Seat 2 (SB): PoKerboT3001 423
+Seat 3 (BB): Chezebot3002 14
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [6d Tc]
+Dealt to Chezebot3002 [7h Qh]
+Dealt to HandBanana3000 [3s 6h]
+HandBanana3000 raises to 10
+PoKerboT3001 folds
+Chezebot3002 folds
+Uncalled bet of 8 returned to HandBanana3000
+HandBanana3000 wins the pot (5)
+
+Hand #89
+Seat 1 (Button): Chezebot3002 14
+Seat 2 (SB): HandBanana3000 -397
+Seat 3 (BB): PoKerboT3001 383
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [8s Ac]
+Dealt to PoKerboT3001 [Qc 4h]
+Dealt to Chezebot3002 [Jd 2c]
+Chezebot3002 folds
+HandBanana3000 raises to 5
+PoKerboT3001 raises to 40
+HandBanana3000 calls
+*** FLOP *** [Td 5s 6c]
+HandBanana3000 bets 72
+PoKerboT3001 folds
+Uncalled bet of 72 returned to HandBanana3000
+HandBanana3000 wins the pot (80)
+
+Hand #90
+Seat 1 (Button): PoKerboT3001 381
+Seat 2 (SB): Chezebot3002 0
+Seat 3 (BB): HandBanana3000 -381
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Js 4d]
+Dealt to HandBanana3000 [9h 5h]
+Dealt to PoKerboT3001 [2d 9d]
+PoKerboT3001 calls
+Chezebot3002 calls
+HandBanana3000 raises to 4
+PoKerboT3001 folds
+Chezebot3002 raises to 14
+HandBanana3000 calls
+*** FLOP *** [Th 3s 7s]
+Chezebot3002 checks
+HandBanana3000 bets 12
+Chezebot3002 folds
+Uncalled bet of 12 returned to HandBanana3000
+HandBanana3000 wins the pot (30)
+
+Hand #91
+Seat 1 (Button): HandBanana3000 -381
+Seat 2 (SB): PoKerboT3001 341
+Seat 3 (BB): Chezebot3002 40
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [3h 5d]
+Dealt to Chezebot3002 [Ac 5s]
+Dealt to HandBanana3000 [9c 3c]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 calls
+*** FLOP *** [Ks Ad As]
+PoKerboT3001 bets 10
+Chezebot3002 calls
+*** TURN *** [Ks Ad As] [9h]
+PoKerboT3001 checks
+Chezebot3002 checks
+*** RIVER *** [Ks Ad As 9h] [5c]
+PoKerboT3001 bets 10
+Chezebot3002 raises to 58
+PoKerboT3001 folds
+Uncalled bet of 48 returned to Chezebot3002
+Chezebot3002 wins the pot (80)
+
+Hand #92
+Seat 1 (Button): Chezebot3002 43
+Seat 2 (SB): HandBanana3000 -382
+Seat 3 (BB): PoKerboT3001 339
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [7h 8s]
+Dealt to PoKerboT3001 [Qc 3c]
+Dealt to Chezebot3002 [Ah Qd]
+Chezebot3002 raises to 7
+HandBanana3000 folds
+PoKerboT3001 folds
+Uncalled bet of 5 returned to Chezebot3002
+Chezebot3002 wins the pot (5)
+
+Hand #93
+Seat 1 (Button): PoKerboT3001 342
+Seat 2 (SB): Chezebot3002 42
+Seat 3 (BB): HandBanana3000 -384
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [Th 8c]
+Dealt to HandBanana3000 [5h 6d]
+Dealt to PoKerboT3001 [8h Td]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 14 returned to PoKerboT3001
+PoKerboT3001 wins the pot (5)
+
+Hand #94
+Seat 1 (Button): HandBanana3000 -398
+Seat 2 (SB): PoKerboT3001 358
+Seat 3 (BB): Chezebot3002 40
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [Jh 3h]
+Dealt to Chezebot3002 [3c 9s]
+Dealt to HandBanana3000 [Ks Qc]
+HandBanana3000 raises to 14
+PoKerboT3001 raises to 104
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 90 returned to PoKerboT3001
+PoKerboT3001 wins the pot (30)
+
+Hand #95
+Seat 1 (Button): Chezebot3002 40
+Seat 2 (SB): HandBanana3000 -400
+Seat 3 (BB): PoKerboT3001 360
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [4c 8s]
+Dealt to PoKerboT3001 [Jc As]
+Dealt to Chezebot3002 [6c 4s]
+Chezebot3002 folds
+HandBanana3000 calls
+PoKerboT3001 raises to 20
+HandBanana3000 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #96
+Seat 1 (Button): PoKerboT3001 344
+Seat 2 (SB): Chezebot3002 39
+Seat 3 (BB): HandBanana3000 -383
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [5d 2d]
+Dealt to HandBanana3000 [Jd Qc]
+Dealt to PoKerboT3001 [8h Td]
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 calls
+*** FLOP *** [4d Ad Ts]
+HandBanana3000 bets 39
+PoKerboT3001 folds
+Uncalled bet of 39 returned to HandBanana3000
+HandBanana3000 wins the pot (33)
+
+Hand #97
+Seat 1 (Button): HandBanana3000 -355
+Seat 2 (SB): PoKerboT3001 318
+Seat 3 (BB): Chezebot3002 37
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [Qd 9s]
+Dealt to Chezebot3002 [6d 3c]
+Dealt to HandBanana3000 [Td Kc]
+HandBanana3000 calls
+PoKerboT3001 raises to 16
+Chezebot3002 folds
+HandBanana3000 calls
+*** FLOP *** [5c 2c 3h]
+PoKerboT3001 bets 10
+HandBanana3000 raises to 32
+PoKerboT3001 folds
+Uncalled bet of 22 returned to HandBanana3000
+HandBanana3000 wins the pot (54)
+
+Hand #98
+Seat 1 (Button): Chezebot3002 37
+Seat 2 (SB): HandBanana3000 -357
+Seat 3 (BB): PoKerboT3001 320
+HandBanana3000 posts the blind of 1
+PoKerboT3001 posts the blind of 2
+Dealt to HandBanana3000 [6d 3s]
+Dealt to PoKerboT3001 [7s 9h]
+Dealt to Chezebot3002 [7c Td]
+Chezebot3002 folds
+HandBanana3000 calls
+PoKerboT3001 raises to 20
+HandBanana3000 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
+Hand #99
+Seat 1 (Button): PoKerboT3001 323
+Seat 2 (SB): Chezebot3002 36
+Seat 3 (BB): HandBanana3000 -359
+Chezebot3002 posts the blind of 1
+HandBanana3000 posts the blind of 2
+Dealt to Chezebot3002 [9c Ac]
+Dealt to HandBanana3000 [Qc Qs]
+Dealt to PoKerboT3001 [Jd Jc]
+PoKerboT3001 raises to 40
+Chezebot3002 folds
+HandBanana3000 folds
+Uncalled bet of 38 returned to PoKerboT3001
+PoKerboT3001 wins the pot (5)
+
+Hand #100
+Seat 1 (Button): HandBanana3000 -359
+Seat 2 (SB): PoKerboT3001 325
+Seat 3 (BB): Chezebot3002 34
+PoKerboT3001 posts the blind of 1
+Chezebot3002 posts the blind of 2
+Dealt to PoKerboT3001 [2s 6d]
+Dealt to Chezebot3002 [5h 9d]
+Dealt to HandBanana3000 [3d 7d]
+HandBanana3000 folds
+PoKerboT3001 raises to 20
+Chezebot3002 folds
+Uncalled bet of 18 returned to PoKerboT3001
+PoKerboT3001 wins the pot (4)
+
