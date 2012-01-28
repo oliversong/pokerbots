@@ -6,6 +6,19 @@ class ParseMatchHistory():
         self.leftOpp = ""
         self.rightOpp = "0"
 
+        self.handID = 0
+        self.makingHandPacket = False
+        self.firstTie = False
+        self.bankrolls = {}
+        self.pockets = {}
+        self.numLastActions = 0
+        self.lastActions = " "
+        self.potSize = 0
+        self.numBoardCards = 0
+        self.boardCards = ""
+        self.numLegActions = 0
+
+
     def parseHistory(self, h):
         f = open(h, 'r')
         l = f.readline()
@@ -23,131 +36,131 @@ class ParseMatchHistory():
             packet = "NEWGAME 1 "+self.leftOpp+" " + self.rightOpp + " " + str(self.numHands) + " 200 2 1 10000.0000"
             self.packets += [[packet, [], []]]
 
-        handID = 0
-        makingHandPacket = False
-        firstTie = False
-        bankrolls = {}
-        pockets = {}
-        numLastActions = 0
-        lastActions = " "
-        potSize = 0
-        numBoardCards = 0
-        boardCards = ""
-        numLegActions = 0
+        self.handID = 0
+        self.makingHandPacket = False
+        self.firstTie = False
+        self.bankrolls = {}
+        self.pockets = {}
+        self.numLastActions = 0
+        self.lastActions = " "
+        self.potSize = 0
+        self.numBoardCards = 0
+        self.boardCards = ""
+        self.numLegActions = 0
 
         l = f.readline()
         while l:
             if l=="\n":
-                packet = "HANDOVER "+bankrolls[self.myPlayer] + " "+bankrolls[self.leftOpp] + " " + bankrolls[self.rightOpp] + " "+str(numLastActions) + lastActions[:-1] + " " + str(numBoardCards) + boardCards+ " 1000.000"
-                self.packets += [[packet, pockets[self.leftOpp], pockets[self.rightOpp]]]
+                packet = "HANDOVER "+self.bankrolls[self.myPlayer] + " "+self.bankrolls[self.leftOpp] + " " + self.bankrolls[self.rightOpp] + " "+str(self.numLastActions) + self.lastActions[:-1] + " " + str(self.numBoardCards) + self.boardCards+ " 1000.000"
+                self.packets += [[packet, self.pockets[self.leftOpp], self.pockets[self.rightOpp]]]
                 l = f.readline()
                 continue
 
             line = l[:-1].split(" ")
             if line[0] == "Hand":
-                makingHandPacket = True
-                handID += 1
-                lastActions = " "
-                numLastActions = 0
-                numBoardCards = 0
-                boardCards = ""
+                self.makingHandPacket = True
+                self.handID += 1
+                self.lastActions = " "
+                self.numLastActions = 0
+                self.numBoardCards = 0
+                self.boardCards = ""
                 l = f.readline()
                 continue
             elif line[0] == "Seat":
-                bankrolls[line[3][:-4]] = line[-1]
+                self.bankrolls[line[3][:-4]] = line[-1]
                 if line[3][:-4] == self.myPlayer:
-                    position = str(int(line[1])-1)
+                    self.position = str(int(line[1])-1)
                 l = f.readline()
                 continue
             elif line[0] == "Dealt":
-                pockets[line[2][:-4]] = [line[3][1:], line[4][:-1]]
+                self.pockets[line[2][:-4]] = [line[3][1:], line[4][:-1]]
                 l = f.readline()
                 continue
             elif line[0] == "***":
-                lastActions += "DEAL:" + line[1] + ","
-                numLastActions += 1
+                self.lastActions += "DEAL:" + line[1] + ","
+                self.numLastActions += 1
                 if line[1] == "FLOP":
-                    numBoardCards = 3
-                    boardCards = " " + line[3][1:] + "," + line[4] + "," + line[5][:-1]
+                    self.numBoardCards = 3
+                    self.boardCards = " " + line[3][1:] + "," + line[4] + "," + line[5][:-1]
                 elif line[1] == "TURN":
-                    numBoardCards = 4
-                    boardCards += ","+ line[6][1]+line[6][2]
+                    self.numBoardCards = 4
+                    self.boardCards += ","+ line[6][1]+line[6][2]
                 elif line[1] == "RIVER":
-                    numBoardCards = 5
-                    boardCards += ","+line[7][1]+line[7][2]
+                    self.numBoardCards = 5
+                    self.boardCards += ","+line[7][1]+line[7][2]
                 l = f.readline()
                 continue
             elif line[0][:-4] in [self.leftOpp, self.rightOpp, self.myPlayer]:
                 if line[1] == "posts":
-                    lastActions += "POST:"+line[0][:-4]+":"+line[-1]+","
-                    numLastActions += 1
-                elif makingHandPacket:
-                    packet = "NEWHAND "+str(handID)+" "+position+" "+pockets[self.myPlayer][0] + " " + pockets[self.myPlayer][1] + " " + bankrolls[self.myPlayer] + " " + bankrolls[self.leftOpp] + " " +bankrolls[self.rightOpp] + " 1000.000"
-                    self.packets += [[packet, pockets[self.leftOpp], pockets[self.rightOpp]]]
-                    makingHandPacket = False
+                    self.lastActions += "POST:"+line[0][:-4]+":"+line[-1]+","
+                    self.numLastActions += 1
+                elif self.makingHandPacket:
+                    packet = "NEWHAND "+str(self.handID)+" "+self.position+" "+self.pockets[self.myPlayer][0] + " " + self.pockets[self.myPlayer][1] + " " + self.bankrolls[self.myPlayer] + " " + self.bankrolls[self.leftOpp] + " " +self.bankrolls[self.rightOpp] + " 1000.000"
+                    self.packets += [[packet, self.pockets[self.leftOpp], self.pockets[self.rightOpp]]]
+                    self.makingHandPacket = False
 #                    l = f.readline()
                     continue
                 elif line[0][:-4] == self.myPlayer:
                     if line[1] == "wins":
-                        lastActions += "WIN:"+line[0][:-4]+":"+line[-1][1:-1]+","
-                        numLastActions +=1
+                        self.lastActions += "WIN:"+line[0][:-4]+":"+line[-1][1:-1]+","
+                        self.numLastActions +=1
                         l = f.readline()
                         continue
                     elif line[1] == "ties":
-                        lastActions += "TIE:"+line[0][:-4]+":"+line[-1][1:-1]
-                        numLastActions+=1
-                        lastActions += ","
+                        self.lastActions += "TIE:"+line[0][:-4]+":"+line[-1][1:-1]
+                        self.numLastActions+=1
+                        self.lastActions += ","
                         l = f.readline()
                         continue
                     elif line[1] == "shows":
-                        lastActions += "SHOWS:"+line[0][:-4]+":"+pockets[line[0][:-4]][0]+":"+pockets[line[0][:-4]][1]+","
-                        numLastActions += 1
+                        self.lastActions += "SHOWS:"+line[0][:-4]+":"+self.pockets[line[0][:-4]][0]+":"+self.pockets[line[0][:-4]][1]+","
+                        self.numLastActions += 1
                         l = f.readline()
                         continue
-                    packet = "GETACTION "+str(potSize) + " " +str(numBoardCards)+ boardCards + " " + str(numLastActions)+ lastActions[:-1] +" 1 FOLD 10000.0000"
-                    self.packets += [[packet, pockets[self.leftOpp], pockets[self.rightOpp]]]
-                    numLastActions = 0
+                    packet = "GETACTION "+str(self.potSize) + " " +str(self.numBoardCards)+ self.boardCards + " " + str(self.numLastActions)+ self.lastActions[:-1] +" 1 FOLD 10000.0000"
+                    self.packets += [[packet, self.pockets[self.leftOpp], self.pockets[self.rightOpp]]]
+                    self.numLastActions = 0
                     if line[1] == "folds":
-                        lastActions = " FOLD:" + self.myPlayer + ","
-                        numLastActions += 1
+                        self.lastActions = " FOLD:" + self.myPlayer + ","
+                        self.numLastActions += 1
                     elif line[1] == "raises":
-                        lastActions = " RAISE:" + self.myPlayer + ":" + line[-1]+ ","
-                        numLastActions += 1
+                        self.lastActions = " RAISE:" + self.myPlayer + ":" + line[-1]+ ","
+                        self.numLastActions += 1
                     elif line[1] == "bets":
-                        lastActions = " BET:" + self.myPlayer + ":" +line[-1]+","
-                        numLastActions += 1
+                        self.lastActions = " BET:" + self.myPlayer + ":" +line[-1]+","
+                        self.numLastActions += 1
                     elif line[1] == "calls":
-                        lastActions = " CALL:" + self.myPlayer + ","
-                        numLastActions += 1
+                        self.lastActions = " CALL:" + self.myPlayer + ","
+                        self.numLastActions += 1
                     elif line[1] == "checks":
-                        lastActions = " CHECK:" + self.myPlayer + ","
-                        numLastActions += 1
+                        self.lastActions = " CHECK:" + self.myPlayer + ","
+                        self.numLastActions += 1
                 else:
                     if line[1] == "folds":
-                        lastActions += "FOLD:" + line[0][:-4] + ","
-                        numLastActions += 1
+                        self.lastActions += "FOLD:" + line[0][:-4] + ","
+                        self.numLastActions += 1
                     elif line[1] == "raises":
-                        lastActions += "RAISE:" + line[0][:-4] + ":" + line[-1] + ","
-                        numLastActions += 1
+                        self.lastActions += "RAISE:" + line[0][:-4] + ":" + line[-1] + ","
+                        self.numLastActions += 1
                     elif line[1] == "bets":
-                        lastActions += "BET:" + line[0][:-4] + ":" + line[-1] + ","
-                        numLastActions += 1
+                        self.lastActions += "BET:" + line[0][:-4] + ":" + line[-1] + ","
+                        self.numLastActions += 1
                     elif line[1] == "calls":
-                        lastActions += "CALL:" + line[0][:-4] + ","
-                        numLastActions += 1
+                        self.lastActions += "CALL:" + line[0][:-4] + ","
+                        self.numLastActions += 1
                     elif line[1] == "checks":
-                        lastActions += "CHECK:" + line[0][:-4] +","
-                        numLastActions += 1
+                        self.lastActions += "CHECK:" + line[0][:-4] +","
+                        self.numLastActions += 1
                     elif line[1] == "shows":
-                        lastActions += "SHOWS:"+line[0][:-4]+":"+pockets[line[0][:-4]][0]+":"+pockets[line[0][:-4]][1]+","
-                        numLastActions += 1
+                        self.lastActions += "SHOWS:"+line[0][:-4]+":"+self.pockets[line[0][:-4]][0]+":"+self.pockets[line[0][:-4]][1]+","
+                        self.numLastActions += 1
                     elif line[1] == "wins":
-                        lastActions += "WIN:"+line[0][:-4]+":"+line[-1][1:-1]+","
-                        numLastActions +=1
+                        self.lastActions += "WIN:"+line[0][:-4]+":"+line[-1][1:-1]+","
+                        self.numLastActions +=1
                     elif line[1] == "ties":
-                        lastActions += "TIE:"+line[0][:-4]+":"+line[-1][1:-1]
-                        numLastActions+=1
-                        lastActions += ","
+                        self.lastActions += "TIE:"+line[0][:-4]+":"+line[-1][1:-1]
+                        self.numLastActions+=1
+                        self.lastActions += ","
                 l = f.readline()
                 continue
 
