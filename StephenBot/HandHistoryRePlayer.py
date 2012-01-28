@@ -1,6 +1,6 @@
 from ParseMatchHistory import *
 
-import sys
+import sys,os
 
 from Enums import *
 from GameState import *
@@ -23,8 +23,12 @@ class HandHistoryRePlayer:
         #self.plot = PlotBankrolls()
 
     def run(self):
+        annFileName = self.fileName[:-3]+"ann"
+        if os.path.exists(annFileName):
+            print annFileName, "already exists, exiting!"
+            return
         f_in = open(self.fileName, 'r')
-        f_out = open(self.fileName[:-3]+"ann.txt", 'w')
+        f_out = open(self.fileName[:-3]+"ann", 'w')
         self.history.packets.reverse()
         data = self.history.packets.pop()
         self.run_player(data[0] + "\n")
