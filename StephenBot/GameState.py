@@ -75,8 +75,8 @@ class GameState:
             self.leftOpp.position = (self.me.position + 1)%3
             self.holeCard1 = Card(packet[3])
             self.holeCard2 = Card(packet[4])
-            self.me.holeCard1 = self.holeCard1
-            self.me.holeCard2 = self.holeCard2
+            self.me.holeCard1 = packet[3]
+            self.me.holeCard2 = packet[4]
             self.me.bankroll = int(packet[5])
             self.leftOpp.bankroll = int(packet[6])
             self.rightOpp.bankroll  = int(packet[7])
