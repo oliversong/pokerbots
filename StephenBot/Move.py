@@ -11,14 +11,13 @@ class Move:
         self.comment = comment
 
     def __repr__(self):
-        #ret = self.toString()[:-1]
         ret = " "
         if self.myEV is not None:
             ret += "myEV=" + str(self.myEV)
         if self.leftEV is not None:
-            ret += " leftEV:" + str(self.leftEV)
+            ret += " leftEV:[%.1f %.1f]" % (self.leftEV[0],self.leftEV[1])
         if self.rightEV is not None:
-            ret += " rightEV:" + str(self.rightEV)
+            ret += " rightEV:[%.1f %.1f]" % (self.rightEV[0],self.rightEV[1])
         if self.comment is not None:
             ret += ", " + self.comment
         return ret

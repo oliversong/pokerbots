@@ -71,8 +71,9 @@ class Player:
             elif self.game.state == HANDOVER:
                 #update hand history now that final hand actions have been parsed
                 self.archive.update(self.game)
-                self.plot.addMoreBanks(self.game.bankroll, self.game.leftBank,
-                                       self.game.rightBank)
+                self.plot.addMoreBanks(self.game.me.bankroll,
+                                       self.game.leftOpp.bankroll,
+                                       self.game.rightOpp.bankroll)
                 print ""
                 if self.game.handID == self.game.numHands:
                     self.plot.leftOpp = self.game.leftOpp.name
