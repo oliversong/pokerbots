@@ -55,12 +55,12 @@ class Player:
                 self.startBank = None
             elif self.game.state == NEWHAND:
                 if self.startBank is None:
-                    self.startBank = self.game.bankroll
+                    self.startBank = self.game.me.bankroll
                     self.strategy = self.winningStrat
-                elif self.game.bankroll < self.startBank - 2000:
+                elif self.game.me.bankroll < self.startBank - 2000:
                     print "We're losing, using losing strategy!"
                     self.strategy = self.losingStrat
-                elif self.game.bankroll > self.startBank:
+                elif self.game.me.bankroll > self.startBank:
                     print "We're winning, using winning strategy!"
                     self.strategy = self.winningStrat
             elif self.game.state == GETACTION:

@@ -26,7 +26,7 @@ class ChuckTestaStrat(Strategy):
         p2ev = OppEvs[game.leftOpp.name][0]
         p2stdev = OppEvs[game.leftOpp.name][1]
         comment = ""
-        
+
         if p1ev == -1 and p2ev == -1:
             move = self.blindEVplay(game,ev)
             if game.activePlayers == 3:
@@ -101,47 +101,34 @@ class ChuckTestaStrat(Strategy):
         return move
 
     def getOppEvs(self, game, archive):
-        OM = self.OppMoves(game)
         OppEvs = {}
         OppEvs[game.rightOpp.name] = [-1,1000]
         OppEvs[game.leftOpp.name] = [-1,1000]
 
-        for p in [game.leftOpp.name, game.rightOpp.name]:
-            if len(OM[p]) == 0:
-                OppEvs[p] = [-1,1000]
+        for p in [game.leftOpp, game.rightOpp]:
+            if len(p.lastActions) == 0:
+                OppEvs[p.name] = [-1,1000]
                 continue
 
-            lastAction = OM[p][-1][1]
+            lastAction = p.lastActions[-1]
             if lastAction.type == FOLD:
-                OppEvs[p] = [0,1000]
+                OppEvs[p.name] = [-1,1000]
                 continue
 
             absamt = archive.averageStrength(p, game, lastAction, ABSAMOUNT)
 
             if lastAction.type == CHECK:
-                OppEvs[p] = absamt
+                OppEvs[p.name] = absamt
                 continue
 
             potamt = archive.averageStrength(p, game, lastAction, POTAMOUNT)
 
             if lastAction.type in [BET, CALL]:
-                OppEvs[p] = min(absamt,potamt,key=lambda x:x[1])
+                OppEvs[p.name] = min(absamt,potamt,key=lambda x:x[1])
             elif lastAction.type == RAISE:
                 betamt = archive.averageStrength(p, game, lastAction, BETAMOUNT)
-                OppEvs[p] = min(absamt,betamt,potamt,key=lambda x:x[1])
+                OppEvs[p.name] = min(absamt,betamt,potamt,key=lambda x:x[1])
         return OppEvs
-
-    def OppMoves(self, game):
-        OM = {}
-        OM[game.rightOpp.name]=[]
-        OM[game.leftOpp.name] =[]
-        game.hand.splitActionsList()
-        for s,street in enumerate(game.hand.splitActions):
-            for acts in street:
-                if acts.type != POST:
-                    if acts.player in OM.keys():
-                        OM[acts.player] += [(s,acts)]
-        return OM
 
     def blindEVplay(self, game, ev):
         street = game.street

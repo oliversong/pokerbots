@@ -33,9 +33,6 @@ class GameState:
         self.position = None
         self.holeCard1 = None
         self.holeCard2 = None
-        self.bankroll = None
-        self.leftBank = None
-        self.rightBank = None
 
         self.potSize = None
         self.pot = 0
@@ -125,10 +122,6 @@ class GameState:
             self.parseLastActions()
             self.hand.splitActionsList()
 
-##            print "bankroll", self.bankroll
-##            print "leftbank", self.leftBank
-##            print "rightBank", self.rightBank, "\n"
-
     def parseLastActions(self):
         if self.lastActions:
             self.lastActions = self.lastActions.split(",")
@@ -147,7 +140,7 @@ class GameState:
                     player = self.rightOpp
                 else:
                     player = self.me
-                player.lastActions += self.lastActions[i]
+
                 potamt = 0
                 betamt = 0
                 amt = self.lastBet
@@ -196,9 +189,10 @@ class GameState:
                 #elif sla == "TIE":
                 #elif sla == "WIN":
 
-                a = Action(ACTION_TYPES.index(sla), self.lastActions[i][1], c1,
+                a = Action(ACTION_TYPES.index(sla), self.lastActions[i][1], self.street, c1,
                            c2, potamt, betamt, amt)
                 self.hand.actions.append(a)
+                player.lastActions.append(a)
 #                print "processed action: " + str(a)
 #                print "resulting in: stacks",self.me.stack, self.leftOpp.stack, self.rightOpp.stack, "and pips", self.me.pip, self.leftOpp.pip, self.rightOpp.pip
 #        print "lastActions", self.lastActions

@@ -86,21 +86,20 @@ class MatchHistory:
                         print "AMOUNT:", act.amount,",",
                         print "POT AMOUNT:", act.potAmount,",",
                         print "BET AMOUNT:", act.betAmount,
-                        print "EV:", act.ev, "]"
+                        print "EV:", act.ev[0],act.ev[1], "]"
 
     def averageStrength(self, player, game, action, amountType):
         sum = 0
         sum2 = 0
         numMatches = 0
-        std = 0
-
         amountDiffs = [] #list of action values [(action, actionAmount, abs(amount-actionAmount)
+        diffBound = max(7,0.15*action.amount)
 
         #print self.history.keys() ##Need to comment out
-        if action.type not in self.history[player][game.street].keys():
+        if action.type not in self.history[player.name][action.street].keys():
             print "ACTION TYPE IN AVERAGE STRENGTH", action.type
             return [-1,1000]
-        actions = self.history[player][game.street][action.type]
+        actions = self.history[player.name][action.street][action.type]
         for a in actions:
             ev = a.ev[game.activePlayers-2]
             if amountType==POTAMOUNT:
@@ -108,8 +107,6 @@ class MatchHistory:
                     sum += ev
                     sum2 += ev*ev
                     numMatches += 1
-                    mean = float(sum)/numMatches
-                    std = sqrt((float(sum2)/numMatches) - (mean*mean))
                 else:
                     amountDiffs += [(a, a.potAmount, abs(a.potAmount - action.potAmount))]
             elif amountType==BETAMOUNT:
@@ -117,8 +114,6 @@ class MatchHistory:
                     sum += ev
                     sum2 += ev*ev
                     numMatches += 1
-                    mean = float(sum)/numMatches
-                    std = sqrt((float(sum2)/numMatches) - (mean*mean))
                 else:
                     amountDiffs += [(a, a.betAmount, abs(a.betAmount - action.betAmount))]
             else:
@@ -126,14 +121,11 @@ class MatchHistory:
                     sum += ev
                     numMatches += 1
                     sum2 += ev*ev
-                    mean = float(sum)/numMatches
-                    std = sqrt((float(sum2)/numMatches) - (mean*mean))
                 else:
-                    upperBound = action.amount + 2 + 0.10*action.amount
-                    lowerBound = action.amount - 2 - 0.10*action.amount
+                    diff = abs(a.amount - action.amount)
                     #only use actions within a certain range to calculate average/std values
-                    if a.amount <= upperBound and a.amount >= lowerBound:
-                        amountDiffs += [(a, a.amount, abs(a.amount - action.amount))]
+                    if diff <= diffBound:
+                        amountDiffs += [(a, a.amount, diff)]
 
         if numMatches<3:
            #sort the amountDiffs by the difference in amount from the desired amount
@@ -144,13 +136,15 @@ class MatchHistory:
                 if amt[2] != minDiff:
                     minDiff = amt[2]
                     if numMatches>=3:
-                        return [float(sum)/float(numMatches), std]
+                        mean = float(sum)/numMatches
+                        std = sqrt((sum2*numMatches - (sum*sum))/float(numMatches*(numMatches-1)))
+                        return [mean, std]
                 sum += ev
                 numMatches += 1
                 sum2 += ev*ev
-                mean = float(sum)/numMatches
-                std = sqrt((float(sum2)/float(numMatches)) - (mean*mean))
 
             return [-1,1000]
 
-        return [float(sum)/float(numMatches), std]
+        mean = float(sum)/numMatches
+        std = sqrt((sum2*numMatches - (sum*sum))/float(numMatches*(numMatches-1)))
+        return [mean, std]
