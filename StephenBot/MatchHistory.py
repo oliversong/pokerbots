@@ -69,24 +69,23 @@ class MatchHistory:
                 act.ev = showStats[action.player][1]
                 self.history[act.player][street][action.type].append(act)
 
-    def printHistory(self):
-        print "PRINTING HISTORY"
-#        print self.history.keys()
+    def __repr__(self):
+        ret = "MATCH HISTORY\n"
         for p in self.history.keys():
-            print "PLAYER",p
+            ret += "PLAYER " + p + "\n"
             for s in range(4):
-                print "    STREET", s
+                ret += "    STREET " + str(s) + "\n"
                 for a in self.history[p][s].keys():
-                    print "        ACTION", ACTION_TYPES[a]
+                    ret += "        ACTION " + ACTION_TYPES[a] + "\n"
                     for i in range(len(self.history[p][s][a])):
                         act = self.history[p][s][a][i]
-                        print "             [",
-                        print "TYPE:", ACTION_TYPES[act.type],",",
-                        print "PLAYER:", act.player,",",
-                        print "AMOUNT:", act.amount,",",
-                        print "POT AMOUNT:", act.potAmount,",",
-                        print "BET AMOUNT:", act.betAmount,
-                        print "EV:", act.ev[0],act.ev[1], "]"
+                        ret += "             ["
+                        ret += "TYPE: " + ACTION_TYPES[act.type] + ", "
+                        ret += "AMOUNT: " + str(act.amount) + ", "
+                        ret += "POT AMOUNT: " + str(act.potAmount) + ", "
+                        ret += "BET AMOUNT: " + str(act.betAmount) + ", "
+                        ret += "EV: " + str(act.ev[0]) + str(act.ev[1])+ " ]\n"
+        return ret[:-1]
 
     def averageStrength(self, player, game, action, amountType):
         sum = 0

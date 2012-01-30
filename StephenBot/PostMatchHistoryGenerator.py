@@ -14,12 +14,12 @@ class PostMatchHistoryGenerator:
         self.game = GameState()
         self.archive = PostMatchHistory()
         self.history = ParseMatchHistory(1000)
-        
+
         self.history.parseHistory(fileName)
 
     def run(self):
         self.history.packets.reverse()
-        
+
         while len(self.history.packets) > 0:
             data = self.history.packets.pop()
 
@@ -34,12 +34,7 @@ class PostMatchHistoryGenerator:
                 self.game.rightOpp.holeCard2 = data[2][1]
                 self.archive.update(self.game)
 
-
-
-        
-
 if __name__== "__main__":
     p = PostMatchHistoryGenerator(sys.argv[1])
     p.run()
-    p.archive.printHistory()
-        
+    print p.archive

@@ -82,7 +82,7 @@ class HandHistoryRePlayer:
         elif self.game.state == HANDOVER:
             #update hand history now that final hand actions have been parsed
             self.archive.update(self.game)
-            #print self.archive.printHistory()
+            #print self.archive
             #self.plot.addMoreBanks(self.game.bankroll, self.game.leftBank,
             #                       self.game.rightBank)
             print ""
