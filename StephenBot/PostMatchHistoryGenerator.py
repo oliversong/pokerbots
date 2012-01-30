@@ -8,8 +8,9 @@ from GameState import *
 from Move import *
 from Card import *
 
-from mpl_toolkits.mplot3d import *
+#from mpl_toolkits.mplot3d import *
 import matplotlib.pyplot as plt
+import numpy
 
 class PostMatchHistoryGenerator:
     def __init__(self, fileName):
@@ -38,30 +39,53 @@ class PostMatchHistoryGenerator:
                 self.archive.update(self.game)
 
     def plotBets(self):
-        fig = plt.figure()
-        ax = Axes3D(fig)
-        amt = {}
-        for a in self.archive.history[self.game.leftOpp.name][0][CALL]:
-#            print a.amount, amt.keys(), a.ev
-            if a.amount not in amt.keys():
-                amt[a.amount] = {}
-            if a.ev[0] not in amt[a.amount].keys():
-                amt[a.amount][a.ev[0]] = 0
-            amt[a.amount][a.ev[0]] += 1
-        xyz = []
-        for x in amt.keys():
-            for y in amt[x].keys():
-                xyz += [[x,y,amt[x][y]]]
-        print xyz
-        xs = [i[0] for i in xyz]
-        ys = [i[1] for i in xyz]
-        zs = [i[2] for i in xyz]
-
-        ax.scatter(xs,ys,zs)
-        ax.set_xlabel("CALL Amount")
-        ax.set_ylabel("Hand strength")
-        ax.set_zlabel("frequency")
-        plt.show()
+        #fig = plt.figure()
+        for pname in self.archive.history.keys():
+            for s in range(RIVER+1):
+                #t = RAISE
+                for t in self.archive.history[pname][s].keys():
+                    #print s,t
+                    ys = [int(a.amount) for a in self.archive.history[pname][s][t]]
+                    xs = [a.ev[0] for a in self.archive.history[pname][s][t]]
+                    if len(xs) == 0 or len(ys) == 0:
+                        continue
+                    #print xs,ys
+                    plt.figure()
+                    plt.title(pname)
+                    if min(ys) == max(ys):
+                        zs = [0 for i in range(1001)]
+                        for y in xs:
+                            zs[y] += 1
+                        x = []
+                        y = []
+                        for i,z in enumerate(zs):
+                            if z>0:
+                                x+=[i]
+                                y+=[z]
+                        plt.scatter(x,y)
+                        plt.xlabel("HandStrength")
+                        plt.ylabel("Frequency of "+ACTION_TYPES[t]+":"+str(min(ys)))
+                    elif min(xs)==max(xs):
+                        zs = [0 for i in range(201)]
+                        for x in ys:
+                            zs[x] += 1
+                        x = []
+                        y = []
+                        for i,z in enumerate(zs):
+                            if z>0:
+                                x+=[i]
+                                y+=[z]
+                        plt.scatter(x,y)
+                        plt.ylabel("Frequency of EV="+str(min(xs)))
+                        plt.xlabel(ACTION_TYPES[t] + ".absAmount")
+                    else:
+                        plt.hexbin(xs,ys,mincnt=1)
+                        plt.axis([0,1000,0,205])
+                        plt.xlabel("Hand Strength")
+                        plt.ylabel(ACTION_TYPES[t] + ".absAmount")
+                        cb = plt.colorbar()
+                        cb.set_label('counts')
+                    plt.savefig(pname + "-" + STREET_TYPES[s]+"-"+ACTION_TYPES[t] + ".png")
 
 if __name__== "__main__":
     p = PostMatchHistoryGenerator(sys.argv[1])
