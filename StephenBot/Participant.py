@@ -15,3 +15,10 @@ class Participant():
         self.holeCard1 = None
         self.holeCard2 = None
         self.lastActions = []
+
+    def isAllIn(self):
+        return self.stack == 0
+
+    # Return amount needed to raise/bet all in
+    def getAllIn(self):
+        return int(self.stack + self.pip)

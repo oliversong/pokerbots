@@ -208,7 +208,3 @@ class GameState:
             self.boardCards = self.boardCards.split(",")
         for i in range(5-len(self.boardCards)):
             self.boardCards += ["__"]
-
-    # Return amount needed to raise/bet all in
-    def getAllIn(self):
-        return int(self.me.stack + self.me.pip)

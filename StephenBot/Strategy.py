@@ -58,9 +58,9 @@ class Strategy:
         move = Move(CALL)
         for la in game.legalActions:
             if la[0] == "BET":
-                return Move(BET, min(game.getAllIn(),int(la[1])*m))
+                return Move(BET, min(game.me.getAllIn(),int(la[1])*m))
             if la[0] == "RAISE":
-                return Move(RAISE, min(game.getAllIn(),int(la[1])*m))
+                return Move(RAISE, min(game.me.getAllIn(),int(la[1])*m))
 
 ##        print "PUSH MIN MOVE:", move
         return move
