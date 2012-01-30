@@ -5,6 +5,7 @@ from GameState import *
 from Enums import *
 import ThreePocketLookup
 import TwoPocketLookup
+from Card import *
 
 from pokereval import PokerEval
 
@@ -12,6 +13,7 @@ class MatchHistory:
     def __init__(self):
         self.history = {}
         self.pokereval = PokerEval()
+        self.showStats = {}
 
     def reset(self, game):
         self.history[game.leftOpp.name] = [{},{},{},{}]
@@ -22,23 +24,23 @@ class MatchHistory:
                 self.history[game.rightOpp.name][s][a] = []
 
     def update(self, game):
-        showStats = {}
+        self.showStats = {}
 
         for action in game.hand.actions:
             if action.type == SHOW and action.player in self.history.keys():
-                showStats[action.player] = [[action.showCard1, action.showCard2],[0,0]]
+                self.showStats[action.player] = [[action.showCard1, action.showCard2],[0,0]]
 
-        if len(showStats.keys()) == 0:
-            return
+        if len(self.showStats.keys()) > 0:
+            self.computeNewEntries(game)
 
-        for player in showStats.keys():
-            playerHand = showStats[player][0]
+    def computeNewEntries(self, game):
+        for player in self.showStats.keys():
+            playerHand = self.showStats[player][0]
             ev2 = TwoPocketLookup.evalPocket(Card(playerHand[0]),Card(playerHand[1]))
             ev3 = ThreePocketLookup.evalPocket(Card(playerHand[0]),Card(playerHand[1]))
-            showStats[player][1] = [ev2,ev3]
+            self.showStats[player][1] = [ev2,ev3]
 
         street = 0
-        activePlayers = 3
         b = [255]*5
         for action in game.hand.actions:
             if action.type == DEAL:
@@ -49,9 +51,8 @@ class MatchHistory:
                     b[:4] = game.boardCards[:4]
                 elif street==RIVER: #RIVER
                     b = game.boardCards
-                for player in showStats.keys():
-                    playerHand = showStats[player][0]
-                    #calculate ev3
+                for player in self.showStats.keys():
+                    playerHand = self.showStats[player][0]
                     pockets = [playerHand,[255,255],[255,255]]
                     ev3 = self.pokereval.poker_eval(game="holdem",
                                                     pockets=pockets,
@@ -63,10 +64,10 @@ class MatchHistory:
                                                     dead=[],
                                                     board=b,
                                                     iterations=ITERATIONS)['eval'][0]['ev']
-                    showStats[player][1] = [ev2,ev3]
-            elif action.player in showStats.keys() and action.type != POST and action.type in game.hand.trackedActions:
+                    self.showStats[player][1] = [ev2,ev3]
+            elif action.player in self.showStats.keys() and action.type != POST and action.type in game.hand.trackedActions:
                 act = action.copy()
-                act.ev = showStats[action.player][1]
+                act.ev = self.showStats[action.player][1]
                 self.history[act.player][street][action.type].append(act)
 
     def printHistory(self):
