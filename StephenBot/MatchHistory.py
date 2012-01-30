@@ -16,12 +16,13 @@ class MatchHistory:
         self.showStats = {}
 
     def reset(self, game):
-        self.history[game.leftOpp.name] = [{},{},{},{}]
-        self.history[game.rightOpp.name] = [{},{},{},{}]
-        for a in range(4):#[BET,CALL,CHECK,RAISE]:
-            for s in range(4):
-                self.history[game.leftOpp.name][s][a] = []
-                self.history[game.rightOpp.name][s][a] = []
+        #self.history[game.leftOpp.name] = [{},{},{},{}]
+        for pname in [game.leftOpp.name, game.rightOpp.name]:
+            if pname not in self.history.keys():
+                self.history[pname] = [{},{},{},{}]
+                for a in range(4):#[BET,CALL,CHECK,RAISE]:
+                    for s in range(4):
+                        self.history[pname][s][a] = []
 
     def update(self, game):
         self.showStats = {}
@@ -85,7 +86,7 @@ class MatchHistory:
                         ret += "AMOUNT: " + str(act.amount) + ", "
                         ret += "POT AMOUNT: " + str(act.potAmount) + ", "
                         ret += "BET AMOUNT: " + str(act.betAmount) + ", "
-                        ret += "EV: " + str(act.ev[0]) + str(act.ev[1])+ " ]\n"
+                        ret += "EV: " + str(act.ev[0]) + " " + str(act.ev[1])+ " ]\n"
         return ret[:-1]
 
     def averageStrength(self, player, game, action, amountType):

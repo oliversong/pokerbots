@@ -3,6 +3,8 @@ class ParseMatchHistory():
         self.packets = []
         self.numHands = numHand
         self.myPlayer = "PoKerboT"
+
+    def reset(self):
         self.leftOpp = ""
         self.rightOpp = "0"
 
@@ -18,8 +20,8 @@ class ParseMatchHistory():
         self.boardCards = ""
         self.numLegActions = 0
 
-
     def parseHistory(self, h):
+        self.reset()
         f = open(h, 'r')
         l = f.readline()
         line = l.split(" ")

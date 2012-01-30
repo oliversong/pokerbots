@@ -13,13 +13,13 @@ import matplotlib.pyplot as plt
 import numpy
 
 class PostMatchHistoryGenerator:
-    def __init__(self, fileName):
-        self.fileName = fileName
+    def __init__(self):#, fileName):
+        #self.fileName = fileName
         self.game = GameState()
         self.archive = PostMatchHistory()
         self.history = ParseMatchHistory(1000)
 
-        self.history.parseHistory(fileName)
+        #self.history.parseHistory(fileName)
 
     def run(self):
         self.history.packets.reverse()
@@ -47,8 +47,12 @@ class PostMatchHistoryGenerator:
                     #print s,t
                     ys = [int(a.amount) for a in self.archive.history[pname][s][t]]
                     xs = [a.ev[0] for a in self.archive.history[pname][s][t]]
-                    if len(xs) == 0 or len(ys) == 0:
+                    ps = [a.potAmount for a in self.archive.history[pname][s][t]]
+                    bs = [a.betAmount for a in self.archive.history[pname][s][t]]
+                    if len(xs) == 0:
                         continue
+                    print "potamt:%.3f %.3f" % (min(ps),max(ps)),
+                    print "betamt:%.3f %.3f" %(min(bs),max(bs))
                     #print xs,ys
                     plt.figure()
                     plt.title(pname)
@@ -88,7 +92,10 @@ class PostMatchHistoryGenerator:
                     plt.savefig(pname + "-" + STREET_TYPES[s]+"-"+ACTION_TYPES[t] + ".png")
 
 if __name__== "__main__":
-    p = PostMatchHistoryGenerator(sys.argv[1])
-    p.run()
-#    p.archive.printHistory()
+    p = PostMatchHistoryGenerator()#sys.argv[1])
+    print "analyzing",len(sys.argv[1:]),"hand histories"
+    for fname in sys.argv[1:]:
+        p.history.parseHistory(fname)
+        p.run()
     p.plotBets()
+    print p.archive
