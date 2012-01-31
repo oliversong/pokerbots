@@ -8,6 +8,6 @@ def replayMatch(fname):
         h.run()
 
 if __name__ == "__main__":
-    print len(sys.argv[1:])
+    print sys.argv[1:]
     pool = mp.Pool()
     pool.map(replayMatch,sys.argv[1:])
