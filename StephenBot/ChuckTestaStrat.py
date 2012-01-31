@@ -30,10 +30,10 @@ class ChuckTestaStrat(Strategy):
                 scores[pname] = UNKNOWN
             elif ev>p[0]+p[1]:
                 scores[pname] = BEST
-            elif ev>p[0]:
+            elif ev>p[0]+0.5*p[1]:
                 scores[pname] = GOOD
-            elif ev>p[0]-p[1]:
-                scores[pname] = OK
+            #elif ev>p[0]-p[1]:
+            #    scores[pname] = OK
             else:
                 scores[pname] = BAD
 
@@ -150,11 +150,8 @@ class ChuckTestaStrat(Strategy):
             if game.activePlayers == 2:
                 npm = 160
             move = Move(CHECK)
-            if ev>600+npm:
-                move = self.pushMin(game,random.randint(4,10))
-                if move.type in [BET, RAISE]:
-                    if move.amount > 200:
-                        move = Move(CALL)
+            if ev>500+npm:#65%
+                move = self.bestEVplay(game)
             elif ev>400+npm:
                 move = self.pushMin(game,random.randint(1,4))
                 if move.type in [BET, RAISE]:
@@ -164,13 +161,10 @@ class ChuckTestaStrat(Strategy):
                 move = self.maxRisk(game,10)
             else:
                 move =  self.maxRisk(game,2)
-        elif street == FLOP:
+        elif street == FLOP:#45#60
             move = Move(CHECK)
-            if ev>700:
-                move = self.pushMin(game,random.randint(4,10))
-                if move.type in [BET, RAISE]:
-                    if move.amount > 200:
-                        move = Move(CALL)
+            if ev>650:
+                move = self.bestEVplay(game)
             elif ev>500:
                 move = self.pushMin(game,random.randint(1,4))
                 if move.type in [BET, RAISE]:
@@ -178,13 +172,10 @@ class ChuckTestaStrat(Strategy):
                         move = Move(CALL)
             else:
                 move =  self.maxRisk(game,2)
-        elif street == TURN:
+        elif street == TURN:#35#65
             move = Move(CHECK)
-            if ev>800:
-                move = self.pushMin(game,10)
-                if move.type in [BET, RAISE]:
-                    if move.amount > 200:
-                        move = Move(CALL)
+            if ev>700:
+                move = self.bestEVplay(game)
             elif ev>600:
                 move = self.pushMin(game,random.randint(1,4))
                 if move.type in [BET, RAISE]:
@@ -194,13 +185,10 @@ class ChuckTestaStrat(Strategy):
                 move = self.maxRisk(game,10)
             else:
                 move =  self.maxRisk(game,2)
-        elif street == RIVER:
+        elif street == RIVER:#30#70
             move = Move(CHECK)
             if ev>800:
-                move = self.pushMin(game,random.randint(4,10))
-                if move.type in [BET, RAISE]:
-                    if move.amount > 200:
-                        move = Move(CALL)
+                move = self.bestEVplay(game)
             elif ev>650:
                 move = self.pushMin(game,random.randint(1,4))
                 if move.type in [BET, RAISE]:
@@ -218,29 +206,37 @@ class ChuckTestaStrat(Strategy):
 
     def bestEVplay(self, game):
         street = game.street
+        move = Move(CALL)
         if street == PREFLOP:
-            move = self.pushMin(game,random.randint(2,6))
-            if move.type in [BET, RAISE]:
-                if move.amount > 30:
-                    move = Move(CALL)
-        elif street == FLOP:
-            move = self.pushMin(game,random.randint(3,7))
-            if move.type in [BET, RAISE]:
-                if move.amount > 40:
-                    move = Move(CALL)
-        elif street == TURN:
-            move = self.pushMin(game,random.randint(4,8))
-            if move.type in [BET, RAISE]:
-                if move.amount > 50:
-                    move = Move(CALL)
-        elif street == RIVER:
-            move = self.pushMin(game,10)
+            amt = 5*game.bigB#self.pushMin(game,5)
+            amt2 = min(game.me.getAllIn(),game.pot + game.leftOpp.pip + game.rightOpp.pip + game.me.pip)
+            amt = max(amt,amt2 + game.lastBet)
+            #amt = 2*(game.lastBet-highpip2)
+            move = Move(CALL)
+            for la in game.legalActions:
+                if la[0] == "RAISE":
+                    move = Move(RAISE, amt)
+        if "BET" in [la[0] for la in game.legalActions]:
+            if street == FLOP:
+                move = self.betPot(game,random.randint(8,10)/10.0)
+            elif street == TURN:
+                move = self.betPot(game,random.randint(7,9)/10.0)
+            elif street == RIVER:
+                move = self.betPot(game,random.randint(7,9)/10.0)
+        elif "RAISE" in [la[0] for la in game.legalActions]:
+            if street == FLOP:
+                move = self.raiseBet(game,random.randint(9,11)/10.0)
+            elif street == TURN:
+                move = self.raiseBet(game,random.randint(9,11)/10.0)
+            elif street == RIVER:
+                move = self.raiseBet(game,random.randint(9,11)/10.0)
         else:
             print "Error! You reached a state not 0-3! in bestEVplay"
 
         return move
 
     def goodEVplay(self, game):
+        return self.bestEVplay(game)
         street = game.street
         if street == PREFLOP:
             move = self.pushMin(game,random.randint(2,6))

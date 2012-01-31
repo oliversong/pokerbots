@@ -72,3 +72,25 @@ class Strategy:
         if game.lastBet <= m:
             return Move(CALL)
         return Move(FOLD)
+
+    def betPot(self, game, m):
+        move = Move(CALL)
+        amt = min(game.me.getAllIn(),m*(game.pot + game.leftOpp.pip + game.rightOpp.pip + game.me.pip))
+        for la in game.legalActions:
+            if la[0] == "BET":
+                return Move(BET, amt)
+            if la[0] == "RAISE":
+                return Move(RAISE, amt)
+
+##        print "PUSH MIN MOVE:", move
+        return move
+    def raiseBet(self, game, m):
+        move = Move(CALL)
+        highpip2 = sorted([game.me.pip, game.leftOpp.pip, game.rightOpp.pip])[1]
+        amt = 3*(game.lastBet-highpip2)
+        amt = max(game.pot, amt)
+        amt = min(game.me.getAllIn(),m*amt)
+        for la in game.legalActions:
+            if la[0] == "RAISE":
+                return Move(RAISE, amt)
+        return move
