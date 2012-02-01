@@ -22,12 +22,12 @@ class HandHistoryRePlayer:
         self.history.parseHistory(fileName)
 
     def run(self):
-        statFileName = "stats.txt"
+        statFileName = "stats_normalized.txt"
 #        if os.path.exists(statFileName):
 #            print statFileName, "already exists, exiting!"
 #            return
         f_in = open(self.fileName, 'r')
-        f_out = open("stats.txt", 'a')
+        f_out = open("stats_normalized.txt", 'a')
         self.history.packets.reverse()
         data = self.history.packets.pop()
         self.run_player(data[0] + "\n")
@@ -61,10 +61,10 @@ class HandHistoryRePlayer:
                     f_out.flush()
                     for p in [self.game.leftOpp, self.game.rightOpp]:
                         for s in [0,1,2,3]:
-                            p.aggFreq[s] = float(p.numBets[s])/self.game.handID
-                            p.avgChips[s] = float(p.amountContributed[s])/self.game.handID
-                            if p.numBets[s] >0:
-                                p.avgRaiseAmt[s] = float(p.amountBetRaise[s])/p.numBets[s]
+#                            p.aggFreq[s] = float(p.numBets[s])/self.game.handID
+#                            p.avgChips[s] = float(p.amountContributed[s])/self.game.handID
+#                            if p.numBets[s] >0:
+#                                p.avgRaiseAmt[s] = float(p.amountBetRaise[s])/p.numBets[s]
 
                             l = p.name + " street: "+ str(s)+  " aggFreq: "+ str(p.aggFreq[s])+ " avgChips: "+ str(p.avgChips[s])+ " avgRaiseAmt: "+ str(p.avgRaiseAmt[s]) + "\n"
                             f_out.write(l)
@@ -88,9 +88,9 @@ class HandHistoryRePlayer:
             move = self.strategy.getMove(self.game, self.archive)
 #            print "our move:",move
             return move
-        elif self.game.state == HANDOVER:
+#        elif self.game.state == HANDOVER:
             #update hand history now that final hand actions have been parsed
-            self.archive.update(self.game)
+#            self.archive.update(self.game)
             #print self.archive
             #self.plot.addMoreBanks(self.game.bankroll, self.game.leftBank,
             #                       self.game.rightBank)

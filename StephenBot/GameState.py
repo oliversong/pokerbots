@@ -196,6 +196,10 @@ class GameState:
 
                     for pl in [self.me, self.leftOpp, self.rightOpp]:
                         pl.aggFreqChanged = False
+
+                        if pl.active==1 and pl.stack>0:
+                            pl.numArrivalsAtStreet[self.street] += 1
+                        print pl.name, "active:", pl.active, "stack size:", pl.stack, "arrivals:", pl.numArrivalsAtStreet
                 elif sla == "POST":
                     self.lastBet = float(self.lastActions[i][2])
                     player.stack -= self.lastBet
@@ -237,7 +241,13 @@ class GameState:
     def calculatePlayerStats(self):
         for p in [self.leftOpp, self.rightOpp]:
             for s in [0,1,2,3]:
-                p.aggFreq[s] = float(p.numBets[s])/self.handID
+                rounds = p.numArrivalsAtStreet[s]
+                if s==0:
+                    rounds = self.handID
+                if rounds == 0:
+                    p.aggFreq[s] = 0
+                else:
+                    p.aggFreq[s] = float(p.numBets[s])/rounds
                 p.avgChips[s] = float(p.amountContributed[s])/self.handID
                 if p.numBets[s] >0:
                     p.avgRaiseAmt[s] = float(p.amountBetRaise[s])/p.numBets[s]

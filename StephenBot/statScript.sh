@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=~/Desktop/Jan31/*
+FILES=~/Desktop/Jan31/*.txt
 
 for f in $FILES
 do 

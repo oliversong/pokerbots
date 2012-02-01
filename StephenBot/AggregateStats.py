@@ -1,5 +1,5 @@
-f = open("statsCopy.txt", "r")
-wf = open("aggregateStats.txt", "w")
+f = open("stats_normalized.txt", "r")
+wf = open("aggregateStats_normalized.txt", "w")
 
 stats = {}
 

@@ -12,6 +12,7 @@ class Participant():
         self.aggFreq = [0,0,0,0]
         self.avgChips = [0,0,0,0]
         self.avgRaiseAmt = [0,0,0,0]
+        self.numArrivalsAtStreet = [0,0,0,0]
 
     def newHand(self):
         self.position = None
