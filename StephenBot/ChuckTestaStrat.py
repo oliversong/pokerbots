@@ -166,7 +166,7 @@ class ChuckTestaStrat(Strategy):
         if street == PREFLOP:
             move = Move(FOLD)
             #Raise 10% of the time
-            if random.randint(1,100) <= 10:
+            if random.randint(1,100) <= 10 and canRaise:
                 move = Move(RAISE, random.randint(1,2)*potAmt)
         elif street == FLOP:
             if canRaise:
@@ -210,7 +210,7 @@ class ChuckTestaStrat(Strategy):
             if curAmt>15:
                 return move
             move = Move(CALL)
-            if random.randint(1,100) <= 10:
+            if random.randint(1,100) <= 10 and canRaise:
                 move = Move(RAISE, random.randint(1,3)*potAmt)
         elif game.street == FLOP:
             if canRaise:
@@ -259,7 +259,7 @@ class ChuckTestaStrat(Strategy):
 
         if game.street == PREFLOP:
             move = Move(CALL)
-            if random.randint(1,100) <= 50:
+            if random.randint(1,100) <= 50 and canRaise:
                 move = Move(RAISE, random.randint(1,5)*potAmt)
         elif game.street == FLOP:
             move = Move(CALL)

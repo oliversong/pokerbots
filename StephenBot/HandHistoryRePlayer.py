@@ -45,7 +45,10 @@ class HandHistoryRePlayer(ChuckTestaPlayer):
                         rightEV = self.strategy.evalHand(self.game)
                         self.game.holeCard1 = h1
                         self.game.holeCard2 = h2
-                        l = l[:-1] + "  my notes:" + str(move)+" trueLeftEV:" + str(leftEV) + " trueRightEV:" + str(rightEV) + "\n"
+                        l = l[:-1] + "  my notes:" + str(move)+" trueLeftEV:"
+                        l += str(leftEV) + " trueRightEV:" + str(rightEV)
+                        l += "aggresive? " + str(self.game.leftOpp.isAggressive(self.game))
+                        l += " " + str(self.game.rightOpp.isAggressive(self.game)) + "\n"
             elif l == "\n":
                 data = self.history.packets.pop()
                 self.processInput(data[0] + "\n")
