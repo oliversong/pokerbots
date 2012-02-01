@@ -1,0 +1,762 @@
+6.S912 MIT Pokerbots - Kingfish vs. PocketRockets vs. PoKerboT
+Hand #1
+Seat 1 (Button): Kingfish3000 0
+Seat 2 (SB): PocketRockets3001 0
+Seat 3 (BB): PoKerboT3002 0
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [7h 5h]
+Dealt to PoKerboT3002 [3s Kh]
+Dealt to Kingfish3000 [5d Qh]
+Kingfish3000 folds
+PocketRockets3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #2
+Seat 1 (Button): PocketRockets3001 -1
+Seat 2 (SB): PoKerboT3002 1
+Seat 3 (BB): Kingfish3000 0
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [4h 6s]
+Dealt to Kingfish3000 [Jd Qh]
+Dealt to PocketRockets3001 [7d 9h]
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=380 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:581 trueRightEV:463
+Kingfish3000 raises to 8
+PoKerboT3002 folds  my notes: myEV=380 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:581 trueRightEV:463
+Uncalled bet of 6 returned to Kingfish3000
+Kingfish3000 wins the pot (4)
+
+Hand #3
+Seat 1 (Button): PoKerboT3002 -1
+Seat 2 (SB): Kingfish3000 2
+Seat 3 (BB): PocketRockets3001 -1
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [6c 3d]
+Dealt to PocketRockets3001 [4s Ac]
+Dealt to PoKerboT3002 [9h Th]
+PoKerboT3002 calls  my notes: myEV=387 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:227 trueRightEV:372
+Kingfish3000 folds
+PocketRockets3001 checks
+*** FLOP *** [Ah 8s Qs]
+PocketRockets3001 checks
+PoKerboT3002 checks  my notes: myEV=472 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:179 trueRightEV:831
+*** TURN *** [Ah 8s Qs] [Js]
+PocketRockets3001 checks
+PoKerboT3002 bets 20  my notes: myEV=847 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:107 trueRightEV:767
+PocketRockets3001 folds
+Uncalled bet of 20 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #4
+Seat 1 (Button): Kingfish3000 1
+Seat 2 (SB): PocketRockets3001 -3
+Seat 3 (BB): PoKerboT3002 2
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [Kd 5d]
+Dealt to PoKerboT3002 [Kh 7s]
+Dealt to Kingfish3000 [Td 7c]
+Kingfish3000 folds
+PocketRockets3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #5
+Seat 1 (Button): PocketRockets3001 -4
+Seat 2 (SB): PoKerboT3002 3
+Seat 3 (BB): Kingfish3000 1
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [Th 2s]
+Dealt to Kingfish3000 [Kd 2h]
+Dealt to PocketRockets3001 [4d 7h]
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=416 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:505 trueRightEV:385
+Kingfish3000 checks
+*** FLOP *** [9d 6s Kc]
+PoKerboT3002 checks  my notes: myEV=290 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:807 trueRightEV:227
+Kingfish3000 bets 3
+PoKerboT3002 folds  my notes: myEV=283 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:809 trueRightEV:226
+Uncalled bet of 3 returned to Kingfish3000
+Kingfish3000 wins the pot (4)
+
+Hand #6
+Seat 1 (Button): PoKerboT3002 1
+Seat 2 (SB): Kingfish3000 3
+Seat 3 (BB): PocketRockets3001 -4
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [2c 5s]
+Dealt to PocketRockets3001 [6c 2h]
+Dealt to PoKerboT3002 [3d Qc]
+PoKerboT3002 calls  my notes: myEV=294 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:214 trueRightEV:207
+Kingfish3000 folds
+PocketRockets3001 checks
+*** FLOP *** [Qh Jh 2d]
+PocketRockets3001 checks
+PoKerboT3002 bets 20  my notes: myEV=778 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:511 trueRightEV:532
+PocketRockets3001 folds
+Uncalled bet of 20 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #7
+Seat 1 (Button): Kingfish3000 2
+Seat 2 (SB): PocketRockets3001 -6
+Seat 3 (BB): PoKerboT3002 4
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [5h 4s]
+Dealt to PoKerboT3002 [3s 9c]
+Dealt to Kingfish3000 [9d Js]
+Kingfish3000 raises to 6
+PocketRockets3001 folds
+PoKerboT3002 folds  my notes: myEV=400 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:532 trueRightEV:381
+Uncalled bet of 4 returned to Kingfish3000
+Kingfish3000 wins the pot (5)
+
+Hand #8
+Seat 1 (Button): PocketRockets3001 -7
+Seat 2 (SB): PoKerboT3002 2
+Seat 3 (BB): Kingfish3000 5
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [Jd Ad]
+Dealt to Kingfish3000 [6d Ks]
+Dealt to PocketRockets3001 [2h Tc]
+PocketRockets3001 folds
+PoKerboT3002 raises to 16  my notes: myEV=654 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:542 trueRightEV:416
+Kingfish3000 folds
+Uncalled bet of 14 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #9
+Seat 1 (Button): PoKerboT3002 4
+Seat 2 (SB): Kingfish3000 3
+Seat 3 (BB): PocketRockets3001 -7
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [Kd Qh]
+Dealt to PocketRockets3001 [3h 4s]
+Dealt to PoKerboT3002 [8h 2c]
+PoKerboT3002 calls  my notes: myEV=217 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:443 trueRightEV:225
+Kingfish3000 calls
+PocketRockets3001 checks
+*** FLOP *** [4h 8c 2h]
+Kingfish3000 bets 2
+PocketRockets3001 folds
+PoKerboT3002 raises to 32  my notes: myEV=867 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:470 trueRightEV:613
+Kingfish3000 folds
+Uncalled bet of 30 returned to PoKerboT3002
+PoKerboT3002 wins the pot (10)
+
+Hand #10
+Seat 1 (Button): Kingfish3000 -1
+Seat 2 (SB): PocketRockets3001 -9
+Seat 3 (BB): PoKerboT3002 10
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [Js 2d]
+Dealt to PoKerboT3002 [Qc 5s]
+Dealt to Kingfish3000 [Jh 9h]
+Kingfish3000 calls
+PocketRockets3001 folds
+PoKerboT3002 checks  my notes: myEV=501 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:556 trueRightEV:443
+*** FLOP *** [4c 9c 4h]
+PoKerboT3002 checks  my notes: myEV=422 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:762 trueRightEV:332
+Kingfish3000 bets 4
+PoKerboT3002 folds  my notes: myEV=421 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:752 trueRightEV:326
+Uncalled bet of 4 returned to Kingfish3000
+Kingfish3000 wins the pot (5)
+
+Hand #11
+Seat 1 (Button): PocketRockets3001 -10
+Seat 2 (SB): PoKerboT3002 8
+Seat 3 (BB): Kingfish3000 2
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [Jh Ah]
+Dealt to Kingfish3000 [8h 5c]
+Dealt to PocketRockets3001 [2h Kc]
+PocketRockets3001 folds
+PoKerboT3002 raises to 12  my notes: myEV=654 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:414 trueRightEV:505
+Kingfish3000 folds
+Uncalled bet of 10 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #12
+Seat 1 (Button): PoKerboT3002 10
+Seat 2 (SB): Kingfish3000 0
+Seat 3 (BB): PocketRockets3001 -10
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [Tc 9s]
+Dealt to PocketRockets3001 [5s 5c]
+Dealt to PoKerboT3002 [9c Ad]
+PoKerboT3002 raises to 4  my notes: myEV=415 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:356 trueRightEV:400
+Kingfish3000 calls
+PocketRockets3001 folds
+*** FLOP *** [Kc 6h Kh]
+Kingfish3000 bets 2
+PoKerboT3002 raises to 4  my notes: myEV=584 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:406 trueRightEV:538
+Kingfish3000 folds
+Uncalled bet of 2 returned to PoKerboT3002
+PoKerboT3002 wins the pot (14)
+
+Hand #13
+Seat 1 (Button): Kingfish3000 -6
+Seat 2 (SB): PocketRockets3001 -12
+Seat 3 (BB): PoKerboT3002 18
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [Qh As]
+Dealt to PoKerboT3002 [Ad 8h]
+Dealt to Kingfish3000 [Qd 3s]
+Kingfish3000 folds
+PocketRockets3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #14
+Seat 1 (Button): PocketRockets3001 -13
+Seat 2 (SB): PoKerboT3002 19
+Seat 3 (BB): Kingfish3000 -6
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [4s Ad]
+Dealt to Kingfish3000 [2s 3s]
+Dealt to PocketRockets3001 [2c As]
+PocketRockets3001 folds
+PoKerboT3002 raises to 4  my notes: myEV=567 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:360 trueRightEV:549
+Kingfish3000 folds
+Uncalled bet of 2 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #15
+Seat 1 (Button): PoKerboT3002 21
+Seat 2 (SB): Kingfish3000 -8
+Seat 3 (BB): PocketRockets3001 -13
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [7s 9s]
+Dealt to PocketRockets3001 [3h 9h]
+Dealt to PoKerboT3002 [7c Kh]
+PoKerboT3002 calls  my notes: myEV=359 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:341 trueRightEV:278
+Kingfish3000 raises to 10
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=551 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:491 trueRightEV:432
+*** FLOP *** [8c Ts Ks]
+Kingfish3000 bets 13
+PoKerboT3002 raises to 130  my notes: myEV=798 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:669 trueRightEV:277
+Kingfish3000 folds
+Uncalled bet of 117 returned to PoKerboT3002
+PoKerboT3002 wins the pot (48)
+
+Hand #16
+Seat 1 (Button): Kingfish3000 -31
+Seat 2 (SB): PocketRockets3001 -15
+Seat 3 (BB): PoKerboT3002 46
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [Qh Kd]
+Dealt to PoKerboT3002 [Js Kh]
+Dealt to Kingfish3000 [6s 8s]
+Kingfish3000 calls
+PocketRockets3001 folds
+PoKerboT3002 raises to 12  my notes: myEV=605 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:462 trueRightEV:614
+Kingfish3000 calls
+*** FLOP *** [Qs 3s 2d]
+PoKerboT3002 checks  my notes: myEV=482 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:504 trueRightEV:831
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=484 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:508 trueRightEV:824
+*** TURN *** [Qs 3s 2d] [2h]
+PoKerboT3002 checks  my notes: myEV=450 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:334 trueRightEV:848
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=455 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:335 trueRightEV:846
+*** RIVER *** [Qs 3s 2d 2h] [Kc]
+PoKerboT3002 bets 10  my notes: myEV=848 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:108 trueRightEV:897
+Kingfish3000 folds
+Uncalled bet of 10 returned to PoKerboT3002
+PoKerboT3002 wins the pot (33)
+
+Hand #17
+Seat 1 (Button): PocketRockets3001 -16
+Seat 2 (SB): PoKerboT3002 63
+Seat 3 (BB): Kingfish3000 -47
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [4h 4d]
+Dealt to Kingfish3000 [5c Kc]
+Dealt to PocketRockets3001 [4c Qs]
+PocketRockets3001 folds
+PoKerboT3002 raises to 12  my notes: myEV=570 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:558 trueRightEV:491
+Kingfish3000 folds
+Uncalled bet of 10 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #18
+Seat 1 (Button): PoKerboT3002 65
+Seat 2 (SB): Kingfish3000 -49
+Seat 3 (BB): PocketRockets3001 -16
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [9c Jc]
+Dealt to PocketRockets3001 [Ah Js]
+Dealt to PoKerboT3002 [Qd 4s]
+PoKerboT3002 calls  my notes: myEV=303 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:394 trueRightEV:455
+Kingfish3000 calls
+PocketRockets3001 checks
+*** FLOP *** [Ac 8d 3d]
+Kingfish3000 bets 2
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=416 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:400 trueRightEV:849
+*** TURN *** [Ac 8d 3d] [Jd]
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=435 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:675 trueRightEV:855
+*** RIVER *** [Ac 8d 3d Jd] [6c]
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=219 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:740 trueRightEV:940
+PoKerboT3002 shows Qd 4s (High Card)
+Kingfish3000 shows 9c Jc (Pair)
+Kingfish3000 wins the pot (18)
+
+Hand #19
+Seat 1 (Button): Kingfish3000 -39
+Seat 2 (SB): PocketRockets3001 -18
+Seat 3 (BB): PoKerboT3002 57
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [Ks 7d]
+Dealt to PoKerboT3002 [8c 9s]
+Dealt to Kingfish3000 [9c 2c]
+Kingfish3000 folds
+PocketRockets3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #20
+Seat 1 (Button): PocketRockets3001 -19
+Seat 2 (SB): PoKerboT3002 58
+Seat 3 (BB): Kingfish3000 -39
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [5d Qd]
+Dealt to Kingfish3000 [Ah 4c]
+Dealt to PocketRockets3001 [9h 7d]
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=527 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:567 trueRightEV:463
+Kingfish3000 checks
+*** FLOP *** [3d 3h 9c]
+PoKerboT3002 checks  my notes: myEV=434 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:556 trueRightEV:740
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=437 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:554 trueRightEV:732
+*** TURN *** [3d 3h 9c] [Jd]
+PoKerboT3002 checks  my notes: myEV=472 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:501 trueRightEV:673
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=474 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:503 trueRightEV:670
+*** RIVER *** [3d 3h 9c Jd] [Qs]
+PoKerboT3002 bets 20  my notes: myEV=810 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:432 trueRightEV:578
+Kingfish3000 folds
+Uncalled bet of 20 returned to PoKerboT3002
+PoKerboT3002 wins the pot (12)
+
+Hand #21
+Seat 1 (Button): PoKerboT3002 64
+Seat 2 (SB): Kingfish3000 -45
+Seat 3 (BB): PocketRockets3001 -19
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [Qs 4d]
+Dealt to PocketRockets3001 [8c Qc]
+Dealt to PoKerboT3002 [6c 9c]
+PoKerboT3002 calls  my notes: myEV=320 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:303 trueRightEV:385
+Kingfish3000 folds
+PocketRockets3001 checks
+*** FLOP *** [Tc 3h Qd]
+PocketRockets3001 checks
+PoKerboT3002 checks  my notes: myEV=336 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:796 trueRightEV:817
+*** TURN *** [Tc 3h Qd] [Ac]
+PocketRockets3001 checks
+PoKerboT3002 checks  my notes: myEV=395 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:721 trueRightEV:793
+*** RIVER *** [Tc 3h Qd Ac] [Ts]
+PocketRockets3001 checks
+PoKerboT3002 checks  my notes: myEV=258 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:718 trueRightEV:717
+PoKerboT3002 shows 6c 9c (Pair)
+PocketRockets3001 shows 8c Qc (Two Pair)
+PocketRockets3001 wins the pot (5)
+
+Hand #22
+Seat 1 (Button): Kingfish3000 -46
+Seat 2 (SB): PocketRockets3001 -16
+Seat 3 (BB): PoKerboT3002 62
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [2c 2s]
+Dealt to PoKerboT3002 [4h 6c]
+Dealt to Kingfish3000 [Qd As]
+Kingfish3000 raises to 8
+PocketRockets3001 folds
+PoKerboT3002 folds  my notes: myEV=380 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:644 trueRightEV:503
+Uncalled bet of 6 returned to Kingfish3000
+Kingfish3000 wins the pot (5)
+
+Hand #23
+Seat 1 (Button): PocketRockets3001 -17
+Seat 2 (SB): PoKerboT3002 60
+Seat 3 (BB): Kingfish3000 -43
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [Th 3s]
+Dealt to Kingfish3000 [Jd 5c]
+Dealt to PocketRockets3001 [Jh 6d]
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=426 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:471 trueRightEV:478
+Kingfish3000 checks
+*** FLOP *** [5s Qd 5h]
+PoKerboT3002 checks  my notes: myEV=324 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:945 trueRightEV:392
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=319 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:948 trueRightEV:383
+*** TURN *** [5s Qd 5h] [7s]
+PoKerboT3002 checks  my notes: myEV=250 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:939 trueRightEV:309
+Kingfish3000 bets 5
+PoKerboT3002 folds  my notes: myEV=249 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:945 trueRightEV:304
+Uncalled bet of 5 returned to Kingfish3000
+Kingfish3000 wins the pot (8)
+
+Hand #24
+Seat 1 (Button): PoKerboT3002 56
+Seat 2 (SB): Kingfish3000 -39
+Seat 3 (BB): PocketRockets3001 -17
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [5s 4s]
+Dealt to PocketRockets3001 [9d As]
+Dealt to PoKerboT3002 [Jd 7d]
+PoKerboT3002 calls  my notes: myEV=353 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:290 trueRightEV:415
+Kingfish3000 calls
+PocketRockets3001 checks
+*** FLOP *** [Ad 9h 4h]
+Kingfish3000 bets 2
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=367 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:571 trueRightEV:919
+*** TURN *** [Ad 9h 4h] [Jh]
+Kingfish3000 bets 2
+PoKerboT3002 raises to 8  my notes: myEV=668 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:466 trueRightEV:848
+Kingfish3000 folds
+Uncalled bet of 6 returned to PoKerboT3002
+PoKerboT3002 wins the pot (14)
+
+Hand #25
+Seat 1 (Button): Kingfish3000 -45
+Seat 2 (SB): PocketRockets3001 -19
+Seat 3 (BB): PoKerboT3002 64
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [6d 5s]
+Dealt to PoKerboT3002 [7h 9d]
+Dealt to Kingfish3000 [9s Jd]
+Kingfish3000 calls
+PocketRockets3001 folds
+PoKerboT3002 checks  my notes: myEV=463 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:532 trueRightEV:399
+*** FLOP *** [3h 8h 6s]
+PoKerboT3002 checks  my notes: myEV=491 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:339 trueRightEV:626
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=489 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:340 trueRightEV:622
+*** TURN *** [3h 8h 6s] [3d]
+PoKerboT3002 checks  my notes: myEV=321 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:290 trueRightEV:620
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=331 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:288 trueRightEV:629
+*** RIVER *** [3h 8h 6s 3d] [2d]
+PoKerboT3002 checks  my notes: myEV=54 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:169 trueRightEV:665
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=57 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:166 trueRightEV:663
+Kingfish3000 shows 9s Jd (Pair)
+PoKerboT3002 shows 7h 9d (Pair)
+Kingfish3000 wins the pot (17)
+
+Hand #26
+Seat 1 (Button): PocketRockets3001 -20
+Seat 2 (SB): PoKerboT3002 56
+Seat 3 (BB): Kingfish3000 -36
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [8c 9h]
+Dealt to Kingfish3000 [4d 3d]
+Dealt to PocketRockets3001 [9s 3s]
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=480 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:386 trueRightEV:432
+Kingfish3000 checks
+*** FLOP *** [4h 9c 9d]
+PoKerboT3002 bets 12  my notes: myEV=955 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:624 trueRightEV:947
+Kingfish3000 folds
+Uncalled bet of 12 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #27
+Seat 1 (Button): PoKerboT3002 58
+Seat 2 (SB): Kingfish3000 -38
+Seat 3 (BB): PocketRockets3001 -20
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [5s Tc]
+Dealt to PocketRockets3001 [Ah 9h]
+Dealt to PoKerboT3002 [Jh Jd]
+PoKerboT3002 raises to 28  my notes: myEV=611 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:270 trueRightEV:445
+Kingfish3000 folds
+PocketRockets3001 folds
+Uncalled bet of 26 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #28
+Seat 1 (Button): Kingfish3000 -39
+Seat 2 (SB): PocketRockets3001 -22
+Seat 3 (BB): PoKerboT3002 61
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [Kd 6c]
+Dealt to PoKerboT3002 [Th 7d]
+Dealt to Kingfish3000 [Qh 4d]
+Kingfish3000 folds
+PocketRockets3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #29
+Seat 1 (Button): PocketRockets3001 -23
+Seat 2 (SB): PoKerboT3002 62
+Seat 3 (BB): Kingfish3000 -39
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [5s As]
+Dealt to Kingfish3000 [Qd 3d]
+Dealt to PocketRockets3001 [8d 7h]
+PocketRockets3001 folds
+PoKerboT3002 raises to 8  my notes: myEV=599 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:509 trueRightEV:450
+Kingfish3000 folds
+Uncalled bet of 6 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #30
+Seat 1 (Button): PoKerboT3002 64
+Seat 2 (SB): Kingfish3000 -41
+Seat 3 (BB): PocketRockets3001 -23
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [2d 9c]
+Dealt to PocketRockets3001 [Kd Tc]
+Dealt to PoKerboT3002 [Ah Js]
+PoKerboT3002 raises to 16  my notes: myEV=455 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:230 trueRightEV:419
+Kingfish3000 folds
+PocketRockets3001 folds
+Uncalled bet of 14 returned to PoKerboT3002
+PoKerboT3002 wins the pot (5)
+
+Hand #31
+Seat 1 (Button): Kingfish3000 -42
+Seat 2 (SB): PocketRockets3001 -25
+Seat 3 (BB): PoKerboT3002 67
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [Th 9h]
+Dealt to PoKerboT3002 [Kc Ah]
+Dealt to Kingfish3000 [7c Ac]
+Kingfish3000 raises to 10
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=653 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:610 trueRightEV:540
+*** FLOP *** [Kd 3h 3c]
+PoKerboT3002 bets 10  my notes: myEV=887 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:581 trueRightEV:391
+Kingfish3000 folds
+Uncalled bet of 10 returned to PoKerboT3002
+PoKerboT3002 wins the pot (21)
+
+Hand #32
+Seat 1 (Button): PocketRockets3001 -26
+Seat 2 (SB): PoKerboT3002 78
+Seat 3 (BB): Kingfish3000 -52
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [5c Qs]
+Dealt to Kingfish3000 [4s Ah]
+Dealt to PocketRockets3001 [2d Ac]
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=501 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:567 trueRightEV:549
+Kingfish3000 checks
+*** FLOP *** [5d 3h Qh]
+PoKerboT3002 bets 12  my notes: myEV=879 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:561 trueRightEV:495
+Kingfish3000 folds
+Uncalled bet of 12 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #33
+Seat 1 (Button): PoKerboT3002 80
+Seat 2 (SB): Kingfish3000 -54
+Seat 3 (BB): PocketRockets3001 -26
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [Ks 4s]
+Dealt to PocketRockets3001 [6c Tc]
+Dealt to PoKerboT3002 [Js 2s]
+PoKerboT3002 calls  my notes: myEV=303 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:365 trueRightEV:326
+Kingfish3000 folds
+PocketRockets3001 checks
+*** FLOP *** [Qd Th 8h]
+PocketRockets3001 checks
+PoKerboT3002 checks  my notes: myEV=400 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:354 trueRightEV:655
+*** TURN *** [Qd Th 8h] [3c]
+PocketRockets3001 checks
+PoKerboT3002 checks  my notes: myEV=310 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:298 trueRightEV:701
+*** RIVER *** [Qd Th 8h 3c] [Jc]
+PocketRockets3001 checks
+PoKerboT3002 checks  my notes: myEV=590 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:175 trueRightEV:509
+PoKerboT3002 shows Js 2s (Pair)
+PocketRockets3001 shows 6c Tc (Pair)
+PoKerboT3002 wins the pot (5)
+
+Hand #34
+Seat 1 (Button): Kingfish3000 -55
+Seat 2 (SB): PocketRockets3001 -28
+Seat 3 (BB): PoKerboT3002 83
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [2d 4d]
+Dealt to PoKerboT3002 [7h 8c]
+Dealt to Kingfish3000 [3h Tc]
+Kingfish3000 folds
+PocketRockets3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #35
+Seat 1 (Button): PocketRockets3001 -29
+Seat 2 (SB): PoKerboT3002 84
+Seat 3 (BB): Kingfish3000 -55
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [2h Qs]
+Dealt to Kingfish3000 [2d 4c]
+Dealt to PocketRockets3001 [5h 4s]
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=473 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:332 trueRightEV:381
+Kingfish3000 checks
+*** FLOP *** [5c Td Jh]
+PoKerboT3002 checks  my notes: myEV=347 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:163 trueRightEV:563
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=349 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:159 trueRightEV:548
+*** TURN *** [5c Td Jh] [4d]
+PoKerboT3002 checks  my notes: myEV=231 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:495 trueRightEV:862
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=226 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:505 trueRightEV:854
+*** RIVER *** [5c Td Jh 4d] [6s]
+PoKerboT3002 checks  my notes: myEV=115 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:396 trueRightEV:869
+Kingfish3000 bets 2
+PoKerboT3002 calls  my notes: myEV=109 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:401 trueRightEV:876
+PoKerboT3002 shows 2h Qs (High Card)
+Kingfish3000 shows 2d 4c (Pair)
+Kingfish3000 wins the pot (16)
+
+Hand #36
+Seat 1 (Button): PoKerboT3002 76
+Seat 2 (SB): Kingfish3000 -47
+Seat 3 (BB): PocketRockets3001 -29
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [7s 9c]
+Dealt to PocketRockets3001 [Ks 5s]
+Dealt to PoKerboT3002 [Ts 6d]
+PoKerboT3002 calls  my notes: myEV=291 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:306 trueRightEV:374
+Kingfish3000 calls
+PocketRockets3001 checks
+*** FLOP *** [3d Jc Kh]
+Kingfish3000 bets 2
+PocketRockets3001 folds
+PoKerboT3002 raises to 5  my notes: myEV=342 leftEV:[301.3 123.9] rightEV:[-1.0 1000.0], 2 players: know his EV and we're worse than his by less than a STD trueLeftEV:310 trueRightEV:827
+Kingfish3000 folds
+Uncalled bet of 3 returned to PoKerboT3002
+PoKerboT3002 wins the pot (10)
+
+Hand #37
+Seat 1 (Button): Kingfish3000 -51
+Seat 2 (SB): PocketRockets3001 -31
+Seat 3 (BB): PoKerboT3002 82
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [5s Ad]
+Dealt to PoKerboT3002 [9h 7s]
+Dealt to Kingfish3000 [7d Js]
+Kingfish3000 folds
+PocketRockets3001 folds
+PoKerboT3002 wins the pot (3)
+
+Hand #38
+Seat 1 (Button): PocketRockets3001 -32
+Seat 2 (SB): PoKerboT3002 83
+Seat 3 (BB): Kingfish3000 -51
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [9h 9c]
+Dealt to Kingfish3000 [Kh Ts]
+Dealt to PocketRockets3001 [3h Qd]
+PocketRockets3001 folds
+PoKerboT3002 raises to 16  my notes: myEV=720 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:597 trueRightEV:482
+Kingfish3000 folds
+Uncalled bet of 14 returned to PoKerboT3002
+PoKerboT3002 wins the pot (4)
+
+Hand #39
+Seat 1 (Button): PoKerboT3002 85
+Seat 2 (SB): Kingfish3000 -53
+Seat 3 (BB): PocketRockets3001 -32
+Kingfish3000 posts the blind of 1
+PocketRockets3001 posts the blind of 2
+Dealt to Kingfish3000 [5h 5s]
+Dealt to PocketRockets3001 [6h 2d]
+Dealt to PoKerboT3002 [4d 4s]
+PoKerboT3002 calls  my notes: myEV=367 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 3 players: know nothing trueLeftEV:400 trueRightEV:207
+Kingfish3000 calls
+PocketRockets3001 checks
+*** FLOP *** [5c Jd 2c]
+Kingfish3000 bets 6
+PocketRockets3001 folds
+PoKerboT3002 raises to 24  my notes: myEV=556 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:934 trueRightEV:531
+Kingfish3000 raises to 196
+PoKerboT3002 calls  my notes: myEV=550 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:925 trueRightEV:525
+*** TURN *** [5c Jd 2c] [Kd]
+Kingfish3000 bets 2
+PoKerboT3002 folds  my notes: myEV=520 leftEV:[491.0 187.8] rightEV:[-1.0 1000.0], 2 players: know his EV and we're worse than his by less than a STD trueLeftEV:957 trueRightEV:499
+Uncalled bet of 2 returned to Kingfish3000
+Kingfish3000 wins the pot (398)
+
+Hand #40
+Seat 1 (Button): Kingfish3000 147
+Seat 2 (SB): PocketRockets3001 -34
+Seat 3 (BB): PoKerboT3002 -113
+PocketRockets3001 posts the blind of 1
+PoKerboT3002 posts the blind of 2
+Dealt to PocketRockets3001 [7s Qc]
+Dealt to PoKerboT3002 [4d 6s]
+Dealt to Kingfish3000 [As Ac]
+Kingfish3000 raises to 8
+PocketRockets3001 folds
+PoKerboT3002 folds  my notes: myEV=380 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:851 trueRightEV:517
+Uncalled bet of 6 returned to Kingfish3000
+Kingfish3000 wins the pot (5)
+
+Hand #41
+Seat 1 (Button): PocketRockets3001 -35
+Seat 2 (SB): PoKerboT3002 -115
+Seat 3 (BB): Kingfish3000 150
+PoKerboT3002 posts the blind of 1
+Kingfish3000 posts the blind of 2
+Dealt to PoKerboT3002 [9h 2h]
+Dealt to Kingfish3000 [9c Qc]
+Dealt to PocketRockets3001 [Ts 6d]
+PocketRockets3001 folds
+PoKerboT3002 calls  my notes: myEV=423 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:576 trueRightEV:461
+Kingfish3000 checks
+*** FLOP *** [Qd 2s 6h]
+PoKerboT3002 bets 2  my notes: myEV=580 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:830 trueRightEV:689
+Kingfish3000 calls
+*** TURN *** [Qd 2s 6h] [Td]
+PoKerboT3002 checks  my notes: myEV=495 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:830 trueRightEV:905
+Kingfish3000 bets 6
+PoKerboT3002 calls  my notes: myEV=501 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:835 trueRightEV:901
+*** RIVER *** [Qd 2s 6h Td] [7d]
+PoKerboT3002 checks  my notes: myEV=416 leftEV:[-1.0 1000.0] rightEV:[-1.0 1000.0], 2 players: know nothing trueLeftEV:818 trueRightEV:898
+Kingfish3000 bets 2
