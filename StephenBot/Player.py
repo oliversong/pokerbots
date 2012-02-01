@@ -14,6 +14,7 @@ class Player:
         self.holeCard2 = None
         self.startBank = None
         self.game = GameState()
+        self.players = {}
         self.archive = MatchHistory()
         self.strategy = Strategy()
         self.losingStrat = LagRuleBotStrategy()
@@ -51,6 +52,18 @@ class Player:
                 print "OUT OF TIME. current time: ", self.game.timebank," at hand:", self.game.handID
 
             if self.game.state == NEWGAME:
+                if self.game.leftOpp.name not in self.players.keys():
+                    self.players[self.game.leftOpp.name] = self.game.leftOpp
+                else:
+                    self.game.leftOpp = self.players[self.game.leftOpp.name]
+                if self.game.rightOpp.name not in self.players.keys():
+                    self.players[self.game.rightOpp.name] = self.game.rightOpp
+                else:
+                    self.game.rightOpp = self.players[self.game.rightOpp.name]
+
+                self.game.leftOpp.newGame()
+                self.game.rightOpp.newGame()
+
                 self.archive.reset(self.game)
                 self.startBank = None
             elif self.game.state == NEWHAND:
