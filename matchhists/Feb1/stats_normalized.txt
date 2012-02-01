@@ -2779,3 +2779,57 @@ VictoriousSecret street: 1 aggFreq: 0.206008583691 avgChips: 4.628 avgRaiseAmt: 
 VictoriousSecret street: 2 aggFreq: 0.134328358209 avgChips: 1.202 avgRaiseAmt: 68.3333333333
 VictoriousSecret street: 3 aggFreq: 0.0392156862745 avgChips: 0.804 avgRaiseAmt: 73.0
 
+mavs street: 0 aggFreq: 0.219 avgChips: 3.745 avgRaiseAmt: 7.69406392694
+mavs street: 1 aggFreq: 0.267699115044 avgChips: 4.176 avgRaiseAmt: 29.5454545455
+mavs street: 2 aggFreq: 0.149425287356 avgChips: 1.682 avgRaiseAmt: 30.9230769231
+mavs street: 3 aggFreq: 0.371134020619 avgChips: 1.716 avgRaiseAmt: 18.0555555556
+PocketRockets street: 0 aggFreq: 0.0 avgChips: 1.001 avgRaiseAmt: 0
+PocketRockets street: 1 aggFreq: 0.0 avgChips: 0.0 avgRaiseAmt: 0
+PocketRockets street: 2 aggFreq: 0.0 avgChips: 0.0 avgRaiseAmt: 0
+PocketRockets street: 3 aggFreq: 0.0 avgChips: 0.0 avgRaiseAmt: 0
+
+mavs street: 0 aggFreq: 0.14 avgChips: 3.771 avgRaiseAmt: 10.1142857143
+mavs street: 1 aggFreq: 0.230603448276 avgChips: 5.679 avgRaiseAmt: 41.1962616822
+mavs street: 2 aggFreq: 0.123552123552 avgChips: 1.717 avgRaiseAmt: 25.125
+mavs street: 3 aggFreq: 0.247524752475 avgChips: 1.954 avgRaiseAmt: 27.42
+VictoriousSecret street: 0 aggFreq: 0.294 avgChips: 4.354 avgRaiseAmt: 8.87755102041
+VictoriousSecret street: 1 aggFreq: 0.187012987013 avgChips: 4.748 avgRaiseAmt: 51.6944444444
+VictoriousSecret street: 2 aggFreq: 0.102678571429 avgChips: 2.065 avgRaiseAmt: 68.0434782609
+VictoriousSecret street: 3 aggFreq: 0.118279569892 avgChips: 3.827 avgRaiseAmt: 71.0
+
+mavs street: 0 aggFreq: 0.278 avgChips: 3.978 avgRaiseAmt: 7.02877697842
+mavs street: 1 aggFreq: 0.338262476895 avgChips: 4.46 avgRaiseAmt: 18.0218579235
+mavs street: 2 aggFreq: 0.233333333333 avgChips: 2.004 avgRaiseAmt: 20.1142857143
+mavs street: 3 aggFreq: 0.634408602151 avgChips: 1.876 avgRaiseAmt: 13.6355932203
+PocketRockets street: 0 aggFreq: 0.0 avgChips: 0.999 avgRaiseAmt: 0
+PocketRockets street: 1 aggFreq: 0.0 avgChips: 0.0 avgRaiseAmt: 0
+PocketRockets street: 2 aggFreq: 0.0 avgChips: 0.0 avgRaiseAmt: 0
+PocketRockets street: 3 aggFreq: 0.0 avgChips: 0.0 avgRaiseAmt: 0
+
+mavs street: 0 aggFreq: 0.192 avgChips: 4.732 avgRaiseAmt: 12.6666666667
+mavs street: 1 aggFreq: 0.291139240506 avgChips: 5.064 avgRaiseAmt: 26.3550724638
+mavs street: 2 aggFreq: 0.188679245283 avgChips: 2.453 avgRaiseAmt: 28.24
+mavs street: 3 aggFreq: 0.406417112299 avgChips: 2.73 avgRaiseAmt: 31.6052631579
+VictoriousSecret street: 0 aggFreq: 0.281 avgChips: 5.617 avgRaiseAmt: 12.6192170819
+VictoriousSecret street: 1 aggFreq: 0.182051282051 avgChips: 4.447 avgRaiseAmt: 51.4929577465
+VictoriousSecret street: 2 aggFreq: 0.16814159292 avgChips: 2.499 avgRaiseAmt: 48.3684210526
+VictoriousSecret street: 3 aggFreq: 0.0867052023121 avgChips: 1.738 avgRaiseAmt: 51.6666666667
+
+mavs street: 0 aggFreq: 0.21 avgChips: 3.173 avgRaiseAmt: 6.49047619048
+mavs street: 1 aggFreq: 0.271762208068 avgChips: 3.971 avgRaiseAmt: 25.28125
+mavs street: 2 aggFreq: 0.138181818182 avgChips: 1.26 avgRaiseAmt: 21.6578947368
+mavs street: 3 aggFreq: 0.356020942408 avgChips: 2.532 avgRaiseAmt: 28.6323529412
+PocketRockets street: 0 aggFreq: 0.001 avgChips: 1.01 avgRaiseAmt: 6.0
+PocketRockets street: 1 aggFreq: 0.0 avgChips: 0.0 avgRaiseAmt: 0
+PocketRockets street: 2 aggFreq: 0.0 avgChips: 0.0 avgRaiseAmt: 0
+PocketRockets street: 3 aggFreq: 0.0 avgChips: 0.0 avgRaiseAmt: 0
+
+mavs street: 0 aggFreq: 0.195 avgChips: 5.505 avgRaiseAmt: 14.3692307692
+mavs street: 1 aggFreq: 0.299794661191 avgChips: 4.257 avgRaiseAmt: 21.3698630137
+mavs street: 2 aggFreq: 0.263940520446 avgChips: 3.417 avgRaiseAmt: 34.8732394366
+mavs street: 3 aggFreq: 0.451282051282 avgChips: 2.192 avgRaiseAmt: 20.875
+VictoriousSecret street: 0 aggFreq: 0.271 avgChips: 5.793 avgRaiseAmt: 13.9889298893
+VictoriousSecret street: 1 aggFreq: 0.171764705882 avgChips: 3.392 avgRaiseAmt: 38.0684931507
+VictoriousSecret street: 2 aggFreq: 0.127659574468 avgChips: 2.395 avgRaiseAmt: 53.4333333333
+VictoriousSecret street: 3 aggFreq: 0.104712041885 avgChips: 4.048 avgRaiseAmt: 73.6
+
