@@ -96,7 +96,7 @@ class ChuckTestaStrat(Strategy):
             else:
                 comment += " and we're better than his by a STD"
                 if player.isAggressive(game):
-                    move = self.bestAggPlay(game)
+                    move = self.goodAggPlay(game)
                 else:
                     move = self.bestEVplay(game)
         else:
@@ -284,6 +284,7 @@ class ChuckTestaStrat(Strategy):
         move = Move(CHECK)
         curAmt = game.lastBet
         potAmt = game.pot + game.rightOpp.pip + game.leftOpp.pip + game.me.pip
+        street = game.street
 
         canBet = False
         canRaise = False
