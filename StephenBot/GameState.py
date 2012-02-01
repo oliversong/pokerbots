@@ -49,6 +49,7 @@ class GameState:
         self.lastBet = 0
         self.street = PREFLOP
         self.activePlayers = 3
+        self.lastActor = None
 
     def parseInput(self, input):
         numOptArgs = 0
@@ -146,6 +147,7 @@ class GameState:
                 else:
                     player = self.me
 
+                player.totalPot = self.pot + self.me.pip + self.leftOpp.pip + self.rightOpp.pip
                 potamt = 0
                 betamt = 0
                 amt = self.lastBet
@@ -154,7 +156,7 @@ class GameState:
 
                 if sla == "RAISE":
                     betamt = amt/float(self.lastBet)
-                    potamt = amt/float(self.pot + self.me.pip + self.leftOpp.pip + self.rightOpp.pip)
+                    potamt = amt/float(player.totalPot)
                     self.lastBet = amt
                     player.stack -= amt - player.pip
 
@@ -166,7 +168,7 @@ class GameState:
                     player.pip = amt
                 elif sla == "CALL":
                     betamt = 1.0
-                    potamt = amt/float(self.pot + self.me.pip + self.leftOpp.pip + self.rightOpp.pip)
+                    potamt = amt/float(player.totalPot)
                     player.stack -= self.lastBet - player.pip
 
                     player.amountContributed[self.street] += amt - player.pip
@@ -176,7 +178,7 @@ class GameState:
                         amt = 0
                 elif sla == "BET":
                     betamt = amt/float(self.lastBet)
-                    potamt = amt/float(self.pot + self.me.pip + self.leftOpp.pip + self.rightOpp.pip)
+                    potamt = amt/float(player.totalPot)
                     self.lastBet = float(self.lastActions[i][2])
                     player.stack -= self.lastBet
                     player.pip = self.lastBet
@@ -188,7 +190,7 @@ class GameState:
                     player.amountBetRaise[self.street] += amt
                 elif sla == "DEAL":
                     amt = 0
-                    self.pot += self.me.pip + self.leftOpp.pip + self.rightOpp.pip
+                    self.pot += player.totalPot
                     self.me.pip = 0
                     self.leftOpp.pip = 0
                     self.rightOpp.pip = 0
@@ -212,6 +214,9 @@ class GameState:
                 #elif sla == "REFUND":
                 #elif sla == "TIE":
                 #elif sla == "WIN":
+                if sla not in ["FOLD", "SHOWS", "TIE", "WIN", "REFUND"]:
+                    self.lastActor = player
+                print "lastactor:",self.lastActor.name
 
                 a = Action(ACTION_TYPES.index(sla), self.lastActions[i][1], self.street, c1,
                            c2, potamt, betamt, amt)

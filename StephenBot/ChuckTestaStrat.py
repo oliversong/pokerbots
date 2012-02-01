@@ -28,12 +28,10 @@ class ChuckTestaStrat(Strategy):
         for pname,p in OppEvs.items():
             if p[0] == -1:
                 scores[pname] = UNKNOWN
-            elif ev>p[0]+p[1]:
+            elif ev>p[0]+p[1]/2.0:
                 scores[pname] = BEST
-            elif ev>p[0]+0.5*p[1]:
-                scores[pname] = GOOD
-            #elif ev>p[0]-p[1]:
-            #    scores[pname] = OK
+            elif ev>p[0]-p[1]:
+                scores[pname] = OK
             else:
                 scores[pname] = BAD
 
@@ -41,6 +39,7 @@ class ChuckTestaStrat(Strategy):
         comment = ""
 
         if scores[game.rightOpp.name] == UNKNOWN and scores[game.leftOpp.name] == UNKNOWN:
+            #act differently for aggressive players?
             move = self.blindEVplay(game,ev)
             if game.activePlayers == 3:
                 comment = "3 players: know nothing"
@@ -72,31 +71,34 @@ class ChuckTestaStrat(Strategy):
                 elif OK in scores.values():
                     comment += " and we're worse than at least one by less than a STD"
                     move = self.maxRisk(game,10)
-                elif GOOD in scores.values():
-                    comment += " and we're better than both, but within a STD of at least one"
-                    move = self.goodEVplay(game)
                 else:
                     comment += " and we're better than both by a STD"
                     move = self.bestEVplay(game)
         elif game.activePlayers == 2:
             ##We must know our opp EV since both opp EV!=-1
-            score = scores[game.leftOpp.name]
-            if not game.leftOpp.active:
-                score = scores[game.rightOpp.name]
-
+            player = game.leftOpp
+            if not player.active:
+                player = game.rightOpp
+            score = scores[player.name]
             comment = "2 players: know his EV"
             if score == BAD:
                 comment += " and we're worse than his by a STD"
-                move = Move(CHECK)
+                if player.isAggressive(game):
+                    move = self.badAggPlay(game)
+                else:
+                    move = Move(CHECK)
             elif score == OK:
                 comment += " and we're worse than his by less than a STD"
-                move = self.maxRisk(game,10)
-            elif score == GOOD:
-                comment += " and we're better than his by less than a STD"
-                move = self.goodEVplay(game)
+                if player.isAggressive(game):
+                    move = self.okAggPlay(game)
+                else:
+                    move = self.maxRisk(game,10)
             else:
                 comment += " and we're better than his by a STD"
-                move = self.bestEVplay(game)
+                if player.isAggressive(game):
+                    move = self.bestAggPlay(game)
+                else:
+                    move = self.bestEVplay(game)
         else:
             comment = "Neither 3 or 2 player game, there are", game.activePlayers, "players"
 
@@ -197,12 +199,11 @@ class ChuckTestaStrat(Strategy):
             elif ev>500:
                 move = self.maxRisk(game,10)
             else:
-                move =  self.maxRisk(game,2)
+                move = self.maxRisk(game,2)
         else:
             print "Error! You reached a state not 0-3! in blindEVplay"
 
         return move
-
 
     def bestEVplay(self, game):
         street = game.street
@@ -235,30 +236,190 @@ class ChuckTestaStrat(Strategy):
 
         return move
 
-    def goodEVplay(self, game):
-        return self.bestEVplay(game)
+    def badAggPlay(self, game):
+        curAmt = game.lastBet
+        potAmt = game.pot + game.rightOpp.pip + game.leftOpp.pip + game.me.pip
         street = game.street
-        if street == PREFLOP:
-            move = self.pushMin(game,random.randint(2,6))
-            if move.type in [BET, RAISE]:
-                if move.amount > 10:
-                    move = Move(CALL)
-        elif street == FLOP:
-            move = self.pushMin(game,random.randint(3,7))
-            if move.type in [BET, RAISE]:
-                if move.amount > 20:
-                    move = Move(CALL)
-        elif street == TURN:
-            move = self.pushMin(game,random.randint(4,8))
-            if move.type in [BET, RAISE]:
-                if move.amount > 20:
-                    move = Move(CALL)
-        elif street == RIVER:
-            move = self.pushMin(game,random.randint(4,8))
-            if move.type in [BET, RAISE]:
-                if move.amount > 20:
-                    move = Move(CALL)
-        else:
-            print "Error! You reached a state not 0-3! in bestEVplay"
 
+        move = Move(CHECK)
+
+        canBet = False
+        canRaise = False
+        for la in game.legalActions:
+            if la[0] == "BET":
+                canBet = True
+            if la[0] == "RAISE":
+                canRaise = True
+
+        if not canBet and curAmt > game.lastActor.totalPot:
+            return Move(CHECK)
+
+        if street == PREFLOP:
+            move = Move(FOLD)
+            #Raise 10% of the time
+            if random.randint(1,100) <= 10:
+                move = Move(RAISE, random.randint(1,2)*potAmt)
+        elif street == FLOP:
+            if canRaise:
+                move = Move(FOLD)
+                if random.randint(1,100) <= 60:
+                    move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
+            elif canBet:
+                move = Move(CHECK)
+                if random.randint(1,100) <= 35:
+                    move = Move(BET, random.randint(33,50)/100.0*potAmt)
+        elif street == TURN:
+            if canRaise:
+                move = Move(FOLD)
+                if random.randint(1,100) <= 15:
+                    move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
+            elif canBet:
+                move = Move(CHECK)
+                if random.randint(1,100) <= 7:
+                    move = Move(BET, random.randint(33,50)/100.0*potAmt)
+        move.amount = min([move.amount, game.me.getAllIn()])
         return move
+
+    def okAggPlay(self,game):
+        move = Move(CHECK)
+        curAmt = game.lastBet
+        potAmt = game.pot + game.rightOpp.pip + game.leftOpp.pip + game.me.pip
+
+        canBet = False
+        canRaise = False
+        for la in game.legalActions:
+            if la[0] == "BET":
+                canBet = True
+            if la[0] == "RAISE":
+                canRaise = True
+
+        if street != PREFLOP and not canBet and curAmt > 1.5*(game.lastActor.totalPot):
+            return move
+
+        if game.street == PREFLOP:
+            if curAmt>15:
+                return move
+            move = Move(CALL)
+            if random.randint(1,100) <= 10:
+                move = Move(RAISE, random.randint(1,3)*potAmt)
+        elif game.street == FLOP:
+            if canRaise:
+                move = Move(CALL)
+                if random.randint(1,100) <= 75:
+                    move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
+            elif canBet:
+                move = Move(CHECK)
+                if random.randint(1,100) <= 35:
+                    move = Move(BET, random.randint(33,66)/100.0*potAmt)
+        elif game.street == TURN:
+            if canRaise:
+                move = Move(FOLD)
+                if random.randint(1,100) <= 45:
+                    move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
+            elif canBet:
+                move = Move(CHECK)
+                if random.randint(1,100) <= 25:
+                    move = Move(BET, random.randint(33,66)/100.0*potAmt)
+        elif game.street == RIVER:
+            if canRaise:
+                move = Move(FOLD)
+                if random.randint(1,100) <= 15:
+                    move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
+            elif canBet:
+                move = Move(CHECK)
+                if random.randint(1,100) <= 15:
+                    move = Move(BET, random.randint(33,66)/100.0*potAmt)
+        else:
+            print "Error! You reached a state not 0-3! in blindEVplay"
+        move.amount = min([move.amount, game.me.getAllIn()])
+        return move
+
+    def goodAggPlay(self,game):
+        move = Move(CHECK)
+        curAmt = game.lastBet
+        potAmt = game.pot + game.rightOpp.pip + game.leftOpp.pip + game.me.pip
+
+        canBet = False
+        canRaise = False
+        for la in game.legalActions:
+            if la[0] == "BET":
+                canBet = True
+            if la[0] == "RAISE":
+                canRaise = True
+
+        if game.street == PREFLOP:
+            move = Move(CALL)
+            if random.randint(1,100) <= 50:
+                move = Move(RAISE, random.randint(1,5)*potAmt)
+        elif game.street == FLOP:
+            move = Move(CALL)
+            if canRaise:
+                if random.randint(1,100) <= 50:
+                    move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
+            elif canBet:
+                move = Move(CHECK)
+                if random.randint(1,100) <= 50:
+                    move = Move(BET, random.randint(66,75)/100.0*potAmt)
+        elif game.street == TURN:
+            move = Move(CALL)
+            if canRaise:
+                if random.randint(1,100) <= 45:
+                    move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
+            elif canBet:
+                move = Move(CHECK)
+                if random.randint(1,100) <= 75:
+                    move = Move(BET, random.randint(66,75)/100.0*potAmt)
+        elif game.street == RIVER:
+            move = Move(CALL)
+            if canRaise:
+                amt = round(min([2.5*game.lastBet, game.me.getAllIn()]))
+                move = Move(RAISE, random.randint(amt, round(game.me.getAllIn())))
+            elif canBet:
+                move = Move(BET, random.randint(50,150)/100.0*potAmt)
+        move.amount = min([move.amount, game.me.getAllIn()])
+        return move
+
+    def blindAggPlay(self,game,ev):
+        street = game.street
+        npm = 0
+
+        if street == PREFLOP:
+            if game.activePlayers == 2:
+                npm = 200
+            if ev>450+npm:
+                return self.goodAggPlay(game)
+            elif ev>400+npm:
+                return self.okAggPlay(game)
+            elif ev>250+npm:
+                return maxRisk(game,6)
+            return Move(CHECK)
+        elif street == FLOP:
+            if game.activePlayers == 2:
+                npm = 50
+            if ev>800+npm:
+                return self.goodAggPlay(game)
+            elif ev>670+npm:
+                return self.okAggPlay(game)
+            elif ev>500+npm:
+                return self.badAggPlay(game)
+        elif street == TURN:
+            if game.activePlayers == 2:
+                npm = 70
+            if ev>800+npm:
+                return self.goodAggPlay(game)
+            elif ev>700+npm:
+                return self.okAggPlay(game)
+            elif ev>600+npm:
+                return self.badAggPlay(game)
+        elif street == RIVER:
+            if game.activePlayers == 2:
+                npm = 50
+            if ev>850+npm:
+                return self.goodAggPlay(game)
+            elif ev>780+npm:
+                return self.okAggPlay(game)
+            else:
+                return self.badAggPlay(game)
+        else:
+            print "Error! You reached a state not 0-3! in blindEVplay"
+        return Move(CHECK)

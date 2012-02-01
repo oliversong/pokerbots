@@ -21,6 +21,7 @@ class Participant():
         self.stack = 200
         self.active = 1
         self.pip = 0
+        self.totalPot = 0 #the pot + pips they saw when they last acted
 
         self.holeCard1 = None
         self.holeCard2 = None
@@ -34,3 +35,6 @@ class Participant():
     # Return amount needed to raise/bet all in
     def getAllIn(self):
         return int(self.stack + self.pip)
+
+    def isAggressive(self, game):
+        return False
