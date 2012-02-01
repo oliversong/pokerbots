@@ -11,7 +11,11 @@ from pokereval import PokerEval
 
 class MatchHistory:
     def __init__(self, pname):
-        self.history = {}
+        self.history = [{},{},{},{}]
+        for a in range(4):#[BET,CALL,CHECK,RAISE]:
+            for s in range(4):
+                self.history[s][a] = []
+
         self.pname = pname
         self.pokereval = PokerEval()
         self.showStats = {}
@@ -23,10 +27,10 @@ class MatchHistory:
         self.showStats = []
 
         for action in game.hand.actions:
-            if action.type == SHOW and action.player == pname:
+            if action.type == SHOW and action.player == self.pname:
                 self.showStats = [[action.showCard1, action.showCard2],[0,0]]
 
-        if len(self.showStats.keys()) > 0:
+        if len(self.showStats) > 0:
             self.computeNewEntries(game)
 
     def computeNewEntries(self, game):

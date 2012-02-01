@@ -13,8 +13,9 @@ class GameState:
 
     def resetGame(self):
         self.matchID = None
-        self.leftOpp = None#Participant()
-        self.rightOpp = None#Participant()
+        # dummy entries, overridden on first newGame packet
+        self.leftOpp = Participant()
+        self.rightOpp = Participant()
         self.numHands = None
         self.stackSize = None
         self.bigB = None

@@ -1,4 +1,5 @@
 from Card import *
+from MatchHistory import *
 
 class Participant():
     def __init__(self, name=""):
