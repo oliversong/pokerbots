@@ -10,5 +10,5 @@ if __name__ == "__main__":
     port = int(sys.argv[1])
     p = Player(port)
     p.winningStrat = ChuckTestaStrat()
-    p.losingStrat = FoldBotStrategy()
+    p.losingStrat = p.winningStrat
     p.run()
