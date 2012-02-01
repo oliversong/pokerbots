@@ -121,6 +121,7 @@ class GameState:
             self.parseBoardCards()
             self.parseLastActions()
             self.hand.splitActionsList()
+            self.calculatePlayerStats()
 
     def parseLastActions(self):
         if self.lastActions:
@@ -152,11 +153,19 @@ class GameState:
                     potamt = amt/float(self.pot + self.me.pip + self.leftOpp.pip + self.rightOpp.pip)
                     self.lastBet = amt
                     player.stack -= amt - player.pip
+                    
+                    if not player.aggFreqChanged:
+                        player.numBets[self.street] += 1
+                        player.aggFreqChanged = True
+                    player.amountContributed[self.street] += amt - player.pip
+                    player.amountBetRaise[self.street] += amt - player.pip
                     player.pip = amt
                 elif sla == "CALL":
                     betamt = 1.0
                     potamt = amt/float(self.pot + self.me.pip + self.leftOpp.pip + self.rightOpp.pip)
                     player.stack -= self.lastBet - player.pip
+                   
+                    player.amountContributed[self.street] += amt - player.pip
                     player.pip = self.lastBet
                 elif sla == "CHECK":
                     if self.street != PREFLOP:
@@ -167,6 +176,12 @@ class GameState:
                     self.lastBet = float(self.lastActions[i][2])
                     player.stack -= self.lastBet
                     player.pip = self.lastBet
+
+                    if not player.aggFreqChanged:
+                        player.numBets[self.street] += 1
+                        player.aggFreqChanged = True
+                    player.amountContributed[self.street] += amt
+                    player.amountBetRaise[self.street] += amt
                 elif sla == "DEAL":
                     amt = 0
                     self.pot += self.me.pip + self.leftOpp.pip + self.rightOpp.pip
@@ -178,6 +193,8 @@ class GameState:
                     self.lastBet = float(self.lastActions[i][2])
                     player.stack -= self.lastBet
                     player.pip = self.lastBet
+
+                    player.amountContributed[self.street] += self.lastBet
                 elif sla == "SHOWS":
                     c1 = self.lastActions[i][2]
                     c2 = self.lastActions[i][3]
@@ -193,6 +210,7 @@ class GameState:
                            c2, potamt, betamt, amt)
                 self.hand.actions.append(a)
                 player.lastActions.append(a)
+
 #                print "processed action: " + str(a)
 #                print "resulting in: stacks",self.me.stack, self.leftOpp.stack, self.rightOpp.stack, "and pips", self.me.pip, self.leftOpp.pip, self.rightOpp.pip
 #        print "lastActions", self.lastActions
@@ -208,3 +226,14 @@ class GameState:
             self.boardCards = self.boardCards.split(",")
         for i in range(5-len(self.boardCards)):
             self.boardCards += ["__"]
+
+    def calculatePlayerStats(self):
+        for p in [self.leftOpp, self.rightOpp]:
+            for s in [0,1,2,3]:
+                p.aggFreq[s] = float(p.numBets[s])/self.handID
+                p.avgChips[s] = float(p.amountContributed[s])/self.handID
+                p.avgBetRaiseChips[s] = float(p.amountBetRaise[s])/self.handID
+
+#                print p.name, "street:", s, "numActs: ", p.numBets[s], "contributed: ", p.amountContributed[s], "betRaise: ", p.amountBetRaise[s]  
+#                print p.name, "street:", s,  "aggFreq:", p.aggFreq[s], "avgChips:", p.avgChips[s], "avgBetRaiseChips:", p.avgBetRaiseChips[s]
+
