@@ -37,4 +37,5 @@ class Participant():
         return int(self.stack + self.pip)
 
     def isAggressive(self, game):
-        return False
+        cutoffs = [.25, .13, .05, .02]
+        return self.aggFreq[game.street] > cutoffs[game.street]

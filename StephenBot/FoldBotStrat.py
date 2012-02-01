@@ -18,26 +18,4 @@ class FoldBotStrategy(Strategy):
                     return Move(RAISE, 10)
                 return Move(FOLD)
 
-<<<<<<< HEAD
-        ev = self.evalHand(game)
-
-        playEV = [650,500]
-
-#        if game.street == PREFLOP:
-#            if game.lastBet == 2:
-#                return Move(RAISE, random.randint(6,12))
-#            return Move(CHECK)
-#
-#        if "BET" in [la[0] for la in game.legalActions]:
-#            return Move(BET, random.randint(6,12))
-#        return Move(CHECK)
-
-        if game.street==PREFLOP and ev > playEV[game.activePlayers-2]:
-            if "RAISE" in [la[0] for la in game.legalActions]:
-                return Move(RAISE, game.stackSize)
-            if "BET" in [la[0] for la in game.legalActions]:
-                return Move(BET, game.stackSize)
-            return Move(CALL)
-=======
->>>>>>> luke
         return Move(CHECK)
