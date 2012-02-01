@@ -103,7 +103,7 @@ class ChuckTestaStrat(Strategy):
 
         #print comment
         if ACTION_TYPES[move.type] not in [la[0] for la in game.legalActions]:
-            print "returned illegal action",move,"! in",game.legalActions
+#            print "returned illegal action",move,"! in",game.legalActions
             move = Move(CHECK)
 
         move.rightEV = OppEvs[game.rightOpp.name]
