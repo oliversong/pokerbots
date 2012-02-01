@@ -3,6 +3,9 @@ from Card import *
 class Participant():
     def __init__(self, name=""):
         self.name = name
+        self.newGame()
+
+    def newGame(self):
         self.bankroll = 0
         self.numBets = [0,0,0,0]            #how many times they Bet or Raise on each street
         self.amountContributed = [0,0,0,0]  #how much they contribute to pot
@@ -22,7 +25,7 @@ class Participant():
         self.holeCard1 = None
         self.holeCard2 = None
         self.lastActions = []
-        
+
         self.aggFreqChanged = False
 
     def isAllIn(self):

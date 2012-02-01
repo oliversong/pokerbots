@@ -7,12 +7,12 @@ from Participant import *
 class GameState:
     def __init__(self):
         self.state = None
+        self.me = Participant()
         self.resetGame()
         self.resetHand()
 
     def resetGame(self):
         self.matchID = None
-        self.me = Participant()
         self.leftOpp = Participant()
         self.rightOpp = Participant()
         self.numHands = None
@@ -153,7 +153,7 @@ class GameState:
                     potamt = amt/float(self.pot + self.me.pip + self.leftOpp.pip + self.rightOpp.pip)
                     self.lastBet = amt
                     player.stack -= amt - player.pip
-                    
+
                     if not player.aggFreqChanged:
                         player.numBets[self.street] += 1
                         player.aggFreqChanged = True
@@ -164,7 +164,7 @@ class GameState:
                     betamt = 1.0
                     potamt = amt/float(self.pot + self.me.pip + self.leftOpp.pip + self.rightOpp.pip)
                     player.stack -= self.lastBet - player.pip
-                   
+
                     player.amountContributed[self.street] += amt - player.pip
                     player.pip = self.lastBet
                 elif sla == "CHECK":
@@ -234,6 +234,5 @@ class GameState:
                 p.avgChips[s] = float(p.amountContributed[s])/self.handID
                 p.avgBetRaiseChips[s] = float(p.amountBetRaise[s])/self.handID
 
-#                print p.name, "street:", s, "numActs: ", p.numBets[s], "contributed: ", p.amountContributed[s], "betRaise: ", p.amountBetRaise[s]  
+#                print p.name, "street:", s, "numActs: ", p.numBets[s], "contributed: ", p.amountContributed[s], "betRaise: ", p.amountBetRaise[s]
 #                print p.name, "street:", s,  "aggFreq:", p.aggFreq[s], "avgChips:", p.avgChips[s], "avgBetRaiseChips:", p.avgBetRaiseChips[s]
-
