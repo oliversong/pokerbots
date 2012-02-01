@@ -123,6 +123,10 @@ class GameState:
             self.hand.splitActionsList()
             self.calculatePlayerStats()
 
+            print "my bankroll:", self.me.bankroll
+            print self.leftOpp.name, " bank:", self.leftOpp.bankroll
+            print self.rightOpp.name, " bank:", self.rightOpp.bankroll
+
     def parseLastActions(self):
         if self.lastActions:
             self.lastActions = self.lastActions.split(",")
@@ -232,8 +236,9 @@ class GameState:
             for s in [0,1,2,3]:
                 p.aggFreq[s] = float(p.numBets[s])/self.handID
                 p.avgChips[s] = float(p.amountContributed[s])/self.handID
-                p.avgBetRaiseChips[s] = float(p.amountBetRaise[s])/self.handID
+                if p.numBets[s] >0:
+                    p.avgRaiseAmt[s] = float(p.avgRaiseAmt[s])/p.numBets[s]
 
 #                print p.name, "street:", s, "numActs: ", p.numBets[s], "contributed: ", p.amountContributed[s], "betRaise: ", p.amountBetRaise[s]  
-#                print p.name, "street:", s,  "aggFreq:", p.aggFreq[s], "avgChips:", p.avgChips[s], "avgBetRaiseChips:", p.avgBetRaiseChips[s]
+                print p.name, "street:", s,  "aggFreq:", p.aggFreq[s], "avgChips:", p.avgChips[s], "avgRaiseAmt:", p.avgRaiseAmt[s]
 
