@@ -53,7 +53,7 @@ class Player:
 
             if self.game.state == NEWGAME:
                 if self.game.leftOpp.name not in self.players.keys():
-                        self.players[self.game.leftOpp.name] = self.game.leftOpp
+                    self.players[self.game.leftOpp.name] = self.game.leftOpp
                 else:
                     self.game.leftOpp = self.players[self.game.leftOpp.name]
                 if self.game.rightOpp.name not in self.players.keys():

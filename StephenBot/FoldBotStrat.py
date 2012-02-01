@@ -7,15 +7,13 @@ class FoldBotStrategy(Strategy):
         Strategy.__init__(self)
 
     def getMove(self, game, archive):
+        print "hahah"
+        for la in game.legalActions:
+            if la[0] == "BET":
+                return Move(BET, 10)
+            if la[0] == "RAISE":
+                if game.street == PREFLOP:
+                    return Move(RAISE, 10)
+                return Move(FOLD)
 
-        ev = self.evalHand(game)
-
-        playEV = [650,500]
-
-        if game.street==PREFLOP and ev > playEV[game.activePlayers-2]:
-            if "RAISE" in [la[0] for la in game.legalActions]:
-                return Move(RAISE, game.stackSize)
-            if "BET" in [la[0] for la in game.legalActions]:
-                return Move(BET, game.stackSize)
-            return Move(CALL)
         return Move(CHECK)
