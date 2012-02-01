@@ -6,7 +6,7 @@ class CallRaiseStrategy(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
-    def getMove(self, game, archive):
+    def getMove(self, game):
 
         if game.street==RIVER:
             return self.pushMin(game)

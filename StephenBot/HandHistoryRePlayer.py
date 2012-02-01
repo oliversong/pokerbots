@@ -10,7 +10,7 @@ from PlotBankrolls import *
 from Move import *
 from Card import *
 
-class HandHistoryRePlayer:
+class HandHistoryRePlayer(ChuckTestaPlayer):
     def __init__(self, fileName):
         self.holeCard1 = None
         self.holeCard2 = None

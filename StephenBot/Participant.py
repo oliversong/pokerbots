@@ -3,6 +3,7 @@ from Card import *
 class Participant():
     def __init__(self, name=""):
         self.name = name
+        self.archive = MatchHistory(name)
         self.newGame()
 
     def newGame(self):
@@ -10,6 +11,7 @@ class Participant():
         self.numBets = [0,0,0,0]            #how many times they Bet or Raise on each street
         self.amountContributed = [0,0,0,0]  #how much they contribute to pot
         self.amountBetRaise = [0,0,0,0]     #how much they contribute only on bet or raise
+        self.archive.reset()
         self.newHand()
 
         self.aggFreq = [0,0,0,0]

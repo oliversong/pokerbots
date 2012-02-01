@@ -16,7 +16,7 @@ class Strategy:
         self.evalHand(game)
         #raise NotImplementedError("evaluateOdds not implemented in subclass")
 
-    def getMove(self, game, archive):
+    def getMove(self, game):
         raise NotImplementedError("getMove not implemented in subclass")
 
     def evaluatePocketCards2(self, game):

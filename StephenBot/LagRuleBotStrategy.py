@@ -6,7 +6,7 @@ class LagRuleBotStrategy(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
-    def getMove(self, game, archive):
+    def getMove(self, game):
 
         ev = self.evalHand(game)
 

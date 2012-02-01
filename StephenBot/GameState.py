@@ -13,8 +13,8 @@ class GameState:
 
     def resetGame(self):
         self.matchID = None
-        self.leftOpp = Participant()
-        self.rightOpp = Participant()
+        self.leftOpp = None#Participant()
+        self.rightOpp = None#Participant()
         self.numHands = None
         self.stackSize = None
         self.bigB = None
@@ -59,8 +59,8 @@ class GameState:
             self.resetGame()
 
             self.matchID = int(packet[1])
-            self.leftOpp.name = packet[2]
-            self.rightOpp.name = packet[3]
+            self.leftOpp = Participant(packet[2])
+            self.rightOpp = Participant(packet[3])
             self.numHands = int(packet[4])
             self.stackSize = int(packet[5])
             self.bigB = int(packet[6])
@@ -116,13 +116,15 @@ class GameState:
             self.numBoardCards = int(packet[5+numOptArgs])
             if self.numBoardCards>0:
                 numOptArgs += 1
-                self.boardCards = packet[5+numOptArgs]    #Card(packet[3+i])
+                self.boardCards = packet[5+numOptArgs]
             self.timebank = float(packet[-1])
 
             self.parseBoardCards()
             self.parseLastActions()
             self.hand.splitActionsList()
             self.calculatePlayerStats()
+            self.leftOpp.archive.update(self)
+            self.rightOpp.archive.update(self)
 
             print "my bankroll:", self.me.bankroll
             print self.leftOpp.name, " bank:", self.leftOpp.bankroll

@@ -7,7 +7,7 @@ class ChuckTestaStrat(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
-    def getMove(self, game, archive):
+    def getMove(self, game):
         # Calculate our ev
         ev = self.evalHand(game)
 
@@ -15,7 +15,7 @@ class ChuckTestaStrat(Strategy):
         #    if ev <275:
         #        return "CHECK"
 
-        OppEvs = self.getOppEvs(game, archive)
+        OppEvs = self.getOppEvs(game)
 
         move = Move(CHECK)
 
@@ -115,7 +115,7 @@ class ChuckTestaStrat(Strategy):
 
         return move
 
-    def getOppEvs(self, game, archive):
+    def getOppEvs(self, game):
         OppEvs = {}
         OppEvs[game.rightOpp.name] = [-1,1000]
         OppEvs[game.leftOpp.name] = [-1,1000]
@@ -130,18 +130,18 @@ class ChuckTestaStrat(Strategy):
                 OppEvs[p.name] = [-1,1000]
                 continue
 
-            absamt = archive.averageStrength(p, game, lastAction, ABSAMOUNT)
+            absamt = p.archive.averageStrength(game, lastAction, ABSAMOUNT)
 
             if lastAction.type == CHECK:
                 OppEvs[p.name] = absamt
                 continue
 
-            potamt = archive.averageStrength(p, game, lastAction, POTAMOUNT)
+            potamt = p.archive.averageStrength(game, lastAction, POTAMOUNT)
 
             if lastAction.type in [BET, CALL]:
                 OppEvs[p.name] = min(absamt,potamt,key=lambda x:x[1])
             elif lastAction.type == RAISE:
-                betamt = archive.averageStrength(p, game, lastAction, BETAMOUNT)
+                betamt = p.archive.averageStrength(game, lastAction, BETAMOUNT)
                 OppEvs[p.name] = min(absamt,betamt,potamt,key=lambda x:x[1])
         return OppEvs
 

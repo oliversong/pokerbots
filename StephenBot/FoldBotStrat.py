@@ -8,8 +8,7 @@ class FoldBotStrategy(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
-    def getMove(self, game, archive):
-        print "hahah"
+    def getMove(self, game):
         for la in game.legalActions:
             if la[0] == "BET":
                 return Move(BET, 10)

@@ -6,7 +6,7 @@ class BasicEVStrategy(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
-    def getMove(self, game, archive):
+    def getMove(self, game):
         ev = self.evalHand(game)
         if ev>300:
             if "BET" in [la[0] for la in game.legalActions]:

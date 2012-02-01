@@ -7,7 +7,7 @@ class StevieWonderStrat(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
-    def getMove(self, game, archive):
+    def getMove(self, game):
         # Calculate our ev
         ev = self.evalHand(game)
         #if ev <275:

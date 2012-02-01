@@ -15,7 +15,6 @@ class Player:
         self.startBank = None
         self.game = GameState()
         self.players = {}
-        self.archive = MatchHistory()
         self.strategy = Strategy()
         self.losingStrat = LagRuleBotStrategy()
         self.winningStrat = LagRuleBotStrategy()
@@ -64,7 +63,6 @@ class Player:
                 self.game.leftOpp.newGame()
                 self.game.rightOpp.newGame()
 
-                self.archive.reset(self.game)
                 self.startBank = None
             elif self.game.state == NEWHAND:
                 if self.startBank is None:
@@ -78,12 +76,10 @@ class Player:
                     self.strategy = self.winningStrat
             elif self.game.state == GETACTION:
                 #self.strategy.evaluateOdds(self.game)
-                move = self.strategy.getMove(self.game, self.archive)
+                move = self.strategy.getMove(self.game)
                 print "our move:",move
                 self.socket.send(move.toString())
             elif self.game.state == HANDOVER:
-                #update hand history now that final hand actions have been parsed
-                self.archive.update(self.game)
                 self.plot.addMoreBanks(self.game.me.bankroll,
                                        self.game.leftOpp.bankroll,
                                        self.game.rightOpp.bankroll)
