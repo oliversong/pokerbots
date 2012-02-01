@@ -98,7 +98,7 @@ class MatchHistory:
 
         #print self.history.keys() ##Need to comment out
         if action.type not in self.history[player.name][action.street].keys():
-            print "ACTION TYPE IN AVERAGE STRENGTH", action.type
+#            print "ACTION TYPE IN AVERAGE STRENGTH", action.type
             return [-1,1000]
         actions = self.history[player.name][action.street][action.type]
         for a in actions:

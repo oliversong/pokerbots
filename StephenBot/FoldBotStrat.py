@@ -2,6 +2,8 @@ from Strategy import *
 from Enums import *
 from Move import *
 
+import random
+
 class FoldBotStrategy(Strategy):
     def __init__(self):
         Strategy.__init__(self)
@@ -11,6 +13,15 @@ class FoldBotStrategy(Strategy):
         ev = self.evalHand(game)
 
         playEV = [650,500]
+
+#        if game.street == PREFLOP:
+#            if game.lastBet == 2:
+#                return Move(RAISE, random.randint(6,12))
+#            return Move(CHECK)
+#
+#        if "BET" in [la[0] for la in game.legalActions]:
+#            return Move(BET, random.randint(6,12))
+#        return Move(CHECK)
 
         if game.street==PREFLOP and ev > playEV[game.activePlayers-2]:
             if "RAISE" in [la[0] for la in game.legalActions]:
