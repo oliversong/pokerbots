@@ -11,20 +11,10 @@ class ChuckTestaStrat(Strategy):
         # Calculate our ev
         ev = self.evalHand(game)
 
-        #if game.street==PREFLOP:
-        #    if ev <275:
-        #        return "CHECK"
-
         OppEvs = self.getOppEvs(game)
 
         move = Move(CHECK)
-
-        #p1ev = OppEvs[game.rightOpp.name][0]
-        #p1stdev = OppEvs[game.rightOpp.name][1]
-        #p2ev = OppEvs[game.leftOpp.name][0]
-        #p2stdev = OppEvs[game.leftOpp.name][1]
-
-        scores = {}#{game.rightOpp.name:UNKNOWN,game.leftOpp.name:UNKNOWN}
+        scores = {}
         for pname,p in OppEvs.items():
             if p[0] == -1:
                 scores[pname] = UNKNOWN
@@ -35,73 +25,95 @@ class ChuckTestaStrat(Strategy):
             else:
                 scores[pname] = BAD
 
-        print "RIGHT EV:", OppEvs[game.rightOpp.name],"-",scores[game.rightOpp.name], "LEFT EV:", OppEvs[game.leftOpp.name],"-",scores[game.leftOpp.name], "EV:", ev, "activePlayers:", game.activePlayers
+        print "LEFT EV:", OppEvs[game.leftOpp.name],"agg?",game.leftOpp.isAggressive(game),"-",scores[game.leftOpp.name], "RIGHT EV:", OppEvs[game.rightOpp.name],"agg?",game.rightOpp.isAggressive(game),"-",scores[game.rightOpp.name], "EV:", ev, "activePlayers:", game.activePlayers
         comment = ""
 
-        if scores[game.rightOpp.name] == UNKNOWN and scores[game.leftOpp.name] == UNKNOWN:
-            #act differently for aggressive players?
-            move = self.blindEVplay(game,ev)
+        if game.leftOpp.isAggressive(game) and game.rightOpp.isAggressive(game): ##Both opp are aggressive
+            comment = "Both opponents are aggressive, "
             if game.activePlayers == 3:
-                comment = "3 players: know nothing"
-            elif game.activePlayers ==2:
-                comment = "2 players: know nothing"
+                comment += "3 are playing, "
+                move = self.aggPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
+            elif game.activePlayers == 2:
+                comment += "2 are playing, "
+                player = game.leftOpp
+                if not player.active:
+                    player = game.rightOpp
+                score = scores[player.name]
+                move = self.aggPlay2(game,score,ev)
+            else:
+                comment = "neither 3 nor 2 are playing???", game.activePlayers, "players"
+        elif game.leftOpp.isAggressive(game) or game.rightOpp.isAggressive(game): ##One opp is aggressive and one opp is not
+            comment = "One opponent is aggressive and one is not, "
+            if game.leftOpp.isAggressive(game):
+                Aplayer = game.leftOpp
+                Uplayer = game.rightOpp
+            else:
+                Aplayer = game.rightOpp
+                Uplayer = game.leftOpp
+            if game.activePlayers == 3:
+                comment += "3 are playing, "
+                if scores[game.rightOpp.name] == UNKNOWN and scores[game.leftOpp.name] == UNKNOWN:
+                    comment += "know neither opp's EV, "
+                    if Uplayer.lastAction.type in [BET, RAISE]: #Need to Check this
+                        comment += "unaggresive player bet or raised, "
+                        move = self.blindEVplay(game,ev)
+                    else:
+                        comment += "unaggressive player did not bet or raise, "
+                        move = self.blindAggPlay(game,ev)
+                elif scores[game.rightOpp.name] == UNKNOWN or scores[game.leftOpp.name] == UNKNOWN:
+                    if scores[Aplayer.name] != UNKNOWN: #We know the agressive player
+                        comment += "only know agressive player's EV, "
+                        if Uplayer.lastAction.type in [BET, RAISE]: #Need to Check this
+                            comment += "unaggresive player bet or raised, "
+                            move = self.evPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
+                        else:
+                            comment += "unaggressive player did not bet or raise, "
+                            move = self.aggPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
+                    else: #We know the unagressive player
+                        comment += "only know unaggressive player's EV, "
+                        if Uplayer.lastAction.type in [BET, RAISE]: #Need to Check this
+                            comment += "unaggresive player bet or raised, "
+                            move = self.evPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
+                        else:
+                            comment += "unaggressive player did not bet or raise, "
+                            move = self.blindAggPlay(game,ev)
+                else:
+                    "know both EVs, "
+                    if Uplayer.lastAction.type in [BET, RAISE]: #Need to Check this
+                        comment += "unaggresive player bet or raised, "
+                        move = self.evPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
+                    else:
+                        comment += "unaggressive player did not bet or raise, "
+                        move = self.blindAggPlay(game,ev)
+            elif game.activePlayers == 2:
+                comment += "2 are playing, "
+                player = game.leftOpp
+                if not player.active:
+                    player = game.rightOpp
+                score = scores[player.name]
+
+                if player.isAggressive(game):
+                    comment += "aggressive player is still playing"
+                    move = self.aggPlay2(game,score,ev)
+                else:
+                    comment += "unaggressive player is still playing"
+                    move = self.evPlay2(game,score.ev)
+            else:
+                comment = "neither 3 nor 2 are playing???", game.activePlayers, "players"
+        else: ##Neither opp is aggressive
+            comment += "neither opponent is aggressive, "
+            if game.activePlayers == 3:
+                comment += "3 are playing"
+                move = self.evPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
+            elif game.activePlayers == 2:
+                comment += "2 are playing"
+                player = game.leftOpp
+                if not player.active:
+                    player = game.rightOpp
+                score = scores[player.name]
+                move = self.evPlay2(game,score,ev)
             else:
                 comment = "Know Nothing and neither 3 or 2 players in game, there are", game.activePlayers, "players"
-        elif game.activePlayers == 3:
-            if UNKNOWN in scores.values():
-                score = scores[game.leftOpp.name]
-                if score == UNKNOWN:
-                    score = scores[game.rightOpp.name]
-                comment = "3 players: know only one EV"
-
-                if score == BAD:
-                    comment += " and we're worse by a STD"
-                    move = Move(CHECK)
-                elif score == OK:
-                    comment += " and we're worse by less than a STD"
-                    move = self.maxRisk(game,4)
-                else:
-                    comment += " and we're better"
-                    move = self.blindEVplay(game,ev)
-            else:
-                comment = "3 players: know both EV"
-                if BAD in scores.values():
-                    comment += " and we're worse than at least one by a STD"
-                    move = Move(CHECK)
-                elif OK in scores.values():
-                    comment += " and we're worse than at least one by less than a STD"
-                    move = self.maxRisk(game,10)
-                else:
-                    comment += " and we're better than both by a STD"
-                    move = self.bestEVplay(game)
-        elif game.activePlayers == 2:
-            ##We must know our opp EV since both opp EV!=-1
-            player = game.leftOpp
-            if not player.active:
-                player = game.rightOpp
-            score = scores[player.name]
-            comment = "2 players: know his EV"
-            if score == BAD:
-                comment += " and we're worse than his by a STD"
-                if player.isAggressive(game):
-                    move = self.badAggPlay(game)
-                else:
-                    move = Move(CHECK)
-            elif score == OK:
-                comment += " and we're worse than his by less than a STD"
-                if player.isAggressive(game):
-                    move = self.okAggPlay(game)
-                else:
-                    move = self.maxRisk(game,10)
-            else:
-                comment += " and we're better than his by a STD"
-                if player.isAggressive(game):
-                    move = self.goodAggPlay(game)
-                else:
-                    move = self.bestEVplay(game)
-        else:
-            comment = "Neither 3 or 2 player game, there are", game.activePlayers, "players"
-
 
         #print comment
         if ACTION_TYPES[move.type] not in [la[0] for la in game.legalActions]:
@@ -159,6 +171,10 @@ class ChuckTestaStrat(Strategy):
                 canBet = True
             if la[0] == "RAISE":
                 canRaise = True
+
+        if canRaise and curAmt > 2*potAmt: #don't call super aggressive bets
+            #with bad ev
+            return move
 
         if street == PREFLOP:
             move = Move(CHECK)
@@ -302,11 +318,11 @@ class ChuckTestaStrat(Strategy):
                 npm = 200
             if ev>450+npm:
                 return self.goodAggPlay(game)
-            elif ev>400+npm:
+            elif ev>325+npm:
                 return self.okAggPlay(game)
             elif ev>250+npm:
-                return maxRisk(game,6)
-            return Move(CHECK)
+                return self.maxRisk(game,6)
+            return self.maxRisk(game,2)
         elif street == FLOP:
             if game.activePlayers == 2:
                 npm = 50
@@ -433,3 +449,52 @@ class ChuckTestaStrat(Strategy):
             print "Error! You reached a state not 0-3! in bestEVplay"
 
         return move
+
+
+    def aggPlay3(self,game,s1,s2,ev):
+        if s1 == UNKNOWN and s2 == UNKNOWN:
+            return self.blindAggPlay(game,ev)
+        elif s1 == BAD or s2 == BAD:
+            return self.badAggPlay(game)
+        elif s1 == OK or s2 == OK:
+            return self.okAggPlay(game)
+        else:
+            return self.goodAggPlay(game)
+
+    def evPlay3(self,game,s1,s2,ev):
+        if s1 == UNKNOWN and s2 == UNKNOWN:
+            return self.blindEVplay(game,ev)
+        elif s1 == UNKNOWN or s2 == UNKNOWN:
+            if s1 == BEST or s2 == BEST:
+                return self.bestEVplay(game)
+            elif s1 == bad and s2 == bad:
+                return Move(CHECK)
+            else:
+                return self.maxRisk(game,4)
+        else:
+            if s1 == BEST and s2 == BEST:
+                return self.bestEVplay(game)
+            elif s1 != BAD and s2 != BAD:
+                return self.maxRisk(game,10)
+            else:
+                return Move(CHECK)
+
+    def aggPlay2(self,game,s1,ev):
+        if s1 == UNKNOWN:
+            return self.blindAggPlay(game,ev)
+        elif s1 == BEST:
+            return self.goodAggPlay(game)
+        elif s1 == OK:
+            return self.okAggPlay(game)
+        else:
+            return self.badAggPlay(game)
+
+    def evPlay2(self,game,s1,ev):
+        if s1 == UNKNOWN:
+            return self.blindEVplay(game,ev)
+        elif s1 == BEST:
+            return self.bestEVplay(game)
+        elif s1 == OK:
+            return self.maxRisk(game,10)
+        else:
+            return Move(CHECK)
