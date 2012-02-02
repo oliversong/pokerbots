@@ -48,7 +48,7 @@ class HandHistoryRePlayer(ChuckTestaPlayer):
                     f_out.flush()
                     for p in [self.game.leftOpp, self.game.rightOpp]:
                         for s in [0,1,2,3]:
-                            l = p.name + " street: "+ str(s)+  " aggFreq: "+ str(p.aggFreq[s])+ " avgChips: "+ str(p.avgChips[s])+ " avgRaiseAmt: "+ str(p.avgRaiseAmt[s]) + "\n"
+                            l = p.name + " street: "+ str(s)+  " aggFreq: "+ str(p.aggFreq[s])+ " avgChips: "+ str(p.avgChips[s])+ " avgRaiseAmt: "+ str(p.avgRaiseAmt[s]) + " percentArrivals: " + str(p.percentArrivals[s]) + "\n"
                             f_out.write(l)
                             f_out.flush()
                     f_out.write("\n")
