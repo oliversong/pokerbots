@@ -73,10 +73,10 @@ class MatchHistory:
         ret += "PLAYER " + self.pname + "\n"
         for s in range(4):
             ret += "    STREET " + str(s) + "\n"
-            for a in self.history[p][s].keys():
+            for a in self.history[s].keys():
                 ret += "        ACTION " + ACTION_TYPES[a] + "\n"
-                for i in range(len(self.history[p][s][a])):
-                    act = self.history[p][s][a][i]
+                for i in range(len(self.history[s][a])):
+                    act = self.history[s][a][i]
                     ret += "             ["
                     ret += "TYPE: " + ACTION_TYPES[act.type] + ", "
                     ret += "AMOUNT: " + str(act.amount) + ", "

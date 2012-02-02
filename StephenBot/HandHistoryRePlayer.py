@@ -73,6 +73,17 @@ class HandHistoryRePlayer(ChuckTestaPlayer):
             for s in [0,1,2,3]:
                 ret += "%s,%d,%d,%d,%d,%d,%d,"%(p.name, s, self.game.numArrivalsAtStreet[s], p.numArrivalsAtStreet[s],p.numBets[s], p.amountContributed[s], p.amountBetRaise[s])
                 ret += "%f,%f,%f\n" %(p.aggFreq[s],p.avgChips[s],p.avgRaiseAmt[s])
+        
+        #get history stats for all opponents
+        for p in self.players.keys():
+            print p
+            print self.players[p].archive
+#            for s in [0,1,2,3]:
+#                for a in p.archive.
+#                print "    STREET ", s
+                
+
+
         return ret
 
 if __name__ == "__main__":
