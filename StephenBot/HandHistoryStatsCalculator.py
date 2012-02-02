@@ -12,9 +12,9 @@ class HandHistoryRePlayer(ChuckTestaPlayer):
         self.history.parseHistory(fileName)
 
     def run(self):
-        statFileName = "stats_normalized.txt"
+        #statFileName = "stats_normalized.txt"
         f_in = open(self.fileName, 'r')
-        f_out = open("stats_normalized.txt", 'a')
+        #f_out = open("stats_normalized.txt", 'a')
         self.history.packets.reverse()
         data = self.history.packets.pop()
         self.processInput(data[0] + "\n")
@@ -45,16 +45,20 @@ class HandHistoryRePlayer(ChuckTestaPlayer):
                 data = self.history.packets.pop()
                 self.processInput(data[0]+"\n")
                 if self.game.handID == 1000:
-                    f_out.flush()
+                    ret = ""
+                    #f_out.flush()
                     for p in [self.game.leftOpp, self.game.rightOpp]:
                         for s in [0,1,2,3]:
-                            l = p.name + " street: "+ str(s)+  " aggFreq: "+ str(p.aggFreq[s])+ " avgChips: "+ str(p.avgChips[s])+ " avgRaiseAmt: "+ str(p.avgRaiseAmt[s]) + "\n"
-                            f_out.write(l)
-                            f_out.flush()
-                    f_out.write("\n")
-                    f_out.flush()
+                            ret += "%s,%d,%d,%d,%d,%d,%d,"%(p.name, s, self.game.numArrivalsAtStreet[s], p.numArrivalsAtStreet[s], p.numBets[s], p.amountContributed[s], p.amountBetRaise[s])
+                            ret += "%f,%f,%f\n" %(p.aggFreq[s],p.avgChips[s],p.avgRaiseAmt[s])
+                            #l = p.name + " street: "+ str(s)+ " aggFreq: "+ str(p.aggFreq[s])+ " avgChips: "+ str(p.avgChips[s])+ " avgRaiseAmt: "+ str(p.avgRaiseAmt[s]) + "\n"
+                            #f_out.write(l)
+                            #f_out.flush()
+                    #f_out.write("\n")
+                    #f_out.flush()
         f_in.close()
-        f_out.close()
+        return ret
+        #f_out.close()
 
 if __name__ == "__main__":
     p = HandHistoryRePlayer(sys.argv[1])

@@ -22,6 +22,7 @@ class GameState:
         self.smallB = None
         self.timebank = None
 
+        self.numArrivalsAtStreet = [0,0,0,0]
         self.hand = Hand()
         #self.trackedHands = [CHECK,BET,RAISE,CALL, POST]
 
@@ -83,6 +84,7 @@ class GameState:
             self.leftOpp.bankroll = int(packet[6])
             self.rightOpp.bankroll  = int(packet[7])
             self.timeBank = float(packet[8])
+            self.numArrivalsAtStreet[self.street] += 1
 
         elif self.state == GETACTION:
             self.potSize = int(packet[1])
@@ -198,10 +200,9 @@ class GameState:
                     self.leftOpp.pip = 0
                     self.rightOpp.pip = 0
                     self.street += 1
-
+                    self.numArrivalsAtStreet[self.street] += 1
                     for pl in [self.me, self.leftOpp, self.rightOpp]:
                         pl.aggFreqChanged = False
-
                         if pl.active==1 and pl.stack>0:
                             pl.numArrivalsAtStreet[self.street] += 1
                         print pl.name, "active:", pl.active, "stack size:", pl.stack, "arrivals:", pl.numArrivalsAtStreet
@@ -254,9 +255,10 @@ class GameState:
                     rounds = self.handID
                 if rounds == 0:
                     p.aggFreq[s] = 0
+                    p.avgChips[s] = 0
                 else:
+                    p.avgChips[s] = float(p.amountContributed[s])/rounds
                     p.aggFreq[s] = float(p.numBets[s])/rounds
-                p.avgChips[s] = float(p.amountContributed[s])/self.handID
                 if p.numBets[s] >0:
                     p.avgRaiseAmt[s] = float(p.amountBetRaise[s])/p.numBets[s]
 
