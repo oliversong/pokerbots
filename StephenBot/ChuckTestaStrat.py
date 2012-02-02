@@ -46,7 +46,7 @@ class ChuckTestaStrat(Strategy):
             elif game.activePlayers ==2:
                 comment = "2 players: know nothing"
             else:
-                comment = "Know Nothing and neither 3 or 2 players in game, there are", game.activePlayers, "players"
+                comment = "Know Nothing and neither 3 or 2 players in game, there are"+ str(game.activePlayers)+ "players"
         elif game.activePlayers == 3:
             if UNKNOWN in scores.values():
                 score = scores[game.leftOpp.name]

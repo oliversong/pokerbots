@@ -53,6 +53,7 @@ class GameState:
         self.activePlayers = 3
         self.lastActor = None
 
+
     def parseInput(self, input):
         numOptArgs = 0
         packet = input.split(" ")
@@ -224,7 +225,7 @@ class GameState:
                 #elif sla == "WIN":
                 if sla not in ["FOLD", "SHOWS", "TIE", "WIN", "REFUND"]:
                     self.lastActor = player
-                print "lastactor:",self.lastActor.name
+                    print "lastactor:",self.lastActor.name
 
                 a = Action(ACTION_TYPES.index(sla), self.lastActions[i][1], self.street, c1,
                            c2, potamt, betamt, amt)
