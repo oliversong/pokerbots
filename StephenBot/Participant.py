@@ -1,5 +1,6 @@
 from Card import *
 from MatchHistory import *
+import random
 
 class Participant():
     def __init__(self, name=""):
@@ -42,6 +43,6 @@ class Participant():
         return int(self.stack + self.pip)
 
     def isAggressive(self, game):
-        #cutoffs = [.4, .2, .2, .15]
-        #return self.aggFreq[game.street] > cutoffs[game.street]
-        return True
+        cutoffs = [.4, .2, .2, .15]
+        return self.aggFreq[game.street] > cutoffs[game.street]
+        #return random.randint(0,1)

@@ -54,7 +54,7 @@ class ChuckTestaStrat(Strategy):
                 comment += "3 are playing, "
                 if scores[game.rightOpp.name] == UNKNOWN and scores[game.leftOpp.name] == UNKNOWN:
                     comment += "know neither opp's EV, "
-                    if Uplayer.lastAction.type in [BET, RAISE]: #Need to Check this
+                    if self.matchLastAction(game, Uplayer, [BET,RAISE]):
                         comment += "unaggresive player bet or raised, "
                         move = self.blindEVplay(game,ev)
                     else:
@@ -63,23 +63,23 @@ class ChuckTestaStrat(Strategy):
                 elif scores[game.rightOpp.name] == UNKNOWN or scores[game.leftOpp.name] == UNKNOWN:
                     if scores[Aplayer.name] != UNKNOWN: #We know the agressive player
                         comment += "only know agressive player's EV, "
-                        if Uplayer.lastAction.type in [BET, RAISE]: #Need to Check this
+                        if self.matchLastAction(game, Uplayer, [BET,RAISE]):
                             comment += "unaggresive player bet or raised, "
-                            move = self.evPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
+                            move = self.blindEVplay(game,ev)
                         else:
                             comment += "unaggressive player did not bet or raise, "
                             move = self.aggPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
                     else: #We know the unagressive player
                         comment += "only know unaggressive player's EV, "
-                        if Uplayer.lastAction.type in [BET, RAISE]: #Need to Check this
+                        if self.matchLastAction(game, Uplayer, [BET,RAISE]):
                             comment += "unaggresive player bet or raised, "
                             move = self.evPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
                         else:
                             comment += "unaggressive player did not bet or raise, "
                             move = self.blindAggPlay(game,ev)
                 else:
-                    "know both EVs, "
-                    if Uplayer.lastAction.type in [BET, RAISE]: #Need to Check this
+                    comment += "know both EVs, "
+                    if self.matchLastAction(game, Uplayer, [BET,RAISE]):
                         comment += "unaggresive player bet or raised, "
                         move = self.evPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
                     else:
@@ -87,17 +87,12 @@ class ChuckTestaStrat(Strategy):
                         move = self.blindAggPlay(game,ev)
             elif game.activePlayers == 2:
                 comment += "2 are playing, "
-                player = game.leftOpp
-                if not player.active:
-                    player = game.rightOpp
-                score = scores[player.name]
-
-                if player.isAggressive(game):
+                if Aplayer.active:
                     comment += "aggressive player is still playing"
-                    move = self.aggPlay2(game,score,ev)
+                    move = self.aggPlay2(game,scores[Aplayer.name],ev)
                 else:
                     comment += "unaggressive player is still playing"
-                    move = self.evPlay2(game,score.ev)
+                    move = self.evPlay2(game,scores[Uplayer.name],ev)
             else:
                 comment = "neither 3 nor 2 are playing???", game.activePlayers, "players"
         else: ##Neither opp is aggressive
@@ -115,10 +110,14 @@ class ChuckTestaStrat(Strategy):
             else:
                 comment = "Know Nothing and neither 3 or 2 players in game, there are", game.activePlayers, "players"
 
+        move.amount = min([move.amount, game.me.getAllIn()])
         #print comment
         if ACTION_TYPES[move.type] not in [la[0] for la in game.legalActions]:
 #            print "returned illegal action",move,"! in",game.legalActions
-            move = Move(CHECK)
+            if move.type in [BET,RAISE]:
+                move = move(CALL)
+            else:
+                move = Move(CHECK)
 
         move.rightEV = OppEvs[game.rightOpp.name]
         move.leftEV = OppEvs[game.leftOpp.name]
@@ -126,6 +125,10 @@ class ChuckTestaStrat(Strategy):
         move.comment = comment
 
         return move
+
+    def matchLastAction(self, game, player, actionTypes):
+        lastAction = player.lastActions[-1]
+        return lastAction.type in actionTypes and lastAction.street == game.street
 
     def getOppEvs(self, game):
         OppEvs = {}
@@ -172,9 +175,16 @@ class ChuckTestaStrat(Strategy):
             if la[0] == "RAISE":
                 canRaise = True
 
+
+
         if canRaise and curAmt > 2*potAmt: #don't call super aggressive bets
             #with bad ev
             return move
+        if canRaise: #don't re-raise with bad ev
+            if game.rightOpp.active and self.matchLastAction(game, game.rightOpp,[RAISE]):
+                return move
+            elif game.leftOpp.active and self.matchLastAction(game, game.leftOpp,[RAISE]):
+                return move
 
         if street == PREFLOP:
             move = Move(CHECK)
@@ -462,20 +472,21 @@ class ChuckTestaStrat(Strategy):
             return self.goodAggPlay(game)
 
     def evPlay3(self,game,s1,s2,ev):
+        potAmt = game.pot + game.rightOpp.pip + game.leftOpp.pip + game.me.pip
         if s1 == UNKNOWN and s2 == UNKNOWN:
             return self.blindEVplay(game,ev)
         elif s1 == UNKNOWN or s2 == UNKNOWN:
             if s1 == BEST or s2 == BEST:
                 return self.bestEVplay(game)
-            elif s1 == bad and s2 == bad:
+            elif s1 == BAD or s2 == BAD:
                 return Move(CHECK)
             else:
-                return self.maxRisk(game,4)
+                return self.maxRisk(game,potAmt/2.0)
         else:
             if s1 == BEST and s2 == BEST:
                 return self.bestEVplay(game)
             elif s1 != BAD and s2 != BAD:
-                return self.maxRisk(game,10)
+                return self.maxRisk(game,potAmt/2.0)
             else:
                 return Move(CHECK)
 
@@ -495,6 +506,7 @@ class ChuckTestaStrat(Strategy):
         elif s1 == BEST:
             return self.bestEVplay(game)
         elif s1 == OK:
-            return self.maxRisk(game,10)
+            potAmt = game.pot + game.rightOpp.pip + game.leftOpp.pip + game.me.pip
+            return self.maxRisk(game,potAmt/2.0)
         else:
             return Move(CHECK)
