@@ -160,17 +160,14 @@ class ChuckTestaStrat(Strategy):
             if la[0] == "RAISE":
                 canRaise = True
 
-        if not canBet and curAmt > game.lastActor.totalPot:
-            return Move(CHECK)
-
         if street == PREFLOP:
-            move = Move(FOLD)
+            move = Move(CHECK)
             #Raise 10% of the time
             if random.randint(1,100) <= 10 and canRaise:
                 move = Move(RAISE, random.randint(1,2)*potAmt)
         elif street == FLOP:
             if canRaise:
-                move = Move(FOLD)
+                move = Move(CHECK)
                 if random.randint(1,100) <= 60:
                     move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
             elif canBet:
@@ -179,13 +176,18 @@ class ChuckTestaStrat(Strategy):
                     move = Move(BET, random.randint(33,50)/100.0*potAmt)
         elif street == TURN:
             if canRaise:
-                move = Move(FOLD)
+                move = Move(CHECK)
                 if random.randint(1,100) <= 15:
                     move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
             elif canBet:
                 move = Move(CHECK)
                 if random.randint(1,100) <= 7:
                     move = Move(BET, random.randint(33,50)/100.0*potAmt)
+
+        if move.type == CHECK and curAmt < .33 * potAmt and canRaise:
+            move = Move(CALL)
+            if random.randint(1,100) <= 50:
+                move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
         move.amount = min([move.amount, game.me.getAllIn()])
         return move
 
@@ -203,11 +205,8 @@ class ChuckTestaStrat(Strategy):
             if la[0] == "RAISE":
                 canRaise = True
 
-        if street != PREFLOP and not canBet and curAmt > 1.5*(game.lastActor.totalPot):
-            return move
-
         if game.street == PREFLOP:
-            if curAmt>15:
+            if curAmt>50:
                 return move
             move = Move(CALL)
             if random.randint(1,100) <= 10 and canRaise:
@@ -223,7 +222,7 @@ class ChuckTestaStrat(Strategy):
                     move = Move(BET, random.randint(33,66)/100.0*potAmt)
         elif game.street == TURN:
             if canRaise:
-                move = Move(FOLD)
+                move = Move(CHECK)
                 if random.randint(1,100) <= 45:
                     move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
             elif canBet:
@@ -232,7 +231,7 @@ class ChuckTestaStrat(Strategy):
                     move = Move(BET, random.randint(33,66)/100.0*potAmt)
         elif game.street == RIVER:
             if canRaise:
-                move = Move(FOLD)
+                move = Move(CHECK)
                 if random.randint(1,100) <= 15:
                     move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
             elif canBet:
@@ -241,6 +240,11 @@ class ChuckTestaStrat(Strategy):
                     move = Move(BET, random.randint(33,66)/100.0*potAmt)
         else:
             print "Error! You reached a state not 0-3! in blindEVplay"
+
+        if move.type == CHECK and curAmt < .33 * potAmt and canRaise:
+            move = Move(CALL)
+            if random.randint(1,100) <= 50:
+                move = Move(RAISE, random.randint(20,25)/10.0*game.lastBet)
         move.amount = min([move.amount, game.me.getAllIn()])
         return move
 
