@@ -49,13 +49,11 @@ class HandHistoryRePlayer(ChuckTestaPlayer):
                     #f_out.flush()
                     for p in [self.game.leftOpp, self.game.rightOpp]:
                         for s in [0,1,2,3]:
-                            ret += "%s,%d,%d,%d,%d,%d,%d,"%(p.name, s, self.game.numArrivalsAtStreet[s], p.numArrivalsAtStreet[s], p.numBets[s], p.amountContributed[s], p.amountBetRaise[s])
-                            ret += "%f,%f,%f\n" %(p.aggFreq[s],p.avgChips[s],p.avgRaiseAmt[s])
-                            #l = p.name + " street: "+ str(s)+ " aggFreq: "+ str(p.aggFreq[s])+ " avgChips: "+ str(p.avgChips[s])+ " avgRaiseAmt: "+ str(p.avgRaiseAmt[s]) + "\n"
-                            #f_out.write(l)
-                            #f_out.flush()
-                    #f_out.write("\n")
-                    #f_out.flush()
+                            l = p.name + " street: "+ str(s)+  " aggFreq: "+ str(p.aggFreq[s])+ " avgChips: "+ str(p.avgChips[s])+ " avgRaiseAmt: "+ str(p.avgRaiseAmt[s]) + " percentArrivals: " + str(p.percentArrivals[s]) + "\n"
+                            f_out.write(l)
+                            f_out.flush()
+                    f_out.write("\n")
+                    f_out.flush()
         f_in.close()
         return ret
         #f_out.close()
