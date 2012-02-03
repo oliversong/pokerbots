@@ -133,13 +133,21 @@ class ChuckTestaStrat(Strategy):
             else:
                 scores[pname] = AWFUL
 
+        maxLeftEV = max([myBlindEV,scores[game.leftOpp.name]])
+        if OppEvs[game.leftOpp.name][1]<100:
+            maxLeftEV = scores[game.leftOpp.name]
+        maxRightEV = max([myBlindEV,scores[game.rightOpp.name]])
+        if OppEvs[game.rightOpp.name][1]<100:
+            maxLeftEV = scores[game.rightOpp.name]
+
         print "EV:", ev, "myBlindEV:",myBlindEV, "LEFT EV:", OppEvs[game.leftOpp.name],"-",scores[game.leftOpp.name],"=",scores[game.leftOpp.name], "RIGHT EV:", OppEvs[game.rightOpp.name],"=",scores[game.rightOpp.name], "activePlayers:", game.activePlayers
         if nump == 3:
-            score = min([max([myBlindEV,scores[game.rightOpp.name]]),max([myBlindEV,scores[game.leftOpp.name]])])
+            score = min([maxLeftEV, maxRightEV])
         else:
-            score = max([myBlindEV,scores[game.rightOpp.name]])
+            score = maxRightEV
             if not game.rightOpp.active:
-                score = max([myBlindEV,scores[game.leftOpp.name]])
+                score = maxLeftEV
+
 
         tagPlaying = ((not game.leftOpp.isLAP(game) and game.leftOpp.active)
                       or (not game.rightOpp.isLAP(game) and game.rightOpp.active))
