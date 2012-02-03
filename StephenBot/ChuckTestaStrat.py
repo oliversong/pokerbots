@@ -9,9 +9,9 @@ class ChuckTestaStrat(Strategy):
 
     def getMove(self, game):
         # Calculate our ev
-        ev = self.evalHand(game)
-
         OppEvs = self.getOppEvs(game)
+
+        ev = self.evalHand(game, OppEvs)
 
         move = Move(CHECK)
         scores = {}

@@ -3,6 +3,7 @@ from Enums import *
 from Move import *
 import TwoPocketLookup
 import ThreePocketLookup
+import random
 
 ITERATIONS = 10000
 
@@ -25,13 +26,61 @@ class Strategy:
     def evaluatePocketCards3(self, game):
         return ThreePocketLookup.evalPocket(game.holeCard1, game.holeCard2)
 
-    def evalHand(self, game):
+    def evalHand(self, game, oppEvs = {}):
         hand = [game.holeCard1.stringValue, game.holeCard2.stringValue]
         if game.street==PREFLOP:
             if game.activePlayers == 2:
                 ev = self.evaluatePocketCards2(game)
+#                print "TWO PLAYER UNKNOWN OPP EV: ", ev
+                #determine which player is still in
+                if game.leftOpp.active == 1:
+                    p = game.leftOpp
+                else:
+                    p = game.rightOpp
+                #get their range of hands
+                if p.name in oppEvs.keys():
+                    pEV = oppEvs[p.name]
+                    if pEV[0] != -1:
+                        p.handRange = reduce(lambda x,y:x+y, TwoPocketLookup.lookupvalue[int(pEV[0]-pEV[1]):int(pEV[0]+pEV[1]+1)])
+                        wins = 0
+                        iters = ITERATIONS/len(p.handRange)
+                        num_hands = 0
+                        for h in p.handRange:
+                            ev = self.pokereval.poker_eval(game="holdem",pockets=[hand,list(h)],dead=[],board=game.boardCards,iterations=iters)
+                            wins += ev['eval'][0]['winhi']+ev['eval'][0]['tiehi']/2.0
+                            num_hands+=1
+                        ev = 1000 * wins/float(num_hands*iters)
+#                        print "TWO PLAYER EDUCATED EV:", ev
+                        
             else:
                 ev = self.evaluatePocketCards3(game)
+#                print "THREE PLAYER UNKNOWN OPP EV: ", ev
+                lHands = [(255,255)]
+                rHands = [(255,255)]
+                if game.leftOpp.name in oppEvs.keys():
+                    pEV = oppEvs[game.leftOpp.name]
+                    if pEV[0] != -1:
+                        lHands = reduce(lambda x,y:x+y, ThreePocketLookup.lookupvalue[int(pEV[0]-pEV[1]):int(pEV[0]+pEV[1]+1)])
+                if game.rightOpp.name in oppEvs.keys():
+                    pEV = oppEvs[game.rightOpp.name]
+                    if pEV[0] != -1:
+                        rHands = reduce(lambda x,y:x+y, ThreePocketLookup.lookupvalue[int(pEV[0]-pEV[1]):int(pEV[0]+pEV[1]+1)])
+                if lHands !=[(255,255)]  or rHands!=[(255,255)]: 
+                    wins = 0
+                    allPairs = []
+                    samples = 3000
+                    num_hands = 0
+                    iters  = ITERATIONS/samples
+                    for i in range(samples):
+                        p1 = list(lHands[random.randrange(len(lHands))])
+                        p2 = list(rHands[random.randrange(len(rHands))])
+                        pockets = [hand,p1,p2]
+                        ev = self.pokereval.poker_eval(game="holdem",pockets=pockets,dead=[],board=game.boardCards,iterations=iters)
+                        wins += ev['eval'][0]['winhi'] + ev['eval'][0]['tiehi']/2.0
+                        num_hands += 1
+                    ev = 1000 * wins/float(num_hands*iters)
+#                    print "THREE PLAYER EDUCATED EV: ", ev
+                
         else:
             if game.activePlayers == 3:
                 pockets = [hand,[255,255],[255,255]]
