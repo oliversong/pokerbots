@@ -41,7 +41,7 @@ class Strategy:
                 if p.name in oppEvs.keys():
                     pEV = oppEvs[p.name]
                     if pEV[0] != -1:
-                        p.handRange = reduce(lambda x,y:x+y, TwoPocketLookup.lookupvalue[int(pEV[0]-pEV[1]):int(pEV[0]+pEV[1]+1)])
+                        p.handRange = reduce(lambda x,y:x+y, TwoPocketLookup.lookupvalue[max([pEV[0]-pEV[1],0]):min([pEV[0]+pEV[1]+1,1000])])
                         if len(p.handRange) == 0:
                             p.handRange = [(255,255)]
                         wins = 0
@@ -53,7 +53,7 @@ class Strategy:
                             num_hands+=1
                         ev = 1000 * wins/float(num_hands*iters)
                         print "TWO PLAYER EDUCATED EV:", ev
-                        
+
             else: #3 active players
                 ev = self.evaluatePocketCards3(game)
                 print "THREE PLAYER UNKNOWN OPP EV: ", ev
@@ -67,21 +67,21 @@ class Strategy:
                     pEV = oppEvs[game.rightOpp.name]
                     if pEV[0] != -1:
                         game.rightOpp.handRange = reduce(lambda x,y:x+y, ThreePocketLookup.lookupvalue[int(pEV[0]-pEV[1]):int(pEV[0]+pEV[1]+1)])
-                if game.leftOpp.handRange !=[(255,255)] or game.rightOpp.handRange !=[(255,255)]: 
+                if game.leftOpp.handRange !=[(255,255)] or game.rightOpp.handRange !=[(255,255)]:
                     wins = 0
                     samples = 3000
                     num_hands = 0
                     iters  = ITERATIONS/samples
                     for i in range(samples):
-                        p1 = list(game.leftOpp.handRange[random.randrange(len(game.leftOpp.handRange))])
-                        p2 = list(game.rightOpp.handRange[random.randrange(len(game.rightOpp.handRange))])
+                        p1 = random.choice(game.leftOpp.handRange)
+                        p2 = random.choice(game.rightOpp.handRange)
                         pockets = [hand,p1,p2]
                         ev = self.pokereval.poker_eval(game="holdem",pockets=pockets,dead=[],board=game.boardCards,iterations=iters)
                         wins += ev['eval'][0]['winhi'] + ev['eval'][0]['tiehi']/2.0
                         num_hands += 1
                     ev = 1000 * wins/float(num_hands*iters)
                     print "THREE PLAYER EDUCATED EV: ", ev
-                
+
         else: #post-flop
             if game.activePlayers == 3:
 #                wins = 0
@@ -128,7 +128,7 @@ class Strategy:
 #                    ev2 = 1000*wins2/float(num_hands2*iters)
 #                else:
 #                    ev2 = -1
-#                
+#
 #                ###unused except for printing
 #                naiveEV = self.pokereval.poker_eval(game="holdem",pockets=[hand,[255,255],[255,255]],dead=[],board=game.boardCards,iterations = ITERATIONS)
 #                naiveEV = 1000*(naiveEV['eval'][0]['winhi'] + naiveEV['eval'][0]['tiehi']/2.0)/float(ITERATIONS)
@@ -192,7 +192,7 @@ class Strategy:
                         ev1 = 1000*wins1/float(num_hands1*iters)
                     else:
                         ev1 = -1
-                    
+
                     ###only used in printing
                     naiveEV = self.pokereval.poker_eval(game="holdem",pockets=[hand,[255,255]],dead=[],board=game.boardCards,iterations = ITERATIONS)
                     naiveEV = 1000*(naiveEV['eval'][0]['winhi'] + naiveEV['eval'][0]['tiehi']/2.0)/float(ITERATIONS)
@@ -205,7 +205,7 @@ class Strategy:
                     print "my naive ev:", naiveEV, " educated ev:", ev
                     print p.name, " ev:", PEV, " educated ev:", ev1
                     print "gameboard", game.boardCards
-                
+
                 else:
                     pockets = [hand,[255,255]]
             else:
