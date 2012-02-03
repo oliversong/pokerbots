@@ -41,7 +41,7 @@ class Strategy:
                 if p.name in oppEvs.keys():
                     pEV = oppEvs[p.name]
                     if pEV[0] != -1:
-                        p.handRange = reduce(lambda x,y:x+y, TwoPocketLookup.lookupvalue[max([pEV[0]-pEV[1],0]):min([pEV[0]+pEV[1]+1,1000])])
+                        p.handRange = reduce(lambda x,y:x+y, TwoPocketLookup.lookupvalue[max([int(pEV[0]-pEV[1]),0]):min([int(pEV[0]+pEV[1]+1),1000])])
                         if len(p.handRange) == 0:
                             p.handRange = [(255,255)]
                         wins = 0
@@ -62,19 +62,19 @@ class Strategy:
                 if game.leftOpp.name in oppEvs.keys():
                     pEV = oppEvs[game.leftOpp.name]
                     if pEV[0] != -1:
-                        game.leftOpp.handRange = reduce(lambda x,y:x+y, ThreePocketLookup.lookupvalue[int(pEV[0]-pEV[1]):int(pEV[0]+pEV[1]+1)])
+                        game.leftOpp.handRange = reduce(lambda x,y:x+y, ThreePocketLookup.lookupvalue[max([int(pEV[0]-pEV[1]),0]):min([int(pEV[0]+pEV[1]+1),1000])])
                 if game.rightOpp.name in oppEvs.keys():
                     pEV = oppEvs[game.rightOpp.name]
                     if pEV[0] != -1:
-                        game.rightOpp.handRange = reduce(lambda x,y:x+y, ThreePocketLookup.lookupvalue[int(pEV[0]-pEV[1]):int(pEV[0]+pEV[1]+1)])
+                        game.rightOpp.handRange = reduce(lambda x,y:x+y, ThreePocketLookup.lookupvalue[max([int(pEV[0]-pEV[1]),0]):min([int(pEV[0]+pEV[1]+1),1000])])
                 if game.leftOpp.handRange !=[(255,255)] or game.rightOpp.handRange !=[(255,255)]:
                     wins = 0
                     samples = 3000
                     num_hands = 0
                     iters  = ITERATIONS/samples
                     for i in range(samples):
-                        p1 = random.choice(game.leftOpp.handRange)
-                        p2 = random.choice(game.rightOpp.handRange)
+                        p1 = list(random.choice(game.leftOpp.handRange))
+                        p2 = list(random.choice(game.rightOpp.handRange))
                         pockets = [hand,p1,p2]
                         ev = self.pokereval.poker_eval(game="holdem",pockets=pockets,dead=[],board=game.boardCards,iterations=iters)
                         wins += ev['eval'][0]['winhi'] + ev['eval'][0]['tiehi']/2.0
@@ -152,62 +152,62 @@ class Strategy:
 
                 pockets = [hand,[255,255],[255,255]]
             elif game.activePlayers == 2:
-                if game.leftOpp.active == 1:
-                    p = game.leftOpp
-                else:
-                    p = game.rightOpp
-
-                if p.handRange != [(255,255)]:
-                    wins = 0
-                    wins1 = 0
-                    samples = 1000
-                    num_hands = 0
-                    num_hands1 = 0
-                    iters = ITERATIONS/samples
-                    for i in range(samples):
-                        if len(p.handRange)>1:
-                            p1 = list(p.handRange[random.randrange(len(p.handRange))])
-                            pockets = [[255,255],p1]
-                            ev = self.pokereval.poker_eval(game="holdem",pockets=pockets,dead=[],board=game.boardCards,iterations=iters)
-                            tempWins1 = ev['eval'][1]['winhi'] + ev['eval'][1]['tiehi']/2.0
-                            tempEV1 = 1000 * tempWins1/float(iters)
-                            #check if those possible cards in hand range give an EV that is in range we expect from history
-                            if p.name in oppEvs.keys():
-                                if oppEvs[p.name][0] != -1:
-                                    if tempEV1 > (oppEvs[p.name][0] - oppEvs[p.name][1]) and tempEV1 < (oppEvs[p.name][0] +  oppEvs[p.name][1]):
-                                        wins1 += tempWins1
-                                        num_hands1 += 1
-                            else:
-                                wins1 += tempWins1
-                                num_hands1 += 1
-                            print "REMOVING ELEMNT", p1
-                            p.handRange.remove((p1[0],p1[1]))
-                            #update our EV
-                            pockets = [hand, p1]
-                            ev = self.pokereval.poker_eval(game="holdem",pockets=pockets,dead=[],board=game.boardCards,iterations=iters)
-                            wins += ev['eval'][0]['winhi'] + ev['eval'][0]['tiehi']/2.0
-                            num_hands += 1
-                    ev = 1000*wins/float(num_hands*iters)
-                    if num_hands1 > 0:
-                        ev1 = 1000*wins1/float(num_hands1*iters)
-                    else:
-                        ev1 = -1
-
-                    ###only used in printing
-                    naiveEV = self.pokereval.poker_eval(game="holdem",pockets=[hand,[255,255]],dead=[],board=game.boardCards,iterations = ITERATIONS)
-                    naiveEV = 1000*(naiveEV['eval'][0]['winhi'] + naiveEV['eval'][0]['tiehi']/2.0)/float(ITERATIONS)
-                    if p.name in oppEvs.keys():
-                        PEV = oppEvs[p.name]
-                    else:
-                        PEV = -1
-
-                    print "TWO PLAYERS:"
-                    print "my naive ev:", naiveEV, " educated ev:", ev
-                    print p.name, " ev:", PEV, " educated ev:", ev1
-                    print "gameboard", game.boardCards
-
-                else:
-                    pockets = [hand,[255,255]]
+#                if game.leftOpp.active == 1:
+#                    p = game.leftOpp
+#                else:
+#                    p = game.rightOpp
+#
+##                if p.handRange != [(255,255)]:
+#                    wins = 0
+#                    wins1 = 0
+#                    samples = 1000
+#                    num_hands = 0
+#                    num_hands1 = 0
+#                    iters = ITERATIONS/samples
+#                    for i in range(samples):
+#                        if len(p.handRange)>1:
+#                            p1 = list(p.handRange[random.randrange(len(p.handRange))])
+#                            pockets = [[255,255],p1]
+#                            ev = self.pokereval.poker_eval(game="holdem",pockets=pockets,dead=[],board=game.boardCards,iterations=iters)
+#                            tempWins1 = ev['eval'][1]['winhi'] + ev['eval'][1]['tiehi']/2.0
+#                            tempEV1 = 1000 * tempWins1/float(iters)
+#                            #check if those possible cards in hand range give an EV that is in range we expect from history
+#                            if p.name in oppEvs.keys():
+#                                if oppEvs[p.name][0] != -1:
+#                                    if tempEV1 > (oppEvs[p.name][0] - oppEvs[p.name][1]) and tempEV1 < (oppEvs[p.name][0] +  oppEvs[p.name][1]):
+#                                        wins1 += tempWins1
+#                                        num_hands1 += 1
+#                            else:
+#                                wins1 += tempWins1
+#                                num_hands1 += 1
+#                            print "REMOVING ELEMNT", p1
+#                            p.handRange.remove((p1[0],p1[1]))
+#                            #update our EV
+#                            pockets = [hand, p1]
+#                            ev = self.pokereval.poker_eval(game="holdem",pockets=pockets,dead=[],board=game.boardCards,iterations=iters)
+#                            wins += ev['eval'][0]['winhi'] + ev['eval'][0]['tiehi']/2.0
+#                            num_hands += 1
+#                    ev = 1000*wins/float(num_hands*iters)
+#                    if num_hands1 > 0:
+#                        ev1 = 1000*wins1/float(num_hands1*iters)
+#                    else:
+#                        ev1 = -1
+##
+#                    ###only used in printing
+#                    naiveEV = self.pokereval.poker_eval(game="holdem",pockets=[hand,[255,255]],dead=[],board=game.boardCards,iterations = ITERATIONS)
+#                    naiveEV = 1000*(naiveEV['eval'][0]['winhi'] + naiveEV['eval'][0]['tiehi']/2.0)/float(ITERATIONS)
+#                    if p.name in oppEvs.keys():
+#                        PEV = oppEvs[p.name]
+#                    else:
+#                        PEV = -1
+#
+#                    print "TWO PLAYERS:"
+#                    print "my naive ev:", naiveEV, " educated ev:", ev
+#                    print p.name, " ev:", PEV, " educated ev:", ev1
+#                    print "gameboard", game.boardCards
+#
+#                else:
+                pockets = [hand,[255,255]]
             else:
                 # shouldn't get here, but just in case
                 print "Only 1 active player! EV is 1"

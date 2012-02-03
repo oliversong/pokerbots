@@ -99,8 +99,8 @@ raiseCutoffs = [
     ]
 ]
 
-blindEVs = [[[400,540,650],[550,670,800],[550,700,800],[500,750,850]],
-            [[290,370,445],[380,500,650],[300,500,650],[250,400,700]]]
+blindEVs = [[[300,500,650],[550,670,800],[550,700,800],[500,750,850]],
+            [[250,370,445],[380,500,650],[300,500,650],[250,400,700]]]
 
 class ChuckTestaStrat(Strategy):
     def __init__(self):
@@ -196,6 +196,7 @@ class ChuckTestaStrat(Strategy):
         if facingRaise: comment += "facing a raise to " + str(game.lastBet) + " "
 
         prob = random.randint(1,100)
+        totalPot = game.pot + game.me.pip + game.leftOpp.pip + game.rightOpp.pip
         if game.street == PREFLOP:
             if firstToAct:
                 check = firstToActCutoffs[isLAP][PREFLOP][score-1]
@@ -207,19 +208,20 @@ class ChuckTestaStrat(Strategy):
                 bin = self.getRaiseBin(game.street, game.lastActor.lastActions[-1])
                 if bin == BIN1:
                     if isLAP:
-                        raiseAmt = 3.5*game.me.totalPot
+                        raiseAmt = int(3.5*totalPot)
                     else:
-                        raiseAmt = 2.75*game.me.totalPot
+                        raiseAmt = int(2.75* totalPot)
                 elif bin == BIN2:
                     if isLAP:
-                        raiseAmt = 2.5*game.me.totalPot
+                        raiseAmt = int(2.5*totalPot)
                     else:
-                        raiseAmt = 3*game.me.totalPot
+                        raiseAmt = int(3*totalPot)
                 elif bin == BIN3:
-                    raiseAmt = 2.5*game.me.totalPot
+                    raiseAmt = int(2.5*totalPot)
                 else:
                     raiseAmt = game.me.getAllIn()
 
+                comment += " bin="+str(bin) + " raiseamnt=" + str(raiseAmt)
                 r,c = raiseCutoffs[isLAP][game.street][bin][score-1]
                 if prob <= r:
                     move = Move(RAISE, raiseAmt)
@@ -229,10 +231,10 @@ class ChuckTestaStrat(Strategy):
                     move = Move(FOLD)
         else:
             if isLAP:
-                betAmt = .8*game.me.totalPot
-                raiseAmt = max([3*game.lastBet, .75*game.me.totalPot])
+                betAmt = .8*totalPot
+                raiseAmt = max([3*game.lastBet, int(.75*totalPot)])
             else:
-                betAmt = .5*game.me.totalPot
+                betAmt = .5*totalPot
                 raiseAmt = 3*game.lastBet
 
             if firstToAct:
@@ -243,6 +245,7 @@ class ChuckTestaStrat(Strategy):
                     move = Move(BET, betAmt)
             elif facingBet:
                 bin = self.getBetBin(game.lastActor.lastActions[-1].potAmount)
+                comment += " bin="+str(bin) + " betamnt=" + str(betAmt)
                 r,c = betCutoffs[isLAP][game.street][bin][score-1]
                 if prob <= r:
                     move = Move(RAISE, raiseAmt)
@@ -252,6 +255,7 @@ class ChuckTestaStrat(Strategy):
                     move = Move(FOLD)
             else:
                 bin = self.getRaiseBin(game.street, game.lastActor.lastActions[-1])
+                comment += " bin="+str(bin) + " raiseamnt=" + str(raiseAmt)
                 r,c = raiseCutoffs[isLAP][game.street][bin][score-1]
                 if prob <= r:
                     move = Move(RAISE, raiseAmt)
