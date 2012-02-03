@@ -107,8 +107,8 @@ class ChuckTestaStrat(Strategy):
         Strategy.__init__(self)
 
     def getMove(self, game):
-        ev = self.evalHand(game)
         OppEvs = self.getOppEvs(game)
+        ev = self.evalHand(game, OppEvs)
         scores = {}
         nump = game.activePlayers
 

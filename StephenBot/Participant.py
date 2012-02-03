@@ -33,6 +33,8 @@ class Participant():
         self.holeCard2 = None
         self.lastActions = []
 
+        self.handRange = [(255,255)]
+
         self.aggFreqChanged = False
 
     def isAllIn(self):
