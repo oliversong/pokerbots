@@ -3,119 +3,161 @@ from Enums import *
 from Move import *
 import random
 
+firstToActCutoffs = [
+    [#TAG
+        [80, 80, 50],#PREFLOP
+        [80, 80, 40],#FLOP
+        [80, 80, 40],#TURN
+        [80, 70, 0]#RIVER
+    ],[#LAP
+        [70, 80, 50],#PREFLOP
+        [70, 80, 30],#FLOP
+        [70, 80, 30],#TURN
+        [70, 80, 0]#RIVER
+    ]
+]
+
+betCutoffs = [
+    [#TAG
+        [],#PREFLOP - impossible to bet on preflop
+        [#FLOP
+            [[10, 40], [25, 100], [50, 100]],#BIN1
+            [[5,  20], [25, 100], [50, 100]],#BIN2
+            [[0,  0 ], [10, 85 ], [40, 100]],#BIN3
+            [[0,  0 ], [0,  50 ], [75, 100]] #BIN4
+        ],[#TURN
+            [[10, 40], [25, 100], [50, 100]],#BIN1
+            [[5,  20], [25, 100], [50, 100]],#BIN2
+            [[0,  0 ], [10, 85 ], [40, 100]],#BIN3
+            [[0,  0 ], [0,  50 ], [75, 100]] #BIN4
+        ],[#RIVER
+            [[10, 40], [25, 100], [100, 100]],#BIN1
+            [[5,  20], [25, 100], [100, 100]],#BIN2
+            [[0,  0 ], [10, 85 ], [100, 100]],#BIN3
+            [[0,  0 ], [0,  50 ], [100, 100]] #BIN4
+        ]
+    ],[#LAP
+        [],#PREFLOP - impossible to bet on preflop
+        [#FLOP
+            [[60, 100], [40, 100], [30, 100]],#BIN1
+            [[60, 100], [40, 100], [30, 100]],#BIN2
+            [[20, 70 ], [50, 100], [30, 100]],#BIN3
+            [[0,  20 ], [75, 100], [30, 100]] #BIN4
+        ],[#TURN
+            [[60, 100], [40, 100], [30, 100]],#BIN1
+            [[60, 100], [40, 100], [30, 100]],#BIN2
+            [[20, 70 ], [50, 100], [30, 100]],#BIN3
+            [[0,  20 ], [75, 100], [30, 100]] #BIN4
+        ],[#RIVER
+            [[60, 100], [50, 100], [100, 100]],#BIN1
+            [[60, 100], [35, 100], [100, 100]],#BIN2
+            [[20, 70 ], [15, 100], [100, 100]],#BIN3
+            [[0,  20 ], [0,  100], [100, 100]] #BIN4
+        ]
+    ]
+]
+
+raiseCutoffs = [
+    [#TAG
+        [#PREFLOP
+            [[30, 80], [20, 100], [90, 100]],#BIN1
+            [[0,  0 ], [0,  70 ], [70, 100]],#BIN2
+            [[0,  0 ], [0,  50 ], [65, 100]],#BIN3
+            [[0,  0 ], [0,  30 ], [90, 100]]#BIN3
+        ],[#FLOP
+            [[0, 40], [0, 100], [70, 100]],#BIN1
+            [[0, 0 ], [0, 80 ], [40, 100]],#BIN2
+            [[0, 0 ], [0, 50 ], [60, 100]] #BIN3
+        ],[#TURN
+            [[0, 40], [0, 100], [70, 100]],#BIN1
+            [[0, 0 ], [0, 80 ], [40, 100]],#BIN2
+            [[0, 0 ], [0, 50 ], [60, 100]] #BIN3
+        ],[#RIVER
+            [[0, 40], [0, 100], [100, 100]],#BIN1
+            [[0, 0 ], [0, 80 ], [100, 100]],#BIN2
+            [[0, 0 ], [0, 50 ], [  0, 100]] #BIN3
+        ]
+    ],[#LAP
+        [#PREFLOP
+            [[75, 100], [60, 100], [85, 100]],#BIN1
+            [[0,  35 ], [40, 100], [70, 100]],#BIN2
+            [[0,  0  ], [0,  50 ], [50, 100]],#BIN3
+            [[0,  0  ], [0,  25 ], [70, 100]]#BIN3
+        ],[#FLOP
+            [[0,  100], [70, 100], [85, 100]],#BIN1
+            [[15, 30 ], [60, 100], [70, 100]],#BIN2
+            [[0,  0  ], [50, 50 ], [50, 100]] #BIN3
+        ],[#FLOP
+            [[0,  100], [70, 100], [85, 100]],#BIN1
+            [[15, 30 ], [60, 100], [70, 100]],#BIN2
+            [[0,  0  ], [50, 50 ], [50, 100]] #BIN3
+        ],[#RIVER
+            [[0, 100], [70, 100], [100, 100]],#BIN1
+            [[0, 10 ], [0,  100], [100, 100]],#BIN2
+            [[0, 0  ], [0,  50 ], [100, 100]] #BIN3
+        ]
+    ]
+]
+
+blindEVs = [[[400,540,650],[550,670,800],[550,700,800],[500,750,850]],
+            [[290,370,445],[380,500,650],[300,500,650],[250,400,700]]]
+
 class ChuckTestaStrat(Strategy):
     def __init__(self):
         Strategy.__init__(self)
 
     def getMove(self, game):
-        # Calculate our ev
         ev = self.evalHand(game)
-
         OppEvs = self.getOppEvs(game)
-
-        move = Move(CHECK)
         scores = {}
+        nump = game.activePlayers
+
+        if ev>blindEVs[nump-2][game.street][2]:
+            myBlindEV = GOOD
+        elif ev>blindEVs[nump-2][game.street][1]:
+            myBlindEV = OK
+        elif ev>blindEVs[nump-2][game.street][0]:
+            myBlindEV = BAD
+        else:
+            myBlindEV = AWFUL
+
         for pname,p in OppEvs.items():
             if p[0] == -1:
                 scores[pname] = UNKNOWN
-            elif ev>p[0]+p[1]/2.0:
-                scores[pname] = BEST
-            elif ev>p[0]-p[1]:
+            elif ev>p[0]+p[1]:
+                scores[pname] = GOOD
+            elif ev>p[0]:
                 scores[pname] = OK
-            else:
+            elif ev>p[0]-p[1]:
                 scores[pname] = BAD
+            else:
+                scores[pname] = AWFUL
 
-        print "LEFT EV:", OppEvs[game.leftOpp.name],"agg?",game.leftOpp.isAggressive(game),"-",scores[game.leftOpp.name], "RIGHT EV:", OppEvs[game.rightOpp.name],"agg?",game.rightOpp.isAggressive(game),"-",scores[game.rightOpp.name], "EV:", ev, "activePlayers:", game.activePlayers
+        print "EV:", ev, "myBlindEV:",myBlindEV, "LEFT EV:", OppEvs[game.leftOpp.name],"-",scores[game.leftOpp.name],"=",scores[game.leftOpp.name], "RIGHT EV:", OppEvs[game.rightOpp.name],"=",scores[game.rightOpp.name], "activePlayers:", game.activePlayers
+        if nump == 3:
+            score = min([max([myBlindEV,scores[game.rightOpp.name]]),max([myBlindEV,scores[game.leftOpp.name]])])
+        else:
+            score = max([myBlindEV,scores[game.rightOpp.name]])
+            if not game.rightOpp.active:
+                score = max([myBlindEV,scores[game.leftOpp.name]])
+
+        tagPlaying = ((not game.leftOpp.isLAP(game) and game.leftOpp.active)
+                      or (not game.rightOpp.isLAP(game) and game.rightOpp.active))
         comment = ""
+        if score == AWFUL:
+            move = Move(CHECK)
+        else:
+            move = self.decide(game, not tagPlaying, score)
+            comment += move.comment
+        comment += " score: " + str(score)
 
-        if game.leftOpp.isAggressive(game) and game.rightOpp.isAggressive(game): ##Both opp are aggressive
-            comment = "Both opponents are aggressive, "
-            if game.activePlayers == 3:
-                comment += "3 are playing, "
-                move = self.aggPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
-            elif game.activePlayers == 2:
-                comment += "2 are playing, "
-                player = game.leftOpp
-                if not player.active:
-                    player = game.rightOpp
-                score = scores[player.name]
-                move = self.aggPlay2(game,score,ev)
-            else:
-                comment = "neither 3 nor 2 are playing???", game.activePlayers, "players"
-        elif game.leftOpp.isAggressive(game) or game.rightOpp.isAggressive(game): ##One opp is aggressive and one opp is not
-            comment = "One opponent is aggressive and one is not, "
-            if game.leftOpp.isAggressive(game):
-                Aplayer = game.leftOpp
-                Uplayer = game.rightOpp
-            else:
-                Aplayer = game.rightOpp
-                Uplayer = game.leftOpp
-            if game.activePlayers == 3:
-                comment += "3 are playing, "
-                if scores[game.rightOpp.name] == UNKNOWN and scores[game.leftOpp.name] == UNKNOWN:
-                    comment += "know neither opp's EV, "
-                    if self.matchLastAction(game, Uplayer, [BET,RAISE]):
-                        comment += "unaggresive player bet or raised, "
-                        move = self.blindEVplay(game,ev)
-                    else:
-                        comment += "unaggressive player did not bet or raise, "
-                        move = self.blindAggPlay(game,ev)
-                elif scores[game.rightOpp.name] == UNKNOWN or scores[game.leftOpp.name] == UNKNOWN:
-                    if scores[Aplayer.name] != UNKNOWN: #We know the agressive player
-                        comment += "only know agressive player's EV, "
-                        if self.matchLastAction(game, Uplayer, [BET,RAISE]):
-                            comment += "unaggresive player bet or raised, "
-                            move = self.blindEVplay(game,ev)
-                        else:
-                            comment += "unaggressive player did not bet or raise, "
-                            move = self.aggPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
-                    else: #We know the unagressive player
-                        comment += "only know unaggressive player's EV, "
-                        if self.matchLastAction(game, Uplayer, [BET,RAISE]):
-                            comment += "unaggresive player bet or raised, "
-                            move = self.evPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
-                        else:
-                            comment += "unaggressive player did not bet or raise, "
-                            move = self.blindAggPlay(game,ev)
-                else:
-                    comment += "know both EVs, "
-                    if self.matchLastAction(game, Uplayer, [BET,RAISE]):
-                        comment += "unaggresive player bet or raised, "
-                        move = self.evPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
-                    else:
-                        comment += "unaggressive player did not bet or raise, "
-                        move = self.blindAggPlay(game,ev)
-            elif game.activePlayers == 2:
-                comment += "2 are playing, "
-                if Aplayer.active:
-                    comment += "aggressive player is still playing"
-                    move = self.aggPlay2(game,scores[Aplayer.name],ev)
-                else:
-                    comment += "unaggressive player is still playing"
-                    move = self.evPlay2(game,scores[Uplayer.name],ev)
-            else:
-                comment = "neither 3 nor 2 are playing???", game.activePlayers, "players"
-        else: ##Neither opp is aggressive
-            comment += "neither opponent is aggressive, "
-            if game.activePlayers == 3:
-                comment += "3 are playing"
-                move = self.evPlay3(game,scores[game.rightOpp.name],scores[game.leftOpp.name],ev)
-            elif game.activePlayers == 2:
-                comment += "2 are playing"
-                player = game.leftOpp
-                if not player.active:
-                    player = game.rightOpp
-                score = scores[player.name]
-                move = self.evPlay2(game,score,ev)
-            else:
-                comment = "Know Nothing and neither 3 or 2 players in game, there are", game.activePlayers, "players"
+        if move.amount is not None:
+            move.amount = min([move.amount, game.me.getAllIn()])
 
-        move.amount = min([move.amount, game.me.getAllIn()])
-        #print comment
         if ACTION_TYPES[move.type] not in [la[0] for la in game.legalActions]:
-#            print "returned illegal action",move,"! in",game.legalActions
+            print "returned illegal action",move.toString()[:-1],"! in",game.legalActions
             if move.type in [BET,RAISE]:
-                move = move(CALL)
+                move = Move(CALL)
             else:
                 move = Move(CHECK)
 
@@ -123,8 +165,133 @@ class ChuckTestaStrat(Strategy):
         move.leftEV = OppEvs[game.leftOpp.name]
         move.myEV = ev
         move.comment = comment
-
         return move
+
+    def decide(self, game, isLAP, score):
+        firstToAct = False
+        facingBet = False
+        facingRaise = False
+        canBet = False
+        canRaise = False
+        comment = "isLap=" + str(isLAP) + ", "
+
+        for la in game.legalActions:
+            if la[0] == "BET":
+                canBet = True
+            if la[0] == "RAISE":
+                canRaise = True
+
+        lastAction = game.lastActor.lastActions[-1]
+        if game.street == PREFLOP:
+            firstToAct = lastAction.type == POST
+        else:
+            firstToAct = game.me.pip + game.leftOpp.pip + game.rightOpp.pip == 0
+
+        if not firstToAct:
+            facingBet = lastAction.type == BET
+        facingRaise = not firstToAct and not facingBet
+
+        if firstToAct: comment += "first to act "
+        if facingBet: comment += "facing a bet of " + str(game.lastBet) + " "
+        if facingRaise: comment += "facing a raise to " + str(game.lastBet) + " "
+
+        prob = random.randint(1,100)
+        if game.street == PREFLOP:
+            if firstToAct:
+                check = firstToActCutoffs[isLAP][PREFLOP][score-1]
+                if prob <= check:
+                    move = Move(CALL)
+                else:
+                    move = Move(RAISE, 6)
+            else:
+                bin = self.getRaiseBin(game.street, game.lastActor.lastActions[-1])
+                if bin == BIN1:
+                    if isLAP:
+                        raiseAmt = 3.5*game.me.totalPot
+                    else:
+                        raiseAmt = 2.75*game.me.totalPot
+                elif bin == BIN2:
+                    if isLAP:
+                        raiseAmt = 2.5*game.me.totalPot
+                    else:
+                        raiseAmt = 3*game.me.totalPot
+                elif bin == BIN3:
+                    raiseAmt = 2.5*game.me.totalPot
+                else:
+                    raiseAmt = game.me.getAllIn()
+
+                r,c = raiseCutoffs[isLAP][game.street][bin][score-1]
+                if prob <= r:
+                    move = Move(RAISE, raiseAmt)
+                elif prob <= c:
+                    move = Move(CALL)
+                else:
+                    move = Move(FOLD)
+        else:
+            if isLAP:
+                betAmt = .8*game.me.totalPot
+                raiseAmt = max([3*game.lastBet, .75*game.me.totalPot])
+            else:
+                betAmt = .5*game.me.totalPot
+                raiseAmt = 3*game.lastBet
+
+            if firstToAct:
+                check = firstToActCutoffs[isLAP][game.street][score-1]
+                if prob <= check:
+                    move = Move(CHECK)
+                else:
+                    move = Move(BET, betAmt)
+            elif facingBet:
+                bin = self.getBetBin(game.lastActor.lastActions[-1].potAmount)
+                r,c = betCutoffs[isLAP][game.street][bin][score-1]
+                if prob <= r:
+                    move = Move(RAISE, raiseAmt)
+                elif prob <= c:
+                    move = Move(CALL)
+                else:
+                    move = Move(FOLD)
+            else:
+                bin = self.getRaiseBin(game.street, game.lastActor.lastActions[-1])
+                r,c = raiseCutoffs[isLAP][game.street][bin][score-1]
+                if prob <= r:
+                    move = Move(RAISE, raiseAmt)
+                elif prob <= c:
+                    move = Move(CALL)
+                else:
+                    move = Move(FOLD)
+        move.comment = comment
+        return move
+
+    def getBetBin(self, potRatio):
+        if potRatio <= .5:
+            return BIN1
+        elif potRatio <= 1.0:
+            return BIN2
+        elif potRatio <= 3.0:
+            return BIN3
+        else:
+            return BIN4
+
+    def getRaiseBin(self, street, action):
+        if street == PREFLOP:
+            if action.amount <= 12:
+                return BIN1
+            elif action.amount <= 25:
+                return BIN2
+            elif action.amount <= 50:
+                return BIN3
+            else:
+                return BIN4
+        else:
+            betRatio = action.betAmount
+            if action.amount > 50:
+                return BIN3
+            if betRatio <= 3:
+                return BIN1
+            elif betRatio <=5:
+                return BIN2
+            else:
+                return BIN3
 
     def matchLastAction(self, game, player, actionTypes):
         lastAction = player.lastActions[-1]
@@ -174,8 +341,6 @@ class ChuckTestaStrat(Strategy):
                 canBet = True
             if la[0] == "RAISE":
                 canRaise = True
-
-
 
         if canRaise and curAmt > 2*potAmt: #don't call super aggressive bets
             #with bad ev

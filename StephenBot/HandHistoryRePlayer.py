@@ -56,8 +56,8 @@ class HandHistoryRePlayer(ChuckTestaPlayer):
                             self.game.holeCard2 = h2
                             l = l[:-1] + "  my notes:" + str(move)+" trueLeftEV:"
                             l += str(leftEV) + " trueRightEV:" + str(rightEV)
-                            l += "aggresive? " + str(self.game.leftOpp.isAggressive(self.game))
-                            l += " " + str(self.game.rightOpp.isAggressive(self.game)) + "\n"
+                            l += "LAP? " + str(self.game.leftOpp.isLAP(self.game))
+                            l += " " + str(self.game.rightOpp.isLAP(self.game)) + "\n"
                         else:
                             self.processInput(data[0] + "\n")
 
@@ -73,7 +73,7 @@ class HandHistoryRePlayer(ChuckTestaPlayer):
             for s in [0,1,2,3]:
                 ret += "%s,%d,%d,%d,%d,%d,%d,"%(p.name, s, self.game.numArrivalsAtStreet[s], p.numArrivalsAtStreet[s],p.numBets[s], p.amountContributed[s], p.amountBetRaise[s])
                 ret += "%f,%f,%f\n" %(p.aggFreq[s],p.avgChips[s],p.avgRaiseAmt[s])
-        
+
         #get history stats for all opponents
         for p in self.players.keys():
             print p
@@ -81,11 +81,11 @@ class HandHistoryRePlayer(ChuckTestaPlayer):
 #            for s in [0,1,2,3]:
 #                for a in p.archive.
 #                print "    STREET ", s
-                
+
 
 
         return ret
 
 if __name__ == "__main__":
-    p = HandHistoryRePlayer(sys.argv[1])
+    p = HandHistoryRePlayer([sys.argv[1]])
     p.run()

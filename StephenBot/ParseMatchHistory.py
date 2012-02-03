@@ -2,7 +2,7 @@ class ParseMatchHistory():
     def __init__(self, numHand):
         self.packets = []
         self.numHands = numHand
-        self.myPlayer = "PoKerboT"#"StephenBot"
+        self.myPlayer = "StephenBot"#"PoKerboT"
 
     def reset(self):
         self.leftOpp = ""

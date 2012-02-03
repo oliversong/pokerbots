@@ -31,8 +31,6 @@ class GameState:
         self.me.newHand()
         self.leftOpp.newHand()
         self.rightOpp.newHand()
-        # position: 0=dealer, 1=sb, 2=bb
-        self.position = None
         self.holeCard1 = None
         self.holeCard2 = None
 
@@ -107,6 +105,7 @@ class GameState:
             self.parseBoardCards()
             self.parseLastActions()
             self.parseLegalActions()
+            print self.potSize, "=?", self.pot
 
         elif self.state == HANDOVER:
             self.me.bankroll = int(packet[1])
@@ -126,7 +125,7 @@ class GameState:
             self.parseBoardCards()
             self.parseLastActions()
             self.hand.splitActionsList()
-            self.calculatePlayerStats()
+            #self.calculatePlayerStats()
             self.leftOpp.archive.update(self)
             self.rightOpp.archive.update(self)
 
@@ -196,7 +195,7 @@ class GameState:
                     player.amountBetRaise[self.street] += amt
                 elif sla == "DEAL":
                     amt = 0
-                    self.pot += player.totalPot
+                    self.pot += self.me.pip + self.leftOpp.pip + self.rightOpp.pip
                     self.me.pip = 0
                     self.leftOpp.pip = 0
                     self.rightOpp.pip = 0
@@ -223,7 +222,7 @@ class GameState:
                 #elif sla == "REFUND":
                 #elif sla == "TIE":
                 #elif sla == "WIN":
-                if sla not in ["FOLD", "SHOWS", "TIE", "WIN", "REFUND"]:
+                if sla in ["POST","BET", "RAISE"]:
                     self.lastActor = player
                     print "lastactor:",self.lastActor.name
 
