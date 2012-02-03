@@ -266,4 +266,4 @@ class GameState:
                     p.percentArrivals[s] = float(rounds)/self.handID
 
 #                print p.name, "street:", s, "numActs: ", p.numBets[s], "contributed: ", p.amountContributed[s], "betRaise: ", p.amountBetRaise[s]
-                print p.name, "street:", s,  "aggFreq:", p.aggFreq[s], "avgChips:", p.avgChips[s], "avgRaiseAmt:", p.avgRaiseAmt[s], "percentArrivals:", p.percentArrivals[s]
+#                print p.name, "street:", s,  "aggFreq:", p.aggFreq[s], "avgChips:", p.avgChips[s], "avgRaiseAmt:", p.avgRaiseAmt[s], "percentArrivals:", p.percentArrivals[s]
